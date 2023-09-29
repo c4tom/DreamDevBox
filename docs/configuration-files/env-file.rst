@@ -445,14 +445,14 @@ hostname.
 +-------------------------+------------------------------+-----------------------------------------------+
 | Name                    | Allowed values               | Default value                                 |
 +=========================+==============================+===============================================+
-| ``DEVILBOX_UI_SSL_CN``  | comma separated list of CN's | ``localhost,*.localhost,devilbox,*.devilbox`` |
+| ``DEVILBOX_UI_SSL_CN``  | comma separated list of CN's | ``localhost,*.localhost,devilbox,*.dreamdevbox`` |
 +-------------------------+------------------------------+-----------------------------------------------+
 
 **Examples**:
 
 * ``DEVILBOX_UI_SSL_CN=localhost``
 * ``DEVILBOX_UI_SSL_CN=localhost,*.localhost``
-* ``DEVILBOX_UI_SSL_CN=localhost,*.localhost,devilbox,*.devilbox``
+* ``DEVILBOX_UI_SSL_CN=localhost,*.localhost,devilbox,*.dreamdevbox``
 * ``DEVILBOX_UI_SSL_CN=intranet.example.com``
 
 .. seealso:: :ref:`setup_valid_https`
@@ -1422,7 +1422,7 @@ have to populate it with one of three yaml-based template files.
 +------------------------+-------------------+------------------+
 | Name                   | Allowed values    | Default value    |
 +========================+===================+==================+
-| ``HTTPD_TEMPLATE_DIR`` | valid dir name    | ``.devilbox``    |
+| ``HTTPD_TEMPLATE_DIR`` | valid dir name    | ``.dreamdevbox``    |
 +------------------------+-------------------+------------------+
 
 Let's have a look at an imaginary project directory called ``my-first-project``:
@@ -1435,7 +1435,7 @@ Let's have a look at an imaginary project directory called ``my-first-project``:
    drwxr-xr-x 2 cytopia cytopia 4096 Mar 12 23:05 htdocs/
 
 Inside this your project directory you will need to create another directory which is called
-``.devilbox`` by default. If you change the ``HTTPD_TEMPLATE_DIR`` variable to something else,
+``.dreamdevbox`` by default. If you change the ``HTTPD_TEMPLATE_DIR`` variable to something else,
 you will have to create a directory by whatever name you chose for that variable.
 
 .. code-block:: bash
@@ -1443,13 +1443,13 @@ you will have to create a directory by whatever name you chose for that variable
 
    # Project directory
    host> cd data/www/my-first-project/
-   host> mkdir .devilbox
+   host> mkdir .dreamdevbox
    host> ls -l
    total 4
-   drwxr-xr-x 2 cytopia cytopia 4096 Mar 12 23:05 .devilbox/
+   drwxr-xr-x 2 cytopia cytopia 4096 Mar 12 23:05 .dreamdevbox/
    drwxr-xr-x 2 cytopia cytopia 4096 Mar 12 23:05 htdocs/
 
-Now you need to copy the ``vhost-gen`` templates into the ``.devilbox`` directory. The templates
+Now you need to copy the ``vhost-gen`` templates into the ``.dreamdevbox`` directory. The templates
 are available in the Devilbox git directory under ``cfg/vhost-gen/``.
 
 By copying those files into your project template directory, nothing will change, these are the
@@ -1463,7 +1463,7 @@ present.
    host> cd path/to/devilbox
 
    # Copy templates to your project directory
-   host> cp cfg/vhost-gen/*.yml data/www/my-first-project/.devilbox/
+   host> cp cfg/vhost-gen/*.yml data/www/my-first-project/.dreamdevbox/
 
 
 Let's have a look how the directory is actually built up:
@@ -1474,11 +1474,11 @@ Let's have a look how the directory is actually built up:
    # Project directory
    host> ls -l data/www/my-first-project/
    total 4
-   drwxr-xr-x 2 cytopia cytopia 4096 Mar 12 23:05 .devilbox/
+   drwxr-xr-x 2 cytopia cytopia 4096 Mar 12 23:05 .dreamdevbox/
    drwxr-xr-x 2 cytopia cytopia 4096 Mar 12 23:05 htdocs/
 
    # template directory inside your project directory
-   host> ls -l data/www/my-first-project/htdocs/.devilbox
+   host> ls -l data/www/my-first-project/htdocs/.dreamdevbox
    total 4
    -rw-r--r-- 1 cytopia cytopia 87 Mar 12 23:05 apache22.yml
    -rw-r--r-- 1 cytopia cytopia 87 Mar 12 23:05 apache24.yml

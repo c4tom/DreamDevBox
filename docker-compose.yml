@@ -183,7 +183,7 @@ services:
       # HOST-DIRECTORY : DOCKER-DIRECTORY
 
       # Mount custom intranet
-      - ${DEVILBOX_PATH}/.devilbox/www:/var/www/default:ro${MOUNT_OPTIONS}
+      - ${DEVILBOX_PATH}/.dreamdevbox/www:/var/www/default:ro${MOUNT_OPTIONS}
 
       # Mount custom mass virtual hosting
       - ${HOST_PATH_HTTPD_DATADIR}:/shared/httpd:rw${MOUNT_OPTIONS}
@@ -315,7 +315,7 @@ services:
       # HOST-DIRECTORY : DOCKER-DIRECTORY
 
       # Mount custom intranet
-      - ${DEVILBOX_PATH}/.devilbox/www:/var/www/default:ro${MOUNT_OPTIONS}
+      - ${DEVILBOX_PATH}/.dreamdevbox/www:/var/www/default:ro${MOUNT_OPTIONS}
 
       # Mount custom mass virtual hosting
       - ${HOST_PATH_HTTPD_DATADIR}:/shared/httpd:rw${MOUNT_OPTIONS}
@@ -362,7 +362,7 @@ services:
 
       # Mount devilbox user-defined cnf files in order
       # to overwrite the MySQL server configuration
-      - ${DEVILBOX_PATH}/.devilbox/cfg/mysql.cnf:/etc/mysql/conf.d/devilbox.cnf:ro${MOUNT_OPTIONS}
+      - ${DEVILBOX_PATH}/.dreamdevbox/cfg/mysql.cnf:/etc/mysql/conf.d/devilbox.cnf:ro${MOUNT_OPTIONS}
       - ${DEVILBOX_PATH}/cfg/${MYSQL_SERVER}:/etc/mysql/docker-default.d:ro${MOUNT_OPTIONS}
 
       # Mount MySQL Data directory

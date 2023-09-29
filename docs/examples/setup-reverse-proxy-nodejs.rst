@@ -142,7 +142,7 @@ which will not hold any data.
 5.1 Create vhost-gen template directory
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Before we can copy the vhost-gen templates, we must create the ``.devilbox`` template directory
+Before we can copy the vhost-gen templates, we must create the ``.dreamdevbox`` template directory
 inside the project directory.
 
 .. code-block:: bash
@@ -150,8 +150,8 @@ inside the project directory.
    # Navigate to your project directory
    devilbox@php-7.0.20 in /shared/httpd $ cd my-node
 
-   # Create the .devilbox template directory
-   devilbox@php-7.0.20 in /shared/httpd/my-node $ mkdir .devilbox
+   # Create the .dreamdevbox template directory
+   devilbox@php-7.0.20 in /shared/httpd/my-node $ mkdir .dreamdevbox
 
 
 .. seealso:: :ref:`env_httpd_template_dir`
@@ -180,15 +180,15 @@ The reverse vhost-gen templates are available in ``cfg/vhost-gen``:
 
    0 directories, 7 files
 
-For this example we will copy all ``*-example-rproxy`` files into ``/shared/httpd/my-node/.devilbox``
+For this example we will copy all ``*-example-rproxy`` files into ``/shared/httpd/my-node/.dreamdevbox``
 to ensure this will work with all web servers.
 
 .. code-block:: bash
 
    host> cd /path/to/devilbox
-   host> cp cfg/vhost-gen/apache22.yml-example-rproxy data/www/my-node/.devilbox/apache22.yml
-   host> cp cfg/vhost-gen/apache24.yml-example-rproxy data/www/my-node/.devilbox/apache24.yml
-   host> cp cfg/vhost-gen/nginx.yml-example-rproxy data/www/my-node/.devilbox/nginx.yml
+   host> cp cfg/vhost-gen/apache22.yml-example-rproxy data/www/my-node/.dreamdevbox/apache22.yml
+   host> cp cfg/vhost-gen/apache24.yml-example-rproxy data/www/my-node/.dreamdevbox/apache24.yml
+   host> cp cfg/vhost-gen/nginx.yml-example-rproxy data/www/my-node/.dreamdevbox/nginx.yml
 
 
 5.3 Adjust ports
@@ -206,14 +206,14 @@ Open the ``apache22.yml`` vhost-gen template in your project:
 .. code-block:: bash
 
    host> cd /path/to/devilbox
-   host> vi data/www/my-node/.devilbox/apache22.yml
+   host> vi data/www/my-node/.dreamdevbox/apache22.yml
 
 
 Find the two lines with ``ProxyPass`` and ``ProxyPassReverse`` and change the port from ``8000``
 to ``4000``
 
 .. code-block:: yaml
-   :caption: data/www/my-node/.devilbox/apache22.yml
+   :caption: data/www/my-node/.dreamdevbox/apache22.yml
    :emphasize-lines: 16,17
 
    # ... more lines above ... #
@@ -244,14 +244,14 @@ Open the ``apache24.yml`` vhost-gen template in your project:
 .. code-block:: bash
 
    host> cd /path/to/devilbox
-   host> vi data/www/my-node/.devilbox/apache24.yml
+   host> vi data/www/my-node/.dreamdevbox/apache24.yml
 
 
 Find the two lines with ``ProxyPass`` and ``ProxyPassReverse`` and change the port from ``8000``
 to ``4000``
 
 .. code-block:: yaml
-   :caption: data/www/my-node/.devilbox/apache24.yml
+   :caption: data/www/my-node/.dreamdevbox/apache24.yml
    :emphasize-lines: 16,17
 
    # ... more lines above ... #
@@ -282,13 +282,13 @@ Open the ``nginx.yml`` vhost-gen template in your project:
 .. code-block:: bash
 
    host> cd /path/to/devilbox
-   host> vi data/www/my-node/.devilbox/nginx.yml
+   host> vi data/www/my-node/.dreamdevbox/nginx.yml
 
 
 Find the lines with ``proxy_pass`` and change the port from ``8000`` to ``4000``
 
 .. code-block:: yaml
-   :caption: data/www/my-node/.devilbox/nginx.yml
+   :caption: data/www/my-node/.dreamdevbox/nginx.yml
    :emphasize-lines: 18
 
    # ... more lines above ... #

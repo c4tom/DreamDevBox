@@ -173,9 +173,9 @@ Open your browser at http://my-phalcon.loc or https://my-phalcon.loc
 
 By default routes will not work if using Nginx. To fix this, you will need to create a custom vhost configuration.
 
-In your project folder, you will need to create a folder called .devilbox unless you changed `HTTPD_TEMPLATE_DIR` in your .env
+In your project folder, you will need to create a folder called .dreamdevbox unless you changed `HTTPD_TEMPLATE_DIR` in your .env
 
-Copy the default nginx config from ./cfg/vhost-gen/nginx.yml-example-vhost to ./data/www/my-project/.devilbox/nginx.yml
+Copy the default nginx config from ./cfg/vhost-gen/nginx.yml-example-vhost to ./data/www/my-project/.dreamdevbox/nginx.yml
 
 Carefully edit the nginx.yml file and change:
 

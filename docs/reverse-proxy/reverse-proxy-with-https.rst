@@ -37,7 +37,7 @@ Let's imagine you have started an application in the PHP container with the foll
 * :ref:`env_TLD_SUFFIX`: ``loc``
 * :ref:`getting_started_directory_overview_project_directory` inside PHP container: ``/shared/httpd/my-app``
 * :ref:`env_httpd_datadir` on the host: ``./data/www``
-* :ref:`env_httpd_template_dir`: ``.devilbox``
+* :ref:`env_httpd_template_dir`: ``.dreamdevbox``
 * Listening port: ``8081``
 * Listening host: ``php`` (any of the PHP container)
 * Resulting vhost name: ``my-app.loc``
@@ -64,15 +64,15 @@ The reverse vhost-gen templates are available in ``cfg/vhost-gen``:
 
    0 directories, 7 files
 
-For this example we will copy all ``*-example-rproxy`` files into ``/shared/httpd/my-app/.devilbox``
+For this example we will copy all ``*-example-rproxy`` files into ``/shared/httpd/my-app/.dreamdevbox``
 to ensure this will work with all web servers.
 
 .. code-block:: bash
 
    host> cd /path/to/devilbox
-   host> cp cfg/vhost-gen/apache22.yml-example-rproxy data/www/my-app/.devilbox/apache22.yml
-   host> cp cfg/vhost-gen/apache24.yml-example-rproxy data/www/my-app/.devilbox/apache24.yml
-   host> cp cfg/vhost-gen/nginx.yml-example-rproxy data/www/my-app/.devilbox/nginx.yml
+   host> cp cfg/vhost-gen/apache22.yml-example-rproxy data/www/my-app/.dreamdevbox/apache22.yml
+   host> cp cfg/vhost-gen/apache24.yml-example-rproxy data/www/my-app/.dreamdevbox/apache24.yml
+   host> cp cfg/vhost-gen/nginx.yml-example-rproxy data/www/my-app/.dreamdevbox/nginx.yml
 
 
 Adjust port
@@ -90,14 +90,14 @@ Open the ``apache22.yml`` vhost-gen template in your project:
 .. code-block:: bash
 
    host> cd /path/to/devilbox
-   host> vi data/www/my-app/.devilbox/apache22.yml
+   host> vi data/www/my-app/.dreamdevbox/apache22.yml
 
 
 Find the two lines with ``ProxyPass`` and ``ProxyPassReverse`` and change the port from ``8000``
 to ``8081``
 
 .. code-block:: yaml
-   :caption: data/www/my-app/.devilbox/apache22.yml
+   :caption: data/www/my-app/.dreamdevbox/apache22.yml
    :emphasize-lines: 16,17
 
    # ... more lines above ... #
@@ -128,14 +128,14 @@ Open the ``apache24.yml`` vhost-gen template in your project:
 .. code-block:: bash
 
    host> cd /path/to/devilbox
-   host> vi data/www/my-app/.devilbox/apache24.yml
+   host> vi data/www/my-app/.dreamdevbox/apache24.yml
 
 
 Find the two lines with ``ProxyPass`` and ``ProxyPassReverse`` and change the port from ``8000``
 to ``8081``
 
 .. code-block:: yaml
-   :caption: data/www/my-app/.devilbox/apache24.yml
+   :caption: data/www/my-app/.dreamdevbox/apache24.yml
    :emphasize-lines: 16,17
 
    # ... more lines above ... #
@@ -166,13 +166,13 @@ Open the ``nginx.yml`` vhost-gen template in your project:
 .. code-block:: bash
 
    host> cd /path/to/devilbox
-   host> vi data/www/my-app/.devilbox/nginx.yml
+   host> vi data/www/my-app/.dreamdevbox/nginx.yml
 
 
 Find the lines with ``proxy_pass`` and change the port from ``8000`` to ``8081``
 
 .. code-block:: yaml
-   :caption: data/www/my-app/.devilbox/nginx.yml
+   :caption: data/www/my-app/.dreamdevbox/nginx.yml
    :emphasize-lines: 18
 
    # ... more lines above ... #

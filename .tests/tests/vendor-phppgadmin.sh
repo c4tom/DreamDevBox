@@ -101,8 +101,8 @@ fi
 
 SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 DVLBOXPATH="${SCRIPTPATH}/../../"
-CONFIGPATH="${DVLBOXPATH}/.devilbox/www/htdocs${URL%index\.php}conf/config.inc.php"
-LIBPATH="${DVLBOXPATH}/.devilbox/www/htdocs${URL%index\.php}libraries/lib.inc.php"
+CONFIGPATH="${DVLBOXPATH}/.dreamdevbox/www/htdocs${URL%index\.php}conf/config.inc.php"
+LIBPATH="${DVLBOXPATH}/.dreamdevbox/www/htdocs${URL%index\.php}libraries/lib.inc.php"
 
 printf "[TEST] config.inc.php exists"
 if [ ! -f "${CONFIGPATH}" ]; then

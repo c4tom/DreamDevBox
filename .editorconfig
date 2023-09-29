@@ -17,22 +17,22 @@ trim_trailing_whitespace = true
 # Devilbox Intranet
 # -------------------------------------------------------------------------------------------------
 # Intranet CSS
-[.devilbox/www/htdocs/assets/css/*.css]
+[.dreamdevbox/www/htdocs/assets/css/*.css]
 indent_style = tab
 indent_size = 4
 
 # Intranet config
-[.devilbox/www/config.php]
+[.dreamdevbox/www/config.php]
 indent_style = tab
 indent_size = 4
 
 # Intranet libs
-[.devilbox/www/include/lib/**.php]
+[.dreamdevbox/www/include/lib/**.php]
 indent_style = tab
 indent_size = 4
 
 # Intranet pages
-[.devilbox/www/htdocs/*.php]
+[.dreamdevbox/www/htdocs/*.php]
 indent_style = tab
 indent_size = 4
 

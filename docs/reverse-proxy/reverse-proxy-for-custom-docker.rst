@@ -40,7 +40,7 @@ application listening on port ``3000``.
 * :ref:`env_TLD_SUFFIX`: ``loc``
 * Desired DNS name: ``my-python.loc``
 * :ref:`env_httpd_datadir` on the host: ``./data/www``
-* :ref:`env_httpd_template_dir`: ``.devilbox``
+* :ref:`env_httpd_template_dir`: ``.dreamdevbox``
 * Listening port: ``3000``
 * Listening host: ``python`` (hostname of the Python container)
 
@@ -67,7 +67,7 @@ Navigate to the :ref:`env_httpd_datadir` directory and create your project
 
 
    # Create the vhost-gen directory (to be apply to apply custom templates)
-   host> mkdir my-python/.devilbox
+   host> mkdir my-python/.dreamdevbox
 
 This part is now sufficient to have the project visible on the Devilbox intranet.
 
@@ -93,15 +93,15 @@ The reverse vhost-gen templates are available in ``cfg/vhost-gen``:
 
    0 directories, 7 files
 
-For this example we will copy all ``*-example-rproxy`` files into ``/shared/httpd/my-python/.devilbox``
+For this example we will copy all ``*-example-rproxy`` files into ``/shared/httpd/my-python/.dreamdevbox``
 to ensure this will work with all web servers.
 
 .. code-block:: bash
 
    host> cd /path/to/devilbox
-   host> cp cfg/vhost-gen/apache22.yml-example-rproxy data/www/my-python/.devilbox/apache22.yml
-   host> cp cfg/vhost-gen/apache24.yml-example-rproxy data/www/my-python/.devilbox/apache24.yml
-   host> cp cfg/vhost-gen/nginx.yml-example-rproxy data/www/my-python/.devilbox/nginx.yml
+   host> cp cfg/vhost-gen/apache22.yml-example-rproxy data/www/my-python/.dreamdevbox/apache22.yml
+   host> cp cfg/vhost-gen/apache24.yml-example-rproxy data/www/my-python/.dreamdevbox/apache24.yml
+   host> cp cfg/vhost-gen/nginx.yml-example-rproxy data/www/my-python/.dreamdevbox/nginx.yml
 
 
 Adjust port
@@ -119,13 +119,13 @@ Open the ``apache22.yml`` vhost-gen template in your project:
 .. code-block:: bash
 
    host> cd /path/to/devilbox
-   host> vi data/www/my-python/.devilbox/apache22.yml
+   host> vi data/www/my-python/.dreamdevbox/apache22.yml
 
 Find the two lines with ``ProxyPass`` and ``ProxyPassReverse`` and change the port from ``8000``
 to ``3000`` and host ``php`` to ``python``:
 
 .. code-block:: yaml
-   :caption: data/www/my-python/.devilbox/apache22.yml
+   :caption: data/www/my-python/.dreamdevbox/apache22.yml
    :emphasize-lines: 16,17
 
    # ... more lines above ... #
@@ -156,13 +156,13 @@ Open the ``apache24.yml`` vhost-gen template in your project:
 .. code-block:: bash
 
    host> cd /path/to/devilbox
-   host> vi data/www/my-python/.devilbox/apache24.yml
+   host> vi data/www/my-python/.dreamdevbox/apache24.yml
 
 Find the two lines with ``ProxyPass`` and ``ProxyPassReverse`` and change the port from ``8000``
 to ``3000`` and host ``php`` to ``python``:
 
 .. code-block:: yaml
-   :caption: data/www/my-python/.devilbox/apache24.yml
+   :caption: data/www/my-python/.dreamdevbox/apache24.yml
    :emphasize-lines: 16,17
 
    # ... more lines above ... #
@@ -193,13 +193,13 @@ Open the ``nginx.yml`` vhost-gen template in your project:
 .. code-block:: bash
 
    host> cd /path/to/devilbox
-   host> vi data/www/my-python/.devilbox/nginx.yml
+   host> vi data/www/my-python/.dreamdevbox/nginx.yml
 
 Find the line with ``proxy_pass`` and change the port from ``8000``
 to ``3000`` and host ``php`` to ``python``:
 
 .. code-block:: yaml
-   :caption: data/www/my-python/.devilbox/nginx.yml
+   :caption: data/www/my-python/.dreamdevbox/nginx.yml
    :emphasize-lines: 18
 
    # ... more lines above ... #

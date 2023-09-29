@@ -263,7 +263,7 @@ On of the cause could be wrongly set file and directory permissions.
 
 First ensure the cloned git directory is readable for users, groups and others.
 
-For the Devilbox intranet, ensure the ``.devilbox/`` directory is readable for users, groups and
+For the Devilbox intranet, ensure the ``.dreamdevbox/`` directory is readable for users, groups and
 others. Also check files and directories within.
 
 For projects, ensure an ``index.php`` or ``index.html`` exists and that all files and directories

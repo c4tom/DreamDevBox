@@ -28,7 +28,7 @@ This release provides the `dvl.to` domain to be used with `TLD_SUFFIX` (set to d
 
 The Backend configuration now supports websockets as well:
 
-file: `/shared/httpd/<project>/.devilbox/backend.cfg`
+file: `/shared/httpd/<project>/.dreamdevbox/backend.cfg`
 ```bash
 # PHP-FPM backend
 conf:phpfpm:tcp:php80:9000
@@ -89,13 +89,13 @@ Once it has been tested by the community, and potential errors have been address
     # Start default set and php80
     docker-compose up php httpd bind php80
     ```
-    file: `/shared/httpd/<project>/.devilbox/backend.cfg`
+    file: `/shared/httpd/<project>/.dreamdevbox/backend.cfg`
     ```
     conf:phpfpm:tcp:php80:9000
     ```
 2. **Automated Reverse Proxy setup**<br/>
     Here is an example to proxy one project to a backend service (e.g. NodeJS or Python application, which runs in the PHP container on port 3000)<br/>
-    file: `/shared/httpd/<project>/.devilbox/backend.cfg`
+    file: `/shared/httpd/<project>/.dreamdevbox/backend.cfg`
     ```
     conf:rproxy:http:127.0.0.1:3000
     ```

@@ -163,7 +163,7 @@ Let's assume the following settings.
 +===============================+======================================+
 | Devilbox path                 | ``/home/user/devilbox``              |
 +-------------------------------+--------------------------------------+
-| :ref:`env_httpd_template_dir` | ``.devilbox``                        |
+| :ref:`env_httpd_template_dir` | ``.dreamdevbox``                        |
 +-------------------------------+--------------------------------------+
 | :ref:`env_httpd_datadir`      | ``./data/www``                       |
 +-------------------------------+--------------------------------------+
@@ -180,10 +180,10 @@ Ensure that the default ``vhost-gen`` templates have been copied to your project
    host> cd ./home/user/devilbox
 
    # Create template directory in your project
-   host> mkdir ./data/www/project-1/.devilbox
+   host> mkdir ./data/www/project-1/.dreamdevbox
 
    # Copy vhost-gen templates
-   host> cp cfg/vhost-gen/*.yml ./data/www/project-1/.devilbox
+   host> cp cfg/vhost-gen/*.yml ./data/www/project-1/.dreamdevbox
 
 By having done all prerequisite, your project should be available under http://my-project-1.loc
 
@@ -218,7 +218,7 @@ template looks similar to the one shown below (**Note:** Only the ``vhost:`` sub
 here).
 
 .. code-block:: yaml
-   :caption: /home/user/devilbox/data/www/project-1/.devilbox/apache22.yml
+   :caption: /home/user/devilbox/data/www/project-1/.dreamdevbox/apache22.yml
    :emphasize-lines: 3
 
    vhost: |
@@ -241,7 +241,7 @@ here).
 All you will have to do, is to add a``ServerAlias`` directive:
 
 .. code-block:: yaml
-   :caption: /home/user/devilbox/data/www/project-1/.devilbox/apache22.yml
+   :caption: /home/user/devilbox/data/www/project-1/.dreamdevbox/apache22.yml
    :emphasize-lines: 3,4
 
    vhost: |
@@ -295,7 +295,7 @@ template looks similar to the one shown below (**Note:** Only the ``vhost:`` sub
 here).
 
 .. code-block:: yaml
-   :caption: /home/user/devilbox/data/www/project-1/.devilbox/apache22.yml
+   :caption: /home/user/devilbox/data/www/project-1/.dreamdevbox/apache22.yml
    :emphasize-lines: 3
 
    vhost: |
@@ -318,7 +318,7 @@ here).
 All you will have to do, is to add a ``ServerAlias`` directive which does catch-all:
 
 .. code-block:: yaml
-   :caption: /home/user/devilbox/data/www/project-1/.devilbox/apache22.yml
+   :caption: /home/user/devilbox/data/www/project-1/.dreamdevbox/apache22.yml
    :emphasize-lines: 3,4
 
    vhost: |
@@ -386,7 +386,7 @@ template looks similar to the one shown below (**Note:** Only the ``vhost:`` sub
 here).
 
 .. code-block:: yaml
-   :caption: /home/user/devilbox/data/www/project-1/.devilbox/nginx.yml
+   :caption: /home/user/devilbox/data/www/project-1/.dreamdevbox/nginx.yml
    :emphasize-lines: 4
 
    vhost: |
@@ -410,7 +410,7 @@ here).
 All you will have to do, is to extend the ``server_name`` directive:
 
 .. code-block:: yaml
-   :caption: /home/user/devilbox/data/www/project-1/.devilbox/nginx.yml
+   :caption: /home/user/devilbox/data/www/project-1/.dreamdevbox/nginx.yml
    :emphasize-lines: 4
 
    vhost: |
@@ -466,7 +466,7 @@ template looks similar to the one shown below (**Note:** Only the ``vhost:`` sub
 here).
 
 .. code-block:: yaml
-   :caption: /home/user/devilbox/data/www/project-1/.devilbox/nginx.yml
+   :caption: /home/user/devilbox/data/www/project-1/.dreamdevbox/nginx.yml
    :emphasize-lines: 4
 
    vhost: |
@@ -490,7 +490,7 @@ here).
 All you will have to do, is to extend the ``server_name`` directive with a catch-all:
 
 .. code-block:: yaml
-   :caption: /home/user/devilbox/data/www/project-1/.devilbox/nginx.yml
+   :caption: /home/user/devilbox/data/www/project-1/.dreamdevbox/nginx.yml
    :emphasize-lines: 4
 
    vhost: |

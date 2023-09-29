@@ -75,7 +75,7 @@ Let's assume the following default values and one project named ``project-1``:
 +-------------------------------+-------------------------------------------------------+
 | Project name                  | ``project-1``                                         |
 +-------------------------------+-------------------------------------------------------+
-| :ref:`env_httpd_template_dir` | ``.devilbox`` (default value)                         |
+| :ref:`env_httpd_template_dir` | ``.dreamdevbox`` (default value)                         |
 +-------------------------------+-------------------------------------------------------+
 | :ref:`env_httpd_datadir`      | ``./data/www`` (default value)                        |
 +-------------------------------+-------------------------------------------------------+
@@ -87,17 +87,17 @@ Those assumed settings will result in the following directory paths which must b
 +===============================+=======================================================+
 | Project directory path        | ``/home/user/devilbox/data/www/project-1/``           |
 +-------------------------------+-------------------------------------------------------+
-| Project template path         | ``/home/user/devilbox/data/www/project-1/.devilbox/`` |
+| Project template path         | ``/home/user/devilbox/data/www/project-1/.dreamdevbox/`` |
 +-------------------------------+-------------------------------------------------------+
 
 1. Retrieve or set template directory value
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-By default the :ref:`env_httpd_template_dir` value is ``.devilbox``. This is defined in the
+By default the :ref:`env_httpd_template_dir` value is ``.dreamdevbox``. This is defined in the
 ``.env`` file. Feel free to change it to whatever directory name you prefer, but keep in mind that
 it will change the `Project template path` which you need to create yourself.
 
-For this example we will keep the default value for the sake of simplicity: ``.devilbox``.
+For this example we will keep the default value for the sake of simplicity: ``.dreamdevbox``.
 
 .. note::
    The :ref:`env_httpd_template_dir` value is a global setting and will affect all projects.
@@ -114,13 +114,13 @@ First you need to ensure that the :ref:`env_httpd_template_dir` exists wihin you
    host> cd /home/user/devilbox
 
    # Create template directory in your project
-   host> mkdir ./data/www/project-1/.devilbox
+   host> mkdir ./data/www/project-1/.dreamdevbox
 
 Then you can copy the templates.
 
 .. code-block:: bash
 
-   host> cp cfg/vhost-gen/*.yml-example-* ./data/www/project-1/.devilbox
+   host> cp cfg/vhost-gen/*.yml-example-* ./data/www/project-1/.dreamdevbox
 
 .. note::
    You actually only need to copy the template of your chosen webserver (either Apache 2.2,
@@ -133,9 +133,9 @@ Then you can copy the templates.
 
 At this stage you can start adjusting the template. Either do that for the webserver version you
 have enabled via :ref:`env_httpd_server`:
-``/home/user/devilbox/data/www/project-1/.devilbox/apache22.yml``.
-``/home/user/devilbox/data/www/project-1/.devilbox/apache24.yml``,
-``/home/user/devilbox/data/www/project-1/.devilbox/nginx.yml`` or do it for all of them
+``/home/user/devilbox/data/www/project-1/.dreamdevbox/apache22.yml``.
+``/home/user/devilbox/data/www/project-1/.dreamdevbox/apache24.yml``,
+``/home/user/devilbox/data/www/project-1/.dreamdevbox/nginx.yml`` or do it for all of them
 synchronously.
 
 .. note:: What exactly to change will be explained later.
@@ -195,10 +195,10 @@ Ensure yaml files are valid
    host> ./shell.sh
 
    # Go to your project's template directory
-   devilbox@php-7.0.19 in /shared/httpd $ cd project-1/.devilbox
+   devilbox@php-7.0.19 in /shared/httpd $ cd project-1/.dreamdevbox
 
    # Check the syntax of apache22.yml
-   devilbox@php-7.0.19 in /shared/httpd/project-1/.devilbox $ yamllint apache22.yml
+   devilbox@php-7.0.19 in /shared/httpd/project-1/.dreamdevbox $ yamllint apache22.yml
 
    108:81    error    line too long (90 > 80 characters)  (line-length)
    139:81    error    line too long (100 > 80 characters)  (line-length)

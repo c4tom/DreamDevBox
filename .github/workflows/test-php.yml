@@ -13,7 +13,7 @@ on:
   # Runs on Pull Requests
   pull_request:
     paths:
-      - '.devilbox/**'
+      - '.dreamdevbox/**'
       - '.github/workflows/params*.yml'
       - '.github/workflows/test*.yml'
       - '.github/workflows/zzz*.yml'
@@ -27,7 +27,7 @@ on:
   # Runs on master Branch and Tags
   push:
     paths:
-      - '.devilbox/**'
+      - '.dreamdevbox/**'
       - '.github/workflows/params*.yml'
       - '.github/workflows/test*.yml'
       - '.github/workflows/zzz*.yml'
