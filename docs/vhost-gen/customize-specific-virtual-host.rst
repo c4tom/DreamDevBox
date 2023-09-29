@@ -37,7 +37,7 @@ listening ports.
 Where do I find templates
 -------------------------
 
-The latest version of vhost-gen templates are shipped in the Devilbox git directory under
+The latest version of vhost-gen templates are shipped in the DreamDevBox git directory under
 ``cfg/vhost-gen/``.
 
 
@@ -61,7 +61,7 @@ Customizing a virtual host via vhost-gen template is generally done in four step
 1. Retrieve or set template directory value in ``.env``.
 2. Copy webserver template to project template directory
 3. Adjust template
-4. Make Devilbox pick up those changes
+4. Make DreamDevBox pick up those changes
 
 
 Let's assume the following default values and one project named ``project-1``:
@@ -69,7 +69,7 @@ Let's assume the following default values and one project named ``project-1``:
 +-------------------------------+-------------------------------------------------------+
 | Variable                      | Value                                                 |
 +===============================+=======================================================+
-| Devilbox path                 | ``/home/user/devilbox``                               |
+| DreamDevBox path                 | ``/home/user/devilbox``                               |
 +-------------------------------+-------------------------------------------------------+
 | Templates to copy from        | ``/home/user/devilbox/cfg/vhost-gen``                 |
 +-------------------------------+-------------------------------------------------------+
@@ -110,7 +110,7 @@ First you need to ensure that the :ref:`env_httpd_template_dir` exists wihin you
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd /home/user/devilbox
 
    # Create template directory in your project
@@ -140,11 +140,11 @@ synchronously.
 
 .. note:: What exactly to change will be explained later.
 
-4. Make Devilbox pick up those changes
+4. Make DreamDevBox pick up those changes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Whenever you change a project vhost template or the :ref:`env_httpd_template_dir` value,
-you need to restart the Devilbox.
+you need to restart the DreamDevBox.
 
 .. note:: It is also possible to do it without a restart which will be explained later.
 
@@ -188,7 +188,7 @@ Ensure yaml files are valid
 .. code-block:: bash
    :emphasize-lines: 13-16
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd /home/user/devilbox
 
    # Enter the PHP container
@@ -219,7 +219,7 @@ Global variables
 ^^^^^^^^^^^^^^^^
 
 There are `global variables` that are determined by the command line arguments of ``vhost-gen``
-itself or are elsewhere replaced by the Devilbox webserver container such as:
+itself or are elsewhere replaced by the DreamDevBox webserver container such as:
 
 * ``__PORT__``
 * ``__DEFAULT_VHOST__``
@@ -236,7 +236,7 @@ a normal vhost or a reverse proxy vhost.
 * ``__VHOST_DOCROOT__``
 * ``__VHOST_PROXY__``
 
-The Devilbox always uses a normal vhost by default, so the ``__VHOST_DOCROOT__`` variable will be
+The DreamDevBox always uses a normal vhost by default, so the ``__VHOST_DOCROOT__`` variable will be
 replaced by what the ``vhost_type.docroot`` section provides.
 The ``vhost_type.rproxy`` will be ignored and ``__VHOST_PROXY__`` will be replaced by an empty
 string.
@@ -308,7 +308,7 @@ look like this:
 2. ``vhost_type:``
 ^^^^^^^^^^^^^^^^^^
 
-The ``vhost_type:`` contains ``docroot`` and ``rproxy``. The Devilbox only makes use of ``docroot``
+The ``vhost_type:`` contains ``docroot`` and ``rproxy``. The DreamDevBox only makes use of ``docroot``
 which holds the definition of a normal vhost. Its content will be replaced into the
 ``__VHOST_DOCROOT__`` variable.
 
@@ -353,7 +353,7 @@ After having edited your vhost-gen template files, you still need to apply these
 This can be achieved in two ways:
 
 1. Rename your project directory back and forth
-2. Restart the Devilbox
+2. Restart the DreamDevBox
 
 
 Rename project directory
@@ -398,13 +398,13 @@ your new vhost-gen template has been read and the changes have applied.
 .. note::
    Renaming a project directory will only affect a single project. In case your change the
    value of :ref:`env_httpd_template_dir` it will affect all projects and you would have to
-   rename all project directories. In this case it is much faster to just restart the Devilbox.
+   rename all project directories. In this case it is much faster to just restart the DreamDevBox.
 
 
-Restart the Devilbox
+Restart the DreamDevBox
 --------------------
 
-Stop the Devilbox and start it up again.
+Stop the DreamDevBox and start it up again.
 
 
 Further readings

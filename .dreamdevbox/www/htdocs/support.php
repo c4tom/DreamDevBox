@@ -13,7 +13,7 @@
 
 			<h1>Support</h1>
 			<br/>
-			<p>I am currently the sole creator and maintainer of the Devilbox and all of its required projects.<br/>If you find this useful or if it makes your daily programming life easier, consider donating to keep this project alive.</p>
+			<p>I am currently the sole creator and maintainer of the DreamDevBox and all of its required projects.<br/>If you find this useful or if it makes your daily programming life easier, consider donating to keep this project alive.</p>
 			<ul>
 				<li><a target="_blank" href="https://github.com/sponsors/cytopia"><strong>GitHub sponsorship</strong></a></li>
 				<li><a target="_blank" href="https://opencollective.com/devilbox"><strong>Open Collective</strong></a></li>
@@ -25,7 +25,7 @@
 
 				<div class="col-md-6">
 					<h2>Core projects</h2>
-					<p>The following core projects were created and are maintained in order to make the Devilbox work.</p>
+					<p>The following core projects were created and are maintained in order to make the DreamDevBox work.</p>
 					<table class="table table-striped ">
 						<thead class="thead-inverse ">
 							<tr>
@@ -36,7 +36,7 @@
 						<tbody>
 							<tr>
 								<td><i class="fa fa-github-alt" aria-hidden="true"></i> <a target="_blank" href="https://github.com/cytopia/devilbox">devilbox</a></td>
-								<td>The Devilbox</td>
+								<td>The DreamDevBox</td>
 							</tr>
 							<tr>
 								<td><i class="fa fa-github-alt" aria-hidden="true"></i> <a target="_blank" href="https://github.com/devilbox/docker-php-fpm-5.2">docker-php-fpm-5.2</a></td>
@@ -72,7 +72,7 @@
 							</tr>
 							<tr>
 								<td><i class="fa fa-github-alt" aria-hidden="true"></i> <a target="_blank" href="https://github.com/devilbox/docker-php-fpm">docker-php-fpm</a></td>
-								<td>PHP-FPM Devilbox images (<code>amd64</code> and <code>arm64</code>)</td>
+								<td>PHP-FPM DreamDevBox images (<code>amd64</code> and <code>arm64</code>)</td>
 							</tr>
 							<tr>
 								<td><i class="fa fa-github-alt" aria-hidden="true"></i> <a target="_blank" href="https://github.com/devilbox/docker-php-fpm-community">docker-php-fpm-community</a></td>
@@ -121,7 +121,7 @@
 
 				<div class="col-md-6">
 					<h2>Supporting projects</h2>
-					<p>The following supporting projects were created and are maintained in order to keep the Devilbox eco system running.</p>
+					<p>The following supporting projects were created and are maintained in order to keep the DreamDevBox eco system running.</p>
 					<table class="table table-striped ">
 						<thead class="thead-inverse ">
 							<tr>

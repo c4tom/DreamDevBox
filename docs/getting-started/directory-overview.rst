@@ -25,7 +25,7 @@ Data directory
 ==============
 
 By default all your projects must be created in the ``./data/www/`` directory which is inside in
-your Devilbox git directory. This can be changed as well, but is outside the scope of this
+your DreamDevBox git directory. This can be changed as well, but is outside the scope of this
 *getting started tutorial*.
 
 You can verifiy that the path is actually ``./data/www/`` by checking your ``.env`` file:

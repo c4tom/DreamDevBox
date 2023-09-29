@@ -7,7 +7,7 @@
 Setup Phalcon
 *************
 
-This example will use ``phalcon`` to install Phalcon from within the Devilbox PHP container.
+This example will use ``phalcon`` to install Phalcon from within the DreamDevBox PHP container.
 
 After completing the below listed steps, you will have a working Phalcon setup ready to be
 served via http and https.
@@ -32,9 +32,9 @@ The following configuration will be used:
 +--------------+--------------------------+-------------+------------+---------------------------------------------------+
 
 .. note::
-   * Inside the Devilbox PHP container, projects are always in ``/shared/httpd/``.
+   * Inside the DreamDevBox PHP container, projects are always in ``/shared/httpd/``.
    * On your host operating system, projects are by default in ``./data/www/`` inside the
-     Devilbox git directory. This path can be changed via :ref:`env_httpd_datadir`.
+     DreamDevBox git directory. This path can be changed via :ref:`env_httpd_datadir`.
 
 
 Walk through
@@ -57,7 +57,7 @@ It will be ready in six simple steps:
 All work will be done inside the PHP container as it provides you with all required command line
 tools.
 
-Navigate to the Devilbox git directory and execute ``shell.sh`` (or ``shell.bat`` on Windows) to
+Navigate to the DreamDevBox git directory and execute ``shell.sh`` (or ``shell.bat`` on Windows) to
 enter the running PHP container.
 
 .. code-block:: bash
@@ -189,7 +189,7 @@ and
 to
 ``location ~ [^/]\.php(/|$) {``
 
-save the file as nginx.yml and ensure not to use any tabs in the file or devilbox will not use the custom configuration. You can use ``yamllint nginx.yml`` whilst inside the Devilbox shell to check the file before restarting devilbox.
+save the file as nginx.yml and ensure not to use any tabs in the file or devilbox will not use the custom configuration. You can use ``yamllint nginx.yml`` whilst inside the DreamDevBox shell to check the file before restarting devilbox.
 
 
 Next steps

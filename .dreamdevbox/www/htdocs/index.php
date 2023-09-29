@@ -241,7 +241,7 @@ $HEALTH_PERCENT = 100 - ceil(100 * $HEALTH_FAILS / $HEALTH_TOTAL);
 					<div class="dash-box">
 						<div class="dash-box-head"><i class="fa fa-hashtag"></i> Version</div>
 						<div class="dash-box-body">
-							<strong>Devilbox</strong> <?php echo $GLOBALS['DEVILBOX_VERSION']; ?> <small>(<?php echo $GLOBALS['DEVILBOX_DATE']; ?>)</small>
+							<strong>DreamDevBox</strong> <?php echo $GLOBALS['DEVILBOX_VERSION']; ?> <small>(<?php echo $GLOBALS['DEVILBOX_DATE']; ?>)</small>
 						</div>
 					</div>
 				</div>
@@ -447,7 +447,7 @@ $HEALTH_PERCENT = 100 - ceil(100 * $HEALTH_FAILS / $HEALTH_TOTAL);
 					<div class="dash-box">
 						<div class="dash-box-head"><i class="fa fa-info-circle" aria-hidden="true"></i> PHP Container Status</div>
 						<div class="dash-box-body">
-							<p><small>You have made the following base configuration to the Devilbox:</small></p>
+							<p><small>You have made the following base configuration to the DreamDevBox:</small></p>
 							<table class="table table-striped table-hover table-bordered table-sm font-small">
 								<thead class="thead-inverse">
 									<tr>

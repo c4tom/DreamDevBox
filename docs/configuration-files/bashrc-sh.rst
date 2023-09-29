@@ -20,7 +20,7 @@ configured, you can add your own configuration files to overwrite settings.
 Directory mapping
 =================
 
-Inside the Devilbox git directory you will find a directory called ``bash/``.
+Inside the DreamDevBox git directory you will find a directory called ``bash/``.
 Every file inside this directory ending by ``*.sh`` will be source by your bash shell,
 allowing for a customized bash configuration. All files not ending by ``*.sh`` will be ignored
 and can be used to create config files for other programs.
@@ -45,7 +45,7 @@ by ``.sh`` and place it into the ``./bash/`` directory:
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox git directory
+   # Navigate to the DreamDevBox git directory
    host> cd path/to/devilbox
 
    # Create a new file
@@ -65,7 +65,7 @@ by ``.sh`` and place it into the ``./bash/`` directory:
 Custom vim configuration
 ------------------------
 
-The ``.vimrc`` is usually place directly in the users home directory and the Devilbox does not
+The ``.vimrc`` is usually place directly in the users home directory and the DreamDevBox does not
 offer any mounts directly to that directory, however you can use a trick with shell aliases
 to use ``vim`` with a different config file by default.
 
@@ -73,7 +73,7 @@ First of all, place your favorite ``.vimrc`` into the ``./bash/`` directory
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox git directory
+   # Navigate to the DreamDevBox git directory
    host> cd path/to/devilbox
 
    # Copy your vim config to the ./bash directory
@@ -88,7 +88,7 @@ that will always use this file:
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox git directory
+   # Navigate to the DreamDevBox git directory
    host> cd path/to/devilbox
 
    # Create a new file

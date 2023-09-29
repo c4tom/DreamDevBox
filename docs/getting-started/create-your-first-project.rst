@@ -36,7 +36,7 @@ It should look like the screenshot below and will actually already provide the i
 Step 2: create a project directory
 ==================================
 
-In your Devilbox git directory, navigate to ``./data/www`` and create a new directory.
+In your DreamDevBox git directory, navigate to ``./data/www`` and create a new directory.
 
 .. note::
    Choose the directory name wisely, as it will be part of the domain for that project.
@@ -44,7 +44,7 @@ In your Devilbox git directory, navigate to ``./data/www`` and create a new dire
 
 .. code-block:: bash
 
-   # navigate to your Devilbox git directory
+   # navigate to your DreamDevBox git directory
    host> cd path/to devilbox
 
    # navigate to the data directory
@@ -72,7 +72,7 @@ Navigate to your newly created project directory and create a directory named `h
 
 .. code-block:: bash
 
-   # navigate to your Devilbox git directory
+   # navigate to your DreamDevBox git directory
    host> cd path/to devilbox
 
    # navigate to your above created project directory
@@ -106,7 +106,7 @@ Step 4: create a DNS entry
    DNS entries to your host computer, but is outside the scope of this
    *getting started tutorial*.
 
-When using native Docker, the Devilbox intranet will provide you the exact string you need to paste
+When using native Docker, the DreamDevBox intranet will provide you the exact string you need to paste
 into your ``/etc/hosts`` (or ``C:\Windows\System32\drivers\etc`` for Windows).
 
 .. code-block:: bash
@@ -129,7 +129,7 @@ Vist the vhost page again and see what has changed: http://localhost/vhosts.php
 
 **So what has happened?**
 
-By having created the DNS record, the Devilbox intranet is aware that everything is setup now and
+By having created the DNS record, the DreamDevBox intranet is aware that everything is setup now and
 gives you a link to your new project.
 
 
@@ -155,7 +155,7 @@ Navigate to your docroot directory within your project and create a ``index.php`
 
 .. code-block:: bash
 
-   # navigate to your Devilbox git directory
+   # navigate to your DreamDevBox git directory
    host> cd path/to devilbox
 
    # navigate to your projects docroot directory
@@ -189,12 +189,12 @@ Checklist
 Further examples
 ================
 
-If you already want to know how to setup specific frameworks on the Devilbox, jump directly to
+If you already want to know how to setup specific frameworks on the DreamDevBox, jump directly to
 their articles:
 
 .. seealso::
 
-   **Well tested frameworks on the Devilbox**
+   **Well tested frameworks on the DreamDevBox**
 
    * :ref:`example_setup_cakephp`
    * :ref:`example_setup_codeigniter`

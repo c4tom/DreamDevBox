@@ -58,7 +58,7 @@ Copy it (do not simply rename it) to a different file ending by ``.ini`` and sta
 
 **How to apply the settings**
 
-In order for the changes to be applied, you will have to restart the Devilbox.
+In order for the changes to be applied, you will have to restart the DreamDevBox.
 
 
 Examples
@@ -73,7 +73,7 @@ The following examples shows you how to change the
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd path/to/devilbox
 
    # Navigate to PHP 7.1 config directory
@@ -90,8 +90,8 @@ Now add the following content to the file:
    [PHP]
    memory_limit = 4096M
 
-In order to apply the changes you need to restart the Devilbox.
-You can validate that the changes have taken place by visiting the Devilbox intranet phpinfo page.
+In order to apply the changes you need to restart the DreamDevBox.
+You can validate that the changes have taken place by visiting the DreamDevBox intranet phpinfo page.
 
 
 Change timeout values for PHP 5.6
@@ -104,7 +104,7 @@ of PHP 5.6.
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd path/to/devilbox
 
    # Navigate to PHP 5.6 config directory
@@ -122,5 +122,5 @@ Now add the following content to the file:
    max_execution_time = 180
    max_input_time     = 180
 
-In order to apply the changes you need to restart the Devilbox.
-You can validate that the changes have taken place by visiting the Devilbox intranet phpinfo page.
+In order to apply the changes you need to restart the DreamDevBox.
+You can validate that the changes have taken place by visiting the DreamDevBox intranet phpinfo page.

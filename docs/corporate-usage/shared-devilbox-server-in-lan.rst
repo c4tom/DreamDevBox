@@ -3,15 +3,15 @@
 .. _shared_devilbox_server_in_lan:
 
 *****************************
-Shared Devilbox server in LAN
+Shared DreamDevBox server in LAN
 *****************************
 
-Devilbox as a shared **development**, **staging** or **CI** server is setup in a similar way as
+DreamDevBox as a shared **development**, **staging** or **CI** server is setup in a similar way as
 you would do locally. The only three important parts to take care of are:
 
 1. Project access to deploy/update code
 2. Handle DNS entries
-3. Share Devilbox CA
+3. Share DreamDevBox CA
 
 
 **Table of Contents**
@@ -25,7 +25,7 @@ Prerequisites
 This walk-through will use the following example values:
 
 +--------------------+------------------+-----------+---------------------------+
-| LAN / Network      | Devilbox server  | TLD_SUFFX | LOCAL_LISTEN_ADDR         |
+| LAN / Network      | DreamDevBox server  | TLD_SUFFX | LOCAL_LISTEN_ADDR         |
 +====================+==================+===========+===========================+
 | ``192.168.0.0/24`` | ``192.168.0.12`` | ``loc``   | ``192.168.0.12`` or empty |
 +--------------------+------------------+-----------+---------------------------+
@@ -52,7 +52,7 @@ is not encouraged and you should use git or any other version control system.
 
 Manually git pull/checkout
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
-When using git, users can directly ssh into the shared Devilbox server and ``git pull`` or
+When using git, users can directly ssh into the shared DreamDevBox server and ``git pull`` or
 ``git checkout <branch>`` on their projects.
 
 Automated git pull/checkout
@@ -82,7 +82,7 @@ use-case.
 +---------------------+------------------+--------------------------------------------------------------------------------------------------------+
 | Own DNS server      |                  | All network devices will have Auto DNS                                                                 |
 +---------------------+------------------+--------------------------------------------------------------------------------------------------------+
-| Devilbox DNS server | Manual           | Every network device must configure its DNS settings                                                   |
+| DreamDevBox DNS server | Manual           | Every network device must configure its DNS settings                                                   |
 |                     +------------------+--------------------------------------------------------------------------------------------------------+
 |                     | DHCP distributed | All network devices will have Auto DNS                                                                 |
 +---------------------+------------------+--------------------------------------------------------------------------------------------------------+
@@ -94,7 +94,7 @@ use-case.
    <br />
 
 .. important::
-   When using a shared Devilbox server and another Devilbox setup on your local computer,
+   When using a shared DreamDevBox server and another DreamDevBox setup on your local computer,
    ensure that you are using different :ref:`env_tld_suffix` in order to not confuse
    DNS records.
 
@@ -122,13 +122,13 @@ Handle DNS records in your own DNS server
 If your LAN already provides its own customizable DNS server, you can setup a new wildcard DNS
 zone for ``*.loc`` which points to ``192.168.0.12``.
 
-Run a second instance of the Devilbox DNS server
+Run a second instance of the DreamDevBox DNS server
 ------------------------------------------------
 
 If the above two methods for automated DNS records don't apply to you, you will need to run
-a second stand-alone Docker container of the Devilbox DNS server.
+a second stand-alone Docker container of the DreamDevBox DNS server.
 
-Run this container permantently on the shared Devilbox server with the following command:
+Run this container permantently on the shared DreamDevBox server with the following command:
 
 .. code-block:: bash
 
@@ -155,7 +155,7 @@ host operating system.
 
 .. important::
    Keep in mind that you have to do this for every machine within the network which wants to access
-   the shared Devilbox server.
+   the shared DreamDevBox server.
 
 .. seealso::
    * :ref:`howto_add_custom_dns_server_on_linux`
@@ -169,20 +169,20 @@ DHCP distributed
 *(This will allow all devices on the network to have Auto-DNS)*
 
 This is the automated and more pain-free approach, as all devices within the network will be able
-to access projects on the shared Devilbox server.
+to access projects on the shared DreamDevBox server.
 
 
 Self-managed DHCP server
 """"""""""""""""""""""""
 If you run your own DHCP server within a network, you probably know how to add other DNS servers.
-The only thing you should keep in mind is, that the Devilbox DNS server should be the first in
+The only thing you should keep in mind is, that the DreamDevBox DNS server should be the first in
 the list.
 
 DSL box / LAN or WIFI router
 """"""""""""""""""""""""""""
 Most `SOHO <https://en.wikipedia.org/wiki/Small_office/home_office>`_ networks probably use some
 vendor router which has a web interface. Generally speaking, you need to find the DNS/DHCP settings
-in its web interface and add the Devilbox DNS server as the first in the list (``192.168.0.12``).
+in its web interface and add the DreamDevBox DNS server as the first in the list (``192.168.0.12``).
 
 .. seealso::
    * `Change DNS server in Fritzbox <https://en.avm.de/service/fritzbox/fritzbox-7390/knowledge-base/publication/show/165_Configuring-different-DNS-servers-in-the-FRITZ-Box/>`_
@@ -193,9 +193,9 @@ Add hosts entries for every project
 
 *(Each device on the network needs to manually set the hosts entries for every single projcet)*
 
-As you also do for the Devilbox locally when not using Auto-DNS, you can do as well for remote
+As you also do for the DreamDevBox locally when not using Auto-DNS, you can do as well for remote
 computer. Just edit your local hosts file and add one DNS entry for every project on the shared
-Devilbox server.
+DreamDevBox server.
 
 Keep in mind that this time you will have to use ``192.168.0.12`` instead of ``127.0.0.1``.
 
@@ -205,10 +205,10 @@ Keep in mind that this time you will have to use ``192.168.0.12`` instead of ``1
    * :ref:`howto_add_project_hosts_entry_on_win`
 
 
-Share Devilbox CA
+Share DreamDevBox CA
 =================
 
-The last step to also have valid HTTPS connections on your shared Devilbox server is to copy
+The last step to also have valid HTTPS connections on your shared DreamDevBox server is to copy
 the CA onto your local machine and import it into your browser or system.
 
 .. seealso:: :ref:`setup_valid_https`

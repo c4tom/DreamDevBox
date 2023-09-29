@@ -432,7 +432,7 @@ fi
 #--------------------------------------------------------------------------------------------------
 # Ensure cfg/ and log/ directories exist
 #--------------------------------------------------------------------------------------------------
-print_head_1 "Checking required Devilbox core directories exist"
+print_head_1 "Checking required DreamDevBox core directories exist"
 
 # /cfg/php-fpm-VERSION
 DIR_MISSING=0
@@ -496,7 +496,7 @@ fi
 
 
 #--------------------------------------------------------------------------------------------------
-# Devilbox Directory permissions
+# DreamDevBox Directory permissions
 #--------------------------------------------------------------------------------------------------
 print_head_1 "Checking devilbox core directory permissions"
 
@@ -566,7 +566,7 @@ fi
 
 
 #--------------------------------------------------------------------------------------------------
-# Devilbox File permissions
+# DreamDevBox File permissions
 #--------------------------------------------------------------------------------------------------
 print_head_1 "Checking devilbox core file permissions"
 
@@ -866,7 +866,7 @@ print_head_1 "SUMMARY"
 
 if [ "${RET_CODE}" -gt "0" ]; then
 	log_err "Found ${RET_CODE} error(s)"
-	log_err "Devilbox might not work properly"
+	log_err "DreamDevBox might not work properly"
 	log_err "Fix the issues before submitting a bug report"
 	if [ "${CUSTOMIZATIONS}" -gt "0" ]; then
 		log_note "${CUSTOMIZATIONS} custom configurations applied. If you encounter issues, reset them first."

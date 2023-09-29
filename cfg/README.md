@@ -1,3 +1,3 @@
-# Devilbox user-defined settings
+# DreamDevBox user-defined settings
 
 Use this folders to add general custom configuration.

@@ -3,12 +3,12 @@
 .. include:: /_includes/all.rst
 
 **********************
-Devilbox documentation
+DreamDevBox documentation
 **********************
 
 |img_banner|
 
-The Devilbox is a modern dockerized LAMP and MEAN stack for local development on Linux, MacOS
+The DreamDevBox is a modern dockerized LAMP and MEAN stack for local development on Linux, MacOS
 and Windows.
 
 It allows you to have an unlimited number of projects ready without having to install
@@ -220,7 +220,7 @@ host is ready to be served with your custom domain.
    :caption: Support
    :maxdepth: 1
 
-   Devilbox Forums <https://devilbox.discourse.group/>
+   DreamDevBox Forums <https://devilbox.discourse.group/>
    support/troubleshooting
    support/faq
    support/howto

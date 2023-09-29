@@ -21,7 +21,7 @@ What is it?
 
 vhost-gen templates are yaml files which contain a general definition for a virtual host definition.
 Those templates contain placeholders in the form of ``__<NAME>__`` which will be replaced by
-settings applied to the Devilbox.
+settings applied to the DreamDevBox.
 
 
 .. seealso:: |ext_lnk_project_vhost_gen|
@@ -30,9 +30,9 @@ settings applied to the Devilbox.
 Template files
 --------------
 
-By default, vhost-gen templates are located within the Devilbox root directory under ``cfg/vhost-gen/``.
+By default, vhost-gen templates are located within the DreamDevBox root directory under ``cfg/vhost-gen/``.
 The templates file names are suffixed with ``-example-<type>`` and are absolutely identical to what is
-shipped inside each Devilbox web server Docker container.
+shipped inside each DreamDevBox web server Docker container.
 
 .. note::
    Also note that nginx stable and nginx mainline share the same template as their configuration
@@ -98,7 +98,7 @@ All vhost-gen templates consist of three sections:
 +----------------+----------------+
 
 .. |vhost| replace:: This is the part that is actually rendered into the vhost configuration. All other |br| sections will be inserted into this one.
-.. |vhost_type| replace:: The vhost type determines the type of vhost: reverse proxy or document root based |br| vhost. The Devilbox currently does not support reverse proxy vhost.
+.. |vhost_type| replace:: The vhost type determines the type of vhost: reverse proxy or document root based |br| vhost. The DreamDevBox currently does not support reverse proxy vhost.
 .. |features| replace:: The feature section contains many sub-sections that are replaced into the ``vhost`` |br| section before final rendering.
 
 

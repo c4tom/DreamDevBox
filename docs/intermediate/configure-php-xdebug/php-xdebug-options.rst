@@ -78,4 +78,4 @@ the setting has as default ''. If this setting is set, it always overrides the e
 remote_log
 ----------
 Keep the exact path of ``/var/log/php/xdebug.log``. You will then have the log file available
-in the Devilbox log directory of the PHP version for which you have configured Xdebug.
+in the DreamDevBox log directory of the PHP version for which you have configured Xdebug.

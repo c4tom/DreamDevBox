@@ -30,11 +30,11 @@ would add the following to the ``.env`` file:
 
    APPLICATION_ENV=production
 
-You need to restart the Devilbox for the changes to take effect.
+You need to restart the DreamDevBox for the changes to take effect.
 
 .. note::
    There is already a proposed section inside the ``.env`` file at the very bottom
-   to add you custom variables to differentiate them from the Devilbox required variables.
+   to add you custom variables to differentiate them from the DreamDevBox required variables.
 
 
 Use custom environment variables

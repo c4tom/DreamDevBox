@@ -11,7 +11,7 @@ This example will walk you through creating a Sphinx documentation, which is sta
 automatically on ``docker-compose up``, will be proxied to the web server and can be reached via valid HTTPS.
 
 .. note::
-   It is also possible to attach a leight-weight Python container to the Devilbox instead of running
+   It is also possible to attach a leight-weight Python container to the DreamDevBox instead of running
    this in the PHP container. See here for details: :ref:`reverse_proxy_with_custom_docker`
 
 
@@ -36,9 +36,9 @@ We also want Sphinx running and autostarted only in the PHP 7.2 container (local
 have all its required Python packages installed during ``docker-compose up``.
 
 .. note::
-   * Inside the Devilbox PHP container, projects are always in ``/shared/httpd/``.
+   * Inside the DreamDevBox PHP container, projects are always in ``/shared/httpd/``.
    * On your host operating system, projects are by default in ``./data/www/`` inside the
-     Devilbox git directory. This path can be changed via :ref:`env_httpd_datadir`.
+     DreamDevBox git directory. This path can be changed via :ref:`env_httpd_datadir`.
 
 Walk through
 ============
@@ -52,7 +52,7 @@ It will be ready in nine simple steps:
 5. Add reverse proxy vhost-gen config files
 6. Create autostart script
 7. Setup DNS record
-8. Restart the Devilbox
+8. Restart the DreamDevBox
 9. Visit http://my-sphinx.loc in your browser
 
 1. Enter the PHP container
@@ -61,7 +61,7 @@ It will be ready in nine simple steps:
 All work will be done inside the PHP container as it provides you with all required command line
 tools.
 
-Navigate to the Devilbox git directory and execute ``shell.sh`` (or ``shell.bat`` on Windows) to
+Navigate to the DreamDevBox git directory and execute ``shell.sh`` (or ``shell.bat`` on Windows) to
 enter the running PHP container.
 
 .. code-block:: bash
@@ -145,7 +145,7 @@ Create the first page ``page1``:
 4. Create *virtual* docroot directory
 -------------------------------------
 
-Every project for the Devilbox requires a ``htdocs`` directory present inside the project dir.
+Every project for the DreamDevBox requires a ``htdocs`` directory present inside the project dir.
 For a reverse proxy this is not of any use, but rather only for the Intranet vhost page to stop
 complaining about the missing ``htdocs`` directory. So that's why this is only a *virtual* directory
 which will not hold any data.
@@ -345,13 +345,13 @@ Find the lines with ``proxy_pass`` and change the port from ``8000`` to ``4000``
 Remember, we only wanted to have our Sphinx application run on the PHP 7.2 container, so we will create
 a autostart script only for that container.
 
-Navigate to ``cfg/php-startup-7.2/`` in the Devilbox git directory and create a new shell script
+Navigate to ``cfg/php-startup-7.2/`` in the DreamDevBox git directory and create a new shell script
 ending by ``.sh``
 
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox git directory
+   # Navigate to the DreamDevBox git directory
    host> cd /path/to/devilbox
 
    # Nagivate to startup directory for PHP 7.2 and create the script
@@ -399,20 +399,20 @@ host operating systems ``/etc/hosts`` file (or ``C:\Windows\System32\drivers\etc
    * :ref:`setup_auto_dns`
 
 
-8. Restart the Devilbox
+8. Restart the DreamDevBox
 -----------------------
 
-Now for those changes to take affect, you will have to restart the Devilbox.
+Now for those changes to take affect, you will have to restart the DreamDevBox.
 
 .. code-block:: bash
 
    host> cd /path/to/devilbox
 
-   # Stop the Devilbox
+   # Stop the DreamDevBox
    host> docker-compose down
    host> docker-compose rm -f
 
-   # Start the Devilbox
+   # Start the DreamDevBox
    host> docker-compose up -d php httpd bind
 
 

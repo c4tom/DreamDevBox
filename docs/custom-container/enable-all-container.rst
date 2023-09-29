@@ -7,8 +7,8 @@
 Enable all additional container
 *******************************
 
-Besides providing basic LAMP/MEAN stack container, which are well integrated into the Devilbox
-intranet, the Devilbox also ships additional pre-configured container that can easily be enabled.
+Besides providing basic LAMP/MEAN stack container, which are well integrated into the DreamDevBox
+intranet, the DreamDevBox also ships additional pre-configured container that can easily be enabled.
 
 .. seealso:: :ref:`docker_compose_override_yml_how_does_it_work`
 
@@ -29,7 +29,7 @@ The following table shows you the currently additional available container:
 Enable all additional container
 ===============================
 
-Copy ``docker-compose.override.yml-all`` into the root of the Devilbox git directory.
+Copy ``docker-compose.override.yml-all`` into the root of the DreamDevBox git directory.
 
 .. code-block:: bash
 

@@ -34,11 +34,11 @@ The following configuration will be used:
 +--------------+--------------------------+-------------+------------+-----------------------------------------------+
 
 .. note::
-   * Inside the Devilbox PHP container, projects are always in ``/shared/httpd/``.
+   * Inside the DreamDevBox PHP container, projects are always in ``/shared/httpd/``.
    * On your host operating system, projects are by default in ``./data/www/`` inside the
-     Devilbox git directory. This path can be changed via :ref:`env_httpd_datadir`.
+     DreamDevBox git directory. This path can be changed via :ref:`env_httpd_datadir`.
 
-The following Devilbox configuration is required:
+The following DreamDevBox configuration is required:
 
 +--------------+------------------------------------------------------------------------------------------------+
 | Service      | Implications                                                                                   |
@@ -71,7 +71,7 @@ It will be ready in ten simple steps:
 6. Add reverse proxy vhost-gen config files
 7. Copy Python Flask compose file
 8. Setup DNS record
-9. Restart the Devilbox
+9. Restart the DreamDevBox
 10. Visit http://my-flask.loc in your browser
 
 
@@ -107,7 +107,7 @@ Add the following variable to the very end of your ``.env`` file:
 All work will be done inside the PHP container as it provides you with all required command line
 tools.
 
-Navigate to the Devilbox git directory and execute ``shell.sh`` (or ``shell.bat`` on Windows) to
+Navigate to the DreamDevBox git directory and execute ``shell.sh`` (or ``shell.bat`` on Windows) to
 enter the running PHP container.
 
 .. code-block:: bash
@@ -384,7 +384,7 @@ Find the lines with ``proxy_pass`` and change the port from ``8000`` to ``3000``
 7. Copy Python Flask compose file
 ---------------------------------
 
-Python Flask comes with its own Docker container and can be added to the Devilbox stack via
+Python Flask comes with its own Docker container and can be added to the DreamDevBox stack via
 the ``docker-compose.override.yml`` file. A fully functional template already exists in the
 ``compose/`` directory. All you will have to do is copy it over.
 
@@ -417,20 +417,20 @@ host operating systems ``/etc/hosts`` file (or ``C:\Windows\System32\drivers\etc
    * :ref:`setup_auto_dns`
 
 
-9. Restart the Devilbox
+9. Restart the DreamDevBox
 -----------------------
 
-Now for those changes to take affect, you will have to restart the Devilbox.
+Now for those changes to take affect, you will have to restart the DreamDevBox.
 
 .. code-block:: bash
 
    host> cd /path/to/devilbox
 
-   # Stop the Devilbox
+   # Stop the DreamDevBox
    host> docker-compose down
    host> docker-compose rm -f
 
-   # Start the Devilbox
+   # Start the DreamDevBox
    host> docker-compose up -d php httpd bind flask1
 
 

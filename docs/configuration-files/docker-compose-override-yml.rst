@@ -53,7 +53,7 @@ Copy example file
 Create new file from scratch
 ----------------------------
 
-1. Create an empty file within the Devilbox git directory named ``docker-compose.override.yml``
+1. Create an empty file within the DreamDevBox git directory named ``docker-compose.override.yml``
 2. Retrieve the currently used version from the existing ``docker-compose.yml`` file
 3. Copy this version line to your newly created ``docker-compose.override.yml`` at the very top
 

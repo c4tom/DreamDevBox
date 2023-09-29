@@ -69,7 +69,7 @@ Copy it (do not simply rename it) to a different file ending by ``.conf`` and st
 
 **How to apply the settings**
 
-In order for the changes to be applied, you will have to restart the Devilbox.
+In order for the changes to be applied, you will have to restart the DreamDevBox.
 
 
 .. seealso::
@@ -89,7 +89,7 @@ of PHP-FPM 7.1 master process to 100.
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd path/to/devilbox
 
    # Navigate to PHP 7.1 config directory
@@ -108,7 +108,7 @@ Now add the following content to the file:
 
 .. important:: Note the ``[global]`` section.
 
-In order to apply the changes you need to restart the Devilbox.
+In order to apply the changes you need to restart the DreamDevBox.
 
 
 Change child process on pool ``www`` for PHP 5.6
@@ -125,7 +125,7 @@ of PHP-FPM 5.6 on pool ``www``.
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd path/to/devilbox
 
    # Navigate to PHP 5.6 config directory
@@ -149,7 +149,7 @@ Now add the following content to the file:
 
 .. important:: Note the ``[www]`` section.
 
-In order to apply the changes you need to restart the Devilbox.
+In order to apply the changes you need to restart the DreamDevBox.
 
 
 Set non-overwritable php.ini values for PHP 7.0
@@ -167,7 +167,7 @@ The following example will disable built-in PHP functions globally and non-overw
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd path/to/devilbox
 
    # Navigate to PHP 7.0 config directory
@@ -194,7 +194,7 @@ Now add the following content to the file:
    Be aware that none of your projects can use the above disabled functions anymore.
    They will simply not exist for PHP 7.0 after that configuration took affect.
 
-In order to apply the changes you need to restart the Devilbox.
+In order to apply the changes you need to restart the DreamDevBox.
 
 
 

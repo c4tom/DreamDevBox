@@ -7,7 +7,7 @@
 Enable and configure Ngrok
 **************************
 
-This section will guide you through getting Ngrok integrated into the Devilbox.
+This section will guide you through getting Ngrok integrated into the DreamDevBox.
 
 .. seealso::
    * |ext_lnk_ngrok_github|
@@ -34,7 +34,7 @@ Ngrok settings
 --------------
 
 In case of Ngrok, the file is ``compose/docker-compose.override.yml-ngrok``. This file
-must be copied into the root of the Devilbox git directory.
+must be copied into the root of the DreamDevBox git directory.
 
 +-----------------------+-----------------------------------------------------------------------------------------------------+
 | What                  | How and where                                                                                       |
@@ -107,7 +107,7 @@ Instructions
 1. Copy docker-compose.override.yml
 -----------------------------------
 
-Copy the Ngrok Docker Compose overwrite file into the root of the Devilbox git directory.
+Copy the Ngrok Docker Compose overwrite file into the root of the DreamDevBox git directory.
 (It must be at the same level as the default ``docker-compose.yml`` file).
 
 .. code-block:: bash
@@ -124,7 +124,7 @@ Copy the Ngrok Docker Compose overwrite file into the root of the Devilbox git d
 --------------------------------------
 
 By Default Ngrok will forward the ``httpd`` domain, which is represents the default virtual host
-(the Devilbox intranet) to your web server (also named ``httpd``) and makes the admin UI available
+(the DreamDevBox intranet) to your web server (also named ``httpd``) and makes the admin UI available
 on port ``4040`` on your local machine.
 
 You can of course change the domain as well as where to forward it to (e.g.: to Varnish or HAProxy
@@ -145,10 +145,10 @@ Additionally you can also specify a license token in order to allow for more tun
 .. seealso:: :ref:`env_file`
 
 
-3. Start the Devilbox
+3. Start the DreamDevBox
 ---------------------
 
-The final step is to start the Devilbox with Ngrok.
+The final step is to start the DreamDevBox with Ngrok.
 
 Let's assume you want to start ``php``, ``httpd``, ``bind`` and ``ngrok``.
 
@@ -162,7 +162,7 @@ Let's assume you want to start ``php``, ``httpd``, ``bind`` and ``ngrok``.
 4. Start using it
 -----------------
 
-* Once the Devilbox is running, visit http://localhost:4040 in your browser.
+* Once the DreamDevBox is running, visit http://localhost:4040 in your browser.
 * Get URL for public available project
 
 
@@ -170,7 +170,7 @@ TL;DR
 =====
 
 For the lazy readers, here are all commands required to get you started.
-Simply copy and paste the following block into your terminal from the root of your Devilbox git
+Simply copy and paste the following block into your terminal from the root of your DreamDevBox git
 directory:
 
 .. code-block:: bash

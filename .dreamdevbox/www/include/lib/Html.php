@@ -5,7 +5,7 @@ class Html
 {
 
 	/**
-	 * The Devilbox Navbar menu
+	 * The DreamDevBox Navbar menu
 	 * @var array
 	 */
 	private $_menu = array(

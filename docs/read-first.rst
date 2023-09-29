@@ -49,6 +49,6 @@ Where to start?
 ===============
 
 On the left menu you will find a ``GETTING STARTED`` section, **read through all of them** to get
-a basic theoretical and practical understanding about the Devilbox.
+a basic theoretical and practical understanding about the DreamDevBox.
 
 There is also a :ref:`blogs_videos_and_use_cases` section that might be useful as an additional crash-course.

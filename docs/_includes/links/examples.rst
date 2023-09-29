@@ -25,7 +25,7 @@
 .. |ext_lnk_example_contao_devilbox_documentation| raw:: html
 
    <a target="_blank" href="https://docs.contao.org/manual/en/guides/local-installation/devilbox/">
-     Official Contao Devilbox Documentation <img src="https://raw.githubusercontent.com/cytopia/icons/master/11x11/ext-link.png" />
+     Official Contao DreamDevBox Documentation <img src="https://raw.githubusercontent.com/cytopia/icons/master/11x11/ext-link.png" />
    </a>
 
 .. |ext_lnk_example_craftcms_documentation| raw:: html

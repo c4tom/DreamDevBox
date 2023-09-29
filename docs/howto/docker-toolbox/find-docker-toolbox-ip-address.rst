@@ -38,7 +38,7 @@ machine.
 What to do with it
 ==================
 
-The Docker Toolbox IP address is the address where the Devilbox intranet as well as all of its
+The Docker Toolbox IP address is the address where the DreamDevBox intranet as well as all of its
 projects will be available at.
 
 * Use it to access the intranet via your browser (``http://192.168.99.100`` in this example)

@@ -7,7 +7,7 @@
 Setup Laravel
 *************
 
-This example will use ``laravel`` to install Laravel from within the Devilbox PHP container.
+This example will use ``laravel`` to install Laravel from within the DreamDevBox PHP container.
 
 After completing the below listed steps, you will have a working Laravel setup ready to be
 served via http and https.
@@ -32,9 +32,9 @@ The following configuration will be used:
 +--------------+--------------------------+-------------+------------+---------------------------------------------------+
 
 .. note::
-   * Inside the Devilbox PHP container, projects are always in ``/shared/httpd/``.
+   * Inside the DreamDevBox PHP container, projects are always in ``/shared/httpd/``.
    * On your host operating system, projects are by default in ``./data/www/`` inside the
-     Devilbox git directory. This path can be changed via :ref:`env_httpd_datadir`.
+     DreamDevBox git directory. This path can be changed via :ref:`env_httpd_datadir`.
 
 
 Walk through
@@ -56,7 +56,7 @@ It will be ready in six simple steps:
 All work will be done inside the PHP container as it provides you with all required command line
 tools.
 
-Navigate to the Devilbox git directory and execute ``shell.sh`` (or ``shell.bat`` on Windows) to
+Navigate to the DreamDevBox git directory and execute ``shell.sh`` (or ``shell.bat`` on Windows) to
 enter the running PHP container.
 
 .. code-block:: bash
@@ -156,7 +156,7 @@ host operating systems ``/etc/hosts`` file (or ``C:\Windows\System32\drivers\etc
    127.0.0.1 my-laravel.loc
 
 This will ensure that your host operating system's browser will direct any calls on
-``http://my-laravel.loc`` or ``https://my-laravel.loc`` to the Devilbox which is listening on
+``http://my-laravel.loc`` or ``https://my-laravel.loc`` to the DreamDevBox which is listening on
 ``127.0.0.1``.
 
 .. seealso::

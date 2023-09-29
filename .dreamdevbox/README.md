@@ -1,4 +1,4 @@
-# Devilbox base configuration
+# DreamDevBox base configuration
 
 Those folders include the devilbox base configuration.
 

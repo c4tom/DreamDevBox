@@ -75,7 +75,7 @@ Via Launcher
    The Docker Quick Start Terminal is configured to use Docker with the "default" VM.
 
 
-You can now use this terminal window to apply all your Docker and Devilbox related commands.
+You can now use this terminal window to apply all your Docker and DreamDevBox related commands.
 
 
 Different terminal
@@ -90,7 +90,7 @@ If you rather want to use a different terminal, you can accomplish the same beha
 
    $(docker-machine env default)
 
-You can now use this terminal window to apply all your Docker and Devilbox related commands.
+You can now use this terminal window to apply all your Docker and DreamDevBox related commands.
 
 
 .. seealso:: |ext_lnk_install_docker_toolbox_mac|

@@ -32,7 +32,7 @@ Yes, read :ref:`howto_docker_toolbox_and_the_devilbox` to find out more.
 Why are mounted MySQL data directories separated by version?
 ------------------------------------------------------------
 
-This is just a pre-caution. Imagine they would link to the same datadir.  You start the Devilbox
+This is just a pre-caution. Imagine they would link to the same datadir.  You start the DreamDevBox
 with mysql 5.5, create a database and add some data.  Now you decide to switch to mysql 5.7 and
 restart the devilbox. The newer mysql version will probably upgrade the data leaving it unable to
 start with older mysql versions.
@@ -77,7 +77,7 @@ Yes. ``http`` and ``php`` will automatically always be started (due to dependenc
 What PHP Modules are available?
 -------------------------------
 
-The Devilbox is a development stack, so it is made sure that a lot of PHP modules are available
+The DreamDevBox is a development stack, so it is made sure that a lot of PHP modules are available
 out of the box in order to work with many different frameworks.
 
 Available PHP modules can be seen at the PHP Docker image repository.
@@ -133,7 +133,7 @@ you want. See :ref:`env_tld_suffix`.
 Can I just start PHP and MySQL instead of all container?
 --------------------------------------------------------
 
-Yes, every Docker container is optional. The Devilbox allows for selective startup. See
+Yes, every Docker container is optional. The DreamDevBox allows for selective startup. See
 :ref:`start_the_devilbox`.
 
 
@@ -141,7 +141,7 @@ Do I always have to edit ``/etc/hosts`` for new projects?
 ---------------------------------------------------------
 
 You need a valid DNS entry for every project that points to the Httpd server. As those records
-don't exists by default, you will have to create them. However, the Devilbox has a bundled DNS
+don't exists by default, you will have to create them. However, the DreamDevBox has a bundled DNS
 server that can automate this for you. The only thing you have to do for that to work is to add
 this DNS server's IP address to your ``/etc/resolv.conf``.
 See :ref:`setup_auto_dns` for detailed instructions.

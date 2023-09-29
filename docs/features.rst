@@ -32,7 +32,7 @@ instantly without having to restart any services.
 Automated SSL certificates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 Whenever a new project is created, SSL certificates are generated as well and assigned to that
-virtual host. Those certificates are signed by the Devilbox certificate authority which can be
+virtual host. Those certificates are signed by the DreamDevBox certificate authority which can be
 imported into your local browser to make all certificates valid and trusted.
 
 Automated DNS records
@@ -49,7 +49,7 @@ can be viewed within the bundled intranet.
 Log files
 ^^^^^^^^^
 Log files for every service are available. Either in the form of Docker logs or as actual log files
-mounted into the Devilbox git directory. The web and PHP server offer log files for each project
+mounted into the DreamDevBox git directory. The web and PHP server offer log files for each project
 separetely.
 
 Virtual host domains
@@ -65,7 +65,7 @@ Selective start
 ^^^^^^^^^^^^^^^
 Run only the Docker container you actually need, but be able to reload others on the fly once
 they are needed. So you could first startup PHP and MySQL only and in case you would require
-a Redis server you can attach it later to the Devilbox stack without having to restart anything.
+a Redis server you can attach it later to the DreamDevBox stack without having to restart anything.
 
 Version choice
 ^^^^^^^^^^^^^^
@@ -94,7 +94,7 @@ each Apache..., each Nginx... you get the idea.
 
 Project specific configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Even down to projects, the Devilbox allows for full customization when it comes to virtual host
+Even down to projects, the DreamDevBox allows for full customization when it comes to virtual host
 settings via |ext_lnk_project_vhost_gen|.
 
 
@@ -118,18 +118,18 @@ Dockerized
 
 Portable
 ^^^^^^^^
-Docker container run on Linux, Windows and MacOS, so does the Devilbox. This ensures that no
+Docker container run on Linux, Windows and MacOS, so does the DreamDevBox. This ensures that no
 matter what operating system you are currently on, you can always run your development stack.
 
 Built nightly
 ^^^^^^^^^^^^^
-Docker images (at least official Devilbox Docker images) are built nightly and pushed to
+Docker images (at least official DreamDevBox Docker images) are built nightly and pushed to
 Dockerhub to ensure to always have the latest versions installed and be up-to-date with any
 security patches that are available.
 
 Ships popular development tools
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The Devilbox is also designed to be a development environment offering many tools used for
+The DreamDevBox is also designed to be a development environment offering many tools used for
 everyday web development, no matter if frontend or backend.
 
 Work inside the container
@@ -148,11 +148,11 @@ Others
 
 Work offline
 ^^^^^^^^^^^^
-The Devilbox only requires internet initially to pull the required Docker images, once this is done
+The DreamDevBox only requires internet initially to pull the required Docker images, once this is done
 you can work completely offline. No need for an active internet connection.
 
 Hacking
 ^^^^^^^
-Last but not least, the Devilbox is bascially just a ``docker-compose.yml`` file and you can
-easily add any Docker images you are currently missing in the Devilbox setup.
+Last but not least, the DreamDevBox is bascially just a ``docker-compose.yml`` file and you can
+easily add any Docker images you are currently missing in the DreamDevBox setup.
 

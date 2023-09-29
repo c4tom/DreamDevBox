@@ -9,7 +9,7 @@ Move projects to a different directory
 **************************************
 
 No matter if your projects are already in a different location or if you want to move them out of
-the Devilbox git directory now, you can do that in a few simple steps.
+the DreamDevBox git directory now, you can do that in a few simple steps.
 
 **Table of Contents**
 
@@ -19,14 +19,14 @@ Projects in an absolute path
 ============================
 
 So let’s assume all of your projects are already in place under ``/home/user/workspace/web/``.
-Now you decide to use the Devilbox, but still want to keep your projects where they are at the
+Now you decide to use the DreamDevBox, but still want to keep your projects where they are at the
 moment.
 
 All you have to do is to adjust the path of :ref:`env_httpd_datadir` in the ``.env`` file.
 
 .. code-block:: bash
 
-   # Navigate to Devilbox git directory
+   # Navigate to DreamDevBox git directory
    host> cd path/to/devilbox
 
    # Open the .env file with your favourite editor
@@ -40,11 +40,11 @@ Now Adjust the value of :ref:`env_httpd_datadir`
 
    HOST_PATH_HTTPD_DATADIR=/home/user/workspace/web
 
-That's it, whenever you start up the Devilbox, ``/home/user/workspace/web/`` will be mounted into
+That's it, whenever you start up the DreamDevBox, ``/home/user/workspace/web/`` will be mounted into
 the PHP and the web server container into ``/shared/httpd/``.
 
 
-Projects adjacent to Devilbox directory
+Projects adjacent to DreamDevBox directory
 =======================================
 
 Consider the following directory setup:
@@ -64,14 +64,14 @@ Consider the following directory setup:
         |
         + htdocs/
 
-Independently of where the Devilbox directory is located, you can achieve this structure via
+Independently of where the DreamDevBox directory is located, you can achieve this structure via
 relative path settings.
 
 All you have to to is to adjust the path of :ref:`env_httpd_datadir` in the ``.env`` file.
 
 .. code-block:: bash
 
-   # Navigate to Devilbox git directory
+   # Navigate to DreamDevBox git directory
    host> cd path/to/devilbox
 
    # Open the .env file with your favourite editor
@@ -85,5 +85,5 @@ Now Adjust the value of :ref:`env_httpd_datadir`
 
    HOST_PATH_HTTPD_DATADIR=../projects
 
-That's it, whenever you start up the Devilbox, your project directory will be mounted into
+That's it, whenever you start up the DreamDevBox, your project directory will be mounted into
 the PHP and the web server container into ``/shared/httpd/``.

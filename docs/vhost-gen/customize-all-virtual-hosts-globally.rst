@@ -57,22 +57,22 @@ filename.
 Apache 2.2
 ----------
 
-1. Navigate to ``cfg/vhost-gen/`` inside the Devilbox directory
-2. Copy ``apache22.yml-example-vhost`` to ``apache22.yml`` and restart the Devilbox
-3. Whenever you adjust ``apache22.yml``, you need to restart the Devilbox
+1. Navigate to ``cfg/vhost-gen/`` inside the DreamDevBox directory
+2. Copy ``apache22.yml-example-vhost`` to ``apache22.yml`` and restart the DreamDevBox
+3. Whenever you adjust ``apache22.yml``, you need to restart the DreamDevBox
 
 
 Apache 2.4
 ----------
 
-1. Navigate to ``cfg/vhost-gen/`` inside the Devilbox directory
-2. Copy ``apache24.yml-example-vhost`` to ``apache24.yml`` and restart the Devilbox
-3. Whenever you adjust ``apache24.yml``, you need to restart the Devilbox
+1. Navigate to ``cfg/vhost-gen/`` inside the DreamDevBox directory
+2. Copy ``apache24.yml-example-vhost`` to ``apache24.yml`` and restart the DreamDevBox
+3. Whenever you adjust ``apache24.yml``, you need to restart the DreamDevBox
 
 
 Nginx stable and Nginx mainline
 -------------------------------
 
-1. Navigate to ``cfg/vhost-gen/`` inside the Devilbox directory
-2. Copy ``nginx.yml-example-vhost`` to ``nginx.yml`` and restart the Devilbox
-3. Whenever you adjust ``nginx.yml``, you need to restart the Devilbox
+1. Navigate to ``cfg/vhost-gen/`` inside the DreamDevBox directory
+2. Copy ``nginx.yml-example-vhost`` to ``nginx.yml`` and restart the DreamDevBox
+3. Whenever you adjust ``nginx.yml``, you need to restart the DreamDevBox

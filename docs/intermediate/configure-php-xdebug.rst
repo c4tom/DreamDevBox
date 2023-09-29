@@ -6,7 +6,7 @@
 Configure PHP Xdebug
 ********************
 
-This section explains in depth how to enable and use PHP Xdebug with the Devilbox.
+This section explains in depth how to enable and use PHP Xdebug with the DreamDevBox.
 
 
 **Table of Contents**

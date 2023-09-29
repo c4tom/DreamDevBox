@@ -6,7 +6,7 @@
 .. _howto_docker_toolbox_and_the_devilbox:
 
 *******************************
-Docker Toolbox and the Devilbox
+Docker Toolbox and the DreamDevBox
 *******************************
 
 Docker Toolbox is a legacy solution to bring Docker to systems which don’t natively support Docker.
@@ -16,7 +16,7 @@ Docker run inside this machine.
 You don’t have to take care about setting up the virtual machine, this is done automatically with
 the provided setup file (Windows and MacOS).
 
-However, there are a few stumbling blocks you need to pay attention to in order to use the Devilbox
+However, there are a few stumbling blocks you need to pay attention to in order to use the DreamDevBox
 at its full potential.
 
 .. seealso::
@@ -33,7 +33,7 @@ at its full potential.
 .. contents:: :local:
 
 
-Devilbox listening address configuration
+DreamDevBox listening address configuration
 ========================================
 
 First thing you need to make sure is that the ``LOCAL_LISTEN_ADDR`` variable from your ``.env``
@@ -56,7 +56,7 @@ You can verifiy that the variable is actually empty by checking your ``.env`` fi
 Find the Docker Toolbox IP address
 ==================================
 
-The Devilbox intranet will not be available under ``127.0.0.1`` or ``localhost`` as it does not run
+The DreamDevBox intranet will not be available under ``127.0.0.1`` or ``localhost`` as it does not run
 on your host operating system, but on a virtualized Linux machine which has a different IP address.
 
 To find out the IP address on which Docker Toolbox is running you have to use the
@@ -70,7 +70,7 @@ To find out the IP address on which Docker Toolbox is running you have to use th
 The above example outputs ``192.168.99.100``, but this might be different on your machine.
 
 In this example I would then paste ``http://192.168.99.100`` in the web browsers address bar to
-reach the Devilbox intranet.
+reach the DreamDevBox intranet.
 
 .. seealso::
 

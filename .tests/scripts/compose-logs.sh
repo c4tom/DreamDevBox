@@ -39,7 +39,7 @@ run "docker-compose ps || true" "1" "${DVLBOX_PATH}"
 
 echo
 echo "# --------------------------------------------------------------------------------"
-echo "# Devilbox logs"
+echo "# DreamDevBox logs"
 echo "# --------------------------------------------------------------------------------"
 
 # shellcheck disable=SC2044

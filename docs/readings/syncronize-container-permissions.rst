@@ -69,7 +69,7 @@ under the same uid/gid as your local user that mouns the volumes and also wants 
 files locally. However, you never know during Image build time what user id this would be.
 Therefore it must be something that can be changed during startup of the container.
 
-This is achieved in the Devilbox's containers by two environment variables that can be provided
+This is achieved in the DreamDevBox's containers by two environment variables that can be provided
 during startup in order to change the uid/gid of the PHP-FPM user prior starting up PHP-FPM process.
 
 .. code-block:: bash

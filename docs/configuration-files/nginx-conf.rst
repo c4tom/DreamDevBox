@@ -14,7 +14,7 @@ supplying custom configurations.
 
 .. important::
    You could actually also create virtual hosts here, but it is recommended to use the
-   Devilbox Auto-vhost generation feature. If you want to custimize your current virtual hosts
+   DreamDevBox Auto-vhost generation feature. If you want to custimize your current virtual hosts
    have a look at:
 
    * vhost-gen: :ref:`vhost_gen_virtual_host_templates`
@@ -48,7 +48,7 @@ Each of the Nginx configuration directories already contain an example file:
 ``devilbox-custom.conf-example``, that can simply be renamed to ``devilbox-custom.conf``.
 This file holds some example values that can be adjusted or commented out.
 
-In order for the changes to be applied, you will have to restart the Devilbox.
+In order for the changes to be applied, you will have to restart the DreamDevBox.
 
 
 Examples
@@ -66,7 +66,7 @@ values of Nginx stable.
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd path/to/devilbox
 
    # Navigate to Nginx stable config directory
@@ -84,7 +84,7 @@ Now add the following content to the file:
    keepalive_timeout 10s;
    keepalive_requests 100;
 
-In order to apply the changes you need to restart the Devilbox.
+In order to apply the changes you need to restart the DreamDevBox.
 
 .. note::
    The above is just an example demonstration, you probably need other values for your setup.
@@ -104,7 +104,7 @@ and
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd path/to/devilbox
 
    # Navigate to Nginx mainline config directory
@@ -122,7 +122,7 @@ Now add the following content to the file:
    client_header_timeout 60s;
    send_timeout 60s;
 
-In order to apply the changes you need to restart the Devilbox.
+In order to apply the changes you need to restart the DreamDevBox.
 
 .. note::
    The above is just an example demonstration, you probably need other values for your setup.

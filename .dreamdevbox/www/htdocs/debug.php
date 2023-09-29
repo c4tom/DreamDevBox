@@ -11,7 +11,7 @@
 
 		<div class="container">
 
-			<h1>Devilbox Debug</h1>
+			<h1>DreamDevBox Debug</h1>
 			<br/>
 			<br/>
 

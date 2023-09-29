@@ -6,7 +6,7 @@
 Email catch-all
 ***************
 
-Devilbox Intranet
+DreamDevBox Intranet
 =================
 
 All your projects can send emails to whatever recipient. You do not have to worry that they will
@@ -19,13 +19,13 @@ There you can also test email sending and verify that they really stay locally.
 .. include:: /_includes/figures/devilbox/devilbox-intranet-emails.rst
 
 In the above image from the intranet you can see that all emails sent to whatever recipient
-have been caught by the Devilbox and are available to be read.
+have been caught by the DreamDevBox and are available to be read.
 
 
 MailHog
 =======
 
-Instead of using the very basic Devilbox intranet UI for emails, you can also enable MailHog
+Instead of using the very basic DreamDevBox intranet UI for emails, you can also enable MailHog
 and use this to view sent email.s
 
 .. seealso:: :ref:`custom_container_enable_mailhog`

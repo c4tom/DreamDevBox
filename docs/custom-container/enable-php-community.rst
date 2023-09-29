@@ -7,7 +7,7 @@
 Enable and configure PHP Community
 **********************************
 
-This section will guide you through getting PHP community images integrated into the Devilbox.
+This section will guide you through getting PHP community images integrated into the DreamDevBox.
 
 .. seealso::
    * |ext_lnk_php_community_github|
@@ -34,7 +34,7 @@ PHP-FPM Community settings
 --------------------------
 
 In case of PHP-FPM Community, the file is ``compose/docker-compose.override.yml-php-community``. This file
-must be copied into the root of the Devilbox git directory.
+must be copied into the root of the DreamDevBox git directory.
 
 +-----------------------+-----------------------------------------------------------------------------------------------------------+
 | What                  | How and where                                                                                             |
@@ -74,7 +74,7 @@ Instructions
 1. Copy docker-compose.override.yml
 -----------------------------------
 
-Copy the PHP-FPM Community Docker Compose overwrite file into the root of the Devilbox git directory.
+Copy the PHP-FPM Community Docker Compose overwrite file into the root of the DreamDevBox git directory.
 (It must be at the same level as the default ``docker-compose.yml`` file).
 
 .. code-block:: bash
@@ -90,7 +90,7 @@ Copy the PHP-FPM Community Docker Compose overwrite file into the root of the De
 2. Adjust ``env`` settings
 --------------------------
 
-By default PHP-FPM Community is using the Devilbox reference flavour ``devilbox``.
+By default PHP-FPM Community is using the DreamDevBox reference flavour ``devilbox``.
 You can change this flavour via the ``.env`` variable ``PHP_COMMUNITY_FLAVOUR``.
 
 .. code-block:: bash
@@ -102,10 +102,10 @@ You can change this flavour via the ``.env`` variable ``PHP_COMMUNITY_FLAVOUR``.
 .. seealso:: :ref:`env_file`
 
 
-3. Start the Devilbox
+3. Start the DreamDevBox
 ---------------------
 
-The final step is to start the Devilbox with the newly added PHP-FPM Community images.
+The final step is to start the DreamDevBox with the newly added PHP-FPM Community images.
 
 Let's assume you want to start ``php``, ``httpd``, and ``bind``.
 
@@ -120,7 +120,7 @@ TL;DR
 =====
 
 For the lazy readers, here are all commands required to get you started.
-Simply copy and paste the following block into your terminal from the root of your Devilbox git
+Simply copy and paste the following block into your terminal from the root of your DreamDevBox git
 directory:
 
 .. code-block:: bash

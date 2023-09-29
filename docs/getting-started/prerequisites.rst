@@ -20,7 +20,7 @@ Prerequisites
 Supported host OS
 =================
 
-The Devilbox runs on all major operating systems which provide ``Docker`` and ``Docker Compose``.
+The DreamDevBox runs on all major operating systems which provide ``Docker`` and ``Docker Compose``.
 See the matrix below for supported versions:
 
 +----------------+---------------------+--------------------------------+-------------+
@@ -49,7 +49,7 @@ See the matrix below for supported versions:
 Required software
 =================
 
-The only requirements for the Devilbox is to have ``Docker`` and ``Docker Compose`` installed,
+The only requirements for the DreamDevBox is to have ``Docker`` and ``Docker Compose`` installed,
 everything else is bundled and provided withing the Docker container.
 The minimum required versions are listed below:
 
@@ -107,7 +107,7 @@ Docker for Mac
 ^^^^^^^^^^^^^^
 
 Docker for Mac is the native and recommended version to choose when using the
-Devilbox.
+DreamDevBox.
 
 Docker for Mac requires super user privileges which is granted to a system
 wide group called ``docker``. After having installed Docker on your system,
@@ -152,7 +152,7 @@ Docker for Windows
 ^^^^^^^^^^^^^^^^^^
 
 Docker for Windows is the native and recommended version to choose when using
-the Devilbox. This however is only available since **Windows 10**.
+the DreamDevBox. This however is only available since **Windows 10**.
 
 Docker for Windows requires administrative privileges which is granted to a system
 wide group called ``docker-users``. After having installed Docker on your system,
@@ -219,7 +219,7 @@ It could also help to do a full system restart after the installation has been f
 Optional previous knowledge
 ===========================
 
-In order to easily work with the Devilbox you should already be familiar with the following:
+In order to easily work with the DreamDevBox you should already be familiar with the following:
 
 * Navigate on the command line
 * Docker Compose commands (|ext_lnk_docker_compose_cmd_up|, |ext_lnk_docker_compose_cmd_stop|,

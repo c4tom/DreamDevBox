@@ -28,7 +28,7 @@ Conferences
 DrupalCamp Ghent 2018
 ---------------------
 
-Simple local development with Devilbox:
+Simple local development with DreamDevBox:
 
 * |ext_lnk_blog_drupalcamp_ghent_2018_presentation|
 * |ext_lnk_blog_drupalcamp_ghent_2018_slides|
@@ -37,7 +37,7 @@ Simple local development with Devilbox:
 Blog posts
 ==========
 
-The following shows a list of blogs that give a nice and objective introduction to the Devilbox.
+The following shows a list of blogs that give a nice and objective introduction to the DreamDevBox.
 
 +---------------------------------+----------+
 | Title                           | Language |
@@ -55,11 +55,11 @@ Joomla's Continuous Integration
 --------------------------------
 
 Joomla has created a |ext_lnk_blog_joomla_pr_testing_platform| as their
-|ext_lnk_blog_joomla_gsoc2017| project using a modified version of the Devilbox.
+|ext_lnk_blog_joomla_gsoc2017| project using a modified version of the DreamDevBox.
 
 
 Add your story
 ==============
 
-Have you written a valuable blog about the Devilbox or do you have a fancy use-case?
+Have you written a valuable blog about the DreamDevBox or do you have a fancy use-case?
 If so, submit a pull request and add it.

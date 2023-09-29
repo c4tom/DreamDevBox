@@ -52,6 +52,6 @@ Docker Toolbox
    The bash environment is required by Docker.
 
 
-You can now use this terminal window to apply all your Docker and Devilbox related commands.
+You can now use this terminal window to apply all your Docker and DreamDevBox related commands.
 
 .. seealso:: |ext_lnk_install_docker_toolbox_win|

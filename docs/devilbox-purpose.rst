@@ -1,10 +1,10 @@
 .. include:: /_includes/snippets/__ANNOUNCEMENTS__.rst
 
 ****************
-Devilbox purpose
+DreamDevBox purpose
 ****************
 
-The Devilbox aims to provide you a universal zero-configuration LAMP and MEAN development
+The DreamDevBox aims to provide you a universal zero-configuration LAMP and MEAN development
 environment for any purpose which is setup in less than 5 minutes.
 
 Its main intention is to support an unlimited number of projects for any framework or cms
@@ -55,14 +55,14 @@ This is due to the fact that the process of PHP or the web server usually run wi
 from inside the container, it will happen with the ``uid`` of the process running inside the
 container, thus making it incompatible with your local user.
 
-This problem has been finally addressed with the Devilbox and you can read up on it in much more
+This problem has been finally addressed with the DreamDevBox and you can read up on it in much more
 detail here: :ref:`syncronize_container_permissions`.
 
 
 Today's state
 =============
 
-Honestly speaking, in the time I spent to build the Devilbox, I could have configured every
+Honestly speaking, in the time I spent to build the DreamDevBox, I could have configured every
 possible VM by now, but I would have missed the fun. I learned a lot and in the end it made my
 work much more pleasent.
 
@@ -70,8 +70,8 @@ work much more pleasent.
 Tomorrow's state
 ================
 
-I use the Devilbox on a daily base and together with other developers we find more and more edge
-cases that are being resolved. As technology also advanced quickly, the Devilbox needs to keep up
+I use the DreamDevBox on a daily base and together with other developers we find more and more edge
+cases that are being resolved. As technology also advanced quickly, the DreamDevBox needs to keep up
 with as well. Next major milestones will be to modularize it for easier customization of currently
 not available Container, hardening for production usage and workflows for deployments in a CI/CD
 landscape.

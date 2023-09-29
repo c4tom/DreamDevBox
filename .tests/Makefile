@@ -59,7 +59,7 @@ pull: ../.env
 
 
 ###
-### Startup Devilbox
+### Startup DreamDevBox
 ###
 start: ../.env
 	@$(MAKE) --no-print-directory configure KEY=HOST_PATH_HTTPD_DATADIR VAL=.tests/www
@@ -70,7 +70,7 @@ start: ../.env
 
 
 ###
-### Stop Devilbox
+### Stop DreamDevBox
 ###
 stop:
 	@$(PWD)/scripts/compose-stop.sh

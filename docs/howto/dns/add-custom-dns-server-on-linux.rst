@@ -22,7 +22,7 @@ Assumption
 ==========
 
 This tutorial is using ``127.0.0.1`` as the DNS server IP address, as it is the method to setup
-Auto DNS for your local Devilbox.
+Auto DNS for your local DreamDevBox.
 
 
 Non permanent solution
@@ -64,7 +64,7 @@ Network Manager
 
 Edit ``/etc/dhcp/dhclient.conf`` with root or sudo privileges and add an instruction, which tells
 your local DHCP client that whenever any of your DNS servers are changed, you always want to have
-an additional entry, which is the one from the Devilbox (``127.0.0.1``).
+an additional entry, which is the one from the DreamDevBox (``127.0.0.1``).
 
 Add the following line to to the very beginning to ``/etc/dhcp/dhclient.conf``:
 
@@ -87,7 +87,7 @@ This will make sure that whenever your /etc/resolv.conf is deployed, you will ha
 as the first entry and also make use of any other DNS server which are deployed via the LAN's DHCP
 server.
 
-If the Devilbox DNS server is not running, it does not affect the name resolution, because you will
+If the DreamDevBox DNS server is not running, it does not affect the name resolution, because you will
 still have other entries in ``/etc/resolv.conf``.
 
 

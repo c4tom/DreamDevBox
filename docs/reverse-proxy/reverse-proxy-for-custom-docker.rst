@@ -8,11 +8,11 @@ Reverse Proxy for custom Docker
 *******************************
 
 
-Imagine you have added a custom service container to the Devilbox which has a project that
+Imagine you have added a custom service container to the DreamDevBox which has a project that
 is available via http on a very specific port in that container.
 
 You do not want to expose this port to the host system, but rather want to make it available
-via the bundled web server and also be able to see it on the Devilbox intranet vhost section.
+via the bundled web server and also be able to see it on the DreamDevBox intranet vhost section.
 
 Additionally you want the project to make use of the same DNS naming scheme and also have HTTPS
 for it.
@@ -34,7 +34,7 @@ Walkthrough
 Assumption
 ----------
 
-Let's imagine you have added a custom Python Docker image to the Devilbox which starts up a Django
+Let's imagine you have added a custom Python Docker image to the DreamDevBox which starts up a Django
 application listening on port ``3000``.
 
 * :ref:`env_TLD_SUFFIX`: ``loc``
@@ -69,7 +69,7 @@ Navigate to the :ref:`env_httpd_datadir` directory and create your project
    # Create the vhost-gen directory (to be apply to apply custom templates)
    host> mkdir my-python/.dreamdevbox
 
-This part is now sufficient to have the project visible on the Devilbox intranet.
+This part is now sufficient to have the project visible on the DreamDevBox intranet.
 
 
 Copy vhost-gen templates
@@ -226,21 +226,21 @@ to ``3000`` and host ``php`` to ``python``:
 
 
 
-Restart the Devilbox
+Restart the DreamDevBox
 --------------------
 
-Now for the changes to take affect, simply restart the Devilbox (or start if not yet running):
+Now for the changes to take affect, simply restart the DreamDevBox (or start if not yet running):
 
 
 .. code-block:: bash
 
    host> cd /path/to/devilbox
 
-   # Stop the Devilbox
+   # Stop the DreamDevBox
    host> docker-compose stop
    host> docker-compose rm -f
 
-   # Start the Devilbox (Your Python container and the PHP and HTTPD container only)
+   # Start the DreamDevBox (Your Python container and the PHP and HTTPD container only)
    host> docker-compose up -d php httpd bind python
 
 
@@ -258,7 +258,7 @@ It will also be available on HTTPS. This is by default and automatically:
 .. seealso:: :ref:`setup_valid_https`
 
 
-And is even shown as a project in the Devilbox intranet:
+And is even shown as a project in the DreamDevBox intranet:
 
 * http://localhost/vhosts.php
 * https://localhost/vhosts.php

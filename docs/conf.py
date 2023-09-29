@@ -21,7 +21,7 @@ from recommonmark.parser import CommonMarkParser
 
 # -- Project information -----------------------------------------------------
 
-project = u'Devilbox'
+project = u'DreamDevBox'
 copyright = u'2018, cytopia'
 author = u'cytopia'
 
@@ -88,7 +88,7 @@ exclude_patterns = [
 pygments_style = 'sphinx'
 
 rst_epilog = """
-.. |psf| replace:: Devilbox
+.. |psf| replace:: DreamDevBox
 """
 
 
@@ -203,7 +203,7 @@ latex_documents = [
     (
         master_doc,
         'devilbox.tex',
-        u'Devilbox Documentation',
+        u'DreamDevBox Documentation',
         u'cytopia',
         'manual'
     ),
@@ -218,7 +218,7 @@ man_pages = [
     (
         master_doc,
         'devilbox',
-        u'Devilbox Documentation',
+        u'DreamDevBox Documentation',
         [author],
         1
     )
@@ -234,7 +234,7 @@ texinfo_documents = [
     (
         master_doc,
         'devilbox',
-        u'Devilbox Documentation',
+        u'DreamDevBox Documentation',
         author,
         'devilbox',
         'A modern dockerized LAMP and MEAN stack alternative to XAMPP',

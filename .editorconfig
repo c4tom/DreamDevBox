@@ -14,7 +14,7 @@ insert_final_newline = true
 trim_trailing_whitespace = true
 
 # -------------------------------------------------------------------------------------------------
-# Devilbox Intranet
+# DreamDevBox Intranet
 # -------------------------------------------------------------------------------------------------
 # Intranet CSS
 [.dreamdevbox/www/htdocs/assets/css/*.css]
@@ -37,7 +37,7 @@ indent_style = tab
 indent_size = 4
 
 # -------------------------------------------------------------------------------------------------
-# Devilbox Git Repository
+# DreamDevBox Git Repository
 # -------------------------------------------------------------------------------------------------
 [.travis.yml]
 indent_style = space
@@ -52,7 +52,7 @@ indent_style = tab
 indent_size = 4
 
 # -------------------------------------------------------------------------------------------------
-# Devilbox Configuration and Scripts
+# DreamDevBox Configuration and Scripts
 # -------------------------------------------------------------------------------------------------
 [{docker-compose.yml,docker-compose-override.yml,docker-compose-override.yml-example}]
 indent_style = space
@@ -80,7 +80,7 @@ indent_style = tab
 indent_size = 4
 
 # -------------------------------------------------------------------------------------------------
-# Devilbox Documentation
+# DreamDevBox Documentation
 # -------------------------------------------------------------------------------------------------
 [*.md]
 indent_style = space

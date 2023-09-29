@@ -6,7 +6,7 @@
 Best practice
 *************
 
-If you have already operate the Devilbox, this guide is a must have. It will cover common
+If you have already operate the DreamDevBox, this guide is a must have. It will cover common
 best-practice topics as well as some tips and tricks you will want to apply.
 
 
@@ -15,13 +15,13 @@ best-practice topics as well as some tips and tricks you will want to apply.
 .. contents:: :local:
 
 
-Move data out of Devilbox directory
+Move data out of DreamDevBox directory
 ===================================
 
 One thing you should take into serious consideration is to move data such as your projects as well
-as persistent data of databases out of the Devilbox git directory.
+as persistent data of databases out of the DreamDevBox git directory.
 
-The Devilbox git directory should be something that can be safely deleted and re-created without
+The DreamDevBox git directory should be something that can be safely deleted and re-created without
 having to worry about loosing any project data. There could also be the case that you have a
 dedicated hard-disk to store your projects or you have your own idea about a directory structure
 where you want to store your projects.
@@ -37,14 +37,14 @@ Projects
 
 .. seealso::
    * :ref:`howto_move_projects_to_a_different_directory`
-     Follow this guide to keep your projects separated from the Devilbox git directory.
+     Follow this guide to keep your projects separated from the DreamDevBox git directory.
 
 Backups
 -------
 
 .. seealso::
    * :ref:`howto_move_backups_to_a_different_directory`
-     Follow this guide to keep your backups separated from the Devilbox git directory.
+     Follow this guide to keep your backups separated from the DreamDevBox git directory.
 
 
 Version control ``.env`` file
@@ -59,8 +59,8 @@ and many more. Those files are usually stored inside this repository and then sy
 correct location. By having all configuration files in one place, you can see and track changes
 easily as well as bein able to jump back to previous configurations.
 
-In case of the Devilbox ``.env`` file, just store this file in your repository and symlink it to
-the Devilbox git directiry. This way you make sure that you keep your file, even when the Devilbox
+In case of the DreamDevBox ``.env`` file, just store this file in your repository and symlink it to
+the DreamDevBox git directiry. This way you make sure that you keep your file, even when the DreamDevBox
 git directory is deleted and you also have a means of keeping track about changes you made.
 
 You could also go further and have several ``.env`` files available somewhere. Each of those files
@@ -70,13 +70,13 @@ holds different configurations e.g. for different projects or customers.
 * ``env-php55``
 * ``env-project3``
 
-You would then simply symlink one of those files to the Devilbox git directory.
+You would then simply symlink one of those files to the DreamDevBox git directory.
 
 
 Version control service config files
 ------------------------------------
 
-.. todo:: This will require some changes on the Devilbox and will be implemented shortly.
+.. todo:: This will require some changes on the DreamDevBox and will be implemented shortly.
 
 * Symlink and have your own git directory
 * Separate data partition, backups
@@ -87,7 +87,7 @@ PHP project hostname settings
 
 When configuring your PHP projects to use MySQL, PostgreSQL, Redis, Mongo and other services,
 make sure to set the hostname/address of each of those services to how they are defined within the
-Devilbox network:
+DreamDevBox network:
 
 .. include:: /_includes/snippets/core-container.rst
 
@@ -98,7 +98,7 @@ following:
 .. code-block:: bash
    :emphasize-lines: 8
 
-   # Navigate to Devilbox git directory
+   # Navigate to DreamDevBox git directory
    host> cd path/to/devilbox
 
    # Enter the PHP container
@@ -138,7 +138,7 @@ Timezone
 ========
 
 The :ref:`env_timezone` value will affect PHP and web serverequally. It does
-however not affect any other official Docker container that are used within the Devilbox. This is
+however not affect any other official Docker container that are used within the DreamDevBox. This is
 an issue that is currently still being worked on.
 
 Feel free to change this to any timezone you require for PHP, but keep in mind that

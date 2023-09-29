@@ -32,7 +32,7 @@ To backup a database named ``my_db_name`` follow the below listed example:
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd path/to/devilbox
 
    # Enter the PHP container
@@ -71,7 +71,7 @@ Here are a few examples for different file types:
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd path/to/devilbox
 
    # Enter the PHP container
@@ -85,7 +85,7 @@ Here are a few examples for different file types:
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd path/to/devilbox
 
    # Enter the PHP container
@@ -99,7 +99,7 @@ Here are a few examples for different file types:
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd path/to/devilbox
 
    # Enter the PHP container

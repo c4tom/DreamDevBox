@@ -19,7 +19,7 @@ Mounted logs
 ============
 
 By default log files for PHP, the webserver and the MySQL server are mounted to the host system
-into your Devilbox git directory under ``./log/``. All logs are separated by service version
+into your DreamDevBox git directory under ``./log/``. All logs are separated by service version
 in the following format: ``./log/<service>-<version>/``
 
 The log directory structure would look something like this:
@@ -54,7 +54,7 @@ You can also change the behaviour where logs are streamed by setting :ref:`env_d
 to ``1`` inside your ``.env`` file. When doing logs are sent to Docker logs.
 
 When using this approach, you need to use the ``docker-compose logs`` command to view your log
-files from within the Devilbox git directory.
+files from within the DreamDevBox git directory.
 
 .. code-block:: bash
    :emphasize-lines: 2

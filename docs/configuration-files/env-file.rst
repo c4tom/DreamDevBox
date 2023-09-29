@@ -10,7 +10,7 @@
 All docker-compose configuration is done inside the ``.env`` file which simply defines key-value
 pairs evaluated by docker-compose.yml.
 
-If this file does not exist at the root of your Devilbox git directory, then copy ``env-example``
+If this file does not exist at the root of your DreamDevBox git directory, then copy ``env-example``
 to ``.env`` to initially create it with sane defaults.
 
 .. seealso::
@@ -20,7 +20,7 @@ to ``.env`` to initially create it with sane defaults.
    Use your browsers search function to quickly find the desired variable name.
 
 .. important::
-   Any change of ``.env`` requires a restart of the Devilbox.
+   Any change of ``.env`` requires a restart of the DreamDevBox.
 
 
 
@@ -52,7 +52,7 @@ DOCKER_LOGS
 -----------
 
 This variable controls the output of logs. Logs can either go to file and will be available
-under ``./log/`` inside the Devilbox git directory or they can be forwarded to Docker logs
+under ``./log/`` inside the DreamDevBox git directory or they can be forwarded to Docker logs
 and will then be send to stdout and stderr.
 
 +-------------------+----------------+---------------+
@@ -68,7 +68,7 @@ The ``./log/`` directory itself will contain subdirectories in the form ``<servi
 which will then hold all available log files.
 
 .. note::
-   Log directories do not exist until you start the Devilbox and will only be created for
+   Log directories do not exist until you start the DreamDevBox and will only be created for
    the service versions you have enabled in ``.env``.
 
 The log directory structure would look something like this:
@@ -128,7 +128,7 @@ name (works with or without ``-f`` as well):
 DEVILBOX_PATH
 -------------
 
-This specifies a relative or absolute path to the Devilbox git directory and will be used as a
+This specifies a relative or absolute path to the DreamDevBox git directory and will be used as a
 prefix for all Docker mount paths.
 
 * Relative path: relative to the devilbox git directory (Must start with ``.``)
@@ -139,7 +139,7 @@ your project files onto an NFS volume due to performance issues.
 
 .. warning::
    :ref:`remove_stopped_container`
-     Whenever you change this value you have to stop the Devilbox and also remove the stopped
+     Whenever you change this value you have to stop the DreamDevBox and also remove the stopped
      container via
      ``docker-compose rm``.
 
@@ -244,7 +244,7 @@ this project visible to everyone in your corporate LAN.
 .. warning::
    **Do not use official domain endings** such as ``.com``, ``.org``, ``.net``, etc.
    If you do, all name resolutions to any ``.com`` address (e.g.: google.com) will be resolved
-   to the Devilbox's PHP server IP address.
+   to the DreamDevBox's PHP server IP address.
 
    The bundled DNS server does a catch-all on the given TLD_SUFFIX and resolves everything
    below it to the PHP container.
@@ -255,7 +255,7 @@ this project visible to everyone in your corporate LAN.
 EXTRA_HOSTS
 -----------
 
-This variable allows you to add additional DNS entries from hosts outside the Devilbox network,
+This variable allows you to add additional DNS entries from hosts outside the DreamDevBox network,
 such as hosts running on your host operating system, the LAN or from the internet.
 
 +-----------------+------------------------------+---------------+
@@ -325,7 +325,7 @@ A few examples for adding extra hosts:
 NEW_UID
 -------
 
-This setting controls one of the core concepts of the Devilbox. It overcomes the problem of
+This setting controls one of the core concepts of the DreamDevBox. It overcomes the problem of
 syncronizing file and directory permissions between the Docker container and your host operating
 system.
 
@@ -346,7 +346,7 @@ your system, however it could also be a different value.
 | ``NEW_UID``           | valid uid      | ``1000``      |
 +-----------------------+----------------+---------------+
 
-The Devilbox own containers will then pick up this value during startup and change their internal
+The DreamDevBox own containers will then pick up this value during startup and change their internal
 user id to the one specified. Services like PHP-FPM, Apache and Nginx will then do read and write
 operation of files with this uid, so all files mounted will have permissions as your local user
 and you do not have to fix permissions afterwards.
@@ -391,7 +391,7 @@ your system, however it could also be a different value.
 TIMEZONE
 --------
 
-This variable controls the system as well as service timezone for the Devilbox's own containers.
+This variable controls the system as well as service timezone for the DreamDevBox's own containers.
 This is especially useful to keep PHP and database timezones in sync.
 
 +-----------------------+----------------+-------------------+
@@ -414,7 +414,7 @@ Intranet settings
 DNS_CHECK_TIMEOUT
 -----------------
 
-The Devilbox intranet validates if every project has a corresponding DNS record (either an official
+The DreamDevBox intranet validates if every project has a corresponding DNS record (either an official
 DNS record, one that came from its own Auto-DNS or an ``/etc/hosts`` entry). By doing so it queries
 the DNS record based on ``<project-dir>.<TLD_SUFFIX>``. In case it does not exist, the query itself
 might take a while and the intranet page will be unresponsive during that time. In order to avoid
@@ -433,10 +433,10 @@ and report as unsuccessful. The default is ``1`` second, wich should be fairly s
 DEVILBOX_UI_SSL_CN
 ------------------
 
-When accessing the Devilbox intranet via ``https`` it will use an automatically created SSL certificate.
+When accessing the DreamDevBox intranet via ``https`` it will use an automatically created SSL certificate.
 Each SSL certificate requires a valid Common Name, which must match the virtual host name.
 
-This setting let's you specify by what **name** you are accessing the Devilbox intranet.
+This setting let's you specify by what **name** you are accessing the DreamDevBox intranet.
 The default is ``localhost``, but if you have created your own alias, you must change this value
 accordingly. Also note that multiple values are possible and must be separated with a comma.
 When you add an asterisk (``*.``) to the beginning, it means it will create a wildcard certificate for that
@@ -463,8 +463,8 @@ hostname.
 DEVILBOX_UI_PROTECT
 -------------------
 
-By setting this variable to ``1``, the Devilbox intranet will be password protected.
-This might be useful, if you share your running Devilbox instance accross a LAN, but do not want
+By setting this variable to ``1``, the DreamDevBox intranet will be password protected.
+This might be useful, if you share your running DreamDevBox instance accross a LAN, but do not want
 everybody to have access to the intranet itself, just to the projects you actually provide.
 
 +-------------------------+----------------+-------------------+
@@ -498,7 +498,7 @@ password by which it will be protected.
 DEVILBOX_UI_ENABLE
 ------------------
 
-In case you want to completely disable the Devilbox intranet, such as when running it on production,
+In case you want to completely disable the DreamDevBox intranet, such as when running it on production,
 you need to set this variable to ``0``.
 
 By disabling the intranet, the webserver will simply remove the default virtual host and redirect
@@ -543,7 +543,7 @@ password here as well, you should set the value to ``0``.
 Docker image versions
 =====================
 
-The following settings reflect one of the main goals of the Devilbox: being able to run any
+The following settings reflect one of the main goals of the DreamDevBox: being able to run any
 combination of all container versions.
 
 .. note::
@@ -564,7 +564,7 @@ This variable choses your desired PHP-FPM version to be started.
 +-------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
 .. important::
-   **PHP 5.2** is available to use, but it is not officially supported. The Devilbox intranet does
+   **PHP 5.2** is available to use, but it is not officially supported. The DreamDevBox intranet does
    not work with this version as PHP 5.2 does not support namespaces. Furthermore PHP 5.2 does only
    work with Apache 2.4, Nginx stable and Nginx mainline. It does not work with Apache 2.2.
    **Use at your own risk.**
@@ -857,7 +857,7 @@ MOUNT_OPTIONS
 
 This variable allows you to add custom mount options/flags to all mounted directories.
 Initially only ``rw`` or ``ro`` are applied to mount points, you can however extend this
-before starting up the Devilbox.
+before starting up the DreamDevBox.
 
 
 +------------------------------+--------------------+----------------+
@@ -890,13 +890,13 @@ SELinux labels in order to share mounts among multiple container.
 HOST_PATH_HTTPD_DATADIR
 -----------------------
 
-This is an absolute or relative path (relative to Devilbox git directory) to your data directory.
+This is an absolute or relative path (relative to DreamDevBox git directory) to your data directory.
 
 .. seealso::
    :ref:`getting_started_directory_overview_datadir`
 
 By default, all of your websites/projects will be stored in that directory. If however you want
-to separate your data from the Devilbox git directory, do change the path to a place where you
+to separate your data from the DreamDevBox git directory, do change the path to a place where you
 want to store all of your projects on your host computer.
 
 * Relative path: relative to the devilbox git directory (Must start with ``.``)
@@ -931,7 +931,7 @@ always be ``/shared/httpd/``.
 
 .. warning::
    :ref:`remove_stopped_container`
-     Whenever you change this value you have to stop the Devilbox and also remove the stopped
+     Whenever you change this value you have to stop the DreamDevBox and also remove the stopped
      container via
      ``docker-compose rm``.
 
@@ -1127,7 +1127,7 @@ to something else if ``53`` is already in use on your host operating system.
    on port ``53`` which would result in a failure when this BIND server is starting.
 
    You only need to set BIND to port ``53`` when you want to use the ``Auto-DNS`` feautre of the
-   Devilbox. When doing so, read this article with care: :ref:`setup_auto_dns`.
+   DreamDevBox. When doing so, read this article with care: :ref:`setup_auto_dns`.
 
 
 Container settings
@@ -1221,7 +1221,7 @@ When set to ``1`` postfix is normally started and made available. However you st
 to configure it to your needs yourself. For that you can use the autostart scripts
 and define a couple of ``postconf -e name=value`` commands.
 
-When set to ``2`` (email catch-all) postfix is started, but no mail will leave the Devilbox. It is automatically
+When set to ``2`` (email catch-all) postfix is started, but no mail will leave the DreamDevBox. It is automatically
 internally routed the the devilbox mail account and you can see each sent mail
 in the bundled intranet: https://localhost/mail.php
 
@@ -1450,7 +1450,7 @@ you will have to create a directory by whatever name you chose for that variable
    drwxr-xr-x 2 cytopia cytopia 4096 Mar 12 23:05 htdocs/
 
 Now you need to copy the ``vhost-gen`` templates into the ``.dreamdevbox`` directory. The templates
-are available in the Devilbox git directory under ``cfg/vhost-gen/``.
+are available in the DreamDevBox git directory under ``cfg/vhost-gen/``.
 
 By copying those files into your project template directory, nothing will change, these are the
 default templates that will create the virtual host exactly the same way as if they were not

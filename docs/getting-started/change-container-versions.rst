@@ -4,7 +4,7 @@
 Change container versions
 *************************
 
-One of the core concepts of the Devilbox is to easily change between different versions of a
+One of the core concepts of the DreamDevBox is to easily change between different versions of a
 specific service.
 
 
@@ -58,14 +58,14 @@ Examples
 Change PHP version
 ------------------
 
-Stop the Devilbox
+Stop the DreamDevBox
 ^^^^^^^^^^^^^^^^^
 
-Shut down the Devilbox in case it is still running:
+Shut down the DreamDevBox in case it is still running:
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd path/to/devilbox
 
    # Stop all container
@@ -96,7 +96,7 @@ It will look something like this:
    #PHP_SERVER=8.2
 
 As you can see, all available values are already there, but commented. Only one is uncommented.
-In this example it is ``7.1``, which is the PHP version that will be started, once the Devilbox
+In this example it is ``7.1``, which is the PHP version that will be started, once the DreamDevBox
 starts.
 
 To change this, simply uncomment your version of choice and save this file. Do not forget to comment
@@ -122,14 +122,14 @@ In order to enable PHP 5.5, you would change the ``.env`` file like this:
    #PHP_SERVER=8.1
    #PHP_SERVER=8.2
 
-Start the Devilbox
+Start the DreamDevBox
 ^^^^^^^^^^^^^^^^^^
 
-Now save the file and you can start the Devilbox again.
+Now save the file and you can start the DreamDevBox again.
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd path/to/devilbox
 
    # Start all container
@@ -141,14 +141,14 @@ Now save the file and you can start the Devilbox again.
 Change web server version
 -------------------------
 
-Stop the Devilbox
+Stop the DreamDevBox
 ^^^^^^^^^^^^^^^^^
 
-Shut down the Devilbox in case it is still running:
+Shut down the DreamDevBox in case it is still running:
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd path/to/devilbox
 
    # Stop all container
@@ -171,7 +171,7 @@ It will look something like this:
 
 As you can see, all available values are already there, but commented. Only one is uncommented.
 In this example it is ``nginx-stable``, which is the web server version that will be started,
-once the Devilbox starts.
+once the DreamDevBox starts.
 
 To change this, simply uncomment your version of choice and save this file. Do not forget to comment
 (disable) any other version.
@@ -187,14 +187,14 @@ In order to enable Apache 2.2, you would change the ``.env`` file like this:
    #HTTPD_SERVER=nginx-stable
    #HTTPD_SERVER=nginx-mainline
 
-Start the Devilbox
+Start the DreamDevBox
 ^^^^^^^^^^^^^^^^^^
 
-Now save the file and you can start the Devilbox again.
+Now save the file and you can start the DreamDevBox again.
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd path/to/devilbox
 
    # Start all container
@@ -244,15 +244,15 @@ Consider this ``.env`` file:
    #PHP_SERVER=8.1
    #PHP_SERVER=8.2
 
-Both, PHP 5.5 and PHP 7.0 are uncommented, however, when you start the Devilbox, it will use
+Both, PHP 5.5 and PHP 7.0 are uncommented, however, when you start the DreamDevBox, it will use
 PHP 7.0 as this value overwrites any previous ones.
 
 
 Checklist
 =========
 
-1. Stop the Devilbox
+1. Stop the DreamDevBox
 2. Uncomment version of choice in ``.env``
-3. Start the Devilbox
+3. Start the DreamDevBox
 
 .. seealso:: :ref:`troubleshooting`

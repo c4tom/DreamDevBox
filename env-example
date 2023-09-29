@@ -110,7 +110,7 @@ TLD_SUFFIX=dvl.to
 ### Optional DNS configuration
 ### Allows you to add extra DNS records (above the wildcard entry)
 ### Useful if your host computer run other Docker services that you want to connect to or reach
-### from within the Devilbox network by a custom hostname.
+### from within the DreamDevBox network by a custom hostname.
 ###
 ### Format:
 ### -------
@@ -169,13 +169,13 @@ DNS_CHECK_TIMEOUT=1
 
 
 ###
-### Devilbox UI SSL Certificate generation
+### DreamDevBox UI SSL Certificate generation
 ###
 ### When using SSL each certificate requires names for which it is responsible:
 ### Common Name as well as alternative names.
 ###
-### Specify comma separated hostnames below by which you want to access the Devilbox.
-### Those hostnames will be included in the SSL certificate for the Devilbox intranet.
+### Specify comma separated hostnames below by which you want to access the DreamDevBox.
+### Those hostnames will be included in the SSL certificate for the DreamDevBox intranet.
 ### This has nothing to do for SSL certificates for projects, it is just for the intranet
 ### itself.
 ###
@@ -183,7 +183,7 @@ DEVILBOX_UI_SSL_CN=localhost,*.localhost,devilbox,*.dreamdevbox,httpd
 
 
 ###
-### Devilbox UI Password protection enable/disable (1/0)
+### DreamDevBox UI Password protection enable/disable (1/0)
 ###
 ### Set DEVILBOX_UI_PROTECT to 1 in order to password protect the
 ### intranet.
@@ -196,7 +196,7 @@ DEVILBOX_UI_PROTECT=0
 
 
 ###
-### Devilbox UI Password
+### DreamDevBox UI Password
 ###
 ### When DEVILBOX_UI_PROTECT=1, use the following password
 ### to log in. The password can always be changed.
@@ -213,7 +213,7 @@ DEVILBOX_UI_PASSWORD=password
 
 
 ###
-### Enable the Devilbox Intranet?
+### Enable the DreamDevBox Intranet?
 ###
 ### Example:
 ###   DEVILBOX_UI_ENABLE=1
@@ -536,7 +536,7 @@ PHP_MODULES_DISABLE=oci8,PDO_OCI,pdo_sqlsrv,sqlsrv,rdkafka,swoole,psr,phalcon
 ### to configure it to your needs yourself. For that you can use the autostart scripts
 ### and define a couple of 'postconf -e name=value' commands.
 ###
-### When set to '2' (email catch-all), no mail will leave the Devilbox. It is automatically
+### When set to '2' (email catch-all), no mail will leave the DreamDevBox. It is automatically
 ### internally routed the the devilbox mail account and you can see each sent mail
 ### in the bundled intranet: https://localhost/mail.php
 ###
@@ -655,13 +655,13 @@ HTTPD_NGINX_WORKER_CONNECTIONS=1024
 ### MySQL root user password
 ###
 ### The password is required for the initial creation of the MySQL database
-### as well as the Devilbox intranet to display schema and configuration settings.
+### as well as the DreamDevBox intranet to display schema and configuration settings.
 ###
 ### If you change your MySQL root user password via mysql cli, phpMyAdmin or other tools
 ### after the database has been created, ensure to adjust the value here accordingly as well.
 ###
 ### If you only change this value here after the database has been created,
-### the MySQL root user password will not actually be changed and the Devilbox intranet
+### the MySQL root user password will not actually be changed and the DreamDevBox intranet
 ### won't be able to connect to the MySQL service.
 ###
 MYSQL_ROOT_PASSWORD=

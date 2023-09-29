@@ -7,7 +7,7 @@
 Setup Yii
 *********
 
-This example will use ``composer`` to install Yii from within the Devilbox PHP container.
+This example will use ``composer`` to install Yii from within the DreamDevBox PHP container.
 
 .. important::
    Using ``composer`` requires the underlying file system to support symlinks. If you
@@ -39,9 +39,9 @@ The following configuration will be used:
 +--------------+--------------------------+-------------+------------+-------------------------------------------+
 
 .. note::
-   * Inside the Devilbox PHP container, projects are always in ``/shared/httpd/``.
+   * Inside the DreamDevBox PHP container, projects are always in ``/shared/httpd/``.
    * On your host operating system, projects are by default in ``./data/www/`` inside the
-     Devilbox git directory. This path can be changed via :ref:`env_httpd_datadir`.
+     DreamDevBox git directory. This path can be changed via :ref:`env_httpd_datadir`.
 
 
 Walk through
@@ -63,7 +63,7 @@ It will be ready in six simple steps:
 All work will be done inside the PHP container as it provides you with all required command line
 tools.
 
-Navigate to the Devilbox git directory and execute ``shell.sh`` (or ``shell.bat`` on Windows) to
+Navigate to the DreamDevBox git directory and execute ``shell.sh`` (or ``shell.bat`` on Windows) to
 enter the running PHP container.
 
 .. code-block:: bash

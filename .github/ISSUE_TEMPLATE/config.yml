@@ -1,18 +1,18 @@
 ---
 blank_issues_enabled: false
 contact_links:
-  - name: Devilbox Discord Chat
+  - name: DreamDevBox Discord Chat
     url: https://discord.gg/2wP3V6kBj4
     about: Please notify or discuss about any other requests here.
 
-  - name: Devilbox Discourse Forum
+  - name: DreamDevBox Discourse Forum
     url: https://devilbox.discourse.group/
     about: Please ask and answer general questions here.
 
-  - name: Devilbox Community Support
+  - name: DreamDevBox Community Support
     url: https://devilbox.discourse.group/
     about: Please ask and answer questions here.
 
-  - name: Devilbox documentation
+  - name: DreamDevBox documentation
     url: https://devilbox.readthedocs.io/
-    about: Find the Devilbox documentation here.
+    about: Find the DreamDevBox documentation here.

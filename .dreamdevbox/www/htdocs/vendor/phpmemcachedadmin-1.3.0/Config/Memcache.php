@@ -16,7 +16,7 @@ return array (
 	'eviction_alert' => 0,
 	'file_path' => '/tmp',
 	'servers' => array (
-		'Devilbox Memcached' => array (
+		'DreamDevBox Memcached' => array (
 			'memcd' =>  array (
 				'hostname' => 'memcd',
 				'port'	 => '11211',

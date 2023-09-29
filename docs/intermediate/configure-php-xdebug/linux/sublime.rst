@@ -20,7 +20,7 @@ of an explicit IP address.
 Prerequisites
 =============
 
-Ensure you know how to customize ``php.ini`` values for the Devilbox and have a rough understanding
+Ensure you know how to customize ``php.ini`` values for the DreamDevBox and have a rough understanding
 about common Xdebug options.
 
 .. seealso::
@@ -36,7 +36,7 @@ For the sake of this example, we will assume the following settings and file sys
 +------------------------------+------------------------------------------+
 | Directory                    | Path                                     |
 +==============================+==========================================+
-| Devilbox git directory       | ``/home/cytopia/repo/devilbox``          |
+| DreamDevBox git directory       | ``/home/cytopia/repo/devilbox``          |
 +------------------------------+------------------------------------------+
 | :ref:`env_httpd_datadir`     | ``./data/www``                           |
 +------------------------------+------------------------------------------+
@@ -94,7 +94,7 @@ Create an ``xdebug.ini`` file (must end by ``.ini``):
 
    .. code-block:: bash
 
-      # Navigate to the Devilbox git directory
+      # Navigate to the DreamDevBox git directory
       host> cd path/to/devilbox
 
       # Navigate to PHP 5.6 ini configuration directory
@@ -126,15 +126,15 @@ Copy/paste all of the following lines into the above created ``xdebug.ini`` file
 .. note:: Host os and editor specific settings are highlighted in yellow and are worth googling to get a better understanding of the tools you use and to be more efficient at troubleshooting.
 
 
-Restart the Devilbox
+Restart the DreamDevBox
 --------------------
 
-Restarting the Devilbox is important in order for it to read the new PHP settings.
+Restarting the DreamDevBox is important in order for it to read the new PHP settings.
 Note that the following example only starts up PHP, HTTPD and Bind.
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox git directory
+   # Navigate to the DreamDevBox git directory
    host> cd path/to/devilbox
 
    # Stop, remove stopped container and start

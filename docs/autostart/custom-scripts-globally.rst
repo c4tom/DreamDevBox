@@ -67,7 +67,7 @@ When
 ----
 
 The scripts will be executed by the PHP container during initial startup. Whenever you change your
-scripts, ensure to restart the Devilbox.
+scripts, ensure to restart the DreamDevBox.
 
 How
 ---

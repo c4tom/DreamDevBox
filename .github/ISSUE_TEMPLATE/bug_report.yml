@@ -113,15 +113,15 @@ body:
   - type: input
     id: devilbox-version
     attributes:
-      label: Devilbox version
-      description: "What version of Devilbox are you running (latest master, specific tag, git hash, etc)?"
+      label: DreamDevBox version
+      description: "What version of DreamDevBox are you running (latest master, specific tag, git hash, etc)?"
     validations:
       required: true
 
   - type: dropdown
     attributes:
       label: Have you removed stopped containers before starting?
-      description: "Have you done a `docker-compose rm` before starting up the Devilbox? [More info here](https://docs.docker.com/compose/reference/rm/)"
+      description: "Have you done a `docker-compose rm` before starting up the DreamDevBox? [More info here](https://docs.docker.com/compose/reference/rm/)"
       multiple: false
       options:
         - "Yes"
@@ -132,7 +132,7 @@ body:
   - type: dropdown
     attributes:
       label: Have you pulled latest Docker images before starting?
-      description: "Have you done a `docker-compose pull` before starting up the Devilbox?"
+      description: "Have you done a `docker-compose pull` before starting up the DreamDevBox?"
       multiple: false
       options:
         - "Yes"
@@ -142,8 +142,8 @@ body:
 
   - type: input
     attributes:
-      label: Devilbox start command
-      description: "What is the [start command](https://devilbox.readthedocs.io/en/latest/getting-started/start-the-devilbox.html) you have used to start the Devilbox?"
+      label: DreamDevBox start command
+      description: "What is the [start command](https://devilbox.readthedocs.io/en/latest/getting-started/start-the-devilbox.html) you have used to start the DreamDevBox?"
     validations:
       required: true
 

@@ -21,7 +21,7 @@ su -c 'cd /shared/httpd/node/node; pm2 start index.js' -l devilbox
 ## Note
 
 This directory will startup commands only for a specific PHP version. If you want to run commands
-for all versions , go to `autostart/` in the root of the Devilbox git directory.
+for all versions , go to `autostart/` in the root of the DreamDevBox git directory.
 
 
 ## Important

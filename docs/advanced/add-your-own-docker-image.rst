@@ -7,7 +7,7 @@
 Add your own Docker image
 *************************
 
-This section is all about customizing the Devilbox and its Docker images specifically to your needs.
+This section is all about customizing the DreamDevBox and its Docker images specifically to your needs.
 
 
 **Table of Contents**
@@ -20,7 +20,7 @@ Prerequisites
 
 The new Docker image definition will be added to a file called ``docker-compose.override.yml``.
 So before going any further, read the following section that shows you how to create this file
-for the Devilbox as well as what pitfalls to watch out for.
+for the DreamDevBox as well as what pitfalls to watch out for.
 
 .. seealso:: :ref:`docker_compose_override_yml`
 

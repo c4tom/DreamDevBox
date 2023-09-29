@@ -32,7 +32,7 @@ To backup all databases follow the below listed example:
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd path/to/devilbox
 
    # Enter the PHP container
@@ -53,7 +53,7 @@ To restore all MongoDB databases follow the below listed example:
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd path/to/devilbox
 
    # Enter the PHP container

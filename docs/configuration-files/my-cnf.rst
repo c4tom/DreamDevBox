@@ -56,7 +56,7 @@ Each of the MySQL cnf configuration directories already contain an example file:
 ``devilbox-custom.cnf-example``, that can simply be renamed to ``devilbox-custom.cnf``.
 This file holds some example values that can be adjusted or commented out.
 
-In order for the changes to be applied, you will have to restart the Devilbox.
+In order for the changes to be applied, you will have to restart the DreamDevBox.
 
 
 Examples
@@ -71,7 +71,7 @@ of MySQL 5.5 to 16 MB.
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd path/to/devilbox
 
    # Navigate to MySQL 5.5 config directory
@@ -88,8 +88,8 @@ Now add the following content to the file:
    [mysqld]
    key_buffer_size=16M
 
-In order to apply the changes you need to restart the Devilbox.
-You can validate that the changes have taken place by visiting the Devilbox intranet MySQL info page.
+In order to apply the changes you need to restart the DreamDevBox.
+You can validate that the changes have taken place by visiting the DreamDevBox intranet MySQL info page.
 
 
 Change timeout and packet size for PerconaDB 5.7
@@ -103,7 +103,7 @@ of PerconaDB 5.7
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd path/to/devilbox
 
    # Navigate to PerconaDB 5.7 config directory
@@ -121,5 +121,5 @@ Now add the following content to the file:
    max_allowed_packet=256M
    wait_timeout = 86400
 
-In order to apply the changes you need to restart the Devilbox.
-You can validate that the changes have taken place by visiting the Devilbox intranet MySQL info page.
+In order to apply the changes you need to restart the DreamDevBox.
+You can validate that the changes have taken place by visiting the DreamDevBox intranet MySQL info page.

@@ -7,7 +7,7 @@
 Enable and configure Varnish
 ****************************
 
-This section will guide you through getting Varnish integrated into the Devilbox.
+This section will guide you through getting Varnish integrated into the DreamDevBox.
 
 As Varnish itself does not handle HTTPS, its Docker Compose override definition also defines an
 optional HAProxy that can be started and run in front of Varnish to provide HTTPS support and take
@@ -38,7 +38,7 @@ Stack settings
 --------------
 
 In case of Varnish, the file is ``compose/docker-compose.override.yml-varnish``. This file
-must be copied into the root of the Devilbox git directory.
+must be copied into the root of the DreamDevBox git directory.
 
 +-----------------------+------------------------------------------------------------------------------------------------------+
 | What                  | How and where                                                                                        |
@@ -127,7 +127,7 @@ Instructions
 1. Copy docker-compose.override.yml
 -----------------------------------
 
-Copy the Varnish Docker Compose overwrite file into the root of the Devilbox git directory.
+Copy the Varnish Docker Compose overwrite file into the root of the DreamDevBox git directory.
 (It must be at the same level as the default ``docker-compose.yml`` file).
 
 .. code-block:: bash
@@ -200,10 +200,10 @@ For this example we will assume you are using  Varnish 6
 4. Ensure that the Backend port points to ``80`` in your custom varnish config
 
 
-4. Start the Devilbox
+4. Start the DreamDevBox
 ---------------------
 
-The final step is to start the Devilbox with Varnish.
+The final step is to start the DreamDevBox with Varnish.
 
 .. seealso:: :ref:`start_the_devilbox`
 
@@ -230,7 +230,7 @@ TL;DR
 =====
 
 For the lazy readers, here are all commands required to get you started.
-Simply copy and paste the following block into your terminal from the root of your Devilbox git
+Simply copy and paste the following block into your terminal from the root of your DreamDevBox git
 directory:
 
 .. code-block:: bash

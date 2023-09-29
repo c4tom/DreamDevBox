@@ -22,7 +22,7 @@ By default, all virtual hosts will simply serve files located in your document r
 your project directory. Sometimes however your *project* is already its own server that will serve
 requests through a listening network port. (e.g. a running NodeJS application).
 This listening port will however only be available inside the PHP container (or any other container)
-you have added to the Devilbox and the webserver is not aware of this.
+you have added to the DreamDevBox and the webserver is not aware of this.
 
 For this kind of project you will want to create a reverse proxy which simply forwards the requests
 incoming to the webserver to your application (either to the PHP container to a specific port or

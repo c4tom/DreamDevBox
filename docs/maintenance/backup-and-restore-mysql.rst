@@ -35,14 +35,14 @@ Mysqldump-secure
 
 |ext_lnk_tool_mysqldump_secure|  is bundled, setup and ready to use in every PHP container.
 You can run it without any arguments and it will dump each available database as a
-separated compressed file. Backups will be located in ``./backups/mysql/`` inside the Devilbox
+separated compressed file. Backups will be located in ``./backups/mysql/`` inside the DreamDevBox
 git directory or in ``/shared/backups/mysql/`` inside the PHP container.
 
 To have your backups in place is just three commands away:
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd path/to/devilbox
 
    # Enter the PHP container
@@ -70,7 +70,7 @@ Let's see where to find the backups inside the PHP container:
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd path/to/devilbox
 
    # Enter the PHP container
@@ -83,11 +83,11 @@ Let's see where to find the backups inside the PHP container:
    -rw-r--r-- 1 devilbox   2269 Jun 17 13:31 2017-06-17_13-31__mysql.sql.gz.info
 
 
-Let's do the same again and see where to find the backups in the Devilbox git directory
+Let's do the same again and see where to find the backups in the DreamDevBox git directory
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd path/to/devilbox
 
    # Show directory output
@@ -194,7 +194,7 @@ example which shows you how to do that from within the PHP container:
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd path/to/devilbox
 
    # Enter the PHP container
@@ -235,7 +235,7 @@ binary. Here are a few examples for different file types:
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd path/to/devilbox
 
    # Enter the PHP container
@@ -251,7 +251,7 @@ binary. Here are a few examples for different file types:
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd path/to/devilbox
 
    # Enter the PHP container
@@ -266,7 +266,7 @@ binary. Here are a few examples for different file types:
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd path/to/devilbox
 
    # Enter the PHP container

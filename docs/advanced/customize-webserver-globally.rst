@@ -40,10 +40,10 @@ can be overwritten or customized separately for Nginx stable and Nginx mainline.
 .. seealso:: :ref:`nginx_conf`
 
 
-Devilbox specific settings
+DreamDevBox specific settings
 ==========================
 
-There are certain other settings that are directly managed by the Devilbox's ``.env`` file in order
+There are certain other settings that are directly managed by the DreamDevBox's ``.env`` file in order
 to make other containers aware of those settings.
 
 .. important:: Try to avoid to overwrite the ``.env`` settings via web server configuration files.

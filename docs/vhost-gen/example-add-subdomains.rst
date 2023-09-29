@@ -161,7 +161,7 @@ Let's assume the following settings.
 +-------------------------------+--------------------------------------+
 | Variable                      | Value                                |
 +===============================+======================================+
-| Devilbox path                 | ``/home/user/devilbox``              |
+| DreamDevBox path                 | ``/home/user/devilbox``              |
 +-------------------------------+--------------------------------------+
 | :ref:`env_httpd_template_dir` | ``.dreamdevbox``                        |
 +-------------------------------+--------------------------------------+
@@ -176,7 +176,7 @@ Ensure that the default ``vhost-gen`` templates have been copied to your project
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd ./home/user/devilbox
 
    # Create template directory in your project
@@ -208,7 +208,7 @@ See here how to do that for Linux, MacOS or Windows:
 :ref:`getting_started_create_your_first_project_dns_entry`
 
 DNS is in place, however when you visit http://www.my-project-1.loc, you will end up seeing the
-Devilbox intranet, because this is the default host when no match has been found.
+DreamDevBox intranet, because this is the default host when no match has been found.
 
 Step 2: Adjust apache22.yml
 """""""""""""""""""""""""""
@@ -376,7 +376,7 @@ See here how to do that for Linux, MacOS or Windows:
 :ref:`getting_started_create_your_first_project_dns_entry`
 
 DNS is in place, however when you visit http://www.my-project-1.loc, you will end up seeing the
-Devilbox intranet, because this is the default host when no match has been found.
+DreamDevBox intranet, because this is the default host when no match has been found.
 
 Step 2: Adjust nginx.yml
 """""""""""""""""""""""""""
@@ -526,7 +526,7 @@ Apply changes
 After having edited your vhost-gen template files, you still need to apply these changes.
 This can be achieved in two ways:
 
-1. Restart the Devilbox
+1. Restart the DreamDevBox
 2. Rename your project directory back and forth
 
 Let's cover the second step
@@ -574,5 +574,5 @@ Checklist
 1. Template files are copied from ``cfg/vhost-gen/*`` to your project template dir (as
    specified in ``.env`` via ``HTTPD_TEMPLATE_DIR``)
 2. Ensure the vhost-gen yaml files are valid (No tab characters)
-3. When templates are edited, the Devilbox is either restarted or the project directory is renamed
+3. When templates are edited, the DreamDevBox is either restarted or the project directory is renamed
    to something else and then renamed back to its original name

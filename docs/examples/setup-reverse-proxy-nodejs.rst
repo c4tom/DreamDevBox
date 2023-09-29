@@ -12,7 +12,7 @@ automatically on ``docker-compose up`` via |ext_lnk_tool_pm2|, will be proxied t
 
 
 .. note::
-   It is also possible to attach a leight-weight NodeJS container to the Devilbox instead of running
+   It is also possible to attach a leight-weight NodeJS container to the DreamDevBox instead of running
    this in the PHP container. See here for details: :ref:`reverse_proxy_with_custom_docker`
 
 
@@ -36,9 +36,9 @@ Additionally we will set the listening port of the NodeJS appliation to ``4000``
 We also want NodeJS running regardless of which PHP container will bestarted (global autostart).
 
 .. note::
-   * Inside the Devilbox PHP container, projects are always in ``/shared/httpd/``.
+   * Inside the DreamDevBox PHP container, projects are always in ``/shared/httpd/``.
    * On your host operating system, projects are by default in ``./data/www/`` inside the
-     Devilbox git directory. This path can be changed via :ref:`env_httpd_datadir`.
+     DreamDevBox git directory. This path can be changed via :ref:`env_httpd_datadir`.
 
 Walk through
 ============
@@ -52,7 +52,7 @@ It will be ready in nine simple steps:
 5. Add reverse proxy vhost-gen config files
 6. Create autostart script
 7. Setup DNS record
-8. Restart the Devilbox
+8. Restart the DreamDevBox
 9. Visit http://my-node.loc in your browser
 
 
@@ -62,7 +62,7 @@ It will be ready in nine simple steps:
 All work will be done inside the PHP container as it provides you with all required command line
 tools.
 
-Navigate to the Devilbox git directory and execute ``shell.sh`` (or ``shell.bat`` on Windows) to
+Navigate to the DreamDevBox git directory and execute ``shell.sh`` (or ``shell.bat`` on Windows) to
 enter the running PHP container.
 
 .. code-block:: bash
@@ -120,7 +120,7 @@ The vhost directory defines the name under which your project will be available.
 4. Create *virtual* docroot directory
 -------------------------------------
 
-Every project for the Devilbox requires a ``htdocs`` directory present inside the project dir.
+Every project for the DreamDevBox requires a ``htdocs`` directory present inside the project dir.
 For a reverse proxy this is not of any use, but rather only for the Intranet vhost page to stop
 complaining about the missing ``htdocs`` directory. So that's why this is only a *virtual* directory
 which will not hold any data.
@@ -316,7 +316,7 @@ Find the lines with ``proxy_pass`` and change the port from ``8000`` to ``4000``
 6. Create autostart script
 --------------------------
 
-For NodeJS applications, the Devilbox already bundles an autostart template which you can use
+For NodeJS applications, the DreamDevBox already bundles an autostart template which you can use
 and simply just add the path of your NodeJS application. This template does nothing by default
 as its file name does not end by ``.sh``. So let's have a look at the template from ``autostart/run-node-js-projects.sh-example``.
 The location where you will have to add your path is highlighted:
@@ -327,7 +327,7 @@ The location where you will have to add your path is highlighted:
    :emphasize-lines: 15
 
 
-So in order to proceed copy this file inside the ``autostart/`` directory of the Devilbox git directory
+So in order to proceed copy this file inside the ``autostart/`` directory of the DreamDevBox git directory
 to a new file ending by ``.sh``
 
 .. code-block:: bash
@@ -386,20 +386,20 @@ host operating systems ``/etc/hosts`` file (or ``C:\Windows\System32\drivers\etc
    * :ref:`setup_auto_dns`
 
 
-8. Restart the Devilbox
+8. Restart the DreamDevBox
 -----------------------
 
-Now for those changes to take affect, you will have to restart the Devilbox.
+Now for those changes to take affect, you will have to restart the DreamDevBox.
 
 .. code-block:: bash
 
    host> cd /path/to/devilbox
 
-   # Stop the Devilbox
+   # Stop the DreamDevBox
    host> docker-compose down
    host> docker-compose rm -f
 
-   # Start the Devilbox
+   # Start the DreamDevBox
    host> docker-compose up -d php httpd bind
 
 
@@ -421,7 +421,7 @@ with the available commands. A quick guide is below:
 
 .. code-block:: bash
 
-   # Navigate to Devilbox git directory
+   # Navigate to DreamDevBox git directory
    host> cd /path/to/devilbox
 
    # Enter the PHP container

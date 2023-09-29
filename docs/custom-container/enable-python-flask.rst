@@ -7,7 +7,7 @@
 Enable and configure Python Flask
 *********************************
 
-This section will guide you through getting Python Flask integrated into the Devilbox.
+This section will guide you through getting Python Flask integrated into the DreamDevBox.
 
 .. seealso::
    * :ref:`example_setup_reverse_proxy_python_flask`
@@ -33,7 +33,7 @@ Python Flask settings
 ---------------------
 
 In case of Python Flask, the file is ``compose/docker-compose.override.yml-python-flask``. This file
-must be copied into the root of the Devilbox git directory.
+must be copied into the root of the DreamDevBox git directory.
 
 +-----------------------+----------------------------------------------------------------------------------------------------------+
 | What                  | How and where                                                                                            |
@@ -50,7 +50,7 @@ must be copied into the root of the Devilbox git directory.
 +-----------------------+----------------------------------------------------------------------------------------------------------+
 | Exposed port          | none                                                                                                     |
 +-----------------------+----------------------------------------------------------------------------------------------------------+
-| Available at          | Devilbox intranet via Reverse Proxy configuration                                                        |
+| Available at          | DreamDevBox intranet via Reverse Proxy configuration                                                        |
 +-----------------------+----------------------------------------------------------------------------------------------------------+
 | Further configuration | :ref:`example_setup_reverse_proxy_python_flask`                                                          |
 +-----------------------+----------------------------------------------------------------------------------------------------------+
@@ -75,7 +75,7 @@ Instructions
 1. Copy docker-compose.override.yml
 -----------------------------------
 
-Copy the Python Flask Docker Compose overwrite file into the root of the Devilbox git directory.
+Copy the Python Flask Docker Compose overwrite file into the root of the DreamDevBox git directory.
 (It must be at the same level as the default ``docker-compose.yml`` file).
 
 .. code-block:: bash
@@ -125,7 +125,7 @@ TL;DR
 =====
 
 For the lazy readers, here are all commands required to get you started.
-Simply copy and paste the following block into your terminal from the root of your Devilbox git
+Simply copy and paste the following block into your terminal from the root of your DreamDevBox git
 directory:
 
 .. code-block:: bash

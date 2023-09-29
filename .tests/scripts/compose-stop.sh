@@ -25,7 +25,7 @@ fi
 # -------------------------------------------------------------------------------------------------
 
 ###
-### Clean Devilbox artifacts
+### Clean DreamDevBox artifacts
 ###
 
 # Remove emails

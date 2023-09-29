@@ -489,7 +489,7 @@ The goal of this release is to reduce the overall size of Docker images and brin
 - [#707](https://github.com/cytopia/devilbox/issues/707) New `.env` variable: `HOST_PATH_BACKUPDIR`
 
 #### Changed
-- [#547](https://github.com/cytopia/devilbox/issues/547) Added link to official Contao Devilbox Documentation
+- [#547](https://github.com/cytopia/devilbox/issues/547) Added link to official Contao DreamDevBox Documentation
 
 
 ## Release v1.8.1 (2020-11-12)
@@ -499,7 +499,7 @@ The goal of this release is to reduce the overall size of Docker images and brin
 - [#746](https://github.com/cytopia/devilbox/issues/746) Fix xdebug config for PHP 8.0 and 8.1
 
 #### Added
-- Added `check-config.sh` script to check against correct Devilbox configuration
+- Added `check-config.sh` script to check against correct DreamDevBox configuration
 
 
 ## Release v1.8.0 (2020-11-08)
@@ -717,7 +717,7 @@ No explicit actions to be taken for updating.
 
 ## Release v1.0.0 (2019-03-19)
 
-This is the first major stable release of the Devilbox.
+This is the first major stable release of the DreamDevBox.
 
 #### Changed
 - Everything from v1.0.0-alpha1 has been backported

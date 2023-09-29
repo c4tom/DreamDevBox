@@ -17,14 +17,14 @@ Why
 
 Sometimes it is just convinient to make your local project available over the internet to quickly
 showcase your current work to a customer. Instead of having to deploy it somewhere and even be able
-to live code during the showcase the Devilbox provides an easy way to accomplish exactly this via
+to live code during the showcase the DreamDevBox provides an easy way to accomplish exactly this via
 Ngrok.
 
 
 How
 ===
 
-First you want to add Ngrok to the Devilbox stack via its pre-defined Docker Compose override file.
+First you want to add Ngrok to the DreamDevBox stack via its pre-defined Docker Compose override file.
 
 .. seealso::    * :ref:`custom_container_enable_ngrok`
 

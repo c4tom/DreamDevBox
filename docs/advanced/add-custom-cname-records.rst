@@ -27,7 +27,7 @@ This might be useful if you have an IP address or hostname on your LAN or any ot
 you want to expose to your container by a different CNAME of your choice.
 
 Think of it as setting your ``/etc/hosts``, but which will be distributed accross all hosts which
-are using the Devilbox' bundled DNS server.
+are using the DreamDevBox' bundled DNS server.
 
 How?
 ====

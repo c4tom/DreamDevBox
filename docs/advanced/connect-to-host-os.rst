@@ -7,7 +7,7 @@
 Connect to host OS
 ******************
 
-This section explains how to connect from inside a Devilbox container to the host operating system.
+This section explains how to connect from inside a DreamDevBox container to the host operating system.
 
 
 **Table of Contents**
@@ -31,12 +31,12 @@ Docker on Linux
 ===============
 
 If you run Docker on Linux the host IP is always ``172.16.238.1``, which is the default gateway
-IP address within the Devilbox bridge network (see ``docker-compose.yml``).
+IP address within the DreamDevBox bridge network (see ``docker-compose.yml``).
 
 .. important:: Ensure services on the host listen on that IP address or on all interfaces.
 
 By default Docker on Linux does not have CNAME's of the host computer as for example with MacOS
-or Windows, therefore two custom CNAME's have been added by the Devilbox in order to emulate the
+or Windows, therefore two custom CNAME's have been added by the DreamDevBox in order to emulate the
 same behaviour:
 
 * CNAME: ``docker.for.lin.host.internal``
@@ -98,7 +98,7 @@ Docker Toolbox
 .. note:: This section applies for both, Docker Toolbox on MacOS and Docker Toolbox on Windows.
 
 Docker Toolbox behaves the same way as Docker on Linux, with one major difference.
-The Devilbox IP address or the custom provided CNAMEs actually refer to the Docker Toolbox machine.
+The DreamDevBox IP address or the custom provided CNAMEs actually refer to the Docker Toolbox machine.
 
 In order to connect from inside the Docker container (which is inside the Docker Toolbox machine)
 to your host os, you need to create:
@@ -115,7 +115,7 @@ For both examples we assume the following:
 * Docker Toolbox IP address is ``192.168.99.100``
 * Host IP address where SSH is listening on ``172.16.0.1``
 * Host SSH username is ``user``
-* Devilbox Docker container wants to access MySQL on host os
+* DreamDevBox Docker container wants to access MySQL on host os
 
 
 Local port forward on Docker Toolbox
@@ -169,4 +169,4 @@ With either of the above you have achieved the exact behaviour as
 :ref:`connect_to_host_os_docker_on_linux` for one single service/port (MySQL port 3306).
 
 You must now follow the steps for :ref:`connect_to_host_os_docker_on_linux` to actually connect
-to that service from within the Devilbox Docker container.
+to that service from within the DreamDevBox Docker container.

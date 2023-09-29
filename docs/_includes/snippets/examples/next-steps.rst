@@ -3,7 +3,7 @@ Once everything is installed and setup correctly, you might be interested in a f
 Use bundled batteries
 ---------------------
 
-The Devilbox ships most common Web UIs accessible from the intranet.
+The DreamDevBox ships most common Web UIs accessible from the intranet.
 
 .. seealso::
    * :ref:`devilbox_intranet_adminer`
@@ -12,10 +12,10 @@ The Devilbox ships most common Web UIs accessible from the intranet.
    * :ref:`devilbox_intranet_phpredmin`
    * :ref:`devilbox_intranet_phpmemcachedadmin`
 
-Enhance the Devilbox
+Enhance the DreamDevBox
 --------------------
 
-Go ahead and make the Devilbox more smoothly by setting up its core features.
+Go ahead and make the DreamDevBox more smoothly by setting up its core features.
 
 .. seealso::
    * :ref:`setup_valid_https`

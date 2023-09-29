@@ -3,11 +3,11 @@
 .. _update_the_devilbox:
 
 *******************
-Update the Devilbox
+Update the DreamDevBox
 *******************
 
 If you are in the initial install process, you can safely skip this section and come back once
-you actually want to update the Devilbox.
+you actually want to update the DreamDevBox.
 
 
 **Table of Contents**
@@ -67,7 +67,7 @@ Keep ``.env`` file in sync
 
 .. important::
    Whenever you check out a different version, make sure that your ``.env`` file is up-to-date
-   with the bundled ``env-example`` file. Different Devilbox releases might require different
+   with the bundled ``env-example`` file. Different DreamDevBox releases might require different
    settings to be available inside the ``.env`` file.
 
 You can also compare your current ``.env`` file with the provided ``env-example`` file by using
@@ -121,12 +121,12 @@ Updating the git branch shouldn't be needed to often, most changes are actually 
 
 This is usually achieved by issueing a ``docker pull`` command with the correct image name and image
 version or ``docker-compose pull`` for all currently selected images in ``.env`` file.
-For your convenience there is a shell script in the Devilbox git directory: ``update-docker.sh``
+For your convenience there is a shell script in the DreamDevBox git directory: ``update-docker.sh``
 which will update all available Docker images at once for every version.
 
 .. note::
 
-     The Devilbox own Docker images (Apache, Nginx, PHP and MySQL) are even built every night to ensure
+     The DreamDevBox own Docker images (Apache, Nginx, PHP and MySQL) are even built every night to ensure
      latest security patches and tool versions are applied.
 
 
@@ -195,7 +195,7 @@ This is most likely the variant you want.
 Update all available Docker images for all versions
 ---------------------------------------------------
 
-In case you also want to pull/update every single of every available Devilbox image, you can
+In case you also want to pull/update every single of every available DreamDevBox image, you can
 use the provided shell script, which has all versions hardcoded and pulls them for you:
 
 .. code-block:: bash
@@ -216,6 +216,6 @@ Checklist Docker images
 =======================
 
 1. Ensure ``docker-compose pull`` or ``./update-docker.sh`` is executed
-2. Ensure ``docker-compose rm -f`` is executed after stopping the Devilbox
+2. Ensure ``docker-compose rm -f`` is executed after stopping the DreamDevBox
 
 .. seealso:: **Troubleshooting:** :ref:`troubleshooting_what_to_do_first`

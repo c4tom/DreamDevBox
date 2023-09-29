@@ -36,7 +36,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 						<div class="inner cover">
 
 							<img src="/assets/img/banner.png" style="width:60%; padding-bottom:20px;"/>
-							<h1 class="cover-heading">Devilbox Login</h1>
+							<h1 class="cover-heading">DreamDevBox Login</h1>
 
 							<div class="text-danger"><?php echo $login_error; ?></div>
 							<form method="POST">

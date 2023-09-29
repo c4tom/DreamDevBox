@@ -4,10 +4,10 @@
 .. _devilbox_intranet:
 
 *****************
-Devilbox intranet
+DreamDevBox intranet
 *****************
 
-The Devilbox intranet is your command & control center showing all kinds of information and
+The DreamDevBox intranet is your command & control center showing all kinds of information and
 settings currently in effect. It also offers third-party projects to do all sorts of database
 manipulation.
 
@@ -17,7 +17,7 @@ manipulation.
 .. contents:: :local:
 
 
-Devilbox tools
+DreamDevBox tools
 ==============
 
 Overview
@@ -135,7 +135,7 @@ Settings
 Password protect the intranet
 -----------------------------
 
-If you share your projects over a LAN, but do not want anybody to view the Devilbox intranet,
+If you share your projects over a LAN, but do not want anybody to view the DreamDevBox intranet,
 you can also password protect it.
 
 .. seealso::
@@ -148,7 +148,7 @@ you can also password protect it.
 Disable the intranet
 --------------------
 
-If you want a more production-like setup, you can also fully disable the Devilbox intranet.
+If you want a more production-like setup, you can also fully disable the DreamDevBox intranet.
 This is achieved internally by removing the default virtual host which serves the intranet.
 When the intranet is disabled, there is no way to access it.
 
@@ -161,8 +161,8 @@ When the intranet is disabled, there is no way to access it.
 Checklist
 =========
 
-1. You know what tools are provided by the Devilbox intranet
-2. You know how to password protect the Devilbox intranet
-3. You know how to disable the Devilbox intranet
+1. You know what tools are provided by the DreamDevBox intranet
+2. You know how to password protect the DreamDevBox intranet
+3. You know how to disable the DreamDevBox intranet
 
 .. seealso:: :ref:`troubleshooting`

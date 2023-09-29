@@ -1,11 +1,11 @@
-# Devilbox tests
+# DreamDevBox tests
 
 **Important:** Do not run this locally.
 
 The Makefile will
 * overwrite your `.env` file.
-* empty your local Devilbox emails
-* empty your local Devilbox logs
+* empty your local DreamDevBox emails
+* empty your local DreamDevBox logs
 
 
 ## Test workflow

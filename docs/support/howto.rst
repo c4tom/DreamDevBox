@@ -21,7 +21,7 @@ The How to section gathers information about various topics, that might need to 
    /howto/uid-and-gid/*
 
 .. toctree::
-   :caption: Devilbox
+   :caption: DreamDevBox
    :maxdepth: 1
    :glob:
 

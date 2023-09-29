@@ -17,7 +17,7 @@ Assumption
 ==========
 
 This tutorial is using ``127.0.0.1`` as the DNS server IP address, as it is the method to setup
-Auto DNS for your local Devilbox.
+Auto DNS for your local DreamDevBox.
 
 
 Network preferences

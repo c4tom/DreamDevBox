@@ -8,7 +8,7 @@ Enable and configure ELK Stack
 ******************************
 
 This section will guide you through getting ELK stack (Elastic Search, Logstash and Kibana)
-integrated into the Devilbox.
+integrated into the DreamDevBox.
 
 .. seealso::
    * |ext_lnk_elk_elastic_github|
@@ -37,7 +37,7 @@ ELK settings
 ------------
 
 In case of ELK stack, the file is ``compose/docker-compose.override.yml-elk``. This file
-must be copied into the root of the Devilbox git directory.
+must be copied into the root of the DreamDevBox git directory.
 
 +-----------------------+------------------------------------------------------------------------------------------------------+
 | What                  | How and where                                                                                        |
@@ -160,7 +160,7 @@ Instructions
 1. Copy docker-compose.override.yml
 -----------------------------------
 
-Copy the ELK stack Docker Compose overwrite file into the root of the Devilbox git directory.
+Copy the ELK stack Docker Compose overwrite file into the root of the DreamDevBox git directory.
 (It must be at the same level as the default ``docker-compose.yml`` file).
 
 .. code-block:: bash
@@ -205,10 +205,10 @@ Add the following variables to ``.env`` and adjust them to your needs:
 .. seealso:: :ref:`env_file`
 
 
-3. Start the Devilbox
+3. Start the DreamDevBox
 ---------------------
 
-The final step is to start the Devilbox with ELK stack.
+The final step is to start the DreamDevBox with ELK stack.
 
 Let's assume you want to start ``php``, ``httpd``, ``bind``, ``elastic``, ``logstash``, ``kibana``.
 
@@ -223,7 +223,7 @@ TL;DR
 =====
 
 For the lazy readers, here are all commands required to get you started.
-Simply copy and paste the following block into your terminal from the root of your Devilbox git
+Simply copy and paste the following block into your terminal from the root of your DreamDevBox git
 directory:
 
 .. code-block:: bash

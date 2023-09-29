@@ -7,7 +7,7 @@
 Enable and configure MailHog
 ****************************
 
-This section will guide you through getting MailHog integrated into the Devilbox.
+This section will guide you through getting MailHog integrated into the DreamDevBox.
 
 .. seealso::
    * |ext_lnk_mailhog_github|
@@ -34,7 +34,7 @@ MailHog settings
 ----------------
 
 In case of MailHog, the file is ``compose/docker-compose.override.yml-mailhog``. This file
-must be copied into the root of the Devilbox git directory.
+must be copied into the root of the DreamDevBox git directory.
 
 +-----------------------+-----------------------------------------------------------------------------------------------------+
 | What                  | How and where                                                                                       |
@@ -77,7 +77,7 @@ Instructions
 1. Copy docker-compose.override.yml
 -----------------------------------
 
-Copy the MailHog Docker Compose overwrite file into the root of the Devilbox git directory.
+Copy the MailHog Docker Compose overwrite file into the root of the DreamDevBox git directory.
 (It must be at the same level as the default ``docker-compose.yml`` file).
 
 .. code-block:: bash
@@ -134,10 +134,10 @@ Additionally also the MailHog version can be controlled via ``MAILHOG_SERVER``.
 .. seealso:: :ref:`env_file`
 
 
-4. Start the Devilbox
+4. Start the DreamDevBox
 ---------------------
 
-The final step is to start the Devilbox with MailHog.
+The final step is to start the DreamDevBox with MailHog.
 
 Let's assume you want to start ``php``, ``httpd``, ``bind`` and ``mailhog``.
 
@@ -151,15 +151,15 @@ Let's assume you want to start ``php``, ``httpd``, ``bind`` and ``mailhog``.
 5. Start using it
 -----------------
 
-* Once the Devilbox is running, visit http://localhost:8025 in your browser.
-* Any email send by any of the Devilbox managed projects will then appear in MailHog
+* Once the DreamDevBox is running, visit http://localhost:8025 in your browser.
+* Any email send by any of the DreamDevBox managed projects will then appear in MailHog
 
 
 TL;DR
 =====
 
 For the lazy readers, here are all commands required to get you started.
-Simply copy and paste the following block into your terminal from the root of your Devilbox git
+Simply copy and paste the following block into your terminal from the root of your DreamDevBox git
 directory:
 
 .. code-block:: bash

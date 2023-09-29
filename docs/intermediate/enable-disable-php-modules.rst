@@ -21,7 +21,7 @@ Enabled PHP modules
 At the moment all PHP modules are enabled by default except `ioncube <http://www.ioncube.com/>`_,
 So this one is the only one you can currently enable. To do so follow the steps provided below:
 
-1. Stop the Devilbox
+1. Stop the DreamDevBox
 2. Enable modules in ``.env`` under ``PHP_MODULES_ENABLE``
 
    .. code-block:: bash
@@ -30,7 +30,7 @@ So this one is the only one you can currently enable. To do so follow the steps 
       # Enable Ioncube
       PHP_MODULES_ENABLE=ioncube
 
-3. Start the Devilbox
+3. Start the DreamDevBox
 
 .. seealso:: :ref:`env_file_php_modules_enable`
 
@@ -41,7 +41,7 @@ Disable PHP modules
 If you feel there are currently too many modules loaded and you want to unload some of them by
 default, you can do so via a comma separated list in ``.env``.
 
-1. Stop the Devilbox
+1. Stop the DreamDevBox
 2. Disable modules in ``.env`` under ``PHP_MODULES_DISABLE``
 
    .. code-block:: bash
@@ -50,7 +50,7 @@ default, you can do so via a comma separated list in ``.env``.
       # Disable Xdebug, Imagick and Swoole
       PHP_MODULES_DISABLE=xdebug,imagick,swoole
 
-3. Start the Devilbox
+3. Start the DreamDevBox
 
 .. seealso:: :ref:`env_file_php_modules_disable`
 

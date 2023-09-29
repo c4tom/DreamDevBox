@@ -1,5 +1,5 @@
-The Devilbox ships various example configurations to overwrite the default stack. Those files are
-located under ``compose/`` in the Devilbox git directory.
+The DreamDevBox ships various example configurations to overwrite the default stack. Those files are
+located under ``compose/`` in the DreamDevBox git directory.
 
 ``docker-compose.override.yml-all`` has all examples combined in one file for easy copy/paste.
 However, each example also exists in its standalone file as shown below:

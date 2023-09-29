@@ -40,7 +40,7 @@ make sure the following is met:
 
 2. Configure your application to use the IP/CNAME of the host os
 
-3. When starting the Devilbox, explicitly specify the service to use and exclude the databases:
+3. When starting the DreamDevBox, explicitly specify the service to use and exclude the databases:
 
    .. code-block:: bash
 
@@ -61,7 +61,7 @@ make sure the following is met:
 
 1. Configure your application to use the IP/CNAME of the database host
 
-2. When starting the Devilbox, explicitly specify the service to use and exclude the databases:
+2. When starting the DreamDevBox, explicitly specify the service to use and exclude the databases:
 
    .. code-block:: bash
 
@@ -80,7 +80,7 @@ make sure the following is met:
 
 1. Configure your application to use the IP/CNAME of the database host
 
-2. When starting the Devilbox, explicitly specify the service to use and exclude the databases:
+2. When starting the DreamDevBox, explicitly specify the service to use and exclude the databases:
 
    .. code-block:: bash
 

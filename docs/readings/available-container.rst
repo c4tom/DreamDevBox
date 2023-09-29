@@ -16,7 +16,7 @@ When doing a selective start, use the ``Name`` value to specify the container to
 Core container
 ==============
 
-These container are well integrated into the Devilbox intranet and are considered core container:
+These container are well integrated into the DreamDevBox intranet and are considered core container:
 
 .. include:: /_includes/snippets/core-container.rst
 
@@ -24,7 +24,7 @@ These container are well integrated into the Devilbox intranet and are considere
 Additional container
 ====================
 
-Additional container that are not yet integrated into the Devilbox intranet are also available.
+Additional container that are not yet integrated into the DreamDevBox intranet are also available.
 Those container come via ``docker-compose.override.yml`` and must explicitly be enabled.
 They are disabled by default to prevent accidentally starting too many container and making your
 computer unresponsive.

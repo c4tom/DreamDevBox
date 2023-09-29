@@ -4,7 +4,7 @@
 .. _install_the_devilbox:
 
 ********************
-Install the Devilbox
+Install the DreamDevBox
 ********************
 
 .. important::
@@ -16,10 +16,10 @@ Install the Devilbox
 .. contents:: :local:
 
 
-Download the Devilbox
+Download the DreamDevBox
 =====================
 
-The Devilbox does not need to be installed. The only thing that is required is its git directory.
+The DreamDevBox does not need to be installed. The only thing that is required is its git directory.
 To download that, open a terminal and copy/paste the following command.
 
 .. code-block:: bash
@@ -36,7 +36,7 @@ To download that, open a terminal and copy/paste the following command.
 Create ``.env`` file
 ====================
 
-Inside the cloned Devilbox git directory, you will find a file called ``env-example``. This file
+Inside the cloned DreamDevBox git directory, you will find a file called ``env-example``. This file
 is the main configuration with sane defaults for Docker Compose. In order to use it, it must be
 copied to a file named ``.env``. (Pay attention to the leading dot).
 
@@ -45,7 +45,7 @@ copied to a file named ``.env``. (Pay attention to the leading dot).
    host> cp env-example .env
 
 The ``.env`` file does nothing else than providing environment variables for Docker Compose
-and in this case it is used as the main configuration file for the Devilbox by providing all kinds
+and in this case it is used as the main configuration file for the DreamDevBox by providing all kinds
 of settings (such as which version to start up).
 
 .. seealso::
@@ -156,10 +156,10 @@ The Docker documentation will also give you alternative caching options to consi
 Checklist
 =========
 
-1. Devilbox is cloned
+1. DreamDevBox is cloned
 2. ``.env`` file is created
 3. User and group id have been set in ``.env`` file
 
-That's it, you have finished the first section and have a working Devilbox ready to be started.
+That's it, you have finished the first section and have a working DreamDevBox ready to be started.
 
 .. seealso:: :ref:`troubleshooting`

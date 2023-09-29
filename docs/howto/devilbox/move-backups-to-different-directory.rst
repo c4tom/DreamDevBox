@@ -9,20 +9,20 @@ Move backups to a different directory
 *************************************
 
 No matter if your backups are already in a different location or if you want to move them out of
-the Devilbox git directory now, you can do that in a few simple steps.
+the DreamDevBox git directory now, you can do that in a few simple steps.
 
 **Table of Contents**
 
 .. contents:: :local:
 
-Move backups out of the Devilbox git directory
+Move backups out of the DreamDevBox git directory
 ==============================================
 
 All you have to do is to adjust the path of :ref:`env_host_path_backupdir` in the ``.env`` file.
 
 .. code-block:: bash
 
-   # Navigate to Devilbox git directory
+   # Navigate to DreamDevBox git directory
    host> cd path/to/devilbox
 
    # Open the .env file with your favourite editor
@@ -36,5 +36,5 @@ Now Adjust the value of :ref:`env_host_path_backupdir`
 
    HOST_PATH_HTTPD_DATADIR=/home/user/backups/devilbox/
 
-That's it, whenever you start up the Devilbox, ``/home/user/backups/devilbox/`` will be mounted into
+That's it, whenever you start up the DreamDevBox, ``/home/user/backups/devilbox/`` will be mounted into
 the PHP container into ``/shared/backups/``.

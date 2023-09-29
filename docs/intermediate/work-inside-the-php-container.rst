@@ -6,7 +6,7 @@
 Work inside the PHP container
 *****************************
 
-The Devilbox allows you to completely work inside the PHP container (no matter what version),
+The DreamDevBox allows you to completely work inside the PHP container (no matter what version),
 instead of your host operating system.
 
 This brings a lot of advantages, such as that you don't
@@ -28,7 +28,7 @@ database and other connections.
 Enter the container
 ===================
 
-Entering the computer is fairly simple. The Devilbox ships with two scripts to do that. One for
+Entering the computer is fairly simple. The DreamDevBox ships with two scripts to do that. One for
 Linux and MacOS (``shell.sh``) and another one for Windows (``shell.bat``).
 
 Entering from Linux or MacOS: ``shell.sh``
@@ -36,7 +36,7 @@ Entering from Linux or MacOS: ``shell.sh``
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    host> cd /path/to/devilbox
 
    # Run provided script
@@ -51,7 +51,7 @@ Entering from Windows: ``shell.bat``
 
 .. code-block:: bash
 
-   # Navigate to the Devilbox directory
+   # Navigate to the DreamDevBox directory
    C:/> cd C:/Users/user1/devilbox
 
    # Run provided script

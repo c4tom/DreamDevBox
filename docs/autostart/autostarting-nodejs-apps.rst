@@ -50,7 +50,7 @@ Add the following script to ``autostart/``
 * ``cd`` tells it to you enter the directory where ``index.js`` can be found
 * And finally |ext_lnk_tool_pm2| will take care about starting up your javascript file.
 
-Once the Devilbox is running, you can enter the PHP container and verify with ``pm2 list`` that
+Once the DreamDevBox is running, you can enter the PHP container and verify with ``pm2 list`` that
 everything is running as expected.
 
 

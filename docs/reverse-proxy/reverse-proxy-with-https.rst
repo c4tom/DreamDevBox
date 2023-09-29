@@ -199,21 +199,21 @@ Find the lines with ``proxy_pass`` and change the port from ``8000`` to ``8081``
 
 
 
-Restart the Devilbox
+Restart the DreamDevBox
 --------------------
 
-Now for the changes to take affect, simply restart the Devilbox (or start if not yet running):
+Now for the changes to take affect, simply restart the DreamDevBox (or start if not yet running):
 
 
 .. code-block:: bash
 
    host> cd /path/to/devilbox
 
-   # Stop the Devilbox
+   # Stop the DreamDevBox
    host> docker-compose stop
    host> docker-compose rm -f
 
-   # Start the Devilbox (PHP and HTTPD container only)
+   # Start the DreamDevBox (PHP and HTTPD container only)
    host> docker-compose up -d php httpd bind
 
 
@@ -245,7 +245,7 @@ It will also be available on HTTPS. This is by default and automatically:
 .. seealso:: :ref:`setup_valid_https`
 
 
-And is even shown as a project in the Devilbox intranet:
+And is even shown as a project in the DreamDevBox intranet:
 
 * http://localhost/vhosts.php
 * https://localhost/vhosts.php

@@ -64,7 +64,7 @@ Before going into the issues below, always do the following
 
    .. code-block:: bash
 
-      # Run the bash script in the Devilbox git directory
+      # Run the bash script in the DreamDevBox git directory
       host> ./check-config.sh
 
 
@@ -114,7 +114,7 @@ A few general things you should always do before attempting to open up issues ar
 
 **4. Shared volumes:**
 
-   Ensure all your Devilbox data (Devilbox directory and project directory) are within the volumes
+   Ensure all your DreamDevBox data (DreamDevBox directory and project directory) are within the volumes
    that are shared by Docker. If not add those in the Docker settings.
 
 
@@ -144,7 +144,7 @@ Address already in use
 
 One of the Docker container wants to bind to a port on the host system which is already taken.
 Figure out what service is listening on your host system and shut it down or change the port
-of the affected service in the Devilbox ``.env`` file.
+of the affected service in the DreamDevBox ``.env`` file.
 
 Some examples of common error messages:
 
@@ -165,7 +165,7 @@ To fix this error, sign out of your currently logged in repository and try again
 localhost or 127.0.0.1 not found
 --------------------------------
 
-If you are using Docker Toolbox, the Devilbox intranet is not available on localhost or 127.0.0.1,
+If you are using Docker Toolbox, the DreamDevBox intranet is not available on localhost or 127.0.0.1,
 but rather on the IP address of the Docker Toolbox machine.
 
 .. seealso:: :ref:`howto_find_docker_toolbox_ip_address`
@@ -226,7 +226,7 @@ unable to get local issuer certificate
 
 This issue might arise if you set :ref:`env_tld_suffix` to an official top level domain such as ``.com``.
 What happens is that the bundled DNS server does a catch-all on the TLD and redirects all name
-resolution to the Devilbox's PHP container IP address.
+resolution to the DreamDevBox's PHP container IP address.
 
 If you want to access ``https://www.example.com`` in that case, the request goes to the PHP
 container which does not have a valid SSL certificate for that domain.
@@ -254,7 +254,7 @@ volumes mounts.
 403 forbidden
 -------------
 
-This error might occur for the Devilbox intranet or custom created projects.
+This error might occur for the DreamDevBox intranet or custom created projects.
 
 File and directory permissions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -263,7 +263,7 @@ On of the cause could be wrongly set file and directory permissions.
 
 First ensure the cloned git directory is readable for users, groups and others.
 
-For the Devilbox intranet, ensure the ``.dreamdevbox/`` directory is readable for users, groups and
+For the DreamDevBox intranet, ensure the ``.dreamdevbox/`` directory is readable for users, groups and
 others. Also check files and directories within.
 
 For projects, ensure an ``index.php`` or ``index.html`` exists and that all files and directories
@@ -272,10 +272,10 @@ are readable for users, groups and others.
 Shared volumes
 ^^^^^^^^^^^^^^
 
-This might additionally occur on MacOS or Windows due to the Devilbox and/or its projects not
+This might additionally occur on MacOS or Windows due to the DreamDevBox and/or its projects not
 being in the standard location of Docker Shared volumes.
 
-Check your Docker settings to allow shared volumes for the path of the Devilbox and its projects.
+Check your Docker settings to allow shared volumes for the path of the DreamDevBox and its projects.
 
 
 504 Gateway timeout

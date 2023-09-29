@@ -6,10 +6,10 @@
 Enter the PHP container
 ***********************
 
-Another core feature of the Devilbox, is to be totally independent of what you have or have not
+Another core feature of the DreamDevBox, is to be totally independent of what you have or have not
 installed on your host operating system.
 
-The Devilbox already ships with many common developer tools which are installed inside each PHP
+The DreamDevBox already ships with many common developer tools which are installed inside each PHP
 container, so why not make use of it.
 
 The only thing you might need to install on your host operating system is your favourite IDE or

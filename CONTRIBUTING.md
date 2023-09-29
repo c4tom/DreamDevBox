@@ -3,12 +3,12 @@
 
 **Abstract**
 
-The Devilbox is currently being developed in my spare time and mostly reflects the features that I
+The DreamDevBox is currently being developed in my spare time and mostly reflects the features that I
 am using for all the web projects I have to handle. In order to better present it to the majority
 of other software developers I do require support to cope with all the feature requests.
 
 
-So first of all, If the Devilbox makes your life easier, **star it on GitHub**!
+So first of all, If the DreamDevBox makes your life easier, **star it on GitHub**!
 
 **Table of Contents**
 
@@ -19,7 +19,7 @@ So first of all, If the Devilbox makes your life easier, **star it on GitHub**!
     4. [Intranet](#intranet)
     5. [Vendors](#vendors)
     6. [Tests](#tests)
-2. [Joining the Devilbox GitHub Organization](#joining-the-devilbox-github-organization)
+2. [Joining the DreamDevBox GitHub Organization](#joining-the-devilbox-github-organization)
 3. [Important](#important)
 
 
@@ -67,7 +67,7 @@ Have a look at the GitHub issues and see if you can implement any features reque
 
 #### Upgrade Adminer
 
-Adminer requires some adjustments to work with the Devilbox intranet. See below for files to adjust:
+Adminer requires some adjustments to work with the DreamDevBox intranet. See below for files to adjust:
 
 `adminer-x.y.z-en.php`
 ```diff
@@ -77,7 +77,7 @@ Adminer requires some adjustments to work with the Devilbox intranet. See below 
 
 #### Upgrade phpMyAdmin
 
-phpMyAdmin requires some adjustments to work with the Devilbox intranet. See below for files to adjust:
+phpMyAdmin requires some adjustments to work with the DreamDevBox intranet. See below for files to adjust:
 
 `config.inc.php`
 ```diff
@@ -116,7 +116,7 @@ phpMyAdmin requires some adjustments to work with the Devilbox intranet. See bel
 
 #### Upgrade phpRedmin
 
-phpRedmin requires some adjustments to work with the Devilbox intranet. See below for files to adjust:
+phpRedmin requires some adjustments to work with the DreamDevBox intranet. See below for files to adjust:
 
 `config.dist.php`
 ```diff
@@ -193,7 +193,7 @@ phpRedmin requires some adjustments to work with the Devilbox intranet. See belo
 
 #### Upgrade phpPgAdmin
 
-phpPgAdmin requires some adjustments to work with the Devilbox intranet. See below for files to adjust:
+phpPgAdmin requires some adjustments to work with the DreamDevBox intranet. See below for files to adjust:
 
 `conf/config.inc.php`
 ```diff
@@ -253,7 +253,7 @@ phpPgAdmin requires some adjustments to work with the Devilbox intranet. See bel
 * Rewrite current tests, write new tests
 
 
-## Joining the Devilbox GitHub Organization
+## Joining the DreamDevBox GitHub Organization
 
 If you want to contribute on a regular base and take care about major feature development you can
 be invited to the GitHub organization.
@@ -261,6 +261,6 @@ be invited to the GitHub organization.
 This however requires some prerequisites:
 
 1. Willing to dedicate a regular amount of time to invest in this project
-2. Already spent a decent amount of time in improving the Devilbox
-3. A good understanding about the Devilbox
+2. Already spent a decent amount of time in improving the DreamDevBox
+3. A good understanding about the DreamDevBox
 4. A good understanding about the PHP-FPM container (and how it is built with Ansible)

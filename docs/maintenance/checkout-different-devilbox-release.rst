@@ -3,7 +3,7 @@
 .. _checkout-different-devilbox-release:
 
 ***********************************
-Checkout different Devilbox release
+Checkout different DreamDevBox release
 ***********************************
 
 You now have the devilbox downloaded at the latest version (``git master branch``). This is also recommended as it receives
@@ -24,7 +24,7 @@ this specific git tag.
 
 .. warning::
    Whenever you check out a different version, make sure that your ``.env`` file is up-to-date
-   with the bundled ``env-example`` file. Different Devilbox releases might require different
+   with the bundled ``env-example`` file. Different DreamDevBox releases might require different
    settings to be available inside the ``.env`` file. Refer to the next section for how to
    create the ``.env`` file.
 

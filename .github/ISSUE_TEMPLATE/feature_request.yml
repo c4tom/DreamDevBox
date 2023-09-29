@@ -10,14 +10,14 @@ body:
   - type: textarea
     attributes:
       label: What is your idea or feature suggestion?
-      description: Tell us, what idea or feature you suggest to be added to the Devilbox.
+      description: Tell us, what idea or feature you suggest to be added to the DreamDevBox.
     validations:
       required: true
 
   - type: textarea
     attributes:
       label: Benefits
-      description: Tell us, how this this will be beneficial to the Devilbox.
+      description: Tell us, how this this will be beneficial to the DreamDevBox.
     validations:
       required: false
 

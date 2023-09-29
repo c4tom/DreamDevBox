@@ -7,7 +7,7 @@
 Setup valid HTTPS
 *****************
 
-This page shows you how to use the Devilbox on https and how to import the Certificate Authority
+This page shows you how to use the DreamDevBox on https and how to import the Certificate Authority
 into your browser once, so that you always and automatically get valid SSL certificates for all new
 projects.
 
@@ -32,9 +32,9 @@ How does it work
 Certificate Authority
 ---------------------
 
-When the Devilbox starts up for the first time, it will generate a
+When the DreamDevBox starts up for the first time, it will generate a
 |ext_lnk_ssl_certificate_authority| and will store its public and private key in ``./ca/`` within
-the Devilbox git directory.
+the DreamDevBox git directory.
 
 The keys are only generated if they don't exist and kept permanently if you don't delete them
 manually, i.e. they are not overwritten.
@@ -56,7 +56,7 @@ Whenever you create a new project directory, multiple things happen in the backg
 1. A new virtual host is created
 2. DNS is provided via :ref:`setup_auto_dns`
 3. A new SSL certificate is generated for that vhost
-4. **The SSL certificate is signed by the Devilbox Certificate Authority**
+4. **The SSL certificate is signed by the DreamDevBox Certificate Authority**
 
 By having a SSL certificates signed by the provided CA, you will only have to import the CA
 into your browser ones and all current projects and future projects will automatically have
@@ -67,7 +67,7 @@ Import the CA into your browser
 ===============================
 
 .. important::
-   Importing the CA into the browser is also recommended and required for the Devilbox
+   Importing the CA into the browser is also recommended and required for the DreamDevBox
    intranet page to work properly.
    You may also import the CA into your Operating System's Keystore. Information on that
    is available at |ext_lnk_ssl_gfi_root_cert_guide|.
@@ -88,7 +88,7 @@ Navigate to the tab setting ``AUTHORITIES`` and click on ``IMPORT``.
 
 .. include:: /_includes/figures/https/chrome-manage-certificates.rst
 
-Select ``devilbox-ca.crt`` from within the Devilbox ``./ca`` directory:
+Select ``devilbox-ca.crt`` from within the DreamDevBox ``./ca`` directory:
 
 .. include:: /_includes/figures/https/file-manager-import-ca.rst
 
@@ -119,7 +119,7 @@ In the ``Authories`` tab, click on ``Import``.
 
 .. include:: /_includes/figures/https/firefox-certificate-manager.rst
 
-Select ``devilbox-ca.crt`` from within the Devilbox ``./ca`` directory:
+Select ``devilbox-ca.crt`` from within the DreamDevBox ``./ca`` directory:
 
 .. include:: /_includes/figures/https/file-manager-import-ca.rst
 
