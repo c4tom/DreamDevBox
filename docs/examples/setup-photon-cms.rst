@@ -77,7 +77,7 @@ The vhost directory defines the name under which your project will be available.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ mkdir my-photon
+   dreamdevbox@php-7.0.20 in /shared/httpd $ mkdir my-photon
 
 .. seealso:: :ref:`env_tld_suffix`
 
@@ -95,8 +95,8 @@ Navigate into your newly created vhost directory and install Photom CMS with ``p
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ cd my-photon
-   devilbox@php-7.0.20 in /shared/httpd/my-photon $ photon new blog
+   dreamdevbox@php-7.0.20 in /shared/httpd $ cd my-photon
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-photon $ photon new blog
    ...What is your mysql hostname? [localhost]  127.0.0.1
    ...What is your mysql username? [root]root
    ...What is your mysql password? []
@@ -105,7 +105,7 @@ How does the directory structure look after installation:
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-photon $ tree -L 1
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-photon $ tree -L 1
    .
    └── blog
 
@@ -126,13 +126,13 @@ to its expected path.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-photon $ ln -s blog/public/ htdocs
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-photon $ ln -s blog/public/ htdocs
 
 How does the directory structure look after symlinking:
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-photon $ tree -L 1
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-photon $ tree -L 1
    .
    ├── blog
    └── htdocs -> blog/public
@@ -146,7 +146,7 @@ path and points to the frameworks entrypoint.
    When using **Docker Toolbox**, you need to **explicitly allow** the usage of **symlinks**.
    See below for instructions:
 
-   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_devilbox_windows_symlinks`
+   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_dreamdevbox_windows_symlinks`
 
 
 5. DNS record

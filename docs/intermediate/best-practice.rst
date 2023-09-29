@@ -99,7 +99,7 @@ following:
    :emphasize-lines: 8
 
    # Navigate to DreamDevBox git directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Enter the PHP container
    host> ./shell.sh

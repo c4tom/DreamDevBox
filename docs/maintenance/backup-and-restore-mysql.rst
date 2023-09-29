@@ -43,13 +43,13 @@ To have your backups in place is just three commands away:
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Enter the PHP container
    host> ./shell.sh
 
    # Run mysqldump-secure
-   devilbox@php-7.1.6 in /shared/httpd $ mysqldump-secure
+   dreamdevbox@php-7.1.6 in /shared/httpd $ mysqldump-secure
 
    [INFO]  (OPT): Logging enabled
    [INFO]  (OPT): MySQL SSL connection disabled
@@ -71,16 +71,16 @@ Let's see where to find the backups inside the PHP container:
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Enter the PHP container
    host> ./shell.sh
 
    # Show directory output
-   devilbox@php-7.1.6 in /shared/httpd $ ls -l /shared/backups/mysql/
+   dreamdevbox@php-7.1.6 in /shared/httpd $ ls -l /shared/backups/mysql/
 
-   -rw-r--r-- 1 devilbox 136751 Jun 17 13:31 2017-06-17_13-31__mysql.sql.gz
-   -rw-r--r-- 1 devilbox   2269 Jun 17 13:31 2017-06-17_13-31__mysql.sql.gz.info
+   -rw-r--r-- 1 dreamdevbox 136751 Jun 17 13:31 2017-06-17_13-31__mysql.sql.gz
+   -rw-r--r-- 1 dreamdevbox   2269 Jun 17 13:31 2017-06-17_13-31__mysql.sql.gz.info
 
 
 Let's do the same again and see where to find the backups in the DreamDevBox git directory
@@ -88,7 +88,7 @@ Let's do the same again and see where to find the backups in the DreamDevBox git
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Show directory output
    host> ls -l backups/mysql/
@@ -124,8 +124,8 @@ occured during backups. Let's have a look at one of them:
    [system]
    uname      = Linux 4.4.0-79-generic
    hostname   =
-   user       = devilbox
-   group      = devilbox
+   user       = dreamdevbox
+   group      = dreamdevbox
 
    [tools]
    mysqldump  = /usr/bin/mysqldump (10.14 Distrib 5.5.52-MariaDB) [for Linux (x86_64)]
@@ -146,8 +146,8 @@ occured during backups. Let's have a look at one of them:
    file_name  = 2017-06-17_13-31__mysql.sql.gz
    file_size  = 136751 Bytes (0.13 MB)
    file_chmod = 0644
-   file_owner = devilbox
-   file_group = devilbox
+   file_owner = dreamdevbox
+   file_group = dreamdevbox
    file_mtime = 1497699116 (2017-06-17 13:31:56 CEST [+0200])
    file_md5   = 8d1a6c38f81c691bc4b490e7024a4f72
    file_sha   = 11fb85282ea866dfc69d29dc02a0418bebfea30e7e566c3c588a50987aceac2f
@@ -195,13 +195,13 @@ example which shows you how to do that from within the PHP container:
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Enter the PHP container
    host> ./shell.sh
 
    # Start the backup
-   devilbox@php-7.1.6 in /shared/httpd $ mysqldump -h mysql -u root -p my_db_name > /shared/backups/mysql/my_db_name.sql
+   dreamdevbox@php-7.1.6 in /shared/httpd $ mysqldump -h mysql -u root -p my_db_name > /shared/backups/mysql/my_db_name.sql
 
 To find out more about the configuration and options of mysqldump, visit its project page under:
 |ext_lnk_tool_mysqldump|
@@ -211,14 +211,14 @@ phpMyAdmin
 ----------
 
 If you do not like to use the command line for backups, you can use |ext_lnk_tool_phpmyadmin|.
-It comes bundled with the devilbox intranet.
+It comes bundled with the dreamdevbox intranet.
 
 
 Adminer
 -------
 
 If you do not like to use the command line for backups, you can use |ext_lnk_tool_adminer| .
-It comes bundled with the devilbox intranet.
+It comes bundled with the dreamdevbox intranet.
 
 
 Restore
@@ -236,13 +236,13 @@ binary. Here are a few examples for different file types:
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Enter the PHP container
    host> ./shell.sh
 
    # Start the import
-   devilbox@php-7.1.6 in /shared/httpd $ mysql -h mysql -u root -p my_db_name < /shared/backups/mysql/my_db_name.sql
+   dreamdevbox@php-7.1.6 in /shared/httpd $ mysql -h mysql -u root -p my_db_name < /shared/backups/mysql/my_db_name.sql
 
 
 
@@ -252,13 +252,13 @@ binary. Here are a few examples for different file types:
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Enter the PHP container
    host> ./shell.sh
 
    # Start the import
-   devilbox@php-7.1.6 in /shared/httpd $ zcat /shared/backups/mysql/my_db_name.sql.gz | mysql -h mysql -u root -p my_db_name
+   dreamdevbox@php-7.1.6 in /shared/httpd $ zcat /shared/backups/mysql/my_db_name.sql.gz | mysql -h mysql -u root -p my_db_name
 
 
 ``*.sql.tar.gz`` file
@@ -267,13 +267,13 @@ binary. Here are a few examples for different file types:
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Enter the PHP container
    host> ./shell.sh
 
    # Start the import
-   devilbox@php-7.1.6 in /shared/httpd $ tar xzOf /shared/backups/mysql/my_db_name.sql.tar.gz | mysql -h mysql -u root -p my_db_name
+   dreamdevbox@php-7.1.6 in /shared/httpd $ tar xzOf /shared/backups/mysql/my_db_name.sql.tar.gz | mysql -h mysql -u root -p my_db_name
 
 
 phpMyAdmin

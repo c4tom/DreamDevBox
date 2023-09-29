@@ -138,7 +138,7 @@ we must configure its PHP settings. There is already a default template that you
 
 .. code-block:: bash
 
-   host> cp cfg/php-ini-7.2/devilbox-php.ini-blackfire cfg/php-ini-7.2/blackfire.ini
+   host> cp cfg/php-ini-7.2/dreamdevbox-php.ini-blackfire cfg/php-ini-7.2/blackfire.ini
 
 .. seealso::
    The above example shows the procedure for PHP 7.2, if you are using a different version,
@@ -182,7 +182,7 @@ Let's assume you want to start ``php``, ``httpd``, ``bind`` and ``blackfire``.
 
    host> docker-compose up -d php httpd bind blackfire
 
-.. seealso:: :ref:`start_the_devilbox`
+.. seealso:: :ref:`start_the_dreamdevbox`
 
 
 TL;DR
@@ -198,7 +198,7 @@ directory:
    cp compose/docker-compose.override.yml-blackfire docker-compose.override.yml
 
    # Copy php.ini into place
-   cp cfg/php-ini-7.2/devilbox-php.ini-blackfire cfg/php-ini-7.2/blackfire.ini
+   cp cfg/php-ini-7.2/dreamdevbox-php.ini-blackfire cfg/php-ini-7.2/blackfire.ini
 
    # Set Blackfire server id and token
    echo "BLACKFIRE_SERVER_ID=<valid server id>"       >> .env

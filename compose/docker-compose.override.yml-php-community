@@ -8,4 +8,4 @@ services:
   # PHP Community image
   # -----------------------------------------------------------------------------------------------
   php:
-    image: devilbox/php-fpm-community:${PHP_SERVER}-${PHP_COMMUNITY_FLAVOUR:-devilbox}
+    image: dreamdevbox/php-fpm-community:${PHP_SERVER}-${PHP_COMMUNITY_FLAVOUR:-dreamdevbox}

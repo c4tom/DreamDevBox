@@ -11,7 +11,7 @@ services:
   # PHP Community image
   # -----------------------------------------------------------------------------------------------
   php:
-    image: devilbox/php-fpm-community:${PHP_SERVER}-${PHP_COMMUNITY_FLAVOUR:-devilbox}
+    image: dreamdevbox/php-fpm-community:${PHP_SERVER}-${PHP_COMMUNITY_FLAVOUR:-dreamdevbox}
 
   # -----------------------------------------------------------------------------------------------
   # Blackfire
@@ -52,7 +52,7 @@ services:
   # Ngrok
   # -----------------------------------------------------------------------------------------------
   ngrok:
-    image: devilbox/ngrok:0.3
+    image: dreamdevbox/ngrok:0.3
     hostname: ngrok
     environment:
       - HTTP_TUNNELS=${NGROK_HTTP_TUNNELS:-httpd:httpd:80}
@@ -85,7 +85,7 @@ services:
       app_net:
         ipv4_address: 172.16.238.210
     volumes:
-      - devilbox-rabbit:/var/lib/rabbitmq
+      - dreamdevbox-rabbit:/var/lib/rabbitmq
     depends_on:
       - bind
       - php
@@ -103,11 +103,11 @@ services:
       app_net:
         ipv4_address: 172.16.238.220
     volumes:
-      - devilbox-solr:/opt/solr/server/solr/mycores
+      - dreamdevbox-solr:/opt/solr/server/solr/mycores
     entrypoint:
       - docker-entrypoint.sh
       - solr-precreate
-      - ${SOLR_CORE_NAME:-devilbox}
+      - ${SOLR_CORE_NAME:-dreamdevbox}
     depends_on:
       - bind
       - php
@@ -117,7 +117,7 @@ services:
   # Varnish
   # -----------------------------------------------------------------------------------------------
   varnish:
-    image: devilbox/varnish:${VARNISH_SERVER:-6}-0.3
+    image: dreamdevbox/varnish:${VARNISH_SERVER:-6}-0.3
     hostname: varnish
     ports:
       - "${LOCAL_LISTEN_ADDR}${HOST_PORT_VARNISH:-6081}:6081"
@@ -131,14 +131,14 @@ services:
       - BACKEND_HOST=httpd
       - BACKEND_PORT=80
     volumes:
-      - ${DEVILBOX_PATH}/cfg/varnish-${VARNISH_SERVER:-6}:/etc/varnish.d
+      - ${DREAMDEVBOX_PATH}/cfg/varnish-${VARNISH_SERVER:-6}:/etc/varnish.d
     depends_on:
       - bind
       - php
       - httpd
 
   haproxy:
-    image: devilbox/haproxy:0.3
+    image: dreamdevbox/haproxy:0.3
     hostname: haproxy
     ports:
       - "${LOCAL_LISTEN_ADDR}${HOST_PORT_HAPROXY:-8080}:80"
@@ -149,11 +149,11 @@ services:
     environment:
       - BACKEND_ADDR=varnish
       - BACKEND_PORT=6081
-      - DEVILBOX_UI_SSL_CN
+      - DREAMDEVBOX_UI_SSL_CN
       - TLD_SUFFIX
     volumes:
       # Certificate Authority public key
-      - ${DEVILBOX_PATH}/ca:/ca:rw${MOUNT_OPTIONS}
+      - ${DREAMDEVBOX_PATH}/ca:/ca:rw${MOUNT_OPTIONS}
       # Mount custom mass virtual hosting
       - ${HOST_PATH_HTTPD_DATADIR}:/shared/httpd:rw${MOUNT_OPTIONS}
     depends_on:
@@ -177,7 +177,7 @@ services:
       - TZ=${TIMEZONE:-UTC}
       - discovery.type=single-node
     volumes:
-      - devilbox-elastic:/usr/share/elasticsearch/data
+      - dreamdevbox-elastic:/usr/share/elasticsearch/data
 
   logstash:
     image: docker.elastic.co/logstash/logstash-oss:${ELK_SERVER:-6.6.1}
@@ -196,7 +196,7 @@ services:
       - CONFIG_RELOAD_INTERVAL=300
       - DB_HOST=DATABASE-SERVER
     volumes:
-      - devilbox-logstash:/var/lib/logstash
+      - dreamdevbox-logstash:/var/lib/logstash
     depends_on:
       - elastic
 
@@ -222,7 +222,7 @@ services:
   # You can add more than one service here if you have multiple flask projects.
   # Just duplicate the block and adjust service name, hostname and ip address.
   flask1:
-    image: devilbox/python-flask:${PYTHON_VERSION:-3.8}-dev
+    image: dreamdevbox/python-flask:${PYTHON_VERSION:-3.8}-dev
     hostname: flask1
     ports:
       - "${LOCAL_LISTEN_ADDR}${HOST_PORT_FLASK:-3000}:${FLASK_PORT:-3000}"
@@ -258,7 +258,7 @@ services:
       app_net:
         ipv4_address: 172.16.238.203
     volumes:
-      - devilbox-meilisearch:/meili_data
+      - dreamdevbox-meilisearch:/meili_data
     depends_on:
       - bind
       - php
@@ -268,8 +268,8 @@ services:
 ### Volumes
 ###
 volumes:
-  devilbox-rabbit:
-  devilbox-solr:
-  devilbox-elastic:
-  devilbox-logstash:
-  devilbox-meilisearch:
+  dreamdevbox-rabbit:
+  dreamdevbox-solr:
+  dreamdevbox-elastic:
+  dreamdevbox-logstash:
+  dreamdevbox-meilisearch:

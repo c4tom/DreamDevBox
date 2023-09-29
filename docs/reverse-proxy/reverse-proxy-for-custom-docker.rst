@@ -56,8 +56,8 @@ Navigate to the :ref:`env_httpd_datadir` directory and create your project
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
-   host> cd /path/to/devilbox/data/www
+   host> cd /path/to/dreamdevbox
+   host> cd /path/to/dreamdevbox/data/www
 
    # Create the project directory
    host> mkdir my-python
@@ -98,7 +98,7 @@ to ensure this will work with all web servers.
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
    host> cp cfg/vhost-gen/apache22.yml-example-rproxy data/www/my-python/.dreamdevbox/apache22.yml
    host> cp cfg/vhost-gen/apache24.yml-example-rproxy data/www/my-python/.dreamdevbox/apache24.yml
    host> cp cfg/vhost-gen/nginx.yml-example-rproxy data/www/my-python/.dreamdevbox/nginx.yml
@@ -118,7 +118,7 @@ Open the ``apache22.yml`` vhost-gen template in your project:
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
    host> vi data/www/my-python/.dreamdevbox/apache22.yml
 
 Find the two lines with ``ProxyPass`` and ``ProxyPassReverse`` and change the port from ``8000``
@@ -155,7 +155,7 @@ Open the ``apache24.yml`` vhost-gen template in your project:
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
    host> vi data/www/my-python/.dreamdevbox/apache24.yml
 
 Find the two lines with ``ProxyPass`` and ``ProxyPassReverse`` and change the port from ``8000``
@@ -192,7 +192,7 @@ Open the ``nginx.yml`` vhost-gen template in your project:
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
    host> vi data/www/my-python/.dreamdevbox/nginx.yml
 
 Find the line with ``proxy_pass`` and change the port from ``8000``
@@ -234,7 +234,7 @@ Now for the changes to take affect, simply restart the DreamDevBox (or start if 
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
 
    # Stop the DreamDevBox
    host> docker-compose stop

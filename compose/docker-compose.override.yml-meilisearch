@@ -19,11 +19,11 @@ services:
       app_net:
         ipv4_address: 172.16.238.203
     volumes:
-      - devilbox-meilisearch:/meili_data
+      - dreamdevbox-meilisearch:/meili_data
     depends_on:
       - bind
       - php
       - httpd
 
 volumes:
-  devilbox-meilisearch:
+  dreamdevbox-meilisearch:

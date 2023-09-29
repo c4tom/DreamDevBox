@@ -33,27 +33,27 @@ To backup a database named ``my_db_name`` follow the below listed example:
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Enter the PHP container
    host> ./shell.sh
 
    # Run pg_dump
-   devilbox@php-7.1.6 in /shared/httpd $ pg_dump -h pgsql -U postgres -W my_db_name > /shared/backups/pgsql/my_db_name.sql
+   dreamdevbox@php-7.1.6 in /shared/httpd $ pg_dump -h pgsql -U postgres -W my_db_name > /shared/backups/pgsql/my_db_name.sql
 
 
 phpPgAdmin
 ----------
 
 If you do not like to use the command line for backups, you can use |ext_lnk_tool_phppgadmin|.
-It comes bundled with the devilbox intranet.
+It comes bundled with the dreamdevbox intranet.
 
 
 Adminer
 -------
 
 If you do not like to use the command line for backups, you can use |ext_lnk_tool_adminer|.
-It comes bundled with the devilbox intranet.
+It comes bundled with the dreamdevbox intranet.
 
 
 Restore
@@ -72,13 +72,13 @@ Here are a few examples for different file types:
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Enter the PHP container
    host> ./shell.sh
 
    # Start the import
-   devilbox@php-7.1.6 in /shared/httpd $ psql -h pgsql -U postgres -W my_db_name < /shared/backups/pgsql/my_db_name.sql
+   dreamdevbox@php-7.1.6 in /shared/httpd $ psql -h pgsql -U postgres -W my_db_name < /shared/backups/pgsql/my_db_name.sql
 
 ``*.sql.gz`` file
 ^^^^^^^^^^^^^^^^^^
@@ -86,13 +86,13 @@ Here are a few examples for different file types:
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Enter the PHP container
    host> ./shell.sh
 
    # Start the import
-   devilbox@php-7.1.6 in /shared/httpd $ zcat /shared/backups/pgsql/my_db_name.sql.gz | psql -h pgsql -U postgres -W my_db_name
+   dreamdevbox@php-7.1.6 in /shared/httpd $ zcat /shared/backups/pgsql/my_db_name.sql.gz | psql -h pgsql -U postgres -W my_db_name
 
 ``*.sql.tar.gz`` file
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -100,13 +100,13 @@ Here are a few examples for different file types:
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Enter the PHP container
    host> ./shell.sh
 
    # Start the import
-   devilbox@php-7.1.6 in /shared/httpd $ tar xzOf /shared/backups/pgsql/my_db_name.sql.tar.gz | psql -h pgsql -U postgres -W my_db_name
+   dreamdevbox@php-7.1.6 in /shared/httpd $ tar xzOf /shared/backups/pgsql/my_db_name.sql.tar.gz | psql -h pgsql -U postgres -W my_db_name
 
 
 phpPgAdmin

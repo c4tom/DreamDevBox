@@ -117,4 +117,4 @@ The PHP container is your workhorse and these are your tools:
 .. seealso::
    If you ever feel those tools are out-dated, simply update your Docker images.
    Docker images are built every night to ensure latest tools and security patches:
-   :ref:`update_the_devilbox_update_the_docker_images`
+   :ref:`update_the_dreamdevbox_update_the_docker_images`

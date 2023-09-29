@@ -232,7 +232,7 @@ $opcache = OpCacheService::init($options);
 <!doctype html>
 <html>
 <head>
-    <?php echo loadClass('Html')->getHead(); /* devilbox edit */ ?>
+    <?php echo loadClass('Html')->getHead(); /* dreamdevbox edit */ ?>
 
 
     <meta charset="UTF-8"/>
@@ -323,7 +323,7 @@ $opcache = OpCacheService::init($options);
 </head>
 
 <body>
-<?php echo loadClass('Html')->getNavbar(); /* devilbox edit */?>
+<?php echo loadClass('Html')->getNavbar(); /* dreamdevbox edit */?>
 
 
 
@@ -768,6 +768,6 @@ $opcache = OpCacheService::init($options);
     var filesObj = ReactDOM.render(React.createElement(Files, null), document.getElementById('filelist'));
     ReactDOM.render(React.createElement(Directives, null), document.getElementById('directives'));
 </script>
-<?php echo loadClass('Html')->getFooter(); /* devilbox edit */?>
+<?php echo loadClass('Html')->getFooter(); /* dreamdevbox edit */?>
 </body>
 </html>

@@ -1,3 +1,3 @@
-.. figure:: /_includes/figures/devilbox/devilbox-intranet-emails.png
+.. figure:: /_includes/figures/dreamdevbox/dreamdevbox-intranet-emails.png
 
    DreamDevBox intranet: email catch-all overview

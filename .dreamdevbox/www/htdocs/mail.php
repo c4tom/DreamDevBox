@@ -26,7 +26,7 @@ require $LIB_DIR . DIRECTORY_SEPARATOR . 'Sort.php';
 
 if (isset($_GET['get-body']) && is_numeric($_GET['get-body'])) {
 	$messageNumber = $_GET['get-body'];
-	$MyMbox = new \devilbox\Mail('/var/mail/devilbox');
+	$MyMbox = new \dreamdevbox\Mail('/var/mail/dreamdevbox');
 	$message = $MyMbox->getMessage($messageNumber-1);
 	$structure = $message['decoded'];
 
@@ -49,7 +49,7 @@ if (isset($_GET['get-body']) && is_numeric($_GET['get-body'])) {
 
 if (isset($_GET['delete']) && is_numeric($_GET['delete'])) {
 	$message = $_GET['delete'];
-	$MyMbox = new \devilbox\Mail('/var/mail/devilbox');
+	$MyMbox = new \dreamdevbox\Mail('/var/mail/dreamdevbox');
 	$MyMbox->delete($message);
 	header('Location: /mail.php');
 	exit();
@@ -68,7 +68,7 @@ $allowedOrders	= array('ASC', 'DESC');
 $GET_sortKeys	= array('sort' => 'sort', 'order' => 'order');
 
 // Get sort/order
-$MySort = new \devilbox\Sort($defaultSort, $allowedSorts, $allowedOrders, $GET_sortKeys);
+$MySort = new \dreamdevbox\Sort($defaultSort, $allowedSorts, $allowedOrders, $GET_sortKeys);
 $sort = $MySort->getSort();
 $order = $MySort->getOrder();
 
@@ -108,7 +108,7 @@ if ($sort == 'date') {
 //
 // Mbox Reader
 //
-$MyMbox = new \devilbox\Mail('/var/mail/devilbox');
+$MyMbox = new \dreamdevbox\Mail('/var/mail/dreamdevbox');
 
 // If default sort is on, use NULL, so we do not have to sort the mails after retrieval,
 // because they are being read in the default sort/order anyway

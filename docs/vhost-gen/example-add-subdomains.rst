@@ -134,7 +134,7 @@ you the option to customize the virtual host of this specific project.
 .. important::
    When adjusting vhost-gen templates for a project you have to do **one** of the following:
 
-   * Restart the devilbox
+   * Restart the dreamdevbox
    * Or rename your project directory to some other name and then rename it back to its original name.
 
    More information here: :ref:`custom_vhost_apply_vhost_gen_changes`
@@ -143,7 +143,7 @@ you the option to customize the virtual host of this specific project.
    Pay close attention that you do not use TAB (``\t``) characters for indenting the vhost-gen
    yaml files. Some editors might automatically indent using TABs, so ensure they are replaced
    with spaces. If TAB characters are present, those files become invalid and won't work.
-   https://github.com/cytopia/devilbox/issues/142
+   https://github.com/cytopia/dreamdevbox/issues/142
 
    You can use the bundled ``yamllint`` binary inside the container to validate your config.
 
@@ -161,7 +161,7 @@ Let's assume the following settings.
 +-------------------------------+--------------------------------------+
 | Variable                      | Value                                |
 +===============================+======================================+
-| DreamDevBox path                 | ``/home/user/devilbox``              |
+| DreamDevBox path                 | ``/home/user/dreamdevbox``              |
 +-------------------------------+--------------------------------------+
 | :ref:`env_httpd_template_dir` | ``.dreamdevbox``                        |
 +-------------------------------+--------------------------------------+
@@ -177,7 +177,7 @@ Ensure that the default ``vhost-gen`` templates have been copied to your project
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd ./home/user/devilbox
+   host> cd ./home/user/dreamdevbox
 
    # Create template directory in your project
    host> mkdir ./data/www/project-1/.dreamdevbox
@@ -218,7 +218,7 @@ template looks similar to the one shown below (**Note:** Only the ``vhost:`` sub
 here).
 
 .. code-block:: yaml
-   :caption: /home/user/devilbox/data/www/project-1/.dreamdevbox/apache22.yml
+   :caption: /home/user/dreamdevbox/data/www/project-1/.dreamdevbox/apache22.yml
    :emphasize-lines: 3
 
    vhost: |
@@ -241,7 +241,7 @@ here).
 All you will have to do, is to add a``ServerAlias`` directive:
 
 .. code-block:: yaml
-   :caption: /home/user/devilbox/data/www/project-1/.dreamdevbox/apache22.yml
+   :caption: /home/user/dreamdevbox/data/www/project-1/.dreamdevbox/apache22.yml
    :emphasize-lines: 3,4
 
    vhost: |
@@ -295,7 +295,7 @@ template looks similar to the one shown below (**Note:** Only the ``vhost:`` sub
 here).
 
 .. code-block:: yaml
-   :caption: /home/user/devilbox/data/www/project-1/.dreamdevbox/apache22.yml
+   :caption: /home/user/dreamdevbox/data/www/project-1/.dreamdevbox/apache22.yml
    :emphasize-lines: 3
 
    vhost: |
@@ -318,7 +318,7 @@ here).
 All you will have to do, is to add a ``ServerAlias`` directive which does catch-all:
 
 .. code-block:: yaml
-   :caption: /home/user/devilbox/data/www/project-1/.dreamdevbox/apache22.yml
+   :caption: /home/user/dreamdevbox/data/www/project-1/.dreamdevbox/apache22.yml
    :emphasize-lines: 3,4
 
    vhost: |
@@ -386,7 +386,7 @@ template looks similar to the one shown below (**Note:** Only the ``vhost:`` sub
 here).
 
 .. code-block:: yaml
-   :caption: /home/user/devilbox/data/www/project-1/.dreamdevbox/nginx.yml
+   :caption: /home/user/dreamdevbox/data/www/project-1/.dreamdevbox/nginx.yml
    :emphasize-lines: 4
 
    vhost: |
@@ -410,7 +410,7 @@ here).
 All you will have to do, is to extend the ``server_name`` directive:
 
 .. code-block:: yaml
-   :caption: /home/user/devilbox/data/www/project-1/.dreamdevbox/nginx.yml
+   :caption: /home/user/dreamdevbox/data/www/project-1/.dreamdevbox/nginx.yml
    :emphasize-lines: 4
 
    vhost: |
@@ -466,7 +466,7 @@ template looks similar to the one shown below (**Note:** Only the ``vhost:`` sub
 here).
 
 .. code-block:: yaml
-   :caption: /home/user/devilbox/data/www/project-1/.dreamdevbox/nginx.yml
+   :caption: /home/user/dreamdevbox/data/www/project-1/.dreamdevbox/nginx.yml
    :emphasize-lines: 4
 
    vhost: |
@@ -490,7 +490,7 @@ here).
 All you will have to do, is to extend the ``server_name`` directive with a catch-all:
 
 .. code-block:: yaml
-   :caption: /home/user/devilbox/data/www/project-1/.dreamdevbox/nginx.yml
+   :caption: /home/user/dreamdevbox/data/www/project-1/.dreamdevbox/nginx.yml
    :emphasize-lines: 4
 
    vhost: |
@@ -534,7 +534,7 @@ Let's cover the second step
 .. code-block:: bash
 
    # Navigate to the data directory
-   host> /home/user/devilbox/data/www
+   host> /home/user/dreamdevbox/data/www
 
    # Rename your project to something else
    host> mv project-1 project-1.tmp
@@ -546,8 +546,8 @@ If you want to understand what is going on right now, check the docker logs for 
 
 .. code-block:: bash
 
-   # Navigate to the devilbox directory
-   host> /home/user/devilbox
+   # Navigate to the dreamdevbox directory
+   host> /home/user/dreamdevbox
 
    # Check docker logs
    host> docker-compose logs httpd

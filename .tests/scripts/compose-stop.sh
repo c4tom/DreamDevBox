@@ -29,7 +29,7 @@ fi
 ###
 
 # Remove emails
-run "docker-compose exec php truncate -s0 /var/mail/devilbox || true" "1" "${DVLBOX_PATH}"
+run "docker-compose exec php truncate -s0 /var/mail/dreamdevbox || true" "1" "${DVLBOX_PATH}"
 
 # Remove PHP logs
 run "docker-compose exec php sh -c \"find /var/log -name 'php-fpm*' -print0 | xargs -n1 -0 rm -f\" || true" "1" "${DVLBOX_PATH}"

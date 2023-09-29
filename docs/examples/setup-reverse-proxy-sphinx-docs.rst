@@ -82,7 +82,7 @@ The vhost directory defines the name under which your project will be available.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ mkdir my-sphinx
+   dreamdevbox@php-7.0.20 in /shared/httpd $ mkdir my-sphinx
 
 .. seealso:: :ref:`env_tld_suffix`
 
@@ -93,10 +93,10 @@ The vhost directory defines the name under which your project will be available.
 .. code-block:: bash
 
    # Navigate to your project directory
-   devilbox@php-7.0.20 in /shared/httpd $ cd my-sphinx
+   dreamdevbox@php-7.0.20 in /shared/httpd $ cd my-sphinx
 
    # Create a directory which will hold the documentation source code
-   devilbox@php-7.0.20 in /shared/httpd/my-sphinx $ mkdir doc
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-sphinx $ mkdir doc
 
 
 Create a basic Sphinx configuration file:
@@ -153,10 +153,10 @@ which will not hold any data.
 .. code-block:: bash
 
    # Navigate to your project directory
-   devilbox@php-7.0.20 in /shared/httpd $ cd my-sphinx
+   dreamdevbox@php-7.0.20 in /shared/httpd $ cd my-sphinx
 
    # Create the docroot directory
-   devilbox@php-7.0.20 in /shared/httpd/my-sphinx $ mkdir htdocs
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-sphinx $ mkdir htdocs
 
 .. seealso:: :ref:`env_httpd_docroot_dir`
 
@@ -173,10 +173,10 @@ inside the project directory.
 .. code-block:: bash
 
    # Navigate to your project directory
-   devilbox@php-7.0.20 in /shared/httpd $ cd my-sphinx
+   dreamdevbox@php-7.0.20 in /shared/httpd $ cd my-sphinx
 
    # Create the .dreamdevbox template directory
-   devilbox@php-7.0.20 in /shared/httpd/my-sphinx $ mkdir .dreamdevbox
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-sphinx $ mkdir .dreamdevbox
 
 
 .. seealso:: :ref:`env_httpd_template_dir`
@@ -210,7 +210,7 @@ to ensure this will work with all web servers.
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
    host> cp cfg/vhost-gen/apache22.yml-example-rproxy data/www/my-sphinx/.dreamdevbox/apache22.yml
    host> cp cfg/vhost-gen/apache24.yml-example-rproxy data/www/my-sphinx/.dreamdevbox/apache24.yml
    host> cp cfg/vhost-gen/nginx.yml-example-rproxy data/www/my-sphinx/.dreamdevbox/nginx.yml
@@ -230,7 +230,7 @@ Open the ``apache22.yml`` vhost-gen template in your project:
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
    host> vi data/www/my-sphinx/.dreamdevbox/apache22.yml
 
 
@@ -268,7 +268,7 @@ Open the ``apache24.yml`` vhost-gen template in your project:
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
    host> vi data/www/my-sphinx/.dreamdevbox/apache24.yml
 
 
@@ -306,7 +306,7 @@ Open the ``nginx.yml`` vhost-gen template in your project:
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
    host> vi data/www/my-sphinx/.dreamdevbox/nginx.yml
 
 
@@ -352,7 +352,7 @@ ending by ``.sh``
 .. code-block:: bash
 
    # Navigate to the DreamDevBox git directory
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
 
    # Nagivate to startup directory for PHP 7.2 and create the script
    host> cd cfg/php-startup-7.2/
@@ -367,8 +367,8 @@ ending by ``.sh``
    # Install required Python modules as root user
    pip install sphinx sphinx-autobuild
 
-   # Autostart Sphinx by devilbox user on Port 4000 and sent it to backgroun with '&'
-   sh -c "cd /shared/httpd/my-sphinx; sphinx-autobuild . _build/html -p 4000 -H 0.0.0.0" -l devilbox &
+   # Autostart Sphinx by dreamdevbox user on Port 4000 and sent it to backgroun with '&'
+   sh -c "cd /shared/httpd/my-sphinx; sphinx-autobuild . _build/html -p 4000 -H 0.0.0.0" -l dreamdevbox &
 
 
 .. seealso::
@@ -406,7 +406,7 @@ Now for those changes to take affect, you will have to restart the DreamDevBox.
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
 
    # Stop the DreamDevBox
    host> docker-compose down

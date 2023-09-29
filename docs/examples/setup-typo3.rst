@@ -14,7 +14,7 @@ This example will use ``composer`` to install TYPO3 from within the DreamDevBox 
    use **Docker Toolbox** you need to explicitly allow/enable this.
    See below for instructions:
 
-   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_devilbox_windows_symlinks`
+   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_dreamdevbox_windows_symlinks`
 
 After completing the below listed steps, you will have a working TYPO3 setup ready to be
 served via http and https.
@@ -86,7 +86,7 @@ The vhost directory defines the name under which your project will be available.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ mkdir my-typo
+   dreamdevbox@php-7.0.20 in /shared/httpd $ mkdir my-typo
 
 .. seealso:: :ref:`env_tld_suffix`
 
@@ -98,14 +98,14 @@ Navigate into your newly created vhost directory and install TYPO3 with ``compos
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ cd my-typo
-   devilbox@php-7.0.20 in /shared/httpd/my-typo $ composer create-project typo3/cms-base-distribution typo3
+   dreamdevbox@php-7.0.20 in /shared/httpd $ cd my-typo
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-typo $ composer create-project typo3/cms-base-distribution typo3
 
 How does the directory structure look after installation:
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-typo $ tree -L 1
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-typo $ tree -L 1
    .
    └── typo3
 
@@ -126,13 +126,13 @@ to its expected path.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-typo $ ln -s typo3/public htdocs
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-typo $ ln -s typo3/public htdocs
 
 How does the directory structure look after symlinking:
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-typo $ tree -L 1
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-typo $ tree -L 1
    .
    ├── typo3
    └── htdocs -> typo3/public
@@ -146,7 +146,7 @@ path and points to the frameworks entrypoint.
    When using **Docker Toolbox**, you need to **explicitly allow** the usage of **symlinks**.
    See below for instructions:
 
-   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_devilbox_windows_symlinks`
+   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_dreamdevbox_windows_symlinks`
 
 
 5. DNS record
@@ -178,7 +178,7 @@ To continue installing via the guided web install, you need to create a file cal
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-typo $ touch htdocs/FIRST_INSTALL
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-typo $ touch htdocs/FIRST_INSTALL
 
 
 7. Open your browser

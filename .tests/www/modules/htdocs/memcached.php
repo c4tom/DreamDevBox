@@ -15,7 +15,7 @@ $MY_KEY = 'test';
 $MY_VAL = 'OK';
 
 
-$memcd = new \Memcached('_devilbox');
+$memcd = new \Memcached('_dreamdevbox');
 $list = $memcd->getServerList();
 
 if (empty($list)) {

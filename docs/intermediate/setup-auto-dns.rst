@@ -39,7 +39,7 @@ First ensure that :ref:`env_local_listen_addr` is either empty or listening on `
    :caption: .env
    :emphasize-lines: 3
 
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
    host> vi .env
    LOCAL_LISTEN_ADDR=
 
@@ -49,7 +49,7 @@ Then you need to ensure that :ref:`env_host_port_bind` is set to ``53``.
    :caption: .env
    :emphasize-lines: 3
 
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
    host> vi .env
    HOST_PORT_BIND=53
 
@@ -106,7 +106,7 @@ Your DNS server IP address is ``127.0.0.1``.
 Docker Toolbox
 ==============
 
-.. seealso:: :ref:`howto_docker_toolbox_and_the_devilbox`
+.. seealso:: :ref:`howto_docker_toolbox_and_the_dreamdevbox`
 
 This part applies equally for Docker Toolbox on MacOS and on Windows:
 
@@ -151,7 +151,7 @@ Actual setup
 
 ..
    seealso::
-   * :ref:`access_devilbox_from_android`
-   * :ref:`access_devilbox_from_iphone`
-   * :ref:`access_colleagues_devilbox`
-   * :ref:`shared_devilbox_server_in_lan`
+   * :ref:`access_dreamdevbox_from_android`
+   * :ref:`access_dreamdevbox_from_iphone`
+   * :ref:`access_colleagues_dreamdevbox`
+   * :ref:`shared_dreamdevbox_server_in_lan`

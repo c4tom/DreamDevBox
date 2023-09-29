@@ -1,7 +1,7 @@
 .. include:: /_includes/all.rst
 .. include:: /_includes/snippets/__ANNOUNCEMENTS__.rst
 
-.. _start_the_devilbox:
+.. _start_the_dreamdevbox:
 
 ******************
 Start the DreamDevBox
@@ -29,7 +29,7 @@ The DreamDevBox startup explained
 ==============================
 
 To gain a brief understanding about what is happening under the hood during startup,
-read ahead or skip directly to: :ref:`start_the_devilbox_start_all_container`.
+read ahead or skip directly to: :ref:`start_the_dreamdevbox_start_all_container`.
 
 
 Startup operations with the same configuration are idempotent, thus consecutive startups will not
@@ -48,10 +48,10 @@ introduce any new changes. The following shows the brief startup steps:
 
 .. note::
    Docker images are only pulled if they do not exist. They are not updated automatically.
-   If you want to update to new Docker images read on: :ref:`update_the_devilbox`.
+   If you want to update to new Docker images read on: :ref:`update_the_dreamdevbox`.
 
 
-.. _start_the_devilbox_start_all_container:
+.. _start_the_dreamdevbox_start_all_container:
 
 Start all container
 ===================
@@ -120,7 +120,7 @@ Background
       they have to be specified.
 
 
-.. _start_the_devilbox_stop_and_restart:
+.. _start_the_dreamdevbox_stop_and_restart:
 
 Stop and Restart
 ================
@@ -168,8 +168,8 @@ http://127.0.0.1 (https://localhost or https://127.0.0.1 respectively).
 The Intranet start page will also show you all running and failed containers:
 
 
-.. include:: /_includes/figures/devilbox/devilbox-intranet-dash-all.rst
-.. include:: /_includes/figures/devilbox/devilbox-intranet-dash-selective.rst
+.. include:: /_includes/figures/dreamdevbox/dreamdevbox-intranet-dash-all.rst
+.. include:: /_includes/figures/dreamdevbox/dreamdevbox-intranet-dash-selective.rst
 
 .. important::
    :ref:`howto_find_docker_toolbox_ip_address`

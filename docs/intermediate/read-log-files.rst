@@ -26,7 +26,7 @@ The log directory structure would look something like this:
 
 .. code-block:: bash
 
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
    host> tree log
 
    log/
@@ -59,7 +59,7 @@ files from within the DreamDevBox git directory.
 .. code-block:: bash
    :emphasize-lines: 2
 
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
    host> docker-compose logs
 
 When you want to continuously watch the log output (such as ``tail -f``), you need to append ``-f``
@@ -68,7 +68,7 @@ to the command.
 .. code-block:: bash
    :emphasize-lines: 2
 
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
    host> docker-compose logs -f
 
 When you only want to have logs displayed for a single service, you can also append the service
@@ -77,7 +77,7 @@ name (works with or without ``-f`` as well):
 .. code-block:: bash
    :emphasize-lines: 2
 
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
    host> docker-compose logs php -f
 
 .. important::

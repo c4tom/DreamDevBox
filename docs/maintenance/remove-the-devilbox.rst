@@ -1,6 +1,6 @@
 .. include:: /_includes/snippets/__ANNOUNCEMENTS__.rst
 
-.. _remove_the_devilbox:
+.. _remove_the_dreamdevbox:
 
 *******************
 Remove the DreamDevBox
@@ -89,7 +89,7 @@ Remove DreamDevBox network
       NETWORK ID          NAME                                 DRIVER              SCOPE
       0069843ff0c3        bridge                               bridge              local
       ...
-      9c8d4a84cf2d        devilbox_app_net                     bridge              local
+      9c8d4a84cf2d        dreamdevbox_app_net                     bridge              local
 
 2. Find the NETWORK ID of the DreamDevBox network and delete it:
 

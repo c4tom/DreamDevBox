@@ -44,7 +44,7 @@ fi
 HOST_PORT_HTTPD="$( "${SCRIPT_PATH}/../scripts/env-getvar.sh" "HOST_PORT_HTTPD" )"
 PGSQL_ROOT_USER="$( "${SCRIPT_PATH}/../scripts/env-getvar.sh" "PGSQL_ROOT_USER" )"
 PGSQL_ROOT_PASSWORD="$( "${SCRIPT_PATH}/../scripts/env-getvar.sh" "PGSQL_ROOT_PASSWORD" )"
-DEVILBOX_VENDOR_PHPPGADMIN_AUTOLOGIN="$( "${SCRIPT_PATH}/../scripts/env-getvar.sh" "DEVILBOX_VENDOR_PHPPGADMIN_AUTOLOGIN" )"
+DREAMDEVBOX_VENDOR_PHPPGADMIN_AUTOLOGIN="$( "${SCRIPT_PATH}/../scripts/env-getvar.sh" "DREAMDEVBOX_VENDOR_PHPPGADMIN_AUTOLOGIN" )"
 
 
 # -------------------------------------------------------------------------------------------------
@@ -156,7 +156,7 @@ fi
 ###
 ### Autologin disabled
 ###
-if [ "${DEVILBOX_VENDOR_PHPPGADMIN_AUTOLOGIN}" != "1" ]; then
+if [ "${DREAMDEVBOX_VENDOR_PHPPGADMIN_AUTOLOGIN}" != "1" ]; then
 
 	###
 	### Login (get token URL)

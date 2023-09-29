@@ -216,7 +216,7 @@ Let's assume you want to start ``php``, ``httpd``, ``bind``, ``elastic``, ``logs
 
    host> docker-compose up -d php httpd bind elastic logstash kibana
 
-.. seealso:: :ref:`start_the_devilbox`
+.. seealso:: :ref:`start_the_dreamdevbox`
 
 
 TL;DR

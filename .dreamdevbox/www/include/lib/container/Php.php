@@ -1,5 +1,5 @@
 <?php
-namespace devilbox;
+namespace dreamdevbox;
 
 class Php extends BaseClass implements BaseInterface
 {

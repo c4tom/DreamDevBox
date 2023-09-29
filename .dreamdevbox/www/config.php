@@ -13,9 +13,9 @@ error_reporting(-1);
 putenv('RES_OPTIONS=retrans:1 retry:1 timeout:1 attempts:1');
 
 
-$DEVILBOX_VERSION = 'v3.0.0-beta-0.3';
-$DEVILBOX_DATE = '2023-01-02';
-$DEVILBOX_API_PAGE = 'devilbox-api/status.json';
+$DREAMDEVBOX_VERSION = 'v3.0.0-beta-0.3';
+$DREAMDEVBOX_DATE = '2023-01-02';
+$DREAMDEVBOX_API_PAGE = 'dreamdevbox-api/status.json';
 
 //
 // Set Directories
@@ -23,7 +23,7 @@ $DEVILBOX_API_PAGE = 'devilbox-api/status.json';
 $CONF_DIR	= dirname(__FILE__);
 $LIB_DIR	= $CONF_DIR . DIRECTORY_SEPARATOR . 'include' . DIRECTORY_SEPARATOR .'lib';
 $VEN_DIR	= $CONF_DIR . DIRECTORY_SEPARATOR . 'include' . DIRECTORY_SEPARATOR .'vendor';
-$LOG_DIR	= dirname(dirname($CONF_DIR)) . DIRECTORY_SEPARATOR . 'log' . DIRECTORY_SEPARATOR . 'devilbox';
+$LOG_DIR	= dirname(dirname($CONF_DIR)) . DIRECTORY_SEPARATOR . 'log' . DIRECTORY_SEPARATOR . 'dreamdevbox';
 
 
 //
@@ -78,17 +78,17 @@ function loadClass($class) {
 			//
 			case 'Logger':
 				loadFile($class, $lib_dir);
-				$_LOADED_LIBS[$class] = \devilbox\Logger::getInstance();
+				$_LOADED_LIBS[$class] = \dreamdevbox\Logger::getInstance();
 				break;
 
 			case 'Html':
 				loadFile($class, $lib_dir);
-				$_LOADED_LIBS[$class] = \devilbox\Html::getInstance();
+				$_LOADED_LIBS[$class] = \dreamdevbox\Html::getInstance();
 				break;
 
 			case 'Helper':
 				loadFile($class, $lib_dir);
-				$_LOADED_LIBS[$class] = \devilbox\Helper::getInstance();
+				$_LOADED_LIBS[$class] = \dreamdevbox\Helper::getInstance();
 				break;
 
 			//
@@ -96,22 +96,22 @@ function loadClass($class) {
 			//
 			case 'Php':
 				loadFile($class, $cnt_dir);
-				$_LOADED_LIBS[$class] = \devilbox\Php::getInstance($GLOBALS['PHP_HOST_NAME']);
+				$_LOADED_LIBS[$class] = \dreamdevbox\Php::getInstance($GLOBALS['PHP_HOST_NAME']);
 				break;
 
 			case 'Dns':
 				loadFile($class, $cnt_dir);
-				$_LOADED_LIBS[$class] = \devilbox\Dns::getInstance($GLOBALS['DNS_HOST_NAME']);
+				$_LOADED_LIBS[$class] = \dreamdevbox\Dns::getInstance($GLOBALS['DNS_HOST_NAME']);
 				break;
 
 			case 'Httpd':
 				loadFile($class, $cnt_dir);
-				$_LOADED_LIBS[$class] = \devilbox\Httpd::getInstance($GLOBALS['HTTPD_HOST_NAME']);
+				$_LOADED_LIBS[$class] = \dreamdevbox\Httpd::getInstance($GLOBALS['HTTPD_HOST_NAME']);
 				break;
 
 			case 'Mysql':
 				loadFile($class, $cnt_dir);
-				$_LOADED_LIBS[$class] = \devilbox\Mysql::getInstance($GLOBALS['MYSQL_HOST_NAME'], array(
+				$_LOADED_LIBS[$class] = \dreamdevbox\Mysql::getInstance($GLOBALS['MYSQL_HOST_NAME'], array(
 					'user' => 'root',
 					'pass' => loadClass('Helper')->getEnv('MYSQL_ROOT_PASSWORD')
 				));
@@ -119,7 +119,7 @@ function loadClass($class) {
 
 			case 'Pgsql':
 				loadFile($class, $cnt_dir);
-				$_LOADED_LIBS[$class] = \devilbox\Pgsql::getInstance($GLOBALS['PGSQL_HOST_NAME'], array(
+				$_LOADED_LIBS[$class] = \dreamdevbox\Pgsql::getInstance($GLOBALS['PGSQL_HOST_NAME'], array(
 					'user' => loadClass('Helper')->getEnv('PGSQL_ROOT_USER'),
 					'pass' => loadClass('Helper')->getEnv('PGSQL_ROOT_PASSWORD'),
 					'db' => 'postgres'
@@ -155,9 +155,9 @@ function loadClass($class) {
 
 				loadFile($class, $cnt_dir);
 				if ($REDIS_ROOT_PASSWORD == '') {
-					$_LOADED_LIBS[$class] = \devilbox\Redis::getInstance($GLOBALS['REDIS_HOST_NAME']);
+					$_LOADED_LIBS[$class] = \dreamdevbox\Redis::getInstance($GLOBALS['REDIS_HOST_NAME']);
 				} else {
-					$_LOADED_LIBS[$class] = \devilbox\Redis::getInstance($GLOBALS['REDIS_HOST_NAME'], array(
+					$_LOADED_LIBS[$class] = \dreamdevbox\Redis::getInstance($GLOBALS['REDIS_HOST_NAME'], array(
 						'pass' => $REDIS_ROOT_PASSWORD,
 					));
 				}
@@ -165,12 +165,12 @@ function loadClass($class) {
 
 			case 'Memcd':
 				loadFile($class, $cnt_dir);
-				$_LOADED_LIBS[$class] = \devilbox\Memcd::getInstance($GLOBALS['MEMCD_HOST_NAME']);
+				$_LOADED_LIBS[$class] = \dreamdevbox\Memcd::getInstance($GLOBALS['MEMCD_HOST_NAME']);
 				break;
 
 			case 'Mongo':
 				loadFile($class, $cnt_dir);
-				$_LOADED_LIBS[$class] = \devilbox\Mongo::getInstance($GLOBALS['MONGO_HOST_NAME']);
+				$_LOADED_LIBS[$class] = \dreamdevbox\Mongo::getInstance($GLOBALS['MONGO_HOST_NAME']);
 				break;
 
 			// Get optional docker classes

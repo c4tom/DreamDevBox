@@ -6,13 +6,13 @@ contact_links:
     about: Please notify or discuss about any other requests here.
 
   - name: DreamDevBox Discourse Forum
-    url: https://devilbox.discourse.group/
+    url: https://dreamdevbox.discourse.group/
     about: Please ask and answer general questions here.
 
   - name: DreamDevBox Community Support
-    url: https://devilbox.discourse.group/
+    url: https://dreamdevbox.discourse.group/
     about: Please ask and answer questions here.
 
   - name: DreamDevBox documentation
-    url: https://devilbox.readthedocs.io/
+    url: https://dreamdevbox.readthedocs.io/
     about: Find the DreamDevBox documentation here.

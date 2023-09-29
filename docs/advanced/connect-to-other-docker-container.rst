@@ -41,7 +41,7 @@ Any Docker container on host os
 Add Docker container to DreamDevBox network
 ========================================
 
-The DreamDevBox defines its own bridge network, usually called ``devilbox_app_net``.
+The DreamDevBox defines its own bridge network, usually called ``dreamdevbox_app_net``.
 
 .. note::
    The name may vary depending on the name of the DreamDevBox directory. It assembles itself by
@@ -58,7 +58,7 @@ The DreamDevBox defines its own bridge network, usually called ``devilbox_app_ne
 
    .. code-block:: bash
 
-      host> docker network connect devilbox_app_net mycontainer
+      host> docker network connect dreamdevbox_app_net mycontainer
 
 Once you have done that, ``mycontainer`` is then part of the internal DreamDevBox network
 and is able to resolve DreamDevBox container by its name and vice-versa.

@@ -41,11 +41,11 @@ manually, i.e. they are not overwritten.
 
 .. code-block:: bash
 
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
    host> ls -l ca/
-   -rw-r--r--  1 cytopia cytopia 1558 May  2 11:12 devilbox-ca.crt
-   -rw-------  1 cytopia cytopia 1675 May  2 11:12 devilbox-ca.key
-   -rw-r--r--  1 cytopia cytopia   17 May  4 08:35 devilbox-ca.srl
+   -rw-r--r--  1 cytopia cytopia 1558 May  2 11:12 dreamdevbox-ca.crt
+   -rw-------  1 cytopia cytopia 1675 May  2 11:12 dreamdevbox-ca.key
+   -rw-r--r--  1 cytopia cytopia   17 May  4 08:35 dreamdevbox-ca.srl
 
 
 SSL Certificates
@@ -88,7 +88,7 @@ Navigate to the tab setting ``AUTHORITIES`` and click on ``IMPORT``.
 
 .. include:: /_includes/figures/https/chrome-manage-certificates.rst
 
-Select ``devilbox-ca.crt`` from within the DreamDevBox ``./ca`` directory:
+Select ``dreamdevbox-ca.crt`` from within the DreamDevBox ``./ca`` directory:
 
 .. include:: /_includes/figures/https/file-manager-import-ca.rst
 
@@ -102,7 +102,7 @@ Now you are all set and all generated SSL certificates will be valid from now on
 .. include:: /_includes/figures/https/https-ssl-address-bar.rst
 
 
-Note: if you are on Chrome on Mac Big Sur and above, you won't find the above settings, you will have to go the "Keychain Access" application, click on ``System`` in the left hand corner and then drag in the ``devilbox-ca.crt``, it will ask for your password to complete the operation. once that is done, the cert will be listed but will not be trusted by default. Now right click on the imported cert, click on Info, an info dialog will open up and you can expand the 'Trust' accordian and set it to ``Trust All``. Now you are all set and all generated SSL certificates will be valid from now on.
+Note: if you are on Chrome on Mac Big Sur and above, you won't find the above settings, you will have to go the "Keychain Access" application, click on ``System`` in the left hand corner and then drag in the ``dreamdevbox-ca.crt``, it will ask for your password to complete the operation. once that is done, the cert will be listed but will not be trusted by default. Now right click on the imported cert, click on Info, an info dialog will open up and you can expand the 'Trust' accordian and set it to ``Trust All``. Now you are all set and all generated SSL certificates will be valid from now on.
 
 Firefox
 -------
@@ -119,7 +119,7 @@ In the ``Authories`` tab, click on ``Import``.
 
 .. include:: /_includes/figures/https/firefox-certificate-manager.rst
 
-Select ``devilbox-ca.crt`` from within the DreamDevBox ``./ca`` directory:
+Select ``dreamdevbox-ca.crt`` from within the DreamDevBox ``./ca`` directory:
 
 .. include:: /_includes/figures/https/file-manager-import-ca.rst
 
@@ -136,4 +136,4 @@ Now you are all set and all generated SSL certificates will be valid from now on
 Further Reading
 ===============
 
-.. seealso:: ``.env`` variable: :ref:`env_devilbox_ui_ssl_cn`
+.. seealso:: ``.env`` variable: :ref:`env_dreamdevbox_ui_ssl_cn`

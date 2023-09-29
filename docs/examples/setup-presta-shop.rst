@@ -15,7 +15,7 @@ PHP container.
    use **Docker Toolbox** you need to explicitly allow/enable this.
    See below for instructions:
 
-   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_devilbox_windows_symlinks`
+   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_dreamdevbox_windows_symlinks`
 
 After completing the below listed steps, you will have a working PrestaShop setup ready to be
 served via http and https.
@@ -87,7 +87,7 @@ The vhost directory defines the name under which your project will be available.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ mkdir my-presta
+   dreamdevbox@php-7.0.20 in /shared/httpd $ mkdir my-presta
 
 .. seealso:: :ref:`env_tld_suffix`
 
@@ -99,23 +99,23 @@ Navigate into your newly created vhost directory and install PrestaShop with ``g
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ cd my-presta
+   dreamdevbox@php-7.0.20 in /shared/httpd $ cd my-presta
 
    # Download PrestaShop with git
-   devilbox@php-7.0.20 in /shared/httpd/my-presta $ git clone https://github.com/PrestaShop/PrestaShop
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-presta $ git clone https://github.com/PrestaShop/PrestaShop
 
    # Checkout the latest stable git tag
-   devilbox@php-7.0.20 in /shared/httpd/my-presta $ cd PrestaShop
-   devilbox@php-7.0.20 in /shared/httpd/my-presta $ git checkout 1.7.4.2
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-presta $ cd PrestaShop
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-presta $ git checkout 1.7.4.2
 
    # Install dependencies with Composer
-   devilbox@php-7.0.20 in /shared/httpd/my-presta $ composer install
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-presta $ composer install
 
 How does the directory structure look after installation:
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-presta $ tree -L 1
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-presta $ tree -L 1
    .
    └── PrestaShop
 
@@ -136,13 +136,13 @@ to its expected path.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-presta $ ln -s PrestaShop/ htdocs
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-presta $ ln -s PrestaShop/ htdocs
 
 How does the directory structure look after symlinking:
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-presta $ tree -L 1
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-presta $ tree -L 1
    .
    ├── PrestaShop
    └── htdocs -> PrestaShop
@@ -156,7 +156,7 @@ path and points to the frameworks entrypoint.
    When using **Docker Toolbox**, you need to **explicitly allow** the usage of **symlinks**.
    See below for instructions:
 
-   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_devilbox_windows_symlinks`
+   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_dreamdevbox_windows_symlinks`
 
 
 5. Add MySQL Database
@@ -164,7 +164,7 @@ path and points to the frameworks entrypoint.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-presta $ mysql -u root -h 127.0.0.1 -p -e 'CREATE DATABASE my_presta;'
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-presta $ mysql -u root -h 127.0.0.1 -p -e 'CREATE DATABASE my_presta;'
 
 
 6. DNS record

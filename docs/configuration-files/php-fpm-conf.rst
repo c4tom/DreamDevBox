@@ -31,7 +31,7 @@ See the directory structure for PHP-FPM configuration directories inside ``./cfg
 
 .. code-block:: bash
 
-   host> ls -l path/to/devilbox/cfg/ | grep 'php-fpm'
+   host> ls -l path/to/dreamdevbox/cfg/ | grep 'php-fpm'
 
    drwxr-xr-x  2 cytopia cytopia 4096 Mar  5 21:53 php-fpm-5.2/
    drwxr-xr-x  2 cytopia cytopia 4096 Mar  5 21:53 php-fpm-5.3/
@@ -49,20 +49,20 @@ Customization is achieved by placing a file into ``cfg/php-fpm-X.X/`` (where ``X
 your PHP version).  The file must end by ``.conf`` in order to be sourced by the PHP-FPM server.
 
 Each of the PHP-FPM conf configuration directories already contains three example file:
-``devilbox-fpm.conf-default``, ``devilbox-fpm.conf-pm_dynamic`` and ``devilbox-fpm.conf-pm_ondemand``.
+``dreamdevbox-fpm.conf-default``, ``dreamdevbox-fpm.conf-pm_dynamic`` and ``dreamdevbox-fpm.conf-pm_ondemand``.
 
-**devilbox-fpm.conf-default**
+**dreamdevbox-fpm.conf-default**
 
 This file holds the exact settings that are currently in place by each PHP-FPM container.
 Copy it (do not simply rename it) to a different file ending by ``.conf`` and start adjusting it.
 
-**devilbox-fpm.conf-pm_dynamic**
+**dreamdevbox-fpm.conf-pm_dynamic**
 
 This file holds some sane example configuration to switch PHP-FPM scheduler to ``dynamic``
 (The default is ``ondemand``).
 Copy it (do not simply rename it) to a different file ending by ``.conf`` and start adjusting it.
 
-**devilbox-fpm.conf-pm_ondemand**
+**dreamdevbox-fpm.conf-pm_ondemand**
 
 This file holds the current default values for the PHP-FPM scheduler which is using ``ondemand``.
 Copy it (do not simply rename it) to a different file ending by ``.conf`` and start adjusting it.
@@ -90,7 +90,7 @@ of PHP-FPM 7.1 master process to 100.
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Navigate to PHP 7.1 config directory
    host> cd cfg/php-fpm-7.1
@@ -126,7 +126,7 @@ of PHP-FPM 5.6 on pool ``www``.
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Navigate to PHP 5.6 config directory
    host> cd cfg/php-fpm-5.6
@@ -168,7 +168,7 @@ The following example will disable built-in PHP functions globally and non-overw
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Navigate to PHP 7.0 config directory
    host> cd cfg/php-fpm-7.0

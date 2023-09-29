@@ -44,9 +44,9 @@ Add the following script to ``autostart/``
 .. code-block:: bash
    :caption: autostart/myscript.sh
 
-   su -c "cd /shared/httpd/my-node/src; pm2 start index.js" -l devilbox
+   su -c "cd /shared/httpd/my-node/src; pm2 start index.js" -l dreamdevbox
 
-* The whole command is wrapped into ``su`` to ensure the application will be started as the user ``devilbox``.
+* The whole command is wrapped into ``su`` to ensure the application will be started as the user ``dreamdevbox``.
 * ``cd`` tells it to you enter the directory where ``index.js`` can be found
 * And finally |ext_lnk_tool_pm2| will take care about starting up your javascript file.
 
@@ -65,7 +65,7 @@ copied to a file ending by ``.sh``
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
    host> cd autostart
    host> cp run-node-js-projects.sh-example run-node-js-projects.sh
 

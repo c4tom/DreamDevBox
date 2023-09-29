@@ -46,7 +46,7 @@ Copy example file
 
 .. code-block:: bash
 
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
    host> cp docker-compose.override.yml-example docker-compose.override.yml
 
 
@@ -60,7 +60,7 @@ Create new file from scratch
 .. code-block:: bash
 
    # Create an empty file
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
    host> touch docker-compose.override.yml
 
    # Retrieve the current version

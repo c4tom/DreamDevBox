@@ -14,7 +14,7 @@ This example will use ``git`` and ``composer`` to install Magento 2 from within 
    use **Docker Toolbox** you need to explicitly allow/enable this.
    See below for instructions:
 
-   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_devilbox_windows_symlinks`
+   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_dreamdevbox_windows_symlinks`
 
 After completing the below listed steps, you will have a working Magento 2 setup ready to be
 served via http and https.
@@ -99,7 +99,7 @@ The vhost directory defines the name under which your project will be available.
 
 .. code-block:: bash
 
-   devilbox@php-7.1.20 in /shared/httpd $ mkdir my-magento
+   dreamdevbox@php-7.1.20 in /shared/httpd $ mkdir my-magento
 
 .. seealso:: :ref:`env_tld_suffix`
 
@@ -111,23 +111,23 @@ Navigate into your newly created vhost directory and install Magento 2 with ``gi
 
 .. code-block:: bash
 
-   devilbox@php-7.1.20 in /shared/httpd $ cd my-magento
+   dreamdevbox@php-7.1.20 in /shared/httpd $ cd my-magento
 
    # Download Magento 2 via git
-   devilbox@php-7.1.20 in /shared/httpd/my-magento $ git clone https://github.com/magento/magento2
+   dreamdevbox@php-7.1.20 in /shared/httpd/my-magento $ git clone https://github.com/magento/magento2
 
    # Checkout the latest stable git tag
-   devilbox@php-7.1.20 in /shared/httpd/my-magento $ cd magento2
-   devilbox@php-7.1.20 in /shared/httpd/my-magento/magento2 $ git checkout 2.2.5
+   dreamdevbox@php-7.1.20 in /shared/httpd/my-magento $ cd magento2
+   dreamdevbox@php-7.1.20 in /shared/httpd/my-magento/magento2 $ git checkout 2.2.5
 
    # Install dependencies with Composer
-   devilbox@php-7.1.20 in /shared/httpd/my-magento/magento2 $ composer install
+   dreamdevbox@php-7.1.20 in /shared/httpd/my-magento/magento2 $ composer install
 
 How does the directory structure look after installation:
 
 .. code-block:: bash
 
-   devilbox@php-7.1.20 in /shared/httpd/my-magento $ tree -L 1
+   dreamdevbox@php-7.1.20 in /shared/httpd/my-magento $ tree -L 1
    .
    └── magento2
 
@@ -148,13 +148,13 @@ to its expected path.
 
 .. code-block:: bash
 
-   devilbox@php-7.1.20 in /shared/httpd/my-magento $ ln -s magento2/ htdocs
+   dreamdevbox@php-7.1.20 in /shared/httpd/my-magento $ ln -s magento2/ htdocs
 
 How does the directory structure look after symlinking:
 
 .. code-block:: bash
 
-   devilbox@php-7.1.20 in /shared/httpd/my-magento $ tree -L 1
+   dreamdevbox@php-7.1.20 in /shared/httpd/my-magento $ tree -L 1
    .
    ├── magento2
    └── htdocs -> magento2
@@ -168,7 +168,7 @@ path and points to the frameworks entrypoint.
    When using **Docker Toolbox**, you need to **explicitly allow** the usage of **symlinks**.
    See below for instructions:
 
-   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_devilbox_windows_symlinks`
+   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_dreamdevbox_windows_symlinks`
 
 
 5. Add MySQL Database
@@ -176,7 +176,7 @@ path and points to the frameworks entrypoint.
 
 .. code-block:: bash
 
-   devilbox@php-7.1.20 in /shared/httpd/my-magento $ mysql -u root -h 127.0.0.1 -p -e 'CREATE DATABASE my_magento;'
+   dreamdevbox@php-7.1.20 in /shared/httpd/my-magento $ mysql -u root -h 127.0.0.1 -p -e 'CREATE DATABASE my_magento;'
 
 
 7. DNS record

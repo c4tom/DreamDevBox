@@ -25,12 +25,12 @@ Every file inside this directory ending by ``*.sh`` will be source by your bash 
 allowing for a customized bash configuration. All files not ending by ``*.sh`` will be ignored
 and can be used to create config files for other programs.
 
-The ``bash/`` directory will be mounted into the PHP container to ``/etc/bashrc-devilbox.d/``.
+The ``bash/`` directory will be mounted into the PHP container to ``/etc/bashrc-dreamdevbox.d/``.
 
 +--------------+-----------------------------+
 | Host OS path | Docker path                 |
 +==============+=============================+
-| ``./bash/``  | ``/etc/bashrc-devilbox.d/`` |
+| ``./bash/``  | ``/etc/bashrc-dreamdevbox.d/`` |
 +--------------+-----------------------------+
 
 
@@ -46,7 +46,7 @@ by ``.sh`` and place it into the ``./bash/`` directory:
 .. code-block:: bash
 
    # Navigate to the DreamDevBox git directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Create a new file
    host> touch ./bash/aliases.sh
@@ -74,7 +74,7 @@ First of all, place your favorite ``.vimrc`` into the ``./bash/`` directory
 .. code-block:: bash
 
    # Navigate to the DreamDevBox git directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Copy your vim config to the ./bash directory
    host> cp ~/.vimrc bash/.vimrc
@@ -83,13 +83,13 @@ Right now, this is not going to do anything and as ``.vimrc`` is not ending by `
 ignored by the shell itself. What is now left to do, is make vim itself always use this config file.
 
 As you can see from the above stated directory mapping, the ``.vimrc`` file will end up under:
-``/etc/bashrc-devilbox.d/.vimrc`` inside the PHP container, so just create a shell alias for vim
+``/etc/bashrc-dreamdevbox.d/.vimrc`` inside the PHP container, so just create a shell alias for vim
 that will always use this file:
 
 .. code-block:: bash
 
    # Navigate to the DreamDevBox git directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Create a new file
    host> touch ./bash/vim.sh
@@ -100,7 +100,7 @@ that will always use this file:
 .. code-block:: bash
    :caption: ./bash/vim.sh
 
-   alias vim='vim -u /etc/bashrc-devilbox.d/.vimrc'
+   alias vim='vim -u /etc/bashrc-dreamdevbox.d/.vimrc'
 
 Whenever you start ``vim`` inside any PHP container, it will automatically use the provided vim
 configuration file.

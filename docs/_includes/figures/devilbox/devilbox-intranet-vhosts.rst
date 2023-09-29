@@ -1,3 +1,3 @@
-.. figure:: /_includes/figures/devilbox/devilbox-intranet-vhosts.png
+.. figure:: /_includes/figures/dreamdevbox/dreamdevbox-intranet-vhosts.png
 
    DreamDevBox intranet: available virtual hosts

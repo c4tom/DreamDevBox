@@ -1,7 +1,7 @@
 .. include:: /_includes/all.rst
 .. include:: /_includes/snippets/__ANNOUNCEMENTS__.rst
 
-.. _devilbox_intranet:
+.. _dreamdevbox_intranet:
 
 *****************
 DreamDevBox intranet
@@ -27,7 +27,7 @@ The start page is there to check if everything works as expected. It shows all d
 containers you wanted to start and if they succeeded, as well as their ports, mount points and
 special settings applied via ``.env``.
 
-.. include:: /_includes/figures/devilbox/devilbox-intranet-index.rst
+.. include:: /_includes/figures/dreamdevbox/dreamdevbox-intranet-index.rst
 
 
 Virtual hosts
@@ -36,7 +36,7 @@ Virtual hosts
 The virtual host page displays all available projects and let's you know if their configuration
 is correct, such as DNS settings or document root.
 
-.. include:: /_includes/figures/devilbox/devilbox-intranet-vhosts.rst
+.. include:: /_includes/figures/dreamdevbox/dreamdevbox-intranet-vhosts.rst
 
 
 Emails
@@ -45,7 +45,7 @@ Emails
 The email page displays all emails that would have been sent, but were caught by the integrated
 email catch-all functionality.
 
-.. include:: /_includes/figures/devilbox/devilbox-intranet-emails.rst
+.. include:: /_includes/figures/dreamdevbox/dreamdevbox-intranet-emails.rst
 
 
 Databases
@@ -56,7 +56,7 @@ what is currently in place, how many databases/schemas and or recors and what si
 
 The following example shows the database page for MySQL:
 
-.. include:: /_includes/figures/devilbox/devilbox-intranet-mysql-databases.rst
+.. include:: /_includes/figures/dreamdevbox/dreamdevbox-intranet-mysql-databases.rst
 
 
 Info pages
@@ -67,17 +67,17 @@ currently applied.
 
 The following example shows you the info page for PHP.
 
-.. include:: /_includes/figures/devilbox/devilbox-intranet-php-info.rst
+.. include:: /_includes/figures/dreamdevbox/dreamdevbox-intranet-php-info.rst
 
 The following example shows you the info page for MySQL:
 
-.. include:: /_includes/figures/devilbox/devilbox-intranet-mysql-info.rst
+.. include:: /_includes/figures/dreamdevbox/dreamdevbox-intranet-mysql-info.rst
 
 
 Third-party tools
 =================
 
-.. _devilbox_intranet_adminer:
+.. _dreamdevbox_intranet_adminer:
 
 Adminer
 -------
@@ -87,7 +87,7 @@ management tool written in PHP. Conversely to phpMyAdmin, it consist of a single
 deploy to the target server. Adminer is available for MySQL, MariaDB, PostgreSQL, SQLite, MS SQL,
 Oracle, Firebird, SimpleDB, Elasticsearch and MongoDB.
 
-.. _devilbox_intranet_phpmyadmin:
+.. _dreamdevbox_intranet_phpmyadmin:
 
 phpMyAdmin
 ----------
@@ -98,7 +98,7 @@ of operations on MySQL and MariaDB. Frequently used operations (managing databas
 columns, relations, indexes, users, permissions, etc) can be performed via the user interface,
 while you still have the ability to directly execute any SQL statement.
 
-.. _devilbox_intranet_phppgadmin:
+.. _dreamdevbox_intranet_phppgadmin:
 
 phpPgAdmin
 ----------
@@ -106,14 +106,14 @@ phpPgAdmin
 |ext_lnk_tool_phppgadmin| is a web-based administration tool for PostgreSQL. It is perfect for
 PostgreSQL DBAs, newbies, and hosting services.
 
-.. _devilbox_intranet_phpredmin:
+.. _dreamdevbox_intranet_phpredmin:
 
 phpRedMin
 ----------
 
 |ext_lnk_tool_phpredmin| is a simple web interface to manage and monitor your Redis.
 
-.. _devilbox_intranet_phpmemcachedadmin:
+.. _dreamdevbox_intranet_phpmemcachedadmin:
 
 PHPMemcachedAdmin
 -----------------
@@ -141,8 +141,8 @@ you can also password protect it.
 .. seealso::
    In order to do so, have a look at the following ``.env`` variables:
 
-   * :ref:`env_devilbox_ui_protect`
-   * :ref:`env_devilbox_ui_password`
+   * :ref:`env_dreamdevbox_ui_protect`
+   * :ref:`env_dreamdevbox_ui_password`
 
 
 Disable the intranet
@@ -155,7 +155,7 @@ When the intranet is disabled, there is no way to access it.
 .. seealso::
    In order to do so, have a look at the following ``.env`` variable:
 
-   * :ref:`env_devilbox_ui_enable`
+   * :ref:`env_dreamdevbox_ui_enable`
 
 
 Checklist

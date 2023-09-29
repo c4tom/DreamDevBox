@@ -85,7 +85,7 @@ telling it what the directory name of your project is.
 Additionally you can define the Python version (``PYTHON_VERSION``)  under which you want to run
 your Flask project.
 
-.. seealso:: Available Python versions can be seen here: https://github.com/devilbox/docker-python-flask
+.. seealso:: Available Python versions can be seen here: https://github.com/dreamdevbox/docker-python-flask
 
 Add the following variable to the very end of your ``.env`` file:
 
@@ -128,7 +128,7 @@ The vhost directory defines the name under which your project will be available.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ mkdir my-flask
+   dreamdevbox@php-7.0.20 in /shared/httpd $ mkdir my-flask
 
 .. seealso:: :ref:`env_tld_suffix`
 
@@ -142,13 +142,13 @@ The vhost directory defines the name under which your project will be available.
 .. code-block:: bash
 
    # Navigate to your project directory
-   devilbox@php-7.0.20 in /shared/httpd $ cd my-flask
+   dreamdevbox@php-7.0.20 in /shared/httpd $ cd my-flask
 
    # Create a directory which will hold the source code
-   devilbox@php-7.0.20 in /shared/httpd/my-flask $ mkdir app
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-flask $ mkdir app
 
    # Create the main.py file with your favourite editor
-   devilbox@php-7.0.20 in /shared/httpd/my-flask/app $ vi main.py
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-flask/app $ vi main.py
 
 .. code-block:: python
    :caption: main.py
@@ -177,10 +177,10 @@ Flask container will then automatically install all Python libraries specified i
 .. code-block:: bash
 
    # Navigate to your project directory
-   devilbox@php-7.0.20 in /shared/httpd $ cd my-flask
+   dreamdevbox@php-7.0.20 in /shared/httpd $ cd my-flask
 
    # Create and open the file with your favourite editor
-   devilbox@php-7.0.20 in /shared/httpd/my-flask $ vi requirements.txt
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-flask $ vi requirements.txt
 
 .. code-block:: ini
    :caption: data/www/my-flask/requirements.txt
@@ -194,10 +194,10 @@ Flask container will then automatically install all Python libraries specified i
 .. code-block:: bash
 
    # Navigate to your project directory
-   devilbox@php-7.0.20 in /shared/httpd $ cd my-flask
+   dreamdevbox@php-7.0.20 in /shared/httpd $ cd my-flask
 
    # Create the docroot directory
-   devilbox@php-7.0.20 in /shared/httpd/my-flask $ ln -s app htdocs
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-flask $ ln -s app htdocs
 
 .. seealso:: :ref:`env_httpd_docroot_dir`
 
@@ -214,10 +214,10 @@ inside the project directory.
 .. code-block:: bash
 
    # Navigate to your project directory
-   devilbox@php-7.0.20 in /shared/httpd $ cd my-flask
+   dreamdevbox@php-7.0.20 in /shared/httpd $ cd my-flask
 
    # Create the .dreamdevbox template directory
-   devilbox@php-7.0.20 in /shared/httpd/my-flask $ mkdir .dreamdevbox
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-flask $ mkdir .dreamdevbox
 
 
 .. seealso:: :ref:`env_httpd_template_dir`
@@ -251,7 +251,7 @@ For this example we will copy all ``*-example-rproxy`` files into ``data/www/my-
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
    host> cp cfg/vhost-gen/apache22.yml-example-rproxy data/www/my-flask/.dreamdevbox/apache22.yml
    host> cp cfg/vhost-gen/apache24.yml-example-rproxy data/www/my-flask/.dreamdevbox/apache24.yml
    host> cp cfg/vhost-gen/nginx.yml-example-rproxy data/www/my-flask/.dreamdevbox/nginx.yml
@@ -272,7 +272,7 @@ Open the ``apache22.yml`` vhost-gen template in your project:
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
    host> vi data/www/my-flask/.dreamdevbox/apache22.yml
 
 
@@ -310,7 +310,7 @@ Open the ``apache24.yml`` vhost-gen template in your project:
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
    host> vi data/www/my-flask/.dreamdevbox/apache24.yml
 
 
@@ -348,7 +348,7 @@ Open the ``nginx.yml`` vhost-gen template in your project:
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
    host> vi data/www/my-flask/.dreamdevbox/nginx.yml
 
 
@@ -390,7 +390,7 @@ the ``docker-compose.override.yml`` file. A fully functional template already ex
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
    host> cp compose/docker-compose.override.yml-python-flask.yml docker-compose.override.yml
 
 .. seealso:: :ref:`docker_compose_override_yml`
@@ -424,7 +424,7 @@ Now for those changes to take affect, you will have to restart the DreamDevBox.
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
 
    # Stop the DreamDevBox
    host> docker-compose down

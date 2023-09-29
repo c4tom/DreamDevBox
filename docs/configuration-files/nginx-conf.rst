@@ -36,7 +36,7 @@ See the directory structure for Nginx configuration directories inside ``./cfg/`
 
 .. code-block:: bash
 
-   host> ls -l path/to/devilbox/cfg/ | grep 'nginx'
+   host> ls -l path/to/dreamdevbox/cfg/ | grep 'nginx'
 
    drwxr-xr-x  2 cytopia cytopia 4096 Mar  5 21:53 nginx-mainline/
    drwxr-xr-x  2 cytopia cytopia 4096 Mar  5 21:53 nginx-stable/
@@ -45,7 +45,7 @@ Customization is achieved by placing a file into ``cfg/nginx-X/`` (where ``X`` s
 your Nginx flavoour).  The file must end by ``.conf`` in order to be sourced by the web server.
 
 Each of the Nginx configuration directories already contain an example file:
-``devilbox-custom.conf-example``, that can simply be renamed to ``devilbox-custom.conf``.
+``dreamdevbox-custom.conf-example``, that can simply be renamed to ``dreamdevbox-custom.conf``.
 This file holds some example values that can be adjusted or commented out.
 
 In order for the changes to be applied, you will have to restart the DreamDevBox.
@@ -67,7 +67,7 @@ values of Nginx stable.
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Navigate to Nginx stable config directory
    host> cd cfg/nginx-stable
@@ -105,7 +105,7 @@ and
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Navigate to Nginx mainline config directory
    host> cd cfg/nginx-mainline

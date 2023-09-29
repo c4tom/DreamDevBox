@@ -14,7 +14,7 @@ This example will use ``composer`` to install CraftCMS from within the DreamDevB
    use **Docker Toolbox** you need to explicitly allow/enable this.
    See below for instructions:
 
-   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_devilbox_windows_symlinks`
+   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_dreamdevbox_windows_symlinks`
 
 After completing the below listed steps, you will have a working CraftCMS setup ready to be
 served via http and https.
@@ -86,7 +86,7 @@ The vhost directory defines the name under which your project will be available.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ mkdir my-craft
+   dreamdevbox@php-7.0.20 in /shared/httpd $ mkdir my-craft
 
 .. seealso:: :ref:`env_tld_suffix`
 
@@ -98,14 +98,14 @@ Navigate into your newly created vhost directory and install CraftCMS with ``com
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ cd my-craft
-   devilbox@php-7.0.20 in /shared/httpd/my-craft $ composer create-project craftcms/craft craftcms
+   dreamdevbox@php-7.0.20 in /shared/httpd $ cd my-craft
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-craft $ composer create-project craftcms/craft craftcms
 
 How does the directory structure look after installation:
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-craft $ tree -L 1
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-craft $ tree -L 1
    .
    └── craftcms
 
@@ -126,13 +126,13 @@ to its expected path.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-craft $ ln -s craftcms/web/ htdocs
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-craft $ ln -s craftcms/web/ htdocs
 
 How does the directory structure look after symlinking:
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-craft $ tree -L 1
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-craft $ tree -L 1
    .
    ├── craftcms
    └── htdocs -> craftcms/web
@@ -146,7 +146,7 @@ path and points to the frameworks entrypoint.
    When using **Docker Toolbox**, you need to **explicitly allow** the usage of **symlinks**.
    See below for instructions:
 
-   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_devilbox_windows_symlinks`
+   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_dreamdevbox_windows_symlinks`
 
 
 5. Add MySQL Database
@@ -154,7 +154,7 @@ path and points to the frameworks entrypoint.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-craft $ mysql -u root -h 127.0.0.1 -p -e 'CREATE DATABASE my_craft CHARACTER SET utf8 COLLATE utf8_unicode_ci;'
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-craft $ mysql -u root -h 127.0.0.1 -p -e 'CREATE DATABASE my_craft CHARACTER SET utf8 COLLATE utf8_unicode_ci;'
 
 
 6. DNS record
@@ -189,7 +189,7 @@ that you can use.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-craft $ php craftcms/craft setup
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-craft $ php craftcms/craft setup
 
    Which database driver are you using? [mysql,pgsql,?]: mysql
    Database server name or IP address: [localhost] 127.0.0.1
@@ -204,7 +204,7 @@ that you can use.
    Install Craft now? (yes|no) [yes]:
 
    Username: [admin]
-   Email: admin@devilbox.org
+   Email: admin@dreamdevbox.org
    Password:
    Confirm:
    Site name: craftcms

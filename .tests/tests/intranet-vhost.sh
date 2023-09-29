@@ -66,9 +66,9 @@ VHOST=test-intranet-vhost
 ###
 ### Create vhost directory
 ###
-run "docker-compose exec --user devilbox -T php rm -rf /shared/httpd/${VHOST}" "${RETRIES}" "${DVLBOX_PATH}"
+run "docker-compose exec --user dreamdevbox -T php rm -rf /shared/httpd/${VHOST}" "${RETRIES}" "${DVLBOX_PATH}"
 run "sleep 4"
-run "docker-compose exec --user devilbox -T php mkdir -p /shared/httpd/${VHOST}" "${RETRIES}" "${DVLBOX_PATH}"
+run "docker-compose exec --user dreamdevbox -T php mkdir -p /shared/httpd/${VHOST}" "${RETRIES}" "${DVLBOX_PATH}"
 run "sleep 4"
 
 
@@ -101,7 +101,7 @@ fi
 ###
 ### Vhost shows success with htdocs/ dir created
 ###
-run "docker-compose exec --user devilbox -T php mkdir -p /shared/httpd/${VHOST}/${HTTPD_DOCROOT_DIR}" "${RETRIES}" "${DVLBOX_PATH}"
+run "docker-compose exec --user dreamdevbox -T php mkdir -p /shared/httpd/${VHOST}/${HTTPD_DOCROOT_DIR}" "${RETRIES}" "${DVLBOX_PATH}"
 printf "[TEST] vhost shows no htdocs dir error if dir is present"
 if run "curl -sS --fail 'http://localhost:${HOST_PORT_HTTPD}/_ajax_callback.php?vhost=${VHOST}' | tac | tac | grep -E 'error|${VHOST}' >/dev/null" "1" "" "0"; then
 	printf "\\r[FAIL] vhost shows no htdocs dir error if dir is present\\n"
@@ -116,7 +116,7 @@ fi
 ### Vhost shows success for DNS
 ###
 printf "[TEST] vhost shows DNS record success"
-if ! run "curl -sS --fail --header 'host: ${VHOST}.${TLD_SUFFIX}' 'http://localhost:${HOST_PORT_HTTPD}/devilbox-api/status.json' | tac | tac | grep 'success' >/dev/null" "${RETRIES}" "" "0"; then
+if ! run "curl -sS --fail --header 'host: ${VHOST}.${TLD_SUFFIX}' 'http://localhost:${HOST_PORT_HTTPD}/dreamdevbox-api/status.json' | tac | tac | grep 'success' >/dev/null" "${RETRIES}" "" "0"; then
 	printf "\\r[FAIL] vhost shows DNS record success\\n"
 	run "curl --header 'host: ${VHOST}.${TLD_SUFFIX}' 'http://localhost:${HOST_PORT_HTTPD}/_ajax_callback.php?vhost=${VHOST}' || true"
 	exit 1
@@ -154,7 +154,7 @@ fi
 ###
 ### vhost-gen config link should appear
 ###
-#run "docker-compose exec --user devilbox -T php mkdir -p /shared/httpd/${VHOST}/${HTTPD_TEMPLATE_DIR}" "${RETRIES}" "${DVLBOX_PATH}"
+#run "docker-compose exec --user dreamdevbox -T php mkdir -p /shared/httpd/${VHOST}/${HTTPD_TEMPLATE_DIR}" "${RETRIES}" "${DVLBOX_PATH}"
 #run "cp ${DVLBOX_PATH}/cfg/vhost-gen/apache22.yml-example-vhost ${SCRIPT_PATH}/../www/${VHOST}/${HTTPD_TEMPLATE_DIR}/apache22.yml" "${RETRIES}"
 #run "cp ${DVLBOX_PATH}/cfg/vhost-gen/apache24.yml-example-vhost ${SCRIPT_PATH}/../www/${VHOST}/${HTTPD_TEMPLATE_DIR}/apache24.yml" "${RETRIES}"
 #run "cp ${DVLBOX_PATH}/cfg/vhost-gen/nginx.yml-example-vhost ${SCRIPT_PATH}/../www/${VHOST}/${HTTPD_TEMPLATE_DIR}/nginx.yml" "${RETRIES}"
@@ -202,7 +202,7 @@ fi
 ###
 ### Vhost disappears after removing its dir
 ###
-#run "docker-compose exec --user devilbox -T php rm -rf /shared/httpd/${VHOST}" "${RETRIES}" "${DVLBOX_PATH}"
+#run "docker-compose exec --user dreamdevbox -T php rm -rf /shared/httpd/${VHOST}" "${RETRIES}" "${DVLBOX_PATH}"
 #run "sleep 4"
 #
 #printf "[TEST] vhost disappears after removing its dir"

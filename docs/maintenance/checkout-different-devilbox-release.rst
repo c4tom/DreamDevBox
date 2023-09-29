@@ -1,21 +1,21 @@
 .. include:: /_includes/snippets/__ANNOUNCEMENTS__.rst
 
-.. _checkout-different-devilbox-release:
+.. _checkout-different-dreamdevbox-release:
 
 ***********************************
 Checkout different DreamDevBox release
 ***********************************
 
-You now have the devilbox downloaded at the latest version (``git master branch``). This is also recommended as it receives
+You now have the dreamdevbox downloaded at the latest version (``git master branch``). This is also recommended as it receives
 bugfixes frequently. If you however want to stay on a stable release, you need to check out a
 specific ``git tag``.
 
-Lets say you want your devilbox setup to be at release ``v1.0.1``, all you have to do is to check out
+Lets say you want your dreamdevbox setup to be at release ``v1.0.1``, all you have to do is to check out
 this specific git tag.
 
 .. code-block:: bash
 
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
    # Ensure you have latest from remote
    host> git fetch
    # Switch to this release

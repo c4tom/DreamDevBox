@@ -13,9 +13,9 @@ This directory also holds three example files:
 
 | File                            | Description                                 |
 |---------------------------------|---------------------------------------------|
-| `devilbox-fpm.conf-default`     | Represents current PHP-FPM default settings |
-| `devilbox-fpm.conf-pm_dynamic`  | Example settings for dynamic workers        |
-| `devilbox-fpm.conf-pm_ondemand` | Example settings for ondemand workers       |
+| `dreamdevbox-fpm.conf-default`     | Represents current PHP-FPM default settings |
+| `dreamdevbox-fpm.conf-pm_dynamic`  | Example settings for dynamic workers        |
+| `dreamdevbox-fpm.conf-pm_ondemand` | Example settings for ondemand workers       |
 
 * Do not edit these example files!
 * Copy them to a new file (in case you want to use them)

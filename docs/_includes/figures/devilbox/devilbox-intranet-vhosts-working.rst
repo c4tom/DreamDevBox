@@ -1,3 +1,3 @@
-.. figure:: /_includes/figures/devilbox/devilbox-intranet-vhosts-working.png
+.. figure:: /_includes/figures/dreamdevbox/dreamdevbox-intranet-vhosts-working.png
 
    DreamDevBox intranet: vhost setup successfully

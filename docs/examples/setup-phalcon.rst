@@ -78,7 +78,7 @@ The vhost directory defines the name under which your project will be available.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ mkdir my-phalcon
+   dreamdevbox@php-7.0.20 in /shared/httpd $ mkdir my-phalcon
 
 .. seealso:: :ref:`env_tld_suffix`
 
@@ -90,14 +90,14 @@ Navigate into your newly created vhost directory and install Phalcon with ``phal
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ cd my-phalcon
-   devilbox@php-7.0.20 in /shared/httpd/my-phalcon $ phalcon project phalconphp
+   dreamdevbox@php-7.0.20 in /shared/httpd $ cd my-phalcon
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-phalcon $ phalcon project phalconphp
 
 How does the directory structure look after installation:
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-phalcon $ tree -L 1
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-phalcon $ tree -L 1
    .
    └── phalconphp
 
@@ -118,13 +118,13 @@ to its expected path.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-phalcon $ ln -s phalconphp/public/ htdocs
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-phalcon $ ln -s phalconphp/public/ htdocs
 
 How does the directory structure look after symlinking:
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-phalcon $ tree -L 1
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-phalcon $ tree -L 1
    .
    ├── phalconphp
    └── htdocs -> phalconphp/public
@@ -138,7 +138,7 @@ path and points to the frameworks entrypoint.
    When using **Docker Toolbox**, you need to **explicitly allow** the usage of **symlinks**.
    See below for instructions:
 
-   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_devilbox_windows_symlinks`
+   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_dreamdevbox_windows_symlinks`
 
 
 5. DNS record
@@ -189,7 +189,7 @@ and
 to
 ``location ~ [^/]\.php(/|$) {``
 
-save the file as nginx.yml and ensure not to use any tabs in the file or devilbox will not use the custom configuration. You can use ``yamllint nginx.yml`` whilst inside the DreamDevBox shell to check the file before restarting devilbox.
+save the file as nginx.yml and ensure not to use any tabs in the file or dreamdevbox will not use the custom configuration. You can use ``yamllint nginx.yml`` whilst inside the DreamDevBox shell to check the file before restarting dreamdevbox.
 
 
 Next steps

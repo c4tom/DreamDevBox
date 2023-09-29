@@ -36,7 +36,7 @@ See the directory structure for Apache configuration directories inside ``./cfg/
 
 .. code-block:: bash
 
-   host> ls -l path/to/devilbox/cfg/ | grep 'apache'
+   host> ls -l path/to/dreamdevbox/cfg/ | grep 'apache'
 
    drwxr-xr-x  2 cytopia cytopia 4096 Mar  5 21:53 apache-2.2/
    drwxr-xr-x  2 cytopia cytopia 4096 Mar  5 21:53 apache-2.4/
@@ -45,7 +45,7 @@ Customization is achieved by placing a file into ``cfg/apache-X.X/`` (where ``X.
 your Apache version).  The file must end by ``.conf`` in order to be sourced by the web server.
 
 Each of the Apache configuration directories already contain an example file:
-``devilbox-custom.conf-example``, that can simply be renamed to ``devilbox-custom.conf``.
+``dreamdevbox-custom.conf-example``, that can simply be renamed to ``dreamdevbox-custom.conf``.
 This file holds some example values that can be adjusted or commented out.
 
 In order for the changes to be applied, you will have to restart the DreamDevBox.
@@ -67,7 +67,7 @@ Apache 2.2.
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Navigate to Apache 2.2 config directory
    host> cd cfg/apache-2.2
@@ -106,7 +106,7 @@ for Apache 2.4.
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Navigate to Apache 2.4 config directory
    host> cd cfg/apache-2.4

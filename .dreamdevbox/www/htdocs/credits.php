@@ -19,7 +19,7 @@
 
 				<div class="col-md-6">
 					<h2>Contributors</h2>
-					<p>The following people have contributed to the <a href="https://github.com/cytopia/devilbox/graphs/contributors">DreamDevBox</a>.</p>
+					<p>The following people have contributed to the <a href="https://github.com/cytopia/dreamdevbox/graphs/contributors">DreamDevBox</a>.</p>
 					<table class="table table-striped ">
 						<thead class="thead-inverse ">
 							<tr>
@@ -41,13 +41,13 @@
 							</tr>
 						</tbody>
 					</table>
-					<p>If you like to contribute, have a lookt at the <a href="https://github.com/cytopia/devilbox/blob/master/CONTRIBUTING.md">Contributing Guidelines</a>.</p>
+					<p>If you like to contribute, have a lookt at the <a href="https://github.com/cytopia/dreamdevbox/blob/master/CONTRIBUTING.md">Contributing Guidelines</a>.</p>
 				</div>
 
 
 				<div class="col-md-6">
 					<h2>Libraries</h2>
-					<p>The <a href="https://github.com/cytopia/devilbox">DreamDevBox</a> includes several libraries which are listed below.</p>
+					<p>The <a href="https://github.com/cytopia/dreamdevbox">DreamDevBox</a> includes several libraries which are listed below.</p>
 					<table class="table table-striped ">
 						<thead class="thead-inverse ">
 							<tr>

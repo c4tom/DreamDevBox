@@ -163,7 +163,7 @@ html_static_path = ['_static']
 
 def setup(app):
     '''Include custom css file'''
-    app.add_css_file('css/devilbox.css')
+    app.add_css_file('css/dreamdevbox.css')
 
 
 # If true, “Created using Sphinx” is shown in the HTML footer. Default is True.
@@ -173,7 +173,7 @@ html_show_sphinx = False
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'devilboxdoc'
+htmlhelp_basename = 'dreamdevboxdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -202,7 +202,7 @@ latex_elements = {
 latex_documents = [
     (
         master_doc,
-        'devilbox.tex',
+        'dreamdevbox.tex',
         u'DreamDevBox Documentation',
         u'cytopia',
         'manual'
@@ -217,7 +217,7 @@ latex_documents = [
 man_pages = [
     (
         master_doc,
-        'devilbox',
+        'dreamdevbox',
         u'DreamDevBox Documentation',
         [author],
         1
@@ -233,10 +233,10 @@ man_pages = [
 texinfo_documents = [
     (
         master_doc,
-        'devilbox',
+        'dreamdevbox',
         u'DreamDevBox Documentation',
         author,
-        'devilbox',
+        'dreamdevbox',
         'A modern dockerized LAMP and MEAN stack alternative to XAMPP',
         'Miscellaneous'
     ),

@@ -1,9 +1,9 @@
 <?php
 
-namespace devilbox;
+namespace dreamdevbox;
 
 /**
- * Log devilbox intranet errors.
+ * Log dreamdevbox intranet errors.
  * If logging is not possible, it will generate emails
  * that are handled by mail.php
  */
@@ -60,7 +60,7 @@ class Logger
 	 * Logfile path
 	 * @var string
 	 */
-	private $_logfile = '/tmp/devilbox-intranet/error.log';
+	private $_logfile = '/tmp/dreamdevbox-intranet/error.log';
 
 
 
@@ -139,7 +139,7 @@ class Logger
 		}
 
 		if (!$this->_fp) {
-			return mail('apache@localhost', 'devilbox error', $mail_body);
+			return mail('apache@localhost', 'dreamdevbox error', $mail_body);
 		}
 
 		$message = date('Y-m-d H:i') . "\n" .
@@ -148,7 +148,7 @@ class Logger
 						$this->_record_separator;
 
 		if (fwrite($this->_fp, $message) === false) {
-			return mail('apache@localhost', 'devilbox error', $mail_body);
+			return mail('apache@localhost', 'dreamdevbox error', $mail_body);
 		}
 	}
 

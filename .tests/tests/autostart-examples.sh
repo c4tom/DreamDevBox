@@ -41,7 +41,7 @@ fi
 ###
 ### Get autostart files
 ###
-FILES="$( run "docker-compose exec -T --user devilbox php bash -c 'find /startup.1.d/ -name \"*.sh-example\"'" "${RETRIES}" "${DVLBOX_PATH}" "0" )"
+FILES="$( run "docker-compose exec -T --user dreamdevbox php bash -c 'find /startup.1.d/ -name \"*.sh-example\"'" "${RETRIES}" "${DVLBOX_PATH}" "0" )"
 
 echo
 echo "#--------------------------------------------------------------------------------"
@@ -57,7 +57,7 @@ done
 ###
 ### Get autostart files
 ###
-FILES="$( run "docker-compose exec -T --user devilbox php bash -c 'find /startup.2.d/ -name \"*.sh-example\"'" "${RETRIES}" "${DVLBOX_PATH}" "0" )"
+FILES="$( run "docker-compose exec -T --user dreamdevbox php bash -c 'find /startup.2.d/ -name \"*.sh-example\"'" "${RETRIES}" "${DVLBOX_PATH}" "0" )"
 
 echo
 echo "#--------------------------------------------------------------------------------"

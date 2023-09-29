@@ -41,12 +41,12 @@ VHOST="${1}"
 # The following ensures to download the module test directory
 
 # Where to download from
-TEST_REPO="https://github.com/devilbox/docker-php-fpm"
+TEST_REPO="https://github.com/dreamdevbox/docker-php-fpm"
 TEST_PATH="tests/mods/modules"
 
 # Get current PHP_FPM git tag or branch
 PHP_FPM_GIT_SLUG="$( \
-	grep -E '^[[:space:]]+image:[[:space:]]+devilbox/php-fpm:' "${DVLBOX_PATH}/docker-compose.yml" \
+	grep -E '^[[:space:]]+image:[[:space:]]+dreamdevbox/php-fpm:' "${DVLBOX_PATH}/docker-compose.yml" \
 	| perl -p -e 's/.*(base|mods|prod|work|)-//g'
 )"
 
@@ -58,6 +58,6 @@ else
 fi
 
 # Cleanup and fetch data
-run "docker-compose exec -T --user devilbox php rm -rf /shared/httpd/${VHOST} || true" "${RETRIES}" "${DVLBOX_PATH}"
-run "docker-compose exec -T --user devilbox php mkdir -p /shared/httpd/${VHOST}" "${RETRIES}" "${DVLBOX_PATH}"
-run "docker-compose exec -T --user devilbox php svn checkout ${SVN_PATH} /shared/httpd/${VHOST}/htdocs" "${RETRIES}" "${DVLBOX_PATH}"
+run "docker-compose exec -T --user dreamdevbox php rm -rf /shared/httpd/${VHOST} || true" "${RETRIES}" "${DVLBOX_PATH}"
+run "docker-compose exec -T --user dreamdevbox php mkdir -p /shared/httpd/${VHOST}" "${RETRIES}" "${DVLBOX_PATH}"
+run "docker-compose exec -T --user dreamdevbox php svn checkout ${SVN_PATH} /shared/httpd/${VHOST}/htdocs" "${RETRIES}" "${DVLBOX_PATH}"

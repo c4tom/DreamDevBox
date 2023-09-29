@@ -36,13 +36,13 @@
 
 .. |ext_lnk_php_community_dockerhub| raw:: html
 
-   <a target="_blank" href="https://hub.docker.com/r/devilbox/php-fpm-community">
+   <a target="_blank" href="https://hub.docker.com/r/dreamdevbox/php-fpm-community">
      Dockerhub: PHP-FPM Community <img src="https://raw.githubusercontent.com/cytopia/icons/master/11x11/ext-link.png" />
    </a>
 
 .. |ext_lnk_php_community_github| raw:: html
 
-   <a target="_blank" href="https://github.com/devilbox/docker-php-fpm-community/">
+   <a target="_blank" href="https://github.com/dreamdevbox/docker-php-fpm-community/">
      Github: PHP-FPM Community <img src="https://raw.githubusercontent.com/cytopia/icons/master/11x11/ext-link.png" />
    </a>
 
@@ -54,13 +54,13 @@
 
 .. |ext_lnk_ngrok_github| raw:: html
 
-   <a target="_blank" href="https://github.com/devilbox/docker-ngrok">
+   <a target="_blank" href="https://github.com/dreamdevbox/docker-ngrok">
      Github: ngrok <img src="https://raw.githubusercontent.com/cytopia/icons/master/11x11/ext-link.png" />
    </a>
 
 .. |ext_lnk_ngrok_dockerhub| raw:: html
 
-   <a target="_blank" href="https://hub.docker.com/r/devilbox/ngrok/">
+   <a target="_blank" href="https://hub.docker.com/r/dreamdevbox/ngrok/">
      Dockerhub: ngrok <img src="https://raw.githubusercontent.com/cytopia/icons/master/11x11/ext-link.png" />
    </a>
 
@@ -108,7 +108,7 @@
 
 .. |ext_lnk_varnish_dockerhub| raw:: html
 
-   <a target="_blank" href="https://hub.docker.com/r/devilbox/varnish/">
+   <a target="_blank" href="https://hub.docker.com/r/dreamdevbox/varnish/">
      Dockerhub: Varnish <img src="https://raw.githubusercontent.com/cytopia/icons/master/11x11/ext-link.png" />
    </a>
 

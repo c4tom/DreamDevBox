@@ -251,13 +251,13 @@
 						if (el_valid.innerHTML != 'WARN') {
 							el_valid.innerHTML = 'OK';
 						}
-						//el_href.innerHTML = '(<a target="_blank" href="'+proto+'//localhost/devilbox-project/'+name+'">ext</a>) <a target="_blank" href="'+proto+'//'+name+port+'">'+name+port+'</a>' + el_href.innerHTML;
+						//el_href.innerHTML = '(<a target="_blank" href="'+proto+'//localhost/dreamdevbox-project/'+name+'">ext</a>) <a target="_blank" href="'+proto+'//'+name+port+'">'+name+port+'</a>' + el_href.innerHTML;
 						el_href.innerHTML = '<a target="_blank" href="'+proto+'//'+name+port+'">'+name+port+'</a>';
 					} else {
 						//console.log(vhost);
 					}
 				}
-				xhttp.open('POST', proto+'//'+name+port+'/devilbox-api/status.json', true);
+				xhttp.open('POST', proto+'//'+name+port+'/dreamdevbox-api/status.json', true);
 				xhttp.send();
 
 				// Timeout to abort in 1 second

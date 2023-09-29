@@ -6,11 +6,11 @@ Use bundled batteries
 The DreamDevBox ships most common Web UIs accessible from the intranet.
 
 .. seealso::
-   * :ref:`devilbox_intranet_adminer`
-   * :ref:`devilbox_intranet_phpmyadmin`
-   * :ref:`devilbox_intranet_phppgadmin`
-   * :ref:`devilbox_intranet_phpredmin`
-   * :ref:`devilbox_intranet_phpmemcachedadmin`
+   * :ref:`dreamdevbox_intranet_adminer`
+   * :ref:`dreamdevbox_intranet_phpmyadmin`
+   * :ref:`dreamdevbox_intranet_phppgadmin`
+   * :ref:`dreamdevbox_intranet_phpredmin`
+   * :ref:`dreamdevbox_intranet_phpmemcachedadmin`
 
 Enhance the DreamDevBox
 --------------------

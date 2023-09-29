@@ -10,19 +10,19 @@ body:
   - type: markdown
     attributes:
       value: |
-        If this is a generic question, please consider using the [DreamDevBox forum](https://devilbox.discourse.group/) instead.
+        If this is a generic question, please consider using the [DreamDevBox forum](https://dreamdevbox.discourse.group/) instead.
 
   - type: checkboxes
     attributes:
       label: Have you already checked elsewhere?
       description: You may select more than one.
       options:
-        - label: I have read the [DreamDevBox documentation](https://devilbox.readthedocs.io/en/latest/)
-        - label: I have checked the [DreamDevBox Troubleshooting Guide](https://devilbox.readthedocs.io/en/latest/)
-        - label: I have checked the [DreamDevBox FAQ](https://devilbox.readthedocs.io/en/latest/support/faq.html)
-        - label: I have checked the [DreamDevBox Howto](https://devilbox.readthedocs.io/en/latest/support/howto.html)
-        - label: I have checked the [DreamDevBox Forum](https://devilbox.discourse.group/)
-        - label: I have checked [existing issues](https://github.com/cytopia/devilbox/issues)
+        - label: I have read the [DreamDevBox documentation](https://dreamdevbox.readthedocs.io/en/latest/)
+        - label: I have checked the [DreamDevBox Troubleshooting Guide](https://dreamdevbox.readthedocs.io/en/latest/)
+        - label: I have checked the [DreamDevBox FAQ](https://dreamdevbox.readthedocs.io/en/latest/support/faq.html)
+        - label: I have checked the [DreamDevBox Howto](https://dreamdevbox.readthedocs.io/en/latest/support/howto.html)
+        - label: I have checked the [DreamDevBox Forum](https://dreamdevbox.discourse.group/)
+        - label: I have checked [existing issues](https://github.com/cytopia/dreamdevbox/issues)
         - label: I have googled already with no luck
         - label: I have not done any of the above
     validations:

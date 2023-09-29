@@ -7,7 +7,7 @@ Available container
 *******************
 
 .. note::
-   :ref:`start_the_devilbox`
+   :ref:`start_the_dreamdevbox`
        Find out how to start some or all container.
 
 The following tables give you an overview about all container that can be started.

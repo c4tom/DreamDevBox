@@ -46,7 +46,7 @@ See the directory structure for PHP startup script directories inside ``./cfg/``
 
 .. code-block:: bash
 
-   host> ls -l path/to/devilbox/cfg/ | grep 'php-startup'
+   host> ls -l path/to/dreamdevbox/cfg/ | grep 'php-startup'
 
    drwxr-xr-x  2 cytopia cytopia 4096 Mar  5 21:53 php-startup-5.2/
    drwxr-xr-x  2 cytopia cytopia 4096 Mar  5 21:53 php-startup-5.3/
@@ -99,7 +99,7 @@ requires every user to accept a license/EULA by Microsoft.
 .. code-block:: bash
 
    # Navigate to starup dir of PHP 7.1
-   host> cd path/to/devilbox/cfg/php-startup-7.1
+   host> cd path/to/dreamdevbox/cfg/php-startup-7.1
 
    # Create an .sh file
    host> touch ms-odbc.sh
@@ -175,21 +175,21 @@ Paste the following into ``ms-obbc.sh`` and **ensure to accept the EULA** by cha
    The script will not work, if you have not accepted the EULA.
 
 
-Running commands as devilbox user
+Running commands as dreamdevbox user
 ---------------------------------
 
 As mentioned above, all scripts are run by the ``root`` user.
-If you do need something to be executed as the normal user: ``devilbox``, you can simply ``su``
+If you do need something to be executed as the normal user: ``dreamdevbox``, you can simply ``su``
 inside the shell script.
 
-The following example will install ``grunt`` and start a NodeJS application as the devilbox user
+The following example will install ``grunt`` and start a NodeJS application as the dreamdevbox user
 for the PHP 7.1 Docker container only.
 
 .. code-block:: bash
    :caption: cfg/php-startup-7.1/myscript.sh
 
-   # Install grunt as devilbox user
-   su -c "npm install grunt" -l devilbox
+   # Install grunt as dreamdevbox user
+   su -c "npm install grunt" -l dreamdevbox
 
-   # Start a NodeJS application with pm2 as devilbox user
-   su -c "cd /shared/httpd/my-node/src/; pm2 start index.js" -l devilbox
+   # Start a NodeJS application with pm2 as dreamdevbox user
+   su -c "cd /shared/httpd/my-node/src/; pm2 start index.js" -l dreamdevbox

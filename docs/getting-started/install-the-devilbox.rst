@@ -1,7 +1,7 @@
 .. include:: /_includes/all.rst
 .. include:: /_includes/snippets/__ANNOUNCEMENTS__.rst
 
-.. _install_the_devilbox:
+.. _install_the_dreamdevbox:
 
 ********************
 Install the DreamDevBox
@@ -24,13 +24,13 @@ To download that, open a terminal and copy/paste the following command.
 
 .. code-block:: bash
 
-   host> git clone https://github.com/cytopia/devilbox
+   host> git clone https://github.com/cytopia/dreamdevbox
 
 .. seealso::
 
    * :ref:`howto_open_terminal_on_mac`
    * :ref:`howto_open_terminal_on_win`
-   * :ref:`checkout-different-devilbox-release`
+   * :ref:`checkout-different-dreamdevbox-release`
 
 
 Create ``.env`` file
@@ -53,7 +53,7 @@ of settings (such as which version to start up).
    * :ref:`env_file`
 
 
-.. _install_the_devilbox_set_uid_and_gid:
+.. _install_the_dreamdevbox_set_uid_and_gid:
 
 Set uid and gid
 ===============
@@ -120,12 +120,12 @@ shared mounts among multiple container:
    MOUNT_OPTIONS=,z
 
 .. seealso::
-   * https://github.com/cytopia/devilbox/issues/255
+   * https://github.com/cytopia/dreamdevbox/issues/255
    * :ref:`env_mount_options`
    * |ext_lnk_docker_selinux_label|
    * |ext_lnk_docker_mount_z_flag|
 
-.. _install_the_devilbox_osx_performance:
+.. _install_the_dreamdevbox_osx_performance:
 
 OSX: Performance
 ----------------
@@ -148,7 +148,7 @@ Ensure to read the links below to understand why this problem exists and how the
 The Docker documentation will also give you alternative caching options to consider.
 
 .. seealso::
-   * https://github.com/cytopia/devilbox/issues/105
+   * https://github.com/cytopia/dreamdevbox/issues/105
    * https://forums.docker.com/t/file-access-in-mounted-volumes-extremely-slow-cpu-bound/8076/281
    * https://docs.docker.com/docker-for-mac/osxfs/
    * :ref:`env_mount_options`

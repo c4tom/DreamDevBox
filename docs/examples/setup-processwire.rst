@@ -14,7 +14,7 @@ This example will use ``composer`` to install ProcessWire from within the DreamD
    use **Docker Toolbox** you need to explicitly allow/enable this.
    See below for instructions:
 
-   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_devilbox_windows_symlinks`
+   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_dreamdevbox_windows_symlinks`
 
 After completing the below listed steps, you will have a working ProcessWire setup ready to be
 served via http and https.
@@ -99,7 +99,7 @@ The vhost directory defines the name under which your project will be available.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ mkdir my-pw
+   dreamdevbox@php-7.0.20 in /shared/httpd $ mkdir my-pw
 
 .. seealso:: :ref:`env_tld_suffix`
 
@@ -111,14 +111,14 @@ Navigate into your newly created vhost directory and install ProcessWire with ``
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ cd my-pw
-   devilbox@php-7.0.20 in /shared/httpd/my-pw $ composer create-project processwire/processwire
+   dreamdevbox@php-7.0.20 in /shared/httpd $ cd my-pw
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-pw $ composer create-project processwire/processwire
 
 How does the directory structure look after installation:
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-pw $ tree -L 1
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-pw $ tree -L 1
    .
    └── processwire
 
@@ -139,13 +139,13 @@ to its expected path.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-pw $ ln -s ln -s processwire htdocs
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-pw $ ln -s ln -s processwire htdocs
 
 How does the directory structure look after symlinking:
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-pw $ tree -L 1
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-pw $ tree -L 1
    .
    ├── processwire
    └── htdocs -> processwire
@@ -159,7 +159,7 @@ path and points to the frameworks entrypoint.
    When using **Docker Toolbox**, you need to **explicitly allow** the usage of **symlinks**.
    See below for instructions:
 
-   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_devilbox_windows_symlinks`
+   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_dreamdevbox_windows_symlinks`
 
 
 5. DNS record

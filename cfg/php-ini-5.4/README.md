@@ -13,8 +13,8 @@ This directory also holds two example files:
 
 | File                       | Description                             |
 |----------------------------|-----------------------------------------|
-| `devilbox-php.ini-default` | Represents current PHP default settings |
-| `devilbox-php.ini-xdebug ` | Example settings for Xdebug             |
+| `dreamdevbox-php.ini-default` | Represents current PHP default settings |
+| `dreamdevbox-php.ini-xdebug ` | Example settings for Xdebug             |
 
 * Do not edit these example files!
 * Copy them to a new file (in case you want to use them)

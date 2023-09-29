@@ -69,9 +69,9 @@ Let's assume the following default values and one project named ``project-1``:
 +-------------------------------+-------------------------------------------------------+
 | Variable                      | Value                                                 |
 +===============================+=======================================================+
-| DreamDevBox path                 | ``/home/user/devilbox``                               |
+| DreamDevBox path                 | ``/home/user/dreamdevbox``                               |
 +-------------------------------+-------------------------------------------------------+
-| Templates to copy from        | ``/home/user/devilbox/cfg/vhost-gen``                 |
+| Templates to copy from        | ``/home/user/dreamdevbox/cfg/vhost-gen``                 |
 +-------------------------------+-------------------------------------------------------+
 | Project name                  | ``project-1``                                         |
 +-------------------------------+-------------------------------------------------------+
@@ -85,9 +85,9 @@ Those assumed settings will result in the following directory paths which must b
 +-------------------------------+-------------------------------------------------------+
 | What                          | Path                                                  |
 +===============================+=======================================================+
-| Project directory path        | ``/home/user/devilbox/data/www/project-1/``           |
+| Project directory path        | ``/home/user/dreamdevbox/data/www/project-1/``           |
 +-------------------------------+-------------------------------------------------------+
-| Project template path         | ``/home/user/devilbox/data/www/project-1/.dreamdevbox/`` |
+| Project template path         | ``/home/user/dreamdevbox/data/www/project-1/.dreamdevbox/`` |
 +-------------------------------+-------------------------------------------------------+
 
 1. Retrieve or set template directory value
@@ -111,7 +111,7 @@ First you need to ensure that the :ref:`env_httpd_template_dir` exists wihin you
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd /home/user/devilbox
+   host> cd /home/user/dreamdevbox
 
    # Create template directory in your project
    host> mkdir ./data/www/project-1/.dreamdevbox
@@ -133,9 +133,9 @@ Then you can copy the templates.
 
 At this stage you can start adjusting the template. Either do that for the webserver version you
 have enabled via :ref:`env_httpd_server`:
-``/home/user/devilbox/data/www/project-1/.dreamdevbox/apache22.yml``.
-``/home/user/devilbox/data/www/project-1/.dreamdevbox/apache24.yml``,
-``/home/user/devilbox/data/www/project-1/.dreamdevbox/nginx.yml`` or do it for all of them
+``/home/user/dreamdevbox/data/www/project-1/.dreamdevbox/apache22.yml``.
+``/home/user/dreamdevbox/data/www/project-1/.dreamdevbox/apache24.yml``,
+``/home/user/dreamdevbox/data/www/project-1/.dreamdevbox/nginx.yml`` or do it for all of them
 synchronously.
 
 .. note:: What exactly to change will be explained later.
@@ -180,7 +180,7 @@ Ensure yaml files are valid
    Pay close attention that you do not use TAB (``\t``) characters for indenting the vhost-gen
    yaml files. Some editors might automatically indent using TABs, so ensure they are replaced
    with spaces. If TAB characters are present, those files become invalid and won't work.
-   https://github.com/cytopia/devilbox/issues/142
+   https://github.com/cytopia/dreamdevbox/issues/142
 
    You can use the bundled ``yamllint`` binary inside the container to validate your config.
 
@@ -189,16 +189,16 @@ Ensure yaml files are valid
    :emphasize-lines: 13-16
 
    # Navigate to the DreamDevBox directory
-   host> cd /home/user/devilbox
+   host> cd /home/user/dreamdevbox
 
    # Enter the PHP container
    host> ./shell.sh
 
    # Go to your project's template directory
-   devilbox@php-7.0.19 in /shared/httpd $ cd project-1/.dreamdevbox
+   dreamdevbox@php-7.0.19 in /shared/httpd $ cd project-1/.dreamdevbox
 
    # Check the syntax of apache22.yml
-   devilbox@php-7.0.19 in /shared/httpd/project-1/.dreamdevbox $ yamllint apache22.yml
+   dreamdevbox@php-7.0.19 in /shared/httpd/project-1/.dreamdevbox $ yamllint apache22.yml
 
    108:81    error    line too long (90 > 80 characters)  (line-length)
    139:81    error    line too long (100 > 80 characters)  (line-length)
@@ -362,7 +362,7 @@ Rename project directory
 .. code-block:: bash
 
    # Navigate to the data directory
-   host> /home/user/devilbox/data/www
+   host> /home/user/dreamdevbox/data/www
 
    # Rename your project to something else
    host> mv project-1 project-1.tmp
@@ -374,8 +374,8 @@ If you want to understand what is going on right now, check the docker logs for 
 
 .. code-block:: bash
 
-   # Navigate to the devilbox directory
-   host> /home/user/devilbox
+   # Navigate to the dreamdevbox directory
+   host> /home/user/dreamdevbox
 
    # Check docker logs
    host> docker-compose logs httpd

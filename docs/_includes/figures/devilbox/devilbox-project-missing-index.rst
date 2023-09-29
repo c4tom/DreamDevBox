@@ -1,3 +1,3 @@
-.. figure:: /_includes/figures/devilbox/devilbox-project-missing-index.png
+.. figure:: /_includes/figures/dreamdevbox/dreamdevbox-project-missing-index.png
 
    DreamDevBox project: misssing ``index.php`` or ``index.html``

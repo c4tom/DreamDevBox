@@ -1,12 +1,12 @@
 .. |ext_lnk_blog_openstream| raw:: html
 
-   <a target="_blank" href="https://www.openstream.ch/developer-blog/devilbox/">
+   <a target="_blank" href="https://www.openstream.ch/developer-blog/dreamdevbox/">
      Docker LAMP Stack for WordPress and Magento <img src="https://raw.githubusercontent.com/cytopia/icons/master/11x11/ext-link.png" />
    </a>
 
 .. |ext_lnk_blog_deliciousbrains| raw:: html
 
-   <a target="_blank" href="https://deliciousbrains.com/devilbox-local-wordpress-development-docker/">
+   <a target="_blank" href="https://deliciousbrains.com/dreamdevbox-local-wordpress-development-docker/">
      Using DreamDevBox For Local WordPress Development In Docker <img src="https://raw.githubusercontent.com/cytopia/icons/master/11x11/ext-link.png" />
    </a>
 

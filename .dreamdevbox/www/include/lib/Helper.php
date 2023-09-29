@@ -1,8 +1,8 @@
 <?php
-namespace devilbox;
+namespace dreamdevbox;
 
 /**
- * @requires devilbox::Logger
+ * @requires dreamdevbox::Logger
  */
 class Helper
 {
@@ -189,9 +189,9 @@ class Helper
 
 	public function login($username, $password)
 	{
-		$dvl_password = loadClass('Helper')->getEnv('DEVILBOX_UI_PASSWORD');
+		$dvl_password = loadClass('Helper')->getEnv('DREAMDEVBOX_UI_PASSWORD');
 
-		if ($username == 'devilbox' && $password == $dvl_password) {
+		if ($username == 'dreamdevbox' && $password == $dvl_password) {
 			$_SESSION['auth'] = 1;
 			return true;
 		}
@@ -207,7 +207,7 @@ class Helper
 	public function isLoginProtected()
 	{
 		// No password protection enabled
-		if (loadClass('Helper')->getEnv('DEVILBOX_UI_PROTECT') != 1) {
+		if (loadClass('Helper')->getEnv('DREAMDEVBOX_UI_PROTECT') != 1) {
 			return false;
 		}
 		return true;

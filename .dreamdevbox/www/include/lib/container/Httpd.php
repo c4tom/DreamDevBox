@@ -1,8 +1,8 @@
 <?php
-namespace devilbox;
+namespace dreamdevbox;
 
 /**
- * @requires devilbox::Logger
+ * @requires dreamdevbox::Logger
  */
 class Httpd extends BaseClass implements BaseInterface
 {
@@ -134,7 +134,7 @@ class Httpd extends BaseClass implements BaseInterface
 		}
 
 		// Silence errors and try to connect
-		$url = 'http://'.$hostname.'/'.$GLOBALS['DEVILBOX_API_PAGE'];
+		$url = 'http://'.$hostname.'/'.$GLOBALS['DREAMDEVBOX_API_PAGE'];
 		$ch = curl_init($url);
 		curl_setopt($ch, CURLOPT_NOBODY, true);
 		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, false);

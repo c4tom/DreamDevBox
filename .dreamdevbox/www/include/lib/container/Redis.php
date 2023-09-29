@@ -1,8 +1,8 @@
 <?php
-namespace devilbox;
+namespace dreamdevbox;
 
 /**
- * @requires devilbox::Logger
+ * @requires dreamdevbox::Logger
  */
 class Redis extends BaseClass implements BaseInterface
 {
@@ -47,7 +47,7 @@ class Redis extends BaseClass implements BaseInterface
 				if (array_key_exists('pass', $data)) {
 					$redis->auth($data['pass']);
 				}
-				$redis->set('devilbox-version', $GLOBALS['DEVILBOX_VERSION'].' ('.$GLOBALS['DEVILBOX_DATE'].')');
+				$redis->set('dreamdevbox-version', $GLOBALS['DREAMDEVBOX_VERSION'].' ('.$GLOBALS['DREAMDEVBOX_DATE'].')');
 				$this->_redis = $redis;
 			}
 		}

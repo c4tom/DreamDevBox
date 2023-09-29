@@ -15,7 +15,7 @@ It will grow over time once there are more issues reported.
 
 .. important::
 
-   :ref:`update_the_devilbox`
+   :ref:`update_the_dreamdevbox`
      Issues are constantly being fixed. Before attempting to spend too much time digging into
      your issue, make sure you are running the latest git changes and have pulled the latest
      Docker images.
@@ -134,7 +134,7 @@ However, depending on the version of Docker some of the above suggestions may no
 have to get support from the docker/for-mac GitHub repository or forum.
 
 .. seealso::
-   * https://github.com/cytopia/devilbox/issues/539
+   * https://github.com/cytopia/dreamdevbox/issues/539
    * https://github.com/docker/for-mac/issues/371
    * https://forums.docker.com/t/no-space-left-on-device-error/10894
 
@@ -159,7 +159,7 @@ Unable to finish Pulling as unauthorized: incorrect username or password
 This error might occur if you are already logged into a different Docker repository.
 To fix this error, sign out of your currently logged in repository and try again.
 
-.. seealso:: https://github.com/cytopia/devilbox/issues/223
+.. seealso:: https://github.com/cytopia/dreamdevbox/issues/223
 
 
 localhost or 127.0.0.1 not found
@@ -189,7 +189,7 @@ By default Docker for Mac has performance issues on mounted directories with a l
 To overcome this issue you can apply different kinds of caching options to the mount points.
 
 .. seealso::
-   * :ref:`install_the_devilbox_osx_performance`
+   * :ref:`install_the_dreamdevbox_osx_performance`
    * :ref:`env_mount_options`
 
 
@@ -201,7 +201,7 @@ zone 'localhost': already exists previous definition
 
 .. code-block:: bash
 
-   bind_1 | /etc/bind/devilbox-wildcard_dns.localhost.conf:1:
+   bind_1 | /etc/bind/dreamdevbox-wildcard_dns.localhost.conf:1:
    zone 'localhost': already exists previous definition:
    /etc/bind/named.conf.default-zones:10
 
@@ -210,7 +210,7 @@ This error occurs when using ``localhost`` as the :ref:`env_tld_suffix`.
 .. seealso::
 
    * :ref:`env_tld_suffix`
-   * https://github.com/cytopia/devilbox/issues/291
+   * https://github.com/cytopia/dreamdevbox/issues/291
 
 
 SSL issues
@@ -236,7 +236,7 @@ container which does not have a valid SSL certificate for that domain.
 .. seealso::
 
    * :ref:`env_tld_suffix`
-   * https://github.com/cytopia/devilbox/issues/275
+   * https://github.com/cytopia/dreamdevbox/issues/275
 
 
 Web server issues
@@ -290,8 +290,8 @@ For that to fix one must increase the PHP-FPM/Proxy timeout settings in the ``.e
 .. seealso::
 
    * :ref:`env_httpd_timeout_to_php_fpm`
-   * https://github.com/cytopia/devilbox/issues/280
-   * https://github.com/cytopia/devilbox/issues/234
+   * https://github.com/cytopia/dreamdevbox/issues/280
+   * https://github.com/cytopia/dreamdevbox/issues/234
 
 
 PHP issues
@@ -330,7 +330,7 @@ This error usually occurs when you import a MySQL dump including the mysql datab
 will overwrite the user permissions and thus you won't be able to connect anymore with the settings
 specified in ``.env``.
 
-.. seealso:: https://github.com/cytopia/devilbox/issues/542
+.. seealso:: https://github.com/cytopia/dreamdevbox/issues/542
 
 Invalid bind mount spec
 -----------------------
@@ -345,7 +345,7 @@ In order to remove the container do the following:
 
 .. code-block:: bash
 
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
    host> docker-compose stop
 
    # Remove the stopped container (IMPORTANT!)
@@ -357,7 +357,7 @@ In order to remove the container do the following:
 [Warning] World-writable config file '/etc/mysql/docker-default.d/my.cnf' is ignored
 ------------------------------------------------------------------------------------
 
-This warning might occur when using :ref:`howto_docker_toolbox_and_the_devilbox` on Windows and
+This warning might occur when using :ref:`howto_docker_toolbox_and_the_dreamdevbox` on Windows and
 trying to apply custom MySQL configuration files. This will also result in the configuration file
 not being source by the MySQL server.
 
@@ -366,8 +366,8 @@ to read-only by applying the following ``chmod`` command.
 
 .. code-block:: bash
 
-   # Nagivate to devilbox git directory
-   host> cd path/to/devilbox
+   # Nagivate to dreamdevbox git directory
+   host> cd path/to/dreamdevbox
 
    # Navigate to the MySQL config directory (e.g.: MySQL 5.5)
    host> cd cfg/mysql-5.5
@@ -377,7 +377,7 @@ to read-only by applying the following ``chmod`` command.
 
 .. seealso::
    * :ref:`my_cnf`
-   * https://github.com/cytopia/devilbox/issues/212
+   * https://github.com/cytopia/dreamdevbox/issues/212
 
 [MariaDB] Assertion failure when executing prepared statement with ? in IN list
 -------------------------------------------------------------------------------
@@ -404,4 +404,4 @@ manually via.
 
 .. seealso:: For detailed example see here:
 
-  * Docker Toolbox on Windows: :ref:`howto_docker_toolbox_and_the_devilbox_windows_symlinks`
+  * Docker Toolbox on Windows: :ref:`howto_docker_toolbox_and_the_dreamdevbox_windows_symlinks`

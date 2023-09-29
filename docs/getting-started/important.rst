@@ -25,7 +25,7 @@ the ``docker`` group.
 .. seealso:: **Ensure you have read and done the following:**
 
    * Add user to ``docker`` group: :ref:`prerequisites_docker_installation`
-   * Synronize file permissions: :ref:`install_the_devilbox_set_uid_and_gid`
+   * Synronize file permissions: :ref:`install_the_dreamdevbox_set_uid_and_gid`
 
 .. warning:: If you start the DreamDevBox with ``sudo`` or as ``root`` user, it will most likely mess with your file permissions.
 
@@ -47,7 +47,7 @@ remove stopped container.
    # Start the DreamDevBox
    host> docker-compose up
 
-.. seealso:: :ref:`start_the_devilbox_stop_and_restart` (why do ``docker-compose rm``?)
+.. seealso:: :ref:`start_the_dreamdevbox_stop_and_restart` (why do ``docker-compose rm``?)
 
 
 Backups

@@ -11,7 +11,7 @@ Enable/disable PHP modules
 .. contents:: :local:
 
 .. seealso::
-   https://github.com/devilbox/docker-php-fpm/blob/master/doc/php-modules.md
+   https://github.com/dreamdevbox/docker-php-fpm/blob/master/doc/php-modules.md
      Follow the link to see all available PHP modules for each different PHP-FPM server version.
 
 
@@ -63,4 +63,4 @@ Roadmap
    modules should be enabled by default. The rest is up to the user to enable others as needed.
 
    The current discussion about default modules can be found at the following Github issue.
-   Please participate and give your ideas: https://github.com/cytopia/devilbox/issues/299
+   Please participate and give your ideas: https://github.com/cytopia/dreamdevbox/issues/299

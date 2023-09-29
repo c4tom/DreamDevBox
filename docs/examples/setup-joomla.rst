@@ -77,7 +77,7 @@ The vhost directory defines the name under which your project will be available.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ mkdir my-joomla
+   dreamdevbox@php-7.0.20 in /shared/httpd $ mkdir my-joomla
 
 .. seealso:: :ref:`env_tld_suffix`
 
@@ -89,16 +89,16 @@ Navigate into your newly created vhost directory and install Joomla.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ cd my-joomla
-   devilbox@php-7.0.20 in /shared/httpd/my-joomla $ wget -O joomla.tar.gz https://downloads.joomla.org/cms/joomla3/3-8-0/joomla_3-8-0-stable-full_package-tar-gz?format=gz
-   devilbox@php-7.0.20 in /shared/httpd/my-joomla $ mkdir joomla
-   devilbox@php-7.0.20 in /shared/httpd/my-joomla $ tar xvfz joomla.tar.gz -C joomla/
+   dreamdevbox@php-7.0.20 in /shared/httpd $ cd my-joomla
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-joomla $ wget -O joomla.tar.gz https://downloads.joomla.org/cms/joomla3/3-8-0/joomla_3-8-0-stable-full_package-tar-gz?format=gz
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-joomla $ mkdir joomla
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-joomla $ tar xvfz joomla.tar.gz -C joomla/
 
 How does the directory structure look after installation:
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-joomla $ tree -L 1
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-joomla $ tree -L 1
    .
    ├── joomla.tar.gz
    └── joomla
@@ -120,13 +120,13 @@ to its expected path.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-joomla $ ln -s joomla/ htdocs
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-joomla $ ln -s joomla/ htdocs
 
 How does the directory structure look after symlinking it:
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-joomla $ tree -L 1
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-joomla $ tree -L 1
    .
    ├── joomla.tar.gz
    ├── joomla
@@ -141,7 +141,7 @@ path and points to the frameworks entrypoint.
    When using **Docker Toolbox**, you need to **explicitly allow** the usage of **symlinks**.
    See below for instructions:
 
-   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_devilbox_windows_symlinks`
+   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_dreamdevbox_windows_symlinks`
 
 
 5. DNS record

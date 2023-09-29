@@ -1,5 +1,5 @@
 <?php
-namespace devilbox;
+namespace dreamdevbox;
 
 class Dns extends BaseClass implements BaseInterface
 {

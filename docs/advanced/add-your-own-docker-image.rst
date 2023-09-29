@@ -31,7 +31,7 @@ What information do you need?
 1. ``<name>`` - A name, which you can use to refer in the ``docker-compose`` command
 2. ``<image-name>`` - The Docker image name itself
 3. ``<image-version>`` - The Docker image tag
-4. ``<unused-ip-address>`` - An unused IP address from the devilbox network (found inside ``docker-compose.yml``)
+4. ``<unused-ip-address>`` - An unused IP address from the dreamdevbox network (found inside ``docker-compose.yml``)
 
 
 How to add a new service?

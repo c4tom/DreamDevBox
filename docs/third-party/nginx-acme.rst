@@ -15,5 +15,5 @@ Project details
 ===============
 
 * **Project:** https://github.com/bigxu/nginx-acme
-* **Mirror:** https://github.com/devilbox/nginx-acme
+* **Mirror:** https://github.com/dreamdevbox/nginx-acme
 * **Based on:** https://github.com/neilpang/acme.sh

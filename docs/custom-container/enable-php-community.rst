@@ -64,7 +64,7 @@ Additionally the following ``.env`` variables can be created for easy configurat
 +------------------------------+---------------+-------------------------------------------------------------------------+
 | Variable                     | Default value | Description                                                             |
 +==============================+===============+=========================================================================+
-| ``PHP_COMMUNITY_FLAVOUR``    | ``devilbox``  | Controls the PHP Community flavour.                                     |
+| ``PHP_COMMUNITY_FLAVOUR``    | ``dreamdevbox``  | Controls the PHP Community flavour.                                     |
 +------------------------------+---------------+-------------------------------------------------------------------------+
 
 
@@ -90,13 +90,13 @@ Copy the PHP-FPM Community Docker Compose overwrite file into the root of the Dr
 2. Adjust ``env`` settings
 --------------------------
 
-By default PHP-FPM Community is using the DreamDevBox reference flavour ``devilbox``.
+By default PHP-FPM Community is using the DreamDevBox reference flavour ``dreamdevbox``.
 You can change this flavour via the ``.env`` variable ``PHP_COMMUNITY_FLAVOUR``.
 
 .. code-block:: bash
    :caption: .env
 
-   PHP_COMMUNITY_FLAVOUR=devilbox
+   PHP_COMMUNITY_FLAVOUR=dreamdevbox
 
 
 .. seealso:: :ref:`env_file`
@@ -113,7 +113,7 @@ Let's assume you want to start ``php``, ``httpd``, and ``bind``.
 
    host> docker-compose up -d php httpd bind
 
-.. seealso:: :ref:`start_the_devilbox`
+.. seealso:: :ref:`start_the_dreamdevbox`
 
 
 TL;DR
@@ -129,7 +129,7 @@ directory:
    cp compose/docker-compose.override.yml-php-community docker-compose.override.yml
 
    # Set Community flavour
-   echo "PHP_COMMUNITY_FLAVOUR=devilbox" >> .env
+   echo "PHP_COMMUNITY_FLAVOUR=dreamdevbox" >> .env
 
    # Start container
    docker-compose up -d php httpd bind

@@ -43,7 +43,7 @@ fi
 ###
 HOST_PORT_HTTPD="$( "${SCRIPT_PATH}/../scripts/env-getvar.sh" "HOST_PORT_HTTPD" )"
 MYSQL_ROOT_PASSWORD="$( "${SCRIPT_PATH}/../scripts/env-getvar.sh" "MYSQL_ROOT_PASSWORD" )"
-DEVILBOX_VENDOR_PHPMYADMIN_AUTOLOGIN="$( "${SCRIPT_PATH}/../scripts/env-getvar.sh" "DEVILBOX_VENDOR_PHPMYADMIN_AUTOLOGIN" )"
+DREAMDEVBOX_VENDOR_PHPMYADMIN_AUTOLOGIN="$( "${SCRIPT_PATH}/../scripts/env-getvar.sh" "DREAMDEVBOX_VENDOR_PHPMYADMIN_AUTOLOGIN" )"
 
 
 # -------------------------------------------------------------------------------------------------
@@ -200,7 +200,7 @@ fi
 ###
 ### Autologin disabled
 ###
-if [ "${DEVILBOX_VENDOR_PHPMYADMIN_AUTOLOGIN}" != "1" ]; then
+if [ "${DREAMDEVBOX_VENDOR_PHPMYADMIN_AUTOLOGIN}" != "1" ]; then
 
 	###
 	### Ensure given phpMyAdmin version works

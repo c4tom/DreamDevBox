@@ -51,7 +51,7 @@ DOCKER_LOGS=0
 
 
 ###
-### Relative or absolute path to the devilbox repository.
+### Relative or absolute path to the dreamdevbox repository.
 ### (Used as a prefix for all mount paths)
 ### There is no need to change this.
 ###
@@ -64,7 +64,7 @@ DOCKER_LOGS=0
 ###
 ### $ docker-compose rm -f
 ###
-DEVILBOX_PATH=.
+DREAMDEVBOX_PATH=.
 
 
 ###
@@ -179,73 +179,73 @@ DNS_CHECK_TIMEOUT=1
 ### This has nothing to do for SSL certificates for projects, it is just for the intranet
 ### itself.
 ###
-DEVILBOX_UI_SSL_CN=localhost,*.localhost,devilbox,*.dreamdevbox,httpd
+DREAMDEVBOX_UI_SSL_CN=localhost,*.localhost,dreamdevbox,*.dreamdevbox,httpd
 
 
 ###
 ### DreamDevBox UI Password protection enable/disable (1/0)
 ###
-### Set DEVILBOX_UI_PROTECT to 1 in order to password protect the
+### Set DREAMDEVBOX_UI_PROTECT to 1 in order to password protect the
 ### intranet.
 ###
 ### Example:
-###   DEVILBOX_UI_PROTECT=1
-###   DEVILBOX_UI_PROTECT=0
+###   DREAMDEVBOX_UI_PROTECT=1
+###   DREAMDEVBOX_UI_PROTECT=0
 ###
-DEVILBOX_UI_PROTECT=0
+DREAMDEVBOX_UI_PROTECT=0
 
 
 ###
 ### DreamDevBox UI Password
 ###
-### When DEVILBOX_UI_PROTECT=1, use the following password
+### When DREAMDEVBOX_UI_PROTECT=1, use the following password
 ### to log in. The password can always be changed.
 ### When changing the password, make sure to restart your
 ### PHP container.
 ###
 ### Example:
-###   DEVILBOX_UI_PASSWORD=my-very-secure-password
-###   DEVILBOX_UI_PASSWORD=Some pass with spaces
+###   DREAMDEVBOX_UI_PASSWORD=my-very-secure-password
+###   DREAMDEVBOX_UI_PASSWORD=Some pass with spaces
 ###
-### The default username is 'devilbox'
+### The default username is 'dreamdevbox'
 ###
-DEVILBOX_UI_PASSWORD=password
+DREAMDEVBOX_UI_PASSWORD=password
 
 
 ###
 ### Enable the DreamDevBox Intranet?
 ###
 ### Example:
-###   DEVILBOX_UI_ENABLE=1
-###   DEVILBOX_UI_ENABLE=0
+###   DREAMDEVBOX_UI_ENABLE=1
+###   DREAMDEVBOX_UI_ENABLE=0
 ###
-DEVILBOX_UI_ENABLE=1
+DREAMDEVBOX_UI_ENABLE=1
 
 
 ###
 ### Automatically be logged in into phpMyAdmin
 ###
 ### Example:
-###   DEVILBOX_VENDOR_PHPMYADMIN_AUTOLOGIN=1
-###   DEVILBOX_VENDOR_PHPMYADMIN_AUTOLOGIN=0
+###   DREAMDEVBOX_VENDOR_PHPMYADMIN_AUTOLOGIN=1
+###   DREAMDEVBOX_VENDOR_PHPMYADMIN_AUTOLOGIN=0
 ###
-DEVILBOX_VENDOR_PHPMYADMIN_AUTOLOGIN=1
+DREAMDEVBOX_VENDOR_PHPMYADMIN_AUTOLOGIN=1
 
 
 ###
 ### Automatically be logged in into phpPgAdmin
 ###
 ### Example:
-###   DEVILBOX_VENDOR_PHPPGADMIN_AUTOLOGIN=1
-###   DEVILBOX_VENDOR_PHPPGADMIN_AUTOLOGIN=0
+###   DREAMDEVBOX_VENDOR_PHPPGADMIN_AUTOLOGIN=1
+###   DREAMDEVBOX_VENDOR_PHPPGADMIN_AUTOLOGIN=0
 ###
-DEVILBOX_VENDOR_PHPPGADMIN_AUTOLOGIN=1
+DREAMDEVBOX_VENDOR_PHPPGADMIN_AUTOLOGIN=1
 
 ###
 ### HTTPD Supvervisord management
 ###
-DEVILBOX_HTTPD_MGMT_USER=supervisord
-DEVILBOX_HTTPD_MGMT_PASS=mypassword
+DREAMDEVBOX_HTTPD_MGMT_USER=supervisord
+DREAMDEVBOX_HTTPD_MGMT_PASS=mypassword
 
 
 
@@ -492,7 +492,7 @@ HOST_PATH_BACKUPDIR=./backups
 
 ###
 ### The path on your host OS of the ssh directory to be mounted into the
-### PHP container into /home/devilbox/.ssh.
+### PHP container into /home/dreamdevbox/.ssh.
 ###
 ### IMPORTANT: The path is mounted read-only to ensure you cannot accidentally
 ##             delete anything inside the php container.
@@ -537,7 +537,7 @@ PHP_MODULES_DISABLE=oci8,PDO_OCI,pdo_sqlsrv,sqlsrv,rdkafka,swoole,psr,phalcon
 ### and define a couple of 'postconf -e name=value' commands.
 ###
 ### When set to '2' (email catch-all), no mail will leave the DreamDevBox. It is automatically
-### internally routed the the devilbox mail account and you can see each sent mail
+### internally routed the the dreamdevbox mail account and you can see each sent mail
 ### in the bundled intranet: https://localhost/mail.php
 ###
 ### Values:
@@ -586,7 +586,7 @@ HTTPD_HTTP2_ENABLE=1
 ### By default each project will have two vhosts (one for HTTP and one for HTTPS).
 ### You can control the SSL settings for your projects via the below stated values.
 ###
-### This is internally achieved via the '-m' argument of https://github.com/devilbox/vhost-gen
+### This is internally achieved via the '-m' argument of https://github.com/dreamdevbox/vhost-gen
 ###
 ### Values:
 ###   * both:  Serve HTTP and HTTPS for all projects
@@ -603,7 +603,7 @@ HTTPD_VHOST_SSL_TYPE=both
 ### In your project directory, which subfolder should
 ### serve your files?
 ###
-### When changing this value, restart the devilbox.
+### When changing this value, restart the dreamdevbox.
 ###
 HTTPD_DOCROOT_DIR=htdocs
 
@@ -614,7 +614,7 @@ HTTPD_DOCROOT_DIR=htdocs
 ### In your project directory, which subfolder should
 ### hold apache, nginx templates for a customized vhost?
 ###
-### When changing this value, restart the devilbox.
+### When changing this value, restart the dreamdevbox.
 ###
 HTTPD_TEMPLATE_DIR=.dreamdevbox
 

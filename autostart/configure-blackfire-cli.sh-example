@@ -22,7 +22,7 @@ BF_CLIENT_ID=
 # Blackfire Client Token via env: BLACKFIRE_SERVER_TOKEN
 BF_CLIENT_TOKEN=
 # Blackfire client configuration file
-BF_CLIENT_INI="/home/devilbox/.blackfire.ini"
+BF_CLIENT_INI="/home/dreamdevbox/.blackfire.ini"
 
 ###
 ### Get Client ID and Client Token
@@ -88,5 +88,5 @@ fi
 	echo "timeout=15s";
 } > "${BF_CLIENT_INI}"
 
-chown devilbox:devilbox "${BF_CLIENT_INI}"
+chown dreamdevbox:dreamdevbox "${BF_CLIENT_INI}"
 chmod 0600 "${BF_CLIENT_INI}"

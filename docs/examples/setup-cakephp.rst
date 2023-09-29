@@ -14,7 +14,7 @@ This example will use ``composer`` to install CakePHP from within the DreamDevBo
    use **Docker Toolbox** you need to explicitly allow/enable this.
    See below for instructions:
 
-   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_devilbox_windows_symlinks`
+   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_dreamdevbox_windows_symlinks`
 
 After completing the below listed steps, you will have a working CakePHP setup ready to be
 served via http and https.
@@ -86,7 +86,7 @@ The vhost directory defines the name under which your project will be available.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ mkdir my-cake
+   dreamdevbox@php-7.0.20 in /shared/httpd $ mkdir my-cake
 
 .. seealso:: :ref:`env_tld_suffix`
 
@@ -98,14 +98,14 @@ Navigate into your newly created vhost directory and install CakePHP with ``comp
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ cd my-cake
-   devilbox@php-7.0.20 in /shared/httpd/my-cake $ composer create-project --prefer-dist cakephp/app cakephp
+   dreamdevbox@php-7.0.20 in /shared/httpd $ cd my-cake
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-cake $ composer create-project --prefer-dist cakephp/app cakephp
 
 How does the directory structure look after installation:
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-cake $ tree -L 1
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-cake $ tree -L 1
    .
    └── cakephp
 
@@ -126,13 +126,13 @@ to its expected path.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-cake $ ln -s cakephp/webroot/ htdocs
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-cake $ ln -s cakephp/webroot/ htdocs
 
 How does the directory structure look after symlinking:
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-cake $ tree -L 1
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-cake $ tree -L 1
    .
    ├── cakephp
    └── htdocs -> cakephp/webroot
@@ -146,7 +146,7 @@ path and points to the frameworks entrypoint.
    When using **Docker Toolbox**, you need to **explicitly allow** the usage of **symlinks**.
    See below for instructions:
 
-   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_devilbox_windows_symlinks`
+   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_dreamdevbox_windows_symlinks`
 
 
 5. Add MySQL Database
@@ -154,7 +154,7 @@ path and points to the frameworks entrypoint.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-cake $ mysql -u root -h 127.0.0.1 -p -e 'CREATE DATABASE my_cake;'
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-cake $ mysql -u root -h 127.0.0.1 -p -e 'CREATE DATABASE my_cake;'
 
 
 6. Configure database connection
@@ -162,7 +162,7 @@ path and points to the frameworks entrypoint.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-cake $ vi cakephp/config/app.php
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-cake $ vi cakephp/config/app.php
 
 .. code-block:: php
    :caption: cakephp/config/app.php

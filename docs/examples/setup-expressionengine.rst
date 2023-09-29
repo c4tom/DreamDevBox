@@ -79,7 +79,7 @@ The vhost directory defines the name under which your project will be available.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ mkdir my-ee
+   dreamdevbox@php-7.0.20 in /shared/httpd $ mkdir my-ee
 
 .. seealso:: :ref:`env_tld_suffix`
 
@@ -91,16 +91,16 @@ Navigate into your newly created vhost directory and install ExpressionEngine.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ cd my-ee
-   devilbox@php-7.0.20 in /shared/httpd/my-ee $ curl 'https://expressionengine.com/?ACT=243' -H 'Referer: https://expressionengine.com/' --compressed -o ee.zip
-   devilbox@php-7.0.20 in /shared/httpd/my-ee $ mkdir ee
-   devilbox@php-7.0.20 in /shared/httpd/my-ee $ unzip ee.zip -d ee
+   dreamdevbox@php-7.0.20 in /shared/httpd $ cd my-ee
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-ee $ curl 'https://expressionengine.com/?ACT=243' -H 'Referer: https://expressionengine.com/' --compressed -o ee.zip
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-ee $ mkdir ee
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-ee $ unzip ee.zip -d ee
 
 How does the directory structure look after installation:
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-ee $ tree -L 1
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-ee $ tree -L 1
    .
    ├── ee
    └── ee.zip
@@ -122,13 +122,13 @@ to its expected path.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-ee $ ln -s ee/ htdocs
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-ee $ ln -s ee/ htdocs
 
 How does the directory structure look after symlinking it:
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-ee $ tree -L 1
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-ee $ tree -L 1
    .
    ├── ee
    ├── ee.zip
@@ -143,7 +143,7 @@ path and points to the frameworks entrypoint.
    When using **Docker Toolbox**, you need to **explicitly allow** the usage of **symlinks**.
    See below for instructions:
 
-   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_devilbox_windows_symlinks`
+   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_dreamdevbox_windows_symlinks`
 
 
 5. Add MySQL Database
@@ -151,7 +151,7 @@ path and points to the frameworks entrypoint.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-ee $ mysql -u root -h 127.0.0.1 -p -e 'CREATE DATABASE my_ee CHARACTER SET utf8 COLLATE utf8_unicode_ci;'
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-ee $ mysql -u root -h 127.0.0.1 -p -e 'CREATE DATABASE my_ee CHARACTER SET utf8 COLLATE utf8_unicode_ci;'
 
 .. note::
    * Remember the database name you create here. It will be needed again during the installation process.

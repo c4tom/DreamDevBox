@@ -39,7 +39,7 @@ linkcheck:
 		-e NEW_UID="$$(id -u)" \
 		-e NEW_GID="$$(id -g)" \
 		-v $(PWD)/..:/shared/httpd \
-		devilbox/python-sphinx:3.8-dev \
+		dreamdevbox/python-sphinx:3.8-dev \
 		sphinx-build -M linkcheck . _build
 
 build:
@@ -51,7 +51,7 @@ build:
 		-e NEW_UID="$$(id -u)" \
 		-e NEW_GID="$$(id -g)" \
 		-v $(PWD)/..:/shared/httpd \
-		devilbox/python-sphinx:3.8-dev \
+		dreamdevbox/python-sphinx:3.8-dev \
 		sphinx-build -a -E -n -j auto -W . _build/html
 
 autobuild:
@@ -64,5 +64,5 @@ autobuild:
 		-e NEW_GID="$$(id -g)" \
 		-p "8000:8000" \
 		-v $(PWD)/..:/shared/httpd \
-		devilbox/python-sphinx:3.8-dev \
+		dreamdevbox/python-sphinx:3.8-dev \
 		sphinx-autobuild -a -E -n -j auto -W --host 0.0.0.0 --port 8000 . _build/html

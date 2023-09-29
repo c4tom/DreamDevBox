@@ -19,7 +19,7 @@ So first of all, If the DreamDevBox makes your life easier, **star it on GitHub*
     4. [Intranet](#intranet)
     5. [Vendors](#vendors)
     6. [Tests](#tests)
-2. [Joining the DreamDevBox GitHub Organization](#joining-the-devilbox-github-organization)
+2. [Joining the DreamDevBox GitHub Organization](#joining-the-dreamdevbox-github-organization)
 3. [Important](#important)
 
 
@@ -28,7 +28,7 @@ So first of all, If the DreamDevBox makes your life easier, **star it on GitHub*
 There are various areas that need support. If you are willing to help, pick a topic below and start
 contributing. If you are unclear about anything, let me know and I will clarify.
 
-See the general [ROADMAP](https://github.com/cytopia/devilbox/issues/23) for what is planned.
+See the general [ROADMAP](https://github.com/cytopia/dreamdevbox/issues/23) for what is planned.
 
 ### Documentation
 
@@ -58,7 +58,7 @@ Have a look at the GitHub issues and see if you can implement any features reque
 
 **Required knowledge:** PHP, HTML, CSS and Javascript
 
-* [ ] Fix email view: https://github.com/cytopia/devilbox/issues/337
+* [ ] Fix email view: https://github.com/cytopia/dreamdevbox/issues/337
 * [ ] Better and more modern layout
 * [ ] Try to remove as much vendor dependencies as possible
 
@@ -97,7 +97,7 @@ phpMyAdmin requires some adjustments to work with the DreamDevBox intranet. See 
 - $cfg['Servers'][$i]['compress'] = false;
 - $cfg['Servers'][$i]['AllowNoPassword'] = false;
 + /* Authentication type */
-+ if (getenv('DEVILBOX_VENDOR_PHPMYADMIN_AUTOLOGIN') == 1) {
++ if (getenv('DREAMDEVBOX_VENDOR_PHPMYADMIN_AUTOLOGIN') == 1) {
 +     $cfg['Servers'][$i]['auth_type'] = 'config';
 +     $cfg['Servers'][$i]['user'] = 'root';
 +     $cfg['Servers'][$i]['password'] = getenv('MYSQL_ROOT_PASSWORD');
@@ -204,7 +204,7 @@ phpPgAdmin requires some adjustments to work with the DreamDevBox intranet. See 
 + $conf['extra_login_security'] = false;
 
 + // ---- Auto-login
-+ if (getenv('DEVILBOX_VENDOR_PHPPGADMIN_AUTOLOGIN') == 1) {
++ if (getenv('DREAMDEVBOX_VENDOR_PHPPGADMIN_AUTOLOGIN') == 1) {
 +   $_REQUEST['server']= 'pgsql:5432:allow';
 +   if(session_id() == ''){
 +     //session has not started

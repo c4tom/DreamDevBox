@@ -39,7 +39,7 @@ That's it, if you ``docker-compose up``, all container will be started. This how
 adviced as it will eat up a lot of resources. You are better off by selectively specifying the
 container you want to run.
 
-.. seealso:: :ref:`start_the_devilbox`
+.. seealso:: :ref:`start_the_dreamdevbox`
 
 
 Configure additional container

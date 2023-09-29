@@ -9,7 +9,7 @@ Setup Contao
 
 .. important::
    **You can find a more up-to-date version in the official Contao Documentation:**
-   |ext_lnk_example_contao_devilbox_documentation|
+   |ext_lnk_example_contao_dreamdevbox_documentation|
 
 This example will use ``composer`` to install Contao CMS from within the DreamDevBox PHP container.
 
@@ -18,14 +18,14 @@ This example will use ``composer`` to install Contao CMS from within the DreamDe
    use **Docker Toolbox** you need to explicitly allow/enable this.
    See below for instructions:
 
-   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_devilbox_windows_symlinks`
+   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_dreamdevbox_windows_symlinks`
 
 After completing the below listed steps, you will have a working Contao CMS setup ready to be
 served via http and https.
 
 .. seealso::
    * |ext_lnk_example_contao_documentation|
-   * |ext_lnk_example_contao_devilbox_documentation|
+   * |ext_lnk_example_contao_dreamdevbox_documentation|
 
 
 **Table of Contents**
@@ -105,7 +105,7 @@ The vhost directory defines the name under which your project will be available.
 
 .. code-block:: bash
 
-   devilbox@php-7.2.15 in /shared/httpd $ mkdir my-contao
+   dreamdevbox@php-7.2.15 in /shared/httpd $ mkdir my-contao
 
 .. seealso:: :ref:`env_tld_suffix`
 
@@ -117,14 +117,14 @@ Navigate into your newly created vhost directory and install Contao with ``compo
 
 .. code-block:: bash
 
-   devilbox@php-7.2.15 in /shared/httpd $ cd my-contao
-   devilbox@php-7.2.15 in /shared/httpd/my-contao $ composer create-project contao/managed-edition contao
+   dreamdevbox@php-7.2.15 in /shared/httpd $ cd my-contao
+   dreamdevbox@php-7.2.15 in /shared/httpd/my-contao $ composer create-project contao/managed-edition contao
 
 How does the directory structure look after installation:
 
 .. code-block:: bash
 
-   devilbox@php-7.2.15 in /shared/httpd/my-contao $ tree -L 1
+   dreamdevbox@php-7.2.15 in /shared/httpd/my-contao $ tree -L 1
    .
    └── contao
 
@@ -145,13 +145,13 @@ to its expected path.
 
 .. code-block:: bash
 
-   devilbox@php-7.2.15 in /shared/httpd/my-contao $ ln -s contao/web/ htdocs
+   dreamdevbox@php-7.2.15 in /shared/httpd/my-contao $ ln -s contao/web/ htdocs
 
 How does the directory structure look after symlinking:
 
 .. code-block:: bash
 
-   devilbox@php-7.2.15 in /shared/httpd/my-contao $ tree -L 1
+   dreamdevbox@php-7.2.15 in /shared/httpd/my-contao $ tree -L 1
    .
    ├── contao
    └── htdocs -> contao/web
@@ -165,7 +165,7 @@ path and points to the frameworks entrypoint.
    When using **Docker Toolbox**, you need to **explicitly allow** the usage of **symlinks**.
    See below for instructions:
 
-   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_devilbox_windows_symlinks`
+   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_dreamdevbox_windows_symlinks`
 
 
 5. Add MySQL Database
@@ -173,7 +173,7 @@ path and points to the frameworks entrypoint.
 
 .. code-block:: bash
 
-   devilbox@php-7.2.15 in /shared/httpd/my-contao $ mysql -u root -h mysql -p -e 'CREATE DATABASE my_contao;'
+   dreamdevbox@php-7.2.15 in /shared/httpd/my-contao $ mysql -u root -h mysql -p -e 'CREATE DATABASE my_contao;'
 
 
 6. DNS record

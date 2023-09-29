@@ -1,10 +1,10 @@
 <?php
-namespace devilbox;
+namespace dreamdevbox;
 
 /**
  * Interface
  *
- * Must be implemented by all devilbox service classes.
+ * Must be implemented by all dreamdevbox service classes.
  * @see _Base.php: Most functions will have a default implementationin the mother class
  */
 interface BaseInterface

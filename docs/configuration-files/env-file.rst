@@ -75,7 +75,7 @@ The log directory structure would look something like this:
 
 .. code-block:: bash
 
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
    host> tree log
 
    log/
@@ -98,7 +98,7 @@ When you want to read logs sent to Docker logs, you can do so via the following 
 .. code-block:: bash
    :emphasize-lines: 2
 
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
    host> docker-compose logs
 
 When you want to continuously watch the log output (such as ``tail -f``), you need to append ``-f``
@@ -107,7 +107,7 @@ to the command.
 .. code-block:: bash
    :emphasize-lines: 2
 
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
    host> docker-compose logs -f
 
 When you only want to have logs displayed for a single service, you can also append the service
@@ -116,7 +116,7 @@ name (works with or without ``-f`` as well):
 .. code-block:: bash
    :emphasize-lines: 2
 
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
    host> docker-compose logs php -f
 
 .. important::
@@ -125,13 +125,13 @@ name (works with or without ``-f`` as well):
    always output to Docker logs.
 
 
-DEVILBOX_PATH
+DREAMDEVBOX_PATH
 -------------
 
 This specifies a relative or absolute path to the DreamDevBox git directory and will be used as a
 prefix for all Docker mount paths.
 
-* Relative path: relative to the devilbox git directory (Must start with ``.``)
+* Relative path: relative to the dreamdevbox git directory (Must start with ``.``)
 * Absolute path: Full path (Must start with ``/``)
 
 The only reason you would ever want change this variable is when you are on MacOS and relocate
@@ -146,7 +146,7 @@ your project files onto an NFS volume due to performance issues.
 +-------------------+----------------+---------------+
 | Name              | Allowed values | Default value |
 +===================+================+===============+
-| ``DEVILBOX_PATH`` | valid path     | ``.``         |
+| ``DREAMDEVBOX_PATH`` | valid path     | ``.``         |
 +-------------------+----------------+---------------+
 
 
@@ -428,9 +428,9 @@ and report as unsuccessful. The default is ``1`` second, wich should be fairly s
 +-----------------------+----------------+-------------------+
 
 
-.. _env_devilbox_ui_ssl_cn:
+.. _env_dreamdevbox_ui_ssl_cn:
 
-DEVILBOX_UI_SSL_CN
+DREAMDEVBOX_UI_SSL_CN
 ------------------
 
 When accessing the DreamDevBox intranet via ``https`` it will use an automatically created SSL certificate.
@@ -445,22 +445,22 @@ hostname.
 +-------------------------+------------------------------+-----------------------------------------------+
 | Name                    | Allowed values               | Default value                                 |
 +=========================+==============================+===============================================+
-| ``DEVILBOX_UI_SSL_CN``  | comma separated list of CN's | ``localhost,*.localhost,devilbox,*.dreamdevbox`` |
+| ``DREAMDEVBOX_UI_SSL_CN``  | comma separated list of CN's | ``localhost,*.localhost,dreamdevbox,*.dreamdevbox`` |
 +-------------------------+------------------------------+-----------------------------------------------+
 
 **Examples**:
 
-* ``DEVILBOX_UI_SSL_CN=localhost``
-* ``DEVILBOX_UI_SSL_CN=localhost,*.localhost``
-* ``DEVILBOX_UI_SSL_CN=localhost,*.localhost,devilbox,*.dreamdevbox``
-* ``DEVILBOX_UI_SSL_CN=intranet.example.com``
+* ``DREAMDEVBOX_UI_SSL_CN=localhost``
+* ``DREAMDEVBOX_UI_SSL_CN=localhost,*.localhost``
+* ``DREAMDEVBOX_UI_SSL_CN=localhost,*.localhost,dreamdevbox,*.dreamdevbox``
+* ``DREAMDEVBOX_UI_SSL_CN=intranet.example.com``
 
 .. seealso:: :ref:`setup_valid_https`
 
 
-.. _env_devilbox_ui_protect:
+.. _env_dreamdevbox_ui_protect:
 
-DEVILBOX_UI_PROTECT
+DREAMDEVBOX_UI_PROTECT
 -------------------
 
 By setting this variable to ``1``, the DreamDevBox intranet will be password protected.
@@ -470,32 +470,32 @@ everybody to have access to the intranet itself, just to the projects you actual
 +-------------------------+----------------+-------------------+
 | Name                    | Allowed values | Default value     |
 +=========================+================+===================+
-| ``DEVILBOX_UI_PROTECT`` | ``0`` or ``1`` | ``0``             |
+| ``DREAMDEVBOX_UI_PROTECT`` | ``0`` or ``1`` | ``0``             |
 +-------------------------+----------------+-------------------+
 
 .. note::
    Also pay attention to the next env var, which will control the password for the login:
-   ``DEVILBOX_UI_PASSWORD``.
+   ``DREAMDEVBOX_UI_PASSWORD``.
 
 
-.. _env_devilbox_ui_password:
+.. _env_dreamdevbox_ui_password:
 
-DEVILBOX_UI_PASSWORD
+DREAMDEVBOX_UI_PASSWORD
 --------------------
 
-When the devilbox intranet is password-protected via ``DEVILBOX_UI_PROTECT``, this is the actual
+When the dreamdevbox intranet is password-protected via ``DREAMDEVBOX_UI_PROTECT``, this is the actual
 password by which it will be protected.
 
 +--------------------------+----------------+-------------------+
 | Name                     | Allowed values | Default value     |
 +==========================+================+===================+
-| ``DEVILBOX_UI_PASSWORD`` | any string     | ``password``      |
+| ``DREAMDEVBOX_UI_PASSWORD`` | any string     | ``password``      |
 +--------------------------+----------------+-------------------+
 
 
-.. _env_devilbox_ui_enable:
+.. _env_dreamdevbox_ui_enable:
 
-DEVILBOX_UI_ENABLE
+DREAMDEVBOX_UI_ENABLE
 ------------------
 
 In case you want to completely disable the DreamDevBox intranet, such as when running it on production,
@@ -508,11 +508,11 @@ ordering their names alphabetically.
 +-------------------------+----------------+-------------------+
 | Name                    | Allowed values | Default value     |
 +=========================+================+===================+
-| ``DEVILBOX_UI_ENABLE``  | ``0`` or ``1`` | ``1``             |
+| ``DREAMDEVBOX_UI_ENABLE``  | ``0`` or ``1`` | ``1``             |
 +-------------------------+----------------+-------------------+
 
 
-DEVILBOX_VENDOR_PHPMYADMIN_AUTOLOGIN
+DREAMDEVBOX_VENDOR_PHPMYADMIN_AUTOLOGIN
 ------------------------------------
 
 By default phpMyAdmin will autologin without having to specify username or password. The phpMyAdmin
@@ -522,11 +522,11 @@ password here as well, you should set the value to ``0``.
 +-------------------------------------------+----------------+-------------------+
 | Name                                      | Allowed values | Default value     |
 +===========================================+================+===================+
-| ``DEVILBOX_VENDOR_PHPMYADMIN_AUTOLOGIN``  | ``0`` or ``1`` | ``1``             |
+| ``DREAMDEVBOX_VENDOR_PHPMYADMIN_AUTOLOGIN``  | ``0`` or ``1`` | ``1``             |
 +-------------------------------------------+----------------+-------------------+
 
 
-DEVILBOX_VENDOR_PHPPGADMIN_AUTOLOGIN
+DREAMDEVBOX_VENDOR_PHPPGADMIN_AUTOLOGIN
 ------------------------------------
 
 By default phpPgAdmin will autologin without having to specify username or password. The phpPgAdmin
@@ -536,7 +536,7 @@ password here as well, you should set the value to ``0``.
 +-------------------------------------------+----------------+-------------------+
 | Name                                      | Allowed values | Default value     |
 +===========================================+================+===================+
-| ``DEVILBOX_VENDOR_PHPPGADMIN_AUTOLOGIN``  | ``0`` or ``1`` | ``1``             |
+| ``DREAMDEVBOX_VENDOR_PHPPGADMIN_AUTOLOGIN``  | ``0`` or ``1`` | ``1``             |
 +-------------------------------------------+----------------+-------------------+
 
 
@@ -547,7 +547,7 @@ The following settings reflect one of the main goals of the DreamDevBox: being a
 combination of all container versions.
 
 .. note::
-   Any change for those settings requires a restart of the devilbox.
+   Any change for those settings requires a restart of the dreamdevbox.
 
 
 .. _env_php_server:
@@ -899,7 +899,7 @@ By default, all of your websites/projects will be stored in that directory. If h
 to separate your data from the DreamDevBox git directory, do change the path to a place where you
 want to store all of your projects on your host computer.
 
-* Relative path: relative to the devilbox git directory (Must start with ``.``)
+* Relative path: relative to the dreamdevbox git directory (Must start with ``.``)
 * Absolute path: Full path (Must start with ``/``)
 
 +------------------------------+----------------+----------------+
@@ -956,7 +956,7 @@ HOST_PATH_SSH_DIR
 -----------------
 
 The path on your host OS of the ssh directory to be mounted into the
-PHP container into ``/home/devilbox/.ssh``.
+PHP container into ``/home/dreamdevbox/.ssh``.
 
 .. note::
    The path is mounted read-only to ensure you cannot accidentally
@@ -1004,7 +1004,7 @@ Open the command prompt and type the following:
    TCP    0.0.0.0:1875        0.0.0.0:0            LISTENING
 
 .. warning::
-   :ref:`howto_docker_toolbox_and_the_devilbox`
+   :ref:`howto_docker_toolbox_and_the_dreamdevbox`
       When using Docker Toobox ensure that ports are exposed to all interfaces.
       See :ref:`env_local_listen_addr`
 
@@ -1222,7 +1222,7 @@ to configure it to your needs yourself. For that you can use the autostart scrip
 and define a couple of ``postconf -e name=value`` commands.
 
 When set to ``2`` (email catch-all) postfix is started, but no mail will leave the DreamDevBox. It is automatically
-internally routed the the devilbox mail account and you can see each sent mail
+internally routed the the dreamdevbox mail account and you can see each sent mail
 in the bundled intranet: https://localhost/mail.php
 
 +-------------------------+--------------------------------------+---------------------------------------------------+
@@ -1342,17 +1342,17 @@ will built up the final location of a virtual hosts document root.
 
 **Example 1**
 
-* devilbox git directory location: ``/home/user-1/repo/devilbox``
+* dreamdevbox git directory location: ``/home/user-1/repo/dreamdevbox``
 * HOST_PATH_HTTPD_DATADIR: ``./data/www`` (relative)
 * Project directory: ``my-first-project``
 * HTTPD_DOCROOT_DIR: ``htdocs``
 
 The location from where the web server will serve files for ``my-first-project`` is then:
-``/home/user-1/repo/devilbox/data/www/my-first-project/htdocs``
+``/home/user-1/repo/dreamdevbox/data/www/my-first-project/htdocs``
 
 **Example 2**
 
-* devilbox git directory location: ``/home/user-1/repo/devilbox``
+* dreamdevbox git directory location: ``/home/user-1/repo/dreamdevbox``
 * HOST_PATH_HTTPD_DATADIR: ``/home/user-1/www`` (absolute)
 * Project directory: ``my-first-project``
 * HTTPD_DOCROOT_DIR: ``htdocs``
@@ -1459,8 +1459,8 @@ present.
 .. code-block:: bash
    :emphasize-lines: 5
 
-   # Navigate into the devilbox directory
-   host> cd path/to/devilbox
+   # Navigate into the dreamdevbox directory
+   host> cd path/to/dreamdevbox
 
    # Copy templates to your project directory
    host> cp cfg/vhost-gen/*.yml data/www/my-first-project/.dreamdevbox/
@@ -1580,7 +1580,7 @@ MYSQL_ROOT_PASSWORD
 
 If you start a MySQL container for the first time, it will setup MySQL itself with this specified
 password. If you do change the root password to something else, make sure to also set it
-accordingly in ``.env``, otherwise the devilbox will not be able to connect to MySQL and will not
+accordingly in ``.env``, otherwise the dreamdevbox will not be able to connect to MySQL and will not
 be able to display information inside the bundled intranet.
 
 +-------------------------+-------------------+---------------------+
@@ -1601,7 +1601,7 @@ PGSQL_ROOT_USER
 
 If you start a PostgreSQL container for the first time, it will setup PostgreSQL itself with a
 specified username and password. If you do change the root username or password to something else,
-make sure to also set it accordingly in .``env,`` otherwise the devilbox will not be able to
+make sure to also set it accordingly in .``env,`` otherwise the dreamdevbox will not be able to
 connect to PostgreSQL and will not be able to display information inside the bundled intranet.
 
 +-------------------------+---------------------+---------------------+
@@ -1619,7 +1619,7 @@ PGSQL_ROOT_PASSWORD
 
 If you start a PostgreSQL container for the first time, it will setup PostgreSQL itself with a
 specified username and password. If you do change the root username or password to something else,
-make sure to also set it accordingly in .``env,`` otherwise the devilbox will not be able to
+make sure to also set it accordingly in .``env,`` otherwise the dreamdevbox will not be able to
 connect to PostgreSQL and will not be able to display information inside the bundled intranet.
 
 +-------------------------+---------------------+---------------------+
@@ -1701,7 +1701,7 @@ By default using Google's DNS server as they are pretty fast.
 | ``BIND_DNS_RESOLVER``   | comma separated list of IP addresses | ``8.8.8.8,8.8.4.4`` |
 +-------------------------+--------------------------------------+---------------------+
 
-The devilbox is using its own DNS server internally (your host computer can also use it for
+The dreamdevbox is using its own DNS server internally (your host computer can also use it for
 Auto-DNS) in order to resolve custom project domains defined by ``TLD_SUFFIX``.
 To also be able to reach the internet from within the Container there must be some kind of
 upstream DNS server to ask for queries.

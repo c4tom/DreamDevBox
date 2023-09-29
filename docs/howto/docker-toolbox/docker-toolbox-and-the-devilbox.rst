@@ -3,7 +3,7 @@
 .. include:: /_includes/all.rst
 .. include:: /_includes/snippets/__ANNOUNCEMENTS__.rst
 
-.. _howto_docker_toolbox_and_the_devilbox:
+.. _howto_docker_toolbox_and_the_dreamdevbox:
 
 *******************************
 Docker Toolbox and the DreamDevBox
@@ -172,7 +172,7 @@ have read, understood and applied the following:
     host filesystem, you can add them, using the VirtualBox UI."
 
 
-.. _howto_docker_toolbox_and_the_devilbox_windows_symlinks:
+.. _howto_docker_toolbox_and_the_dreamdevbox_windows_symlinks:
 
 Symlinks
 ^^^^^^^^
@@ -208,5 +208,5 @@ The ``Value: 1`` now indicates that symlinks are allowed.
 
 .. seealso::
    * |ext_lnk_install_docker_toolbox_win_shared_directory|
-   * https://github.com/cytopia/devilbox/issues/479
+   * https://github.com/cytopia/dreamdevbox/issues/479
    * https://www.virtualbox.org/ticket/10085

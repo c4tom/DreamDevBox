@@ -12,7 +12,7 @@ MySQL version.
 
 
 .. important::
-   When using :ref:`howto_docker_toolbox_and_the_devilbox` on Windows, ``*.cnf`` files must have read-only file
+   When using :ref:`howto_docker_toolbox_and_the_dreamdevbox` on Windows, ``*.cnf`` files must have read-only file
    permissions, otherwise they are not sourced by the MySQL server.
 
    Make sure to ``chmod 0444 *.cnf`` after adding your values.
@@ -31,7 +31,7 @@ See the directory structure for MySQL configuration directories inside ``./cfg/`
 
 .. code-block:: bash
 
-   host> ls -l path/to/devilbox/cfg/ | grep -E 'mysql|mariadb|percona'
+   host> ls -l path/to/dreamdevbox/cfg/ | grep -E 'mysql|mariadb|percona'
 
    drwxr-xr-x  2 cytopia cytopia 4096 Mar  5 21:53 mariadb-5.5/
    drwxr-xr-x  2 cytopia cytopia 4096 Mar  5 21:53 mariadb-10.0/
@@ -53,7 +53,7 @@ Customization is achieved by placing a file into ``cfg/mysql-X.X/``, ``cfg/maria
 The file must end by ``.cnf`` in order to be sourced by the MySQL server.
 
 Each of the MySQL cnf configuration directories already contain an example file:
-``devilbox-custom.cnf-example``, that can simply be renamed to ``devilbox-custom.cnf``.
+``dreamdevbox-custom.cnf-example``, that can simply be renamed to ``dreamdevbox-custom.cnf``.
 This file holds some example values that can be adjusted or commented out.
 
 In order for the changes to be applied, you will have to restart the DreamDevBox.
@@ -72,7 +72,7 @@ of MySQL 5.5 to 16 MB.
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Navigate to MySQL 5.5 config directory
    host> cd cfg/mysql-5.5
@@ -104,7 +104,7 @@ of PerconaDB 5.7
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Navigate to PerconaDB 5.7 config directory
    host> cd cfg/percona-5.7

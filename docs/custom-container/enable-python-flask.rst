@@ -115,7 +115,7 @@ Add the following variables to ``.env`` and adjust them to your needs:
 3. Configure Reverse Proxy
 --------------------------
 
-Before starting up the devilbox you will need to configure your python flask project and the
+Before starting up the dreamdevbox you will need to configure your python flask project and the
 reverse proxy settings.
 
 .. seealso:: :ref:`example_setup_reverse_proxy_python_flask`
@@ -143,7 +143,7 @@ directory:
    echo "#PYTHON_VERSION=3.7"              >> .env
    echo "PYTHON_VERSION=3.8"               >> .env
 
-before starting up the devilbox you will need to configure your python flask project and the
+before starting up the dreamdevbox you will need to configure your python flask project and the
 reverse proxy settings.
 
 .. seealso:: :ref:`example_setup_reverse_proxy_python_flask`

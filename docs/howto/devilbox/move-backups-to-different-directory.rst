@@ -23,7 +23,7 @@ All you have to do is to adjust the path of :ref:`env_host_path_backupdir` in th
 .. code-block:: bash
 
    # Navigate to DreamDevBox git directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Open the .env file with your favourite editor
    host> vim .env
@@ -34,7 +34,7 @@ Now Adjust the value of :ref:`env_host_path_backupdir`
    :caption: .env
    :emphasize-lines: 1
 
-   HOST_PATH_HTTPD_DATADIR=/home/user/backups/devilbox/
+   HOST_PATH_HTTPD_DATADIR=/home/user/backups/dreamdevbox/
 
-That's it, whenever you start up the DreamDevBox, ``/home/user/backups/devilbox/`` will be mounted into
+That's it, whenever you start up the DreamDevBox, ``/home/user/backups/dreamdevbox/`` will be mounted into
 the PHP container into ``/shared/backups/``.

@@ -1,3 +1,3 @@
-.. figure:: /_includes/figures/devilbox/devilbox-intranet-php-info.png
+.. figure:: /_includes/figures/dreamdevbox/dreamdevbox-intranet-php-info.png
 
    DreamDevBox intranet: php info

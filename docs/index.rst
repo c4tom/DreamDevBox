@@ -22,7 +22,7 @@ host is ready to be served with your custom domain.
 
 .. raw:: html
 
-   <img src="https://raw.githubusercontent.com/devilbox/artwork/master/submissions_diagrams/cytopia/01/png/architecture-full.png" />
+   <img src="https://raw.githubusercontent.com/dreamdevbox/artwork/master/submissions_diagrams/cytopia/01/png/architecture-full.png" />
 
 .. important::
    :ref:`read_first`
@@ -34,7 +34,7 @@ host is ready to be served with your custom domain.
 
    read-first
    features
-   devilbox-purpose
+   dreamdevbox-purpose
 
 
 .. toctree::
@@ -43,9 +43,9 @@ host is ready to be served with your custom domain.
    :numbered:
 
    getting-started/prerequisites
-   getting-started/install-the-devilbox
-   getting-started/start-the-devilbox
-   getting-started/devilbox-intranet
+   getting-started/install-the-dreamdevbox
+   getting-started/start-the-dreamdevbox
+   getting-started/dreamdevbox-intranet
    getting-started/directory-overview
    getting-started/create-your-first-project
    getting-started/enter-the-php-container
@@ -134,24 +134,24 @@ host is ready to be served with your custom domain.
    :caption: Corporate Usage
    :maxdepth: 2
 
-   corporate-usage/shared-devilbox-server-in-lan
+   corporate-usage/shared-dreamdevbox-server-in-lan
    corporate-usage/use-external-databases
    corporate-usage/showcase-over-the-internet
 ..
-   corporate-usage/deploy-devilbox-via-ansible
-   corporate-usage/access-colleagues-devilbox
-   corporate-usage/access-devilbox-from-android
-   corporate-usage/access-devilbox-from-iphone
+   corporate-usage/deploy-dreamdevbox-via-ansible
+   corporate-usage/access-colleagues-dreamdevbox
+   corporate-usage/access-dreamdevbox-from-android
+   corporate-usage/access-dreamdevbox-from-iphone
 
 
 .. toctree::
    :caption: Maintenance
    :maxdepth: 2
 
-   maintenance/checkout-different-devilbox-release
+   maintenance/checkout-different-dreamdevbox-release
    maintenance/remove-stopped-container
-   maintenance/update-the-devilbox
-   maintenance/remove-the-devilbox
+   maintenance/update-the-dreamdevbox
+   maintenance/remove-the-dreamdevbox
    maintenance/backup-and-restore-mysql
    maintenance/backup-and-restore-pgsql
    maintenance/backup-and-restore-mongo
@@ -220,7 +220,7 @@ host is ready to be served with your custom domain.
    :caption: Support
    :maxdepth: 1
 
-   DreamDevBox Forums <https://devilbox.discourse.group/>
+   DreamDevBox Forums <https://dreamdevbox.discourse.group/>
    support/troubleshooting
    support/faq
    support/howto
@@ -231,5 +231,5 @@ host is ready to be served with your custom domain.
    :caption: 3rd party projects
    :maxdepth: 1
 
-   third-party/devilbox-cli
+   third-party/dreamdevbox-cli
    third-party/nginx-acme

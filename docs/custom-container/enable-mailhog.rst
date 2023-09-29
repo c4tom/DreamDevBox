@@ -145,7 +145,7 @@ Let's assume you want to start ``php``, ``httpd``, ``bind`` and ``mailhog``.
 
    host> docker-compose up -d php httpd bind mailhog
 
-.. seealso:: :ref:`start_the_devilbox`
+.. seealso:: :ref:`start_the_dreamdevbox`
 
 
 5. Start using it

@@ -287,7 +287,7 @@
 
 .. |ext_lnk_tool_github_issues| raw:: html
 
-   <a target="_blank" href="https://github.com/cytopia/devilbox/issues">
+   <a target="_blank" href="https://github.com/cytopia/dreamdevbox/issues">
      Github <img src="https://raw.githubusercontent.com/cytopia/icons/master/11x11/ext-link.png" />
    </a>
 
@@ -341,18 +341,18 @@
 
 .. |ext_lnk_project_vhost_gen| raw:: html
 
-   <a target="_blank" href="https://github.com/devilbox/vhost-gen">
+   <a target="_blank" href="https://github.com/dreamdevbox/vhost-gen">
      vhost-gen <img src="https://raw.githubusercontent.com/cytopia/icons/master/11x11/ext-link.png" />
    </a>
 
 .. |ext_lnk_project_watcherd| raw:: html
 
-   <a target="_blank" href="https://github.com/devilbox/watcherd">
+   <a target="_blank" href="https://github.com/dreamdevbox/watcherd">
      watcherd <img src="https://raw.githubusercontent.com/cytopia/icons/master/11x11/ext-link.png" />
    </a>
 
 .. |ext_lnk_project_watcherp| raw:: html
 
-   <a target="_blank" href="https://github.com/devilbox/watcherp">
+   <a target="_blank" href="https://github.com/dreamdevbox/watcherp">
      watcherp <img src="https://raw.githubusercontent.com/cytopia/icons/master/11x11/ext-link.png" />
    </a>

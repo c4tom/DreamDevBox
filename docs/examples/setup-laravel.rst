@@ -77,7 +77,7 @@ The vhost directory defines the name under which your project will be available.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ mkdir my-laravel
+   dreamdevbox@php-7.0.20 in /shared/httpd $ mkdir my-laravel
 
 .. seealso:: :ref:`env_tld_suffix`
 
@@ -89,14 +89,14 @@ Navigate into your newly created vhost directory and install Laravel with ``lara
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ cd my-laravel
-   devilbox@php-7.0.20 in /shared/httpd/my-laravel $ laravel new laravel-project
+   dreamdevbox@php-7.0.20 in /shared/httpd $ cd my-laravel
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-laravel $ laravel new laravel-project
 
 How does the directory structure look after installation:
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-laravel $ tree -L 1
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-laravel $ tree -L 1
    .
    └── laravel-project
 
@@ -117,14 +117,14 @@ to its expected path.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-laravel $ ln -s laravel-project/public/ htdocs
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-laravel $ ln -s laravel-project/public/ htdocs
 
 
 How does the directory structure look after symlinking:
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-laravel $ tree -L 1
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-laravel $ tree -L 1
    .
    ├── laravel-project
    └── htdocs -> laravel-project/public
@@ -138,7 +138,7 @@ path and points to the frameworks entrypoint.
    When using **Docker Toolbox**, you need to **explicitly allow** the usage of **symlinks**.
    See below for instructions:
 
-   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_devilbox_windows_symlinks`
+   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_dreamdevbox_windows_symlinks`
 
 
 5. DNS record

@@ -8,7 +8,7 @@ services:
   # Varnish
   # -----------------------------------------------------------------------------------------------
   varnish:
-    image: devilbox/varnish:${VARNISH_SERVER:-6}-0.3
+    image: dreamdevbox/varnish:${VARNISH_SERVER:-6}-0.3
     hostname: varnish
     ports:
       - "${LOCAL_LISTEN_ADDR}${HOST_PORT_VARNISH:-6081}:6081"
@@ -22,14 +22,14 @@ services:
       - BACKEND_HOST=httpd
       - BACKEND_PORT=80
     volumes:
-      - ${DEVILBOX_PATH}/cfg/varnish-${VARNISH_SERVER:-6}:/etc/varnish.d
+      - ${DREAMDEVBOX_PATH}/cfg/varnish-${VARNISH_SERVER:-6}:/etc/varnish.d
     depends_on:
       - bind
       - php
       - httpd
 
   haproxy:
-    image: devilbox/haproxy:0.3
+    image: dreamdevbox/haproxy:0.3
     hostname: haproxy
     ports:
       - "${LOCAL_LISTEN_ADDR}${HOST_PORT_HAPROXY:-8080}:80"
@@ -40,11 +40,11 @@ services:
     environment:
       - BACKEND_ADDR=varnish
       - BACKEND_PORT=6081
-      - DEVILBOX_UI_SSL_CN
+      - DREAMDEVBOX_UI_SSL_CN
       - TLD_SUFFIX
     volumes:
       # Certificate Authority public key
-      - ${DEVILBOX_PATH}/ca:/ca:rw${MOUNT_OPTIONS}
+      - ${DREAMDEVBOX_PATH}/ca:/ca:rw${MOUNT_OPTIONS}
       # Mount custom mass virtual hosting
       - ${HOST_PATH_HTTPD_DATADIR}:/shared/httpd:rw${MOUNT_OPTIONS}
     depends_on:

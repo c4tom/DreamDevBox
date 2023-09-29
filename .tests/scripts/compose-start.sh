@@ -61,9 +61,9 @@ until curl -sS -I --fail -o /dev/null -w "%{http_code}" "http://localhost:${HOST
 		curl -sS -I -o /dev/null -w "%{http_code}" "http://localhost:${HOST_PORT_HTTPD}" || true
 		echo
 		echo "---- curl From PHP container ----"
-		run "docker-compose exec -T --user devilbox php curl -sS -v 'http://localhost/'" "1" "${DVLBOX_PATH}" || true
-		run "docker-compose exec -T --user devilbox php curl -sS -I 'http://localhost/'" "1" "${DVLBOX_PATH}" || true
-		run "docker-compose exec -T --user devilbox php curl -sS -I -o /dev/null -w '%{http_code}' 'http://localhost/'" "1" "${DVLBOX_PATH}" || true
+		run "docker-compose exec -T --user dreamdevbox php curl -sS -v 'http://localhost/'" "1" "${DVLBOX_PATH}" || true
+		run "docker-compose exec -T --user dreamdevbox php curl -sS -I 'http://localhost/'" "1" "${DVLBOX_PATH}" || true
+		run "docker-compose exec -T --user dreamdevbox php curl -sS -I -o /dev/null -w '%{http_code}' 'http://localhost/'" "1" "${DVLBOX_PATH}" || true
 		run "cd ${DVLBOX_PATH} && docker-compose logs" || true
 		run "cat ${DVLBOX_PATH}/log/php-fpm-${PHP_SERVER}/php-fpm.error" || true
 		run "cat ${DVLBOX_PATH}/log/${HTTPD_SERVER}/defaultlocalhost-error.log" || true

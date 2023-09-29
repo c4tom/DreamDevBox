@@ -1,3 +1,3 @@
-.. figure:: /_includes/figures/devilbox/devilbox-project-hello-world.png
+.. figure:: /_includes/figures/dreamdevbox/dreamdevbox-project-hello-world.png
 
    DreamDevBox project: hello world on ``index.php``

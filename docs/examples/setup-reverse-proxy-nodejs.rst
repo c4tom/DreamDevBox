@@ -83,7 +83,7 @@ The vhost directory defines the name under which your project will be available.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ mkdir my-node
+   dreamdevbox@php-7.0.20 in /shared/httpd $ mkdir my-node
 
 .. seealso:: :ref:`env_tld_suffix`
 
@@ -94,13 +94,13 @@ The vhost directory defines the name under which your project will be available.
 .. code-block:: bash
 
    # Navigate to your project directory
-   devilbox@php-7.0.20 in /shared/httpd $ cd my-node
+   dreamdevbox@php-7.0.20 in /shared/httpd $ cd my-node
 
    # Create a directory which will hold the source code
-   devilbox@php-7.0.20 in /shared/httpd/my-node $ mkdir src
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-node $ mkdir src
 
    # Create the index.js file with your favourite editor
-   devilbox@php-7.0.20 in /shared/httpd/my-node/src $ vi index.js
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-node/src $ vi index.js
 
 .. code-block:: javascript
    :caption: index.js
@@ -128,10 +128,10 @@ which will not hold any data.
 .. code-block:: bash
 
    # Navigate to your project directory
-   devilbox@php-7.0.20 in /shared/httpd $ cd my-node
+   dreamdevbox@php-7.0.20 in /shared/httpd $ cd my-node
 
    # Create the docroot directory
-   devilbox@php-7.0.20 in /shared/httpd/my-node $ mkdir htdocs
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-node $ mkdir htdocs
 
 .. seealso:: :ref:`env_httpd_docroot_dir`
 
@@ -148,10 +148,10 @@ inside the project directory.
 .. code-block:: bash
 
    # Navigate to your project directory
-   devilbox@php-7.0.20 in /shared/httpd $ cd my-node
+   dreamdevbox@php-7.0.20 in /shared/httpd $ cd my-node
 
    # Create the .dreamdevbox template directory
-   devilbox@php-7.0.20 in /shared/httpd/my-node $ mkdir .dreamdevbox
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-node $ mkdir .dreamdevbox
 
 
 .. seealso:: :ref:`env_httpd_template_dir`
@@ -185,7 +185,7 @@ to ensure this will work with all web servers.
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
    host> cp cfg/vhost-gen/apache22.yml-example-rproxy data/www/my-node/.dreamdevbox/apache22.yml
    host> cp cfg/vhost-gen/apache24.yml-example-rproxy data/www/my-node/.dreamdevbox/apache24.yml
    host> cp cfg/vhost-gen/nginx.yml-example-rproxy data/www/my-node/.dreamdevbox/nginx.yml
@@ -205,7 +205,7 @@ Open the ``apache22.yml`` vhost-gen template in your project:
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
    host> vi data/www/my-node/.dreamdevbox/apache22.yml
 
 
@@ -243,7 +243,7 @@ Open the ``apache24.yml`` vhost-gen template in your project:
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
    host> vi data/www/my-node/.dreamdevbox/apache24.yml
 
 
@@ -281,7 +281,7 @@ Open the ``nginx.yml`` vhost-gen template in your project:
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
    host> vi data/www/my-node/.dreamdevbox/nginx.yml
 
 
@@ -332,7 +332,7 @@ to a new file ending by ``.sh``
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
 
    # Navigate to the autostart directory
    host> cd autostart
@@ -393,7 +393,7 @@ Now for those changes to take affect, you will have to restart the DreamDevBox.
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
 
    # Stop the DreamDevBox
    host> docker-compose down
@@ -422,18 +422,18 @@ with the available commands. A quick guide is below:
 .. code-block:: bash
 
    # Navigate to DreamDevBox git directory
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
 
    # Enter the PHP container
    host> ./shell.sh
 
    # List your running NodeJS apps
-   devilbox@php-7.0.20 in /shared/httpd $ pm2 list
+   dreamdevbox@php-7.0.20 in /shared/httpd $ pm2 list
 
    ┌──────────┬────┬─────────┬──────┬──────┬────────┬─────────┬────────┬─────┬───────────┬──────────┬──────────┐
    │ App name │ id │ version │ mode │ pid  │ status │ restart │ uptime │ cpu │ mem       │ user     │ watching │
    ├──────────┼────┼─────────┼──────┼──────┼────────┼─────────┼────────┼─────┼───────────┼──────────┼──────────┤
-   │ index    │ 0  │ N/A     │ fork │ 1906 │ online │ 0       │ 42h    │ 0%  │ 39.7 MB   │ devilbox │ disabled │
+   │ index    │ 0  │ N/A     │ fork │ 1906 │ online │ 0       │ 42h    │ 0%  │ 39.7 MB   │ dreamdevbox │ disabled │
    └──────────┴────┴─────────┴──────┴──────┴────────┴─────────┴────────┴─────┴───────────┴──────────┴──────────┘
 
 

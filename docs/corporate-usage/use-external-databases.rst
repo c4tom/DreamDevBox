@@ -48,7 +48,7 @@ make sure the following is met:
       # Omit the database
       host> docker-compose up -d php httpd bind redis
 
-   .. seealso:: :ref:`start_the_devilbox`
+   .. seealso:: :ref:`start_the_dreamdevbox`
 
 
 .. _use_external_databases_database_on_network:
@@ -69,7 +69,7 @@ make sure the following is met:
       # Omit the database
       host> docker-compose up -d php httpd bind redis
 
-   .. seealso:: :ref:`start_the_devilbox`
+   .. seealso:: :ref:`start_the_dreamdevbox`
 
 
 Database on internet
@@ -88,4 +88,4 @@ make sure the following is met:
       # Omit the database
       host> docker-compose up -d php httpd bind redis
 
-   .. seealso:: :ref:`start_the_devilbox`
+   .. seealso:: :ref:`start_the_dreamdevbox`

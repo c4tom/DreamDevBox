@@ -68,7 +68,7 @@ Additionally the following ``.env`` variables can be created for easy configurat
 +------------------------------+-------------------+----------------------------------------------------------------------------+
 | ``SOLR_SERVER``              | ``latest``        | Controls the Solr version to use.                                          |
 +------------------------------+-------------------+----------------------------------------------------------------------------+
-| ``SOLR_CORE_NAME``           | ``devilbox``      | Default Solr core name                                                     |
+| ``SOLR_CORE_NAME``           | ``dreamdevbox``      | Default Solr core name                                                     |
 +------------------------------+-------------------+----------------------------------------------------------------------------+
 
 
@@ -108,7 +108,7 @@ Add the following variables to ``.env`` and adjust them to your needs:
    #SOLR_SERVER=7
    SOLR_SERVER=latest
 
-   SOLR_CORE_NAME=devilbox
+   SOLR_CORE_NAME=dreamdevbox
    HOST_PORT_SOLR=8983
 
 .. seealso:: :ref:`env_file`
@@ -125,7 +125,7 @@ Let's assume you want to start ``php``, ``httpd``, ``bind``, ``solr``.
 
    host> docker-compose up -d php httpd bind solr
 
-.. seealso:: :ref:`start_the_devilbox`
+.. seealso:: :ref:`start_the_dreamdevbox`
 
 
 TL;DR
@@ -146,7 +146,7 @@ directory:
    echo "#SOLR_SERVER=6"                   >> .env
    echo "#SOLR_SERVER=7"                   >> .env
    echo "SOLR_SERVER=latest"               >> .env
-   echo "SOLR_CORE_NAME=devilbox"          >> .env
+   echo "SOLR_CORE_NAME=dreamdevbox"          >> .env
    echo "HOST_PORT_SOLR=8983"              >> .env
 
    # Start container

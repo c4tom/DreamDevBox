@@ -1,6 +1,6 @@
 .. include:: /_includes/snippets/__ANNOUNCEMENTS__.rst
 
-.. _update_the_devilbox:
+.. _update_the_dreamdevbox:
 
 *******************
 Update the DreamDevBox
@@ -22,12 +22,12 @@ Stop container
 --------------
 
 Before updating your git branch or checking out a different tag or commit, make sure to properly
-stop all devilbox containers:
+stop all dreamdevbox containers:
 
 .. code-block:: bash
 
    # Stop containers
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
    host> docker-compose stop
    # Remove stopped container (required)
    host> docker-compose rm -f
@@ -43,7 +43,7 @@ If you simply want to update the master branch, do a ``git pull origin master``:
 .. code-block:: bash
 
    # Update master branch
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
    host> git pull origin master
 
 
@@ -55,7 +55,7 @@ If you want to checkout a specific release tag (such as ``0.12.1``), do a ``git 
 .. code-block:: bash
 
    # Checkout release
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
    # Ensure you have latest from remote
    host> git fetch
    host> git checkout v1.0.1
@@ -104,14 +104,14 @@ recreated during the next start.
 .. code-block:: bash
 
    # Remove anonymous volumes
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
    host> docker-compose rm -f
 
 .. seealso::
    :ref:`remove_stopped_container`
 
 
-.. _update_the_devilbox_update_the_docker_images:
+.. _update_the_dreamdevbox_update_the_docker_images:
 
 Update Docker images
 ====================
@@ -143,9 +143,9 @@ You first need to find out the image name and then also the currently used image
    host> grep 'image:' docker-compose.yml
 
    image: cytopia/bind:0.11
-   image: devilbox/php-fpm:${PHP_SERVER}-work
-   image: devilbox/${HTTPD_SERVER}:0.13
-   image: devilbox/mysql-${MYSQL_SERVER}
+   image: dreamdevbox/php-fpm:${PHP_SERVER}-work
+   image: dreamdevbox/${HTTPD_SERVER}:0.13
+   image: dreamdevbox/mysql-${MYSQL_SERVER}
    image: postgres:${PGSQL_SERVER}
    image: redis:${REDIS_SERVER}
    image: memcached:${MEMCD_SERVER}
@@ -165,7 +165,7 @@ finally pull a newer version:
 
 .. code-block:: bash
 
-   host> docker pull devilbox/php-fpm:7.2-work
+   host> docker pull dreamdevbox/php-fpm:7.2-work
 
 Not very efficient.
 
@@ -181,8 +181,8 @@ that are actually set in ``.env``.
    host> docker-compose pull
 
    Pulling bind (cytopia/bind:0.11)...
-   Pulling php (devilbox/php-fpm:5.6-work)...
-   Pulling httpd (devilbox/apache-2.2:0.13)...
+   Pulling php (dreamdevbox/php-fpm:5.6-work)...
+   Pulling httpd (dreamdevbox/apache-2.2:0.13)...
    Pulling mysql (cytopia/mysql-5.7:latest)...
    Pulling pgsql (postgres:9.6)...
    Pulling redis (redis:4.0)...

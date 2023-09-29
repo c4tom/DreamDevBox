@@ -156,7 +156,7 @@ Let's assume you want to start ``php``, ``httpd``, ``bind`` and ``ngrok``.
 
    host> docker-compose up -d php httpd bind ngrok
 
-.. seealso:: :ref:`start_the_devilbox`
+.. seealso:: :ref:`start_the_dreamdevbox`
 
 
 4. Start using it

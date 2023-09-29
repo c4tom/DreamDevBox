@@ -71,10 +71,10 @@ ERROR=0
 ###
 ### Create vhost directory
 ###
-run "docker-compose exec --user devilbox -T php rm -rf /shared/httpd/${VHOST}" "${RETRIES}" "${DVLBOX_PATH}"
+run "docker-compose exec --user dreamdevbox -T php rm -rf /shared/httpd/${VHOST}" "${RETRIES}" "${DVLBOX_PATH}"
 run "sleep 4"
-run "docker-compose exec --user devilbox -T php mkdir -p /shared/httpd/${VHOST}/htdocs" "${RETRIES}" "${DVLBOX_PATH}"
-run "docker-compose exec --user devilbox -T php bash -c 'echo \"<?php echo \\\"indexphp\\\";\" > /shared/httpd/${VHOST}/${HTTPD_DOCROOT_DIR}/index.php'" "${RETRIES}" "${DVLBOX_PATH}"
+run "docker-compose exec --user dreamdevbox -T php mkdir -p /shared/httpd/${VHOST}/htdocs" "${RETRIES}" "${DVLBOX_PATH}"
+run "docker-compose exec --user dreamdevbox -T php bash -c 'echo \"<?php echo \\\"indexphp\\\";\" > /shared/httpd/${VHOST}/${HTTPD_DOCROOT_DIR}/index.php'" "${RETRIES}" "${DVLBOX_PATH}"
 run "sleep 4"
 
 
@@ -82,9 +82,9 @@ run "sleep 4"
 ### Vhost / from host
 ###
 printf "[TEST] https vhost / from host"
-if ! run "curl -sS --fail --resolve ${VHOST}.${TLD_SUFFIX}:${HOST_PORT_HTTPD_SSL}:127.0.0.1 --cacert ${DVLBOX_PATH}/ca/devilbox-ca.crt 'https://${VHOST}.${TLD_SUFFIX}:${HOST_PORT_HTTPD_SSL}' >/dev/null" "${RETRIES}" "" "0"; then
+if ! run "curl -sS --fail --resolve ${VHOST}.${TLD_SUFFIX}:${HOST_PORT_HTTPD_SSL}:127.0.0.1 --cacert ${DVLBOX_PATH}/ca/dreamdevbox-ca.crt 'https://${VHOST}.${TLD_SUFFIX}:${HOST_PORT_HTTPD_SSL}' >/dev/null" "${RETRIES}" "" "0"; then
 	printf "\\r[FAIL] https vhost / from host\\n"
-	run "curl -v --resolve ${VHOST}.${TLD_SUFFIX}:${HOST_PORT_HTTPD_SSL}:127.0.0.1 --cacert ${DVLBOX_PATH}/ca/devilbox-ca.crt 'https://${VHOST}.${TLD_SUFFIX}:${HOST_PORT_HTTPD_SSL}' || true" "1"
+	run "curl -v --resolve ${VHOST}.${TLD_SUFFIX}:${HOST_PORT_HTTPD_SSL}:127.0.0.1 --cacert ${DVLBOX_PATH}/ca/dreamdevbox-ca.crt 'https://${VHOST}.${TLD_SUFFIX}:${HOST_PORT_HTTPD_SSL}' || true" "1"
 	ERROR=1
 else
 	printf "\\r[OK]   https vhost / from host\\n"

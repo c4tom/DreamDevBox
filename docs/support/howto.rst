@@ -25,7 +25,7 @@ The How to section gathers information about various topics, that might need to 
    :maxdepth: 1
    :glob:
 
-   /howto/devilbox/*
+   /howto/dreamdevbox/*
    /howto/xdebug/*
 
 .. toctree::

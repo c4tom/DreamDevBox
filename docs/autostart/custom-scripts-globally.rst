@@ -46,7 +46,7 @@ Startup scripts can be added to ``autostart/``.
 .. code-block:: bash
    :emphasize-lines: 3
 
-   host> ls -l path/to/devilbox/
+   host> ls -l path/to/dreamdevbox/
 
    drwxr-xr-x  2 cytopia cytopia 4096 Mar  5 21:53 autostart/
    drwxr-xr-x  2 cytopia cytopia 4096 Mar  5 21:53 backups/
@@ -80,21 +80,21 @@ executed as a normal user.
 Examples
 ========
 
-Running commands as devilbox user
+Running commands as dreamdevbox user
 ---------------------------------
 
 As mentioned above, all scripts are run by the ``root`` user.
-If you do need something to be executed as the normal user: ``devilbox``, you can simply ``su``
+If you do need something to be executed as the normal user: ``dreamdevbox``, you can simply ``su``
 inside the shell script.
 
-The following example will install ``grunt`` and start a NodeJS application as the devilbox user
+The following example will install ``grunt`` and start a NodeJS application as the dreamdevbox user
 for whatever PHP container has been started.
 
 .. code-block:: bash
    :caption: autostart/myscript.sh
 
-   # Install grunt as devilbox user
-   su -c "npm install grunt" -l devilbox
+   # Install grunt as dreamdevbox user
+   su -c "npm install grunt" -l dreamdevbox
 
-   # Start a NodeJS application with pm2 as devilbox user
-   su -c "cd /shared/httpd/my-node/src/; pm2 start index.js" -l devilbox
+   # Start a NodeJS application with pm2 as dreamdevbox user
+   su -c "cd /shared/httpd/my-node/src/; pm2 start index.js" -l dreamdevbox

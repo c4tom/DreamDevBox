@@ -24,7 +24,7 @@ General
 Are there any differences between native Docker and Docker Toolbox?
 -------------------------------------------------------------------
 
-Yes, read :ref:`howto_docker_toolbox_and_the_devilbox` to find out more.
+Yes, read :ref:`howto_docker_toolbox_and_the_dreamdevbox` to find out more.
 
 
 .. _faq_data_dir_separated_by_version:
@@ -34,7 +34,7 @@ Why are mounted MySQL data directories separated by version?
 
 This is just a pre-caution. Imagine they would link to the same datadir.  You start the DreamDevBox
 with mysql 5.5, create a database and add some data.  Now you decide to switch to mysql 5.7 and
-restart the devilbox. The newer mysql version will probably upgrade the data leaving it unable to
+restart the dreamdevbox. The newer mysql version will probably upgrade the data leaving it unable to
 start with older mysql versions.
 
 
@@ -55,7 +55,7 @@ Why do the user/group permissions of log/ or cfg/ directories show 1000?
 
 Uid and Gid are set to 1000 by default. You can alter them to match the uid/gid of your current
 user. Open the ``.env`` file and change the sections ``NEW_UID`` and ``NEW_GID``. When you start
-up the devilbox, the PHP container will use these values for its user.
+up the dreamdevbox, the PHP container will use these values for its user.
 
 .. seealso:: :ref:`env_new_uid` and :ref:`env_new_gid`
 
@@ -64,7 +64,7 @@ Can I not just comment out the service in the .env file?
 --------------------------------------------------------
 
 No, don't do this. This will lead to unexpected behaviour (different versions will be loaded).
-The ``.env`` file allows you to configure the devilbox, but not to start services selectively.
+The ``.env`` file allows you to configure the dreamdevbox, but not to start services selectively.
 
 
 Are there any required services that must/will always be started?
@@ -82,7 +82,7 @@ out of the box in order to work with many different frameworks.
 
 Available PHP modules can be seen at the PHP Docker image repository.
 
-.. seealso:: https://github.com/devilbox/docker-php-fpm
+.. seealso:: https://github.com/dreamdevbox/docker-php-fpm
 
 
 Configuration
@@ -134,7 +134,7 @@ Can I just start PHP and MySQL instead of all container?
 --------------------------------------------------------
 
 Yes, every Docker container is optional. The DreamDevBox allows for selective startup. See
-:ref:`start_the_devilbox`.
+:ref:`start_the_dreamdevbox`.
 
 
 Do I always have to edit ``/etc/hosts`` for new projects?

@@ -1,5 +1,5 @@
 <?php
-namespace devilbox;
+namespace dreamdevbox;
 
 /**
  * @requires Pear::Mail_Mbox (http://pear.php.net/package/Mail_Mbox)

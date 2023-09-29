@@ -138,7 +138,7 @@ Let's assume you want to start ``php``, ``httpd``, ``bind``, ``rabbit``.
 
    host> docker-compose up -d php httpd bind rabbit
 
-.. seealso:: :ref:`start_the_devilbox`
+.. seealso:: :ref:`start_the_dreamdevbox`
 
 
 TL;DR

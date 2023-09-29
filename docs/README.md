@@ -1,14 +1,14 @@
 # DreamDevBox Documentation
 
 The DreamDevBox documentation is build via [sphinx](http://www.sphinx-doc.org/en/master) and
-automatically updated on [readthedocs](https://devilbox.readthedocs.io) by every git push.
+automatically updated on [readthedocs](https://dreamdevbox.readthedocs.io) by every git push.
 
 
 ## Documentation
 
-The documentation is available online: https://devilbox.readthedocs.io
+The documentation is available online: https://dreamdevbox.readthedocs.io
 
-<a href="https://devilbox.readthedocs.io" title="DreamDevBox Documentation">
+<a href="https://dreamdevbox.readthedocs.io" title="DreamDevBox Documentation">
   <img style="width:200px;height:200px;" widh="200" height="200" title="DreamDevBox Documentation" name="DreamDevBox Documentation" src="https://raw.githubusercontent.com/cytopia/icons/master/400x400/readthedocs.png" />
 </a>
 

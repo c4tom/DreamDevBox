@@ -36,11 +36,11 @@ For the sake of this example, we will assume the following settings and file sys
 +------------------------------+------------------------------------------+
 | Directory                    | Path                                     |
 +==============================+==========================================+
-| DreamDevBox git directory       | ``/home/cytopia/repo/devilbox``          |
+| DreamDevBox git directory       | ``/home/cytopia/repo/dreamdevbox``          |
 +------------------------------+------------------------------------------+
 | :ref:`env_httpd_datadir`     | ``./data/www``                           |
 +------------------------------+------------------------------------------+
-| Resulting local project path | ``/home/cytopia/repo/devilbox/data/www`` |
+| Resulting local project path | ``/home/cytopia/repo/dreamdevbox/data/www`` |
 +------------------------------+------------------------------------------+
 | Selected PHP version         | ``5.6``                                  |
 +------------------------------+------------------------------------------+
@@ -108,7 +108,7 @@ You will need to configure the path mapping in ``launch.json`` (VSCode configura
 
    .. seealso::
       * https://go.microsoft.com/fwlink/?linkid=830387
-      * https://github.com/cytopia/devilbox/issues/381
+      * https://github.com/cytopia/dreamdevbox/issues/381
 
 Configure php.ini
 -----------------
@@ -120,7 +120,7 @@ Create an ``xdebug.ini`` file (must end by ``.ini``):
    .. code-block:: bash
 
       # Navigate to the DreamDevBox git directory
-      host> cd path/to/devilbox
+      host> cd path/to/dreamdevbox
 
       # Navigate to PHP 7.4 ini configuration directory
       host> cd cfg/php-ini-7.4/
@@ -160,7 +160,7 @@ Note that the following example only starts up PHP, HTTPD and Bind.
 .. code-block:: bash
 
    # Navigate to the DreamDevBox git directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Stop, remove stopped container and start
    host> docker-compose stop
@@ -168,4 +168,4 @@ Note that the following example only starts up PHP, HTTPD and Bind.
    host> docker-compose up php httpd bind
 
 
-.. seealso:: :ref:`start_the_devilbox_stop_and_restart` (Why do ``docker-compose rm``?)
+.. seealso:: :ref:`start_the_dreamdevbox_stop_and_restart` (Why do ``docker-compose rm``?)

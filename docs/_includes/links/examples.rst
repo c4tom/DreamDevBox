@@ -22,9 +22,9 @@
      Official Contao Documentation <img src="https://raw.githubusercontent.com/cytopia/icons/master/11x11/ext-link.png" />
    </a>
 
-.. |ext_lnk_example_contao_devilbox_documentation| raw:: html
+.. |ext_lnk_example_contao_dreamdevbox_documentation| raw:: html
 
-   <a target="_blank" href="https://docs.contao.org/manual/en/guides/local-installation/devilbox/">
+   <a target="_blank" href="https://docs.contao.org/manual/en/guides/local-installation/dreamdevbox/">
      Official Contao DreamDevBox Documentation <img src="https://raw.githubusercontent.com/cytopia/icons/master/11x11/ext-link.png" />
    </a>
 
@@ -78,7 +78,7 @@
 
 .. |ext_lnk_example_phalcon_documentation| raw:: html
 
-   <a target="_blank" href="https://docs.phalcon.io/4.0/en/environments-devilbox">
+   <a target="_blank" href="https://docs.phalcon.io/4.0/en/environments-dreamdevbox">
      Official Phalcon Documentation  <img src="https://raw.githubusercontent.com/cytopia/icons/master/11x11/ext-link.png" />
    </a>
 

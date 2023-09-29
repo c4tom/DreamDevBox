@@ -37,13 +37,13 @@ Entering from Linux or MacOS: ``shell.sh``
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
 
    # Run provided script
    host> ./shell.sh
 
    # Now you are inside the PHP Linux container
-   devilbox@php-7.0.19 in /shared/httpd $
+   dreamdevbox@php-7.0.19 in /shared/httpd $
 
 
 Entering from Windows: ``shell.bat``
@@ -52,22 +52,22 @@ Entering from Windows: ``shell.bat``
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   C:/> cd C:/Users/user1/devilbox
+   C:/> cd C:/Users/user1/dreamdevbox
 
    # Run provided script
-   C:/Users/user1/devilbox> shell.bat
+   C:/Users/user1/dreamdevbox> shell.bat
 
    # Now you are inside the PHP Linux container
-   devilbox@php-7.0.19 in /shared/httpd $
+   dreamdevbox@php-7.0.19 in /shared/httpd $
 
 
 Inside the container
 ====================
 
-``devilbox`` user
+``dreamdevbox`` user
 -----------------
 
-By using the provided scripts to enter the container you will become the user ``devilbox``.
+By using the provided scripts to enter the container you will become the user ``dreamdevbox``.
 This user will have the same uid and gid as the user from your host operating system.
 
 So no matter what files or directories you create inside the container, they will have the same
@@ -94,8 +94,8 @@ By default ``sudo`` is configured to be used without passwords, so you can simpl
 
 .. code-block:: bash
 
-   # As user devilbox inside the container
-   devilbox@php-7.0.19 in /shared/httpd $ sudo su -
+   # As user dreamdevbox inside the container
+   dreamdevbox@php-7.0.19 in /shared/httpd $ sudo su -
 
    # You are now the root user
    root@php-7.0.19 in /shared/httpd $
@@ -104,9 +104,9 @@ You can also use ``sudo`` to run commands with root privileges without having to
 
 .. code-block:: bash
 
-   # As user devilbox inside the container
-   devilbox@php-7.0.19 in /shared/httpd $ sudo apt update
-   devilbox@php-7.0.19 in /shared/httpd $ sudo apt install nmap
+   # As user dreamdevbox inside the container
+   dreamdevbox@php-7.0.19 in /shared/httpd $ sudo apt update
+   dreamdevbox@php-7.0.19 in /shared/httpd $ sudo apt install nmap
 
 
 Leave the container
@@ -117,8 +117,8 @@ and you are out.
 
 .. code-block:: bash
 
-   # As user devilbox inside the container
-   devilbox@php-7.0.19 in /shared/httpd $ exit
+   # As user dreamdevbox inside the container
+   dreamdevbox@php-7.0.19 in /shared/httpd $ exit
 
    # You are now back on your host operating system
    host>
@@ -136,7 +136,7 @@ change any settings.
 File and directory Permissions
 ------------------------------
 
-The username inside the container (``devilbox``) might be different from your local host operating
+The username inside the container (``dreamdevbox``) might be different from your local host operating
 system username, however its actual uid and gid will match. This is to ensure file and directory
 permissions are synronized inside and outside the container and no matter from which side you
 create files and directories, it will always look as if they are owned by your system user.
@@ -186,7 +186,7 @@ An example to access the MySQL database from within the PHP container:
    host> mysql -h 127.0.0.1 -u root -p
 
    # Access MySQL from within the PHP container
-   devilbox@php-7.0.19 in /shared/httpd $ mysql -h mysql -u root -p
+   dreamdevbox@php-7.0.19 in /shared/httpd $ mysql -h mysql -u root -p
 
 So when setting up a configuration file from your PHP project you would for example use
 ``mysql`` as the host for your MySQL database connection:

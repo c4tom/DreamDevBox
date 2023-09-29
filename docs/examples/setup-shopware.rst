@@ -80,7 +80,7 @@ The vhost directory defines the name under which your project will be available.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ mkdir my-sw
+   dreamdevbox@php-7.0.20 in /shared/httpd $ mkdir my-sw
 
 .. seealso:: :ref:`env_tld_suffix`
 
@@ -92,14 +92,14 @@ Navigate into your newly created vhost directory and install Shopware with ``git
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ cd my-sw
-   devilbox@php-7.0.20 in /shared/httpd/my-sw $ git clone https://github.com/shopware/shopware
+   dreamdevbox@php-7.0.20 in /shared/httpd $ cd my-sw
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-sw $ git clone https://github.com/shopware/shopware
 
 How does the directory structure look after installation:
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-sw $ tree -L 1
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-sw $ tree -L 1
    .
    └── shopware
 
@@ -120,13 +120,13 @@ to its expected path.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-sw $ ln -s shopware/ htdocs
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-sw $ ln -s shopware/ htdocs
 
 How does the directory structure look after symlinking:
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-sw $ tree -L 1
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-sw $ tree -L 1
    .
    ├── shopware
    └── htdocs -> shopware
@@ -140,7 +140,7 @@ path and points to the frameworks entrypoint.
    When using **Docker Toolbox**, you need to **explicitly allow** the usage of **symlinks**.
    See below for instructions:
 
-   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_devilbox_windows_symlinks`
+   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_dreamdevbox_windows_symlinks`
 
 
 5. Add MySQL Database
@@ -148,7 +148,7 @@ path and points to the frameworks entrypoint.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-sw $ mysql -u root -h 127.0.0.1 -p -e 'CREATE DATABASE my_sw;'
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-sw $ mysql -u root -h 127.0.0.1 -p -e 'CREATE DATABASE my_sw;'
 
 
 6. DNS record
@@ -193,7 +193,7 @@ Encountered problems
 By the time of writing (2018-07-07) Shopware had loading issues with the combination of ``PHP 5.6``
 and ``Apache 2.4``. Use any other combination.
 
-.. seealso:: https://github.com/cytopia/devilbox/issues/300
+.. seealso:: https://github.com/cytopia/dreamdevbox/issues/300
 
 
 Next steps

@@ -74,11 +74,11 @@ during startup in order to change the uid/gid of the PHP-FPM user prior starting
 
 .. code-block:: bash
 
-   $ docker run -e NEW_UID=1000 -e NEW_GID=1000 -it devilbox/php-fpm:7.2-work
-   [INFO] Changing user 'devilbox' uid to: 1000
-   root $ usermod -u 1000 devilbox
-   [INFO] Changing group 'devilbox' gid to: 1000
-   root $ groupmod -g 1000 devilbox
+   $ docker run -e NEW_UID=1000 -e NEW_GID=1000 -it dreamdevbox/php-fpm:7.2-work
+   [INFO] Changing user 'dreamdevbox' uid to: 1000
+   root $ usermod -u 1000 dreamdevbox
+   [INFO] Changing group 'dreamdevbox' gid to: 1000
+   root $ groupmod -g 1000 dreamdevbox
    [INFO] Starting PHP 7.2.0 (fpm-fcgi) (built: Oct 30 2017 12:05:19)
 
 

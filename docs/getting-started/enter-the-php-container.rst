@@ -44,7 +44,7 @@ it will enter you into the PHP container and bring you to ``/shared/httpd``.
    host> ./shell.sh
 
    # Now you are inside the PHP Linux container
-   devilbox@php-7.0.19 in /shared/httpd $
+   dreamdevbox@php-7.0.19 in /shared/httpd $
 
 
 Windows
@@ -56,23 +56,23 @@ Just run it and it will enter you into the PHP container and bring you to ``/sha
 .. code-block:: bash
 
    # Execute on the host operating system
-   C:/Users/user1/devilbox> shell.bat
+   C:/Users/user1/dreamdevbox> shell.bat
 
    # Now you are inside the PHP Linux container
-   devilbox@php-7.0.19 in /shared/httpd $
+   dreamdevbox@php-7.0.19 in /shared/httpd $
 
 
 How to become root
 ==================
 
-When you enter the container with the provided scripts, you are doing so as the user ``devilbox``.
+When you enter the container with the provided scripts, you are doing so as the user ``dreamdevbox``.
 If you do need to perform any actions as root (such as installing new software), you can use
 the password-less ``sudo``.
 
 .. code-block:: bash
 
-   # Inside the PHP Linux container as user devilbox
-   devilbox@php-7.0.19 in /shared/httpd $ sudo su -
+   # Inside the PHP Linux container as user dreamdevbox
+   dreamdevbox@php-7.0.19 in /shared/httpd $ sudo su -
 
    # Now you are root and can do anything you want
    root@php-7.0.19 in /shared/httpd $
@@ -104,7 +104,7 @@ automatically pushed to Docker hub to ensure versions are outdated at a maximum 
 
 The only thing you have to do, is to update the Docker images itself, simply by pulling a new version.
 
-.. seealso:: :ref:`update_the_devilbox_update_the_docker_images`
+.. seealso:: :ref:`update_the_dreamdevbox_update_the_docker_images`
 
 
 Advanced

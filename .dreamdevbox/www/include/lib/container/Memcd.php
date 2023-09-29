@@ -1,8 +1,8 @@
 <?php
-namespace devilbox;
+namespace dreamdevbox;
 
 /**
- * @requires devilbox::Logger
+ * @requires dreamdevbox::Logger
  */
 class Memcd extends BaseClass implements BaseInterface
 {
@@ -43,7 +43,7 @@ class Memcd extends BaseClass implements BaseInterface
 		}
 
 		if (class_exists('Memcached')) {
-			$memcd = new \Memcached('_devilbox');
+			$memcd = new \Memcached('_dreamdevbox');
 			$list = $memcd->getServerList();
 
 			if (empty($list)) {
@@ -72,9 +72,9 @@ class Memcd extends BaseClass implements BaseInterface
 				$this->_connect_errno = 3;
 				return;
 			}
-			$memcd->getDelayed(array('devilbox-version'));
+			$memcd->getDelayed(array('dreamdevbox-version'));
 			if (!$memcd->fetchAll()) {
-				$memcd->set('devilbox-version', $GLOBALS['DEVILBOX_VERSION'].' ('.$GLOBALS['DEVILBOX_DATE'].')');
+				$memcd->set('dreamdevbox-version', $GLOBALS['DREAMDEVBOX_VERSION'].' ('.$GLOBALS['DREAMDEVBOX_DATE'].')');
 			}
 			$this->_memcached = $memcd;
 		} else {

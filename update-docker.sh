@@ -1,9 +1,9 @@
 #!/bin/sh -eu
 #
 # This script will pull all Docker images that are currently
-# bound to your devilbox git state.
+# bound to your dreamdevbox git state.
 #
-# When updating the devilbox via git, do run this script once
+# When updating the dreamdevbox via git, do run this script once
 # in order to download all images locally.
 #
 
@@ -28,7 +28,7 @@ fi
 
 
 ###
-### Path of devilbox repository
+### Path of dreamdevbox repository
 ###
 CWD="$(cd -P -- "$(dirname -- "$0")" && pwd -P)"
 
@@ -46,10 +46,10 @@ fi
 ### PHP
 ###
 if [ "${WHICH}" = "all" ] || [ "${WHICH}" = "php" ]; then
-	SUFFIX="$( grep -E '^\s+image:\s+devilbox/php-fpm' "${CWD}/docker-compose.yml" | sed 's/.*}//g' )"
+	SUFFIX="$( grep -E '^\s+image:\s+dreamdevbox/php-fpm' "${CWD}/docker-compose.yml" | sed 's/.*}//g' )"
 	IMAGES="$( grep -Eo '^#*PHP_SERVER=[.0-9]+' "${CWD}/env-example" | sed 's/.*=//g' )"
 	echo "${IMAGES}" | while read version ; do
-		docker pull devilbox/php-fpm:${version}${SUFFIX}
+		docker pull dreamdevbox/php-fpm:${version}${SUFFIX}
 	done
 fi
 
@@ -58,10 +58,10 @@ fi
 ### HTTPD
 ###
 if [ "${WHICH}" = "all" ] || [ "${WHICH}" = "httpd" ]; then
-	SUFFIX="$( grep -E '^\s+image:\s+devilbox/\${HTTPD_SERVER' "${CWD}/docker-compose.yml" | sed 's/.*://g' )"
+	SUFFIX="$( grep -E '^\s+image:\s+dreamdevbox/\${HTTPD_SERVER' "${CWD}/docker-compose.yml" | sed 's/.*://g' )"
 	IMAGES="$( grep -Eo '^#*HTTPD_SERVER=[-a-z]+[.0-9]*' "${CWD}/env-example" | sed 's/.*=//g' )"
 	echo "${IMAGES}" | while read version ; do
-		docker pull devilbox/${version}:${SUFFIX}
+		docker pull dreamdevbox/${version}:${SUFFIX}
 	done
 fi
 
@@ -72,7 +72,7 @@ fi
 if [ "${WHICH}" = "all" ] || [ "${WHICH}" = "mysql" ]; then
 	IMAGES="$( grep -Eo '^#*MYSQL_SERVER=[-a-z]+[.0-9]*' "${CWD}/env-example" | sed 's/.*=//g' )"
 	echo "${IMAGES}" | while read version ; do
-		docker pull devilbox/mysql:${version}
+		docker pull dreamdevbox/mysql:${version}
 	done
 fi
 

@@ -53,11 +53,11 @@ fi
 ###
 HOST_PORT_HTTPD="$( "${SCRIPT_PATH}/../scripts/env-getvar.sh" "HOST_PORT_HTTPD" )"
 
-printf "[TEST] devilbox-version key in Redis"
-if  ! run "curl -sS --fail 'http://localhost:${HOST_PORT_HTTPD}/db_redis.php' | tac | tac | grep 'devilbox-version' >/dev/null" "${RETRIES}" "" "0"; then
-	printf "\\r[FAIL] devilbox-version key in Redis\\n"
+printf "[TEST] dreamdevbox-version key in Redis"
+if  ! run "curl -sS --fail 'http://localhost:${HOST_PORT_HTTPD}/db_redis.php' | tac | tac | grep 'dreamdevbox-version' >/dev/null" "${RETRIES}" "" "0"; then
+	printf "\\r[FAIL] dreamdevbox-version key in Redis\\n"
 	run "curl 'http://localhost:${HOST_PORT_HTTPD}/db_redis.php' || true"
 	exit 1
 else
-	printf "\\r[OK]   devilbox-version key in Redis\\n"
+	printf "\\r[OK]   dreamdevbox-version key in Redis\\n"
 fi

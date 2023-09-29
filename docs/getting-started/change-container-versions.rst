@@ -66,7 +66,7 @@ Shut down the DreamDevBox in case it is still running:
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Stop all container
    host> docker-compose stop
@@ -130,12 +130,12 @@ Now save the file and you can start the DreamDevBox again.
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Start all container
    host> docker-compose up php httpd bind
 
-.. seealso:: :ref:`start_the_devilbox`
+.. seealso:: :ref:`start_the_dreamdevbox`
 
 
 Change web server version
@@ -149,7 +149,7 @@ Shut down the DreamDevBox in case it is still running:
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Stop all container
    host> docker-compose stop
@@ -195,12 +195,12 @@ Now save the file and you can start the DreamDevBox again.
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Start all container
    host> docker-compose up php httpd bind
 
-.. seealso:: :ref:`start_the_devilbox`
+.. seealso:: :ref:`start_the_dreamdevbox`
 
 
 Change whatever version

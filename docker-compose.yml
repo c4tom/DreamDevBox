@@ -100,7 +100,7 @@ services:
   # PHP
   # ------------------------------------------------------------
   php:
-    image: devilbox/php-fpm:${PHP_SERVER}-work-0.150
+    image: dreamdevbox/php-fpm:${PHP_SERVER}-work-0.150
     hostname: php
 
     ##
@@ -117,8 +117,8 @@ services:
       ## Supervisord Management (to connect to HTTPD supvervisord)
       ##
       - SVCTL_LISTEN_PORT=9001
-      - SVCTL_USER=${DEVILBOX_HTTPD_MGMT_USER:-supervisor}
-      - SVCTL_PASS=${DEVILBOX_HTTPD_MGMT_PASS:-mypassword}
+      - SVCTL_USER=${DREAMDEVBOX_HTTPD_MGMT_USER:-supervisor}
+      - SVCTL_PASS=${DREAMDEVBOX_HTTPD_MGMT_PASS:-mypassword}
 
       ##
       ## Debug/Logging
@@ -183,43 +183,43 @@ services:
       # HOST-DIRECTORY : DOCKER-DIRECTORY
 
       # Mount custom intranet
-      - ${DEVILBOX_PATH}/.dreamdevbox/www:/var/www/default:ro${MOUNT_OPTIONS}
+      - ${DREAMDEVBOX_PATH}/.dreamdevbox/www:/var/www/default:ro${MOUNT_OPTIONS}
 
       # Mount custom mass virtual hosting
       - ${HOST_PATH_HTTPD_DATADIR}:/shared/httpd:rw${MOUNT_OPTIONS}
 
       # Mount logs
-      - ${DEVILBOX_PATH}/log/php-fpm-${PHP_SERVER}:/var/log/php:rw${MOUNT_OPTIONS}
+      - ${DREAMDEVBOX_PATH}/log/php-fpm-${PHP_SERVER}:/var/log/php:rw${MOUNT_OPTIONS}
 
       # Mount Mail directory
-      - devilbox-mail:/var/mail:rw${MOUNT_OPTIONS}
+      - dreamdevbox-mail:/var/mail:rw${MOUNT_OPTIONS}
 
       # Mount DB Backup directory
       - ${HOST_PATH_BACKUPDIR:-./backups}:/shared/backups:rw${MOUNT_OPTIONS}
 
-      # Mount devilbox user-defined *.ini files in order
+      # Mount dreamdevbox user-defined *.ini files in order
       # to overwrite the default PHP.ini configuration
-      - ${DEVILBOX_PATH}/cfg/php-ini-${PHP_SERVER}:/etc/php-custom.d:ro${MOUNT_OPTIONS}
+      - ${DREAMDEVBOX_PATH}/cfg/php-ini-${PHP_SERVER}:/etc/php-custom.d:ro${MOUNT_OPTIONS}
 
-      # Mount devilbox user-defined PHP-FPM *.conf files in order
+      # Mount dreamdevbox user-defined PHP-FPM *.conf files in order
       # to overwrite the default PHP-FPM configuration
-      - ${DEVILBOX_PATH}/cfg/php-fpm-${PHP_SERVER}:/etc/php-fpm-custom.d:ro${MOUNT_OPTIONS}
+      - ${DREAMDEVBOX_PATH}/cfg/php-fpm-${PHP_SERVER}:/etc/php-fpm-custom.d:ro${MOUNT_OPTIONS}
 
-      # Mount devilbox user-defined PHP-FPM startup *.sh scripts
-      - ${DEVILBOX_PATH}/cfg/php-startup-${PHP_SERVER}:/startup.1.d:rw${MOUNT_OPTIONS}
-      - ${DEVILBOX_PATH}/autostart:/startup.2.d:rw${MOUNT_OPTIONS}
+      # Mount dreamdevbox user-defined PHP-FPM startup *.sh scripts
+      - ${DREAMDEVBOX_PATH}/cfg/php-startup-${PHP_SERVER}:/startup.1.d:rw${MOUNT_OPTIONS}
+      - ${DREAMDEVBOX_PATH}/autostart:/startup.2.d:rw${MOUNT_OPTIONS}
 
-      # Mount devilbox user-defined bash config
-      - ${DEVILBOX_PATH}/bash:/etc/bashrc-devilbox.d:rw${MOUNT_OPTIONS}
+      # Mount dreamdevbox user-defined bash config
+      - ${DREAMDEVBOX_PATH}/bash:/etc/bashrc-dreamdevbox.d:rw${MOUNT_OPTIONS}
 
-      # Mount devilbox user-defined supervisord config
-      - ${DEVILBOX_PATH}/supervisor:/etc/supervisor/custom.d:rw${MOUNT_OPTIONS}
+      # Mount dreamdevbox user-defined supervisord config
+      - ${DREAMDEVBOX_PATH}/supervisor:/etc/supervisor/custom.d:rw${MOUNT_OPTIONS}
 
       # Certificate Authority public key
-      - ${DEVILBOX_PATH}/ca:/ca:rw${MOUNT_OPTIONS}
+      - ${DREAMDEVBOX_PATH}/ca:/ca:rw${MOUNT_OPTIONS}
 
       # Users SSH directory (read-only)
-      - ${HOST_PATH_SSH_DIR}:/home/devilbox/.ssh:ro${MOUNT_OPTIONS}
+      - ${HOST_PATH_SSH_DIR}:/home/dreamdevbox/.ssh:ro${MOUNT_OPTIONS}
 
     depends_on:
       - bind
@@ -229,7 +229,7 @@ services:
   # Web Server
   # ------------------------------------------------------------
   httpd:
-    image: devilbox/${HTTPD_SERVER}:${HTTPD_FLAVOUR:-alpine}-1.0
+    image: dreamdevbox/${HTTPD_SERVER}:${HTTPD_FLAVOUR:-alpine}-1.0
     hostname: httpd
 
     environment:
@@ -241,8 +241,8 @@ services:
       - SVCTL_LISTEN_ADDR=0.0.0.0
       - SVCTL_LISTEN_PORT=9001
       - SVCTL_REMOTE_LOGS_ENABLE=1
-      - SVCTL_USER=${DEVILBOX_HTTPD_MGMT_USER:-supervisor}
-      - SVCTL_PASS=${DEVILBOX_HTTPD_MGMT_PASS:-mypassword}
+      - SVCTL_USER=${DREAMDEVBOX_HTTPD_MGMT_USER:-supervisor}
+      - SVCTL_PASS=${DREAMDEVBOX_HTTPD_MGMT_PASS:-mypassword}
 
       ##
       ## Debug/Logging
@@ -276,15 +276,15 @@ services:
       ##
       ## Disable default vhost?
       ##
-      - MAIN_VHOST_ENABLE=${DEVILBOX_UI_ENABLE}
+      - MAIN_VHOST_ENABLE=${DREAMDEVBOX_UI_ENABLE}
       - MAIN_VHOST_STATUS_ENABLE=1
-      - MAIN_VHOST_STATUS_ALIAS=/devilbox-httpd-status
+      - MAIN_VHOST_STATUS_ALIAS=/dreamdevbox-httpd-status
       - MAIN_VHOST_SSL_TYPE=${HTTPD_VHOST_SSL_TYPE:-both}
       - MAIN_VHOST_SSL_GEN=1
-      - MAIN_VHOST_SSL_CN=${DEVILBOX_UI_SSL_CN:-localhost}
+      - MAIN_VHOST_SSL_CN=${DREAMDEVBOX_UI_SSL_CN:-localhost}
       - MAIN_VHOST_BACKEND=conf:phpfpm:tcp:172.16.238.10:9000
       - MAIN_VHOST_BACKEND_TIMEOUT=${HTTPD_BACKEND_TIMEOUT:-180}
-      - MAIN_VHOST_ALIASES_ALLOW=/devilbox-api/:/var/www/default/api, /vhost.d/:/etc/httpd
+      - MAIN_VHOST_ALIASES_ALLOW=/dreamdevbox-api/:/var/www/default/api, /vhost.d/:/etc/httpd
 
       ##
       ## Enable Mass Vhosts
@@ -298,7 +298,7 @@ services:
       - MASS_VHOST_BACKEND=conf:phpfpm:tcp:172.16.238.10:9000
       - MASS_VHOST_BACKEND_REWRITE=file:backend.cfg
       - MASS_VHOST_BACKEND_TIMEOUT=${HTTPD_BACKEND_TIMEOUT:-180}
-      - MASS_VHOST_ALIASES_ALLOW=/devilbox-api/:/var/www/default/api:http(s)?://(.*)$$
+      - MASS_VHOST_ALIASES_ALLOW=/dreamdevbox-api/:/var/www/default/api:http(s)?://(.*)$$
 
     ports:
       # ---- Format: ----
@@ -315,22 +315,22 @@ services:
       # HOST-DIRECTORY : DOCKER-DIRECTORY
 
       # Mount custom intranet
-      - ${DEVILBOX_PATH}/.dreamdevbox/www:/var/www/default:ro${MOUNT_OPTIONS}
+      - ${DREAMDEVBOX_PATH}/.dreamdevbox/www:/var/www/default:ro${MOUNT_OPTIONS}
 
       # Mount custom mass virtual hosting
       - ${HOST_PATH_HTTPD_DATADIR}:/shared/httpd:rw${MOUNT_OPTIONS}
 
       # Mount custom web server config directory
-      - ${DEVILBOX_PATH}/cfg/${HTTPD_SERVER}:/etc/httpd-custom.d:rw${MOUNT_OPTIONS}
+      - ${DREAMDEVBOX_PATH}/cfg/${HTTPD_SERVER}:/etc/httpd-custom.d:rw${MOUNT_OPTIONS}
 
       # Mount custom vhost-templates
-      - ${DEVILBOX_PATH}/cfg/vhost-gen:/etc/vhost-gen.d:rw${MOUNT_OPTIONS}
+      - ${DREAMDEVBOX_PATH}/cfg/vhost-gen:/etc/vhost-gen.d:rw${MOUNT_OPTIONS}
 
       # Mount logs
-      - ${DEVILBOX_PATH}/log/${HTTPD_SERVER}:/var/log/httpd:rw${MOUNT_OPTIONS}
+      - ${DREAMDEVBOX_PATH}/log/${HTTPD_SERVER}:/var/log/httpd:rw${MOUNT_OPTIONS}
 
       # Certificate Authority public key
-      - ${DEVILBOX_PATH}/ca:/ca:rw${MOUNT_OPTIONS}
+      - ${DREAMDEVBOX_PATH}/ca:/ca:rw${MOUNT_OPTIONS}
 
     depends_on:
       - bind
@@ -341,7 +341,7 @@ services:
   # MySQL Database
   # ------------------------------------------------------------
   mysql:
-    image: devilbox/mysql:${MYSQL_SERVER}-0.21
+    image: dreamdevbox/mysql:${MYSQL_SERVER}-0.21
     hostname: mysql
 
     environment:
@@ -360,13 +360,13 @@ services:
       # ---- Format: ----
       # HOST-DIRECTORY : DOCKER-DIRECTORY
 
-      # Mount devilbox user-defined cnf files in order
+      # Mount dreamdevbox user-defined cnf files in order
       # to overwrite the MySQL server configuration
-      - ${DEVILBOX_PATH}/.dreamdevbox/cfg/mysql.cnf:/etc/mysql/conf.d/devilbox.cnf:ro${MOUNT_OPTIONS}
-      - ${DEVILBOX_PATH}/cfg/${MYSQL_SERVER}:/etc/mysql/docker-default.d:ro${MOUNT_OPTIONS}
+      - ${DREAMDEVBOX_PATH}/.dreamdevbox/cfg/mysql.cnf:/etc/mysql/conf.d/dreamdevbox.cnf:ro${MOUNT_OPTIONS}
+      - ${DREAMDEVBOX_PATH}/cfg/${MYSQL_SERVER}:/etc/mysql/docker-default.d:ro${MOUNT_OPTIONS}
 
       # Mount MySQL Data directory
-      - devilbox-${MYSQL_SERVER}:/var/lib/mysql:rw${MOUNT_OPTIONS}
+      - dreamdevbox-${MYSQL_SERVER}:/var/lib/mysql:rw${MOUNT_OPTIONS}
 
     depends_on:
       - bind
@@ -401,7 +401,7 @@ services:
       # HOST-DIRECTORY : DOCKER-DIRECTORY
 
       # Mount PostgreSQL Data directory
-      - devilbox-pgsql-${PGSQL_SERVER}:/var/lib/postgresql/data/pgdata:rw${MOUNT_OPTIONS}
+      - dreamdevbox-pgsql-${PGSQL_SERVER}:/var/lib/postgresql/data/pgdata:rw${MOUNT_OPTIONS}
 
     depends_on:
       - bind
@@ -476,7 +476,7 @@ services:
       # HOST-DIRECTORY : DOCKER-DIRECTORY
 
       # Mount MongoDB Data directory
-      - devilbox-mongo-${MONGO_SERVER}:/data/db:rw${MOUNT_OPTIONS}
+      - dreamdevbox-mongo-${MONGO_SERVER}:/data/db:rw${MOUNT_OPTIONS}
 
     depends_on:
       - bind
@@ -506,72 +506,72 @@ volumes:
   # ------------------------------------------------------------
   # Misc
   # ------------------------------------------------------------
-  devilbox-mail:
+  dreamdevbox-mail:
 
   # ------------------------------------------------------------
   # MySQL
   # ------------------------------------------------------------
-  devilbox-mysql-5.5:
-  devilbox-mysql-5.6:
-  devilbox-mysql-5.7:
-  devilbox-mysql-8.0:
-  devilbox-mariadb-5.5:
-  devilbox-mariadb-10.0:
-  devilbox-mariadb-10.1:
-  devilbox-mariadb-10.2:
-  devilbox-mariadb-10.3:
-  devilbox-mariadb-10.4:
-  devilbox-mariadb-10.5:
-  devilbox-mariadb-10.6:
-  devilbox-mariadb-10.7:
-  devilbox-mariadb-10.8:
-  devilbox-mariadb-10.9:
-  devilbox-mariadb-10.10:
-  devilbox-percona-5.5:
-  devilbox-percona-5.6:
-  devilbox-percona-5.7:
-  devilbox-percona-8.0:
+  dreamdevbox-mysql-5.5:
+  dreamdevbox-mysql-5.6:
+  dreamdevbox-mysql-5.7:
+  dreamdevbox-mysql-8.0:
+  dreamdevbox-mariadb-5.5:
+  dreamdevbox-mariadb-10.0:
+  dreamdevbox-mariadb-10.1:
+  dreamdevbox-mariadb-10.2:
+  dreamdevbox-mariadb-10.3:
+  dreamdevbox-mariadb-10.4:
+  dreamdevbox-mariadb-10.5:
+  dreamdevbox-mariadb-10.6:
+  dreamdevbox-mariadb-10.7:
+  dreamdevbox-mariadb-10.8:
+  dreamdevbox-mariadb-10.9:
+  dreamdevbox-mariadb-10.10:
+  dreamdevbox-percona-5.5:
+  dreamdevbox-percona-5.6:
+  dreamdevbox-percona-5.7:
+  dreamdevbox-percona-8.0:
 
   # ------------------------------------------------------------
   # Postgres
   # ------------------------------------------------------------
-  devilbox-pgsql-9.0:
-  devilbox-pgsql-9.1:
-  devilbox-pgsql-9.2:
-  devilbox-pgsql-9.2-alpine:
-  devilbox-pgsql-9.3:
-  devilbox-pgsql-9.3-alpine:
-  devilbox-pgsql-9.4:
-  devilbox-pgsql-9.4-alpine:
-  devilbox-pgsql-9.5:
-  devilbox-pgsql-9.5-alpine:
-  devilbox-pgsql-9.6:
-  devilbox-pgsql-9.6-alpine:
-  devilbox-pgsql-10:
-  devilbox-pgsql-10-alpine:
-  devilbox-pgsql-11:
-  devilbox-pgsql-11-alpine:
-  devilbox-pgsql-12:
-  devilbox-pgsql-12-alpine:
-  devilbox-pgsql-13:
-  devilbox-pgsql-13-alpine:
-  devilbox-pgsql-14:
-  devilbox-pgsql-14-alpine:
-  devilbox-pgsql-15:
-  devilbox-pgsql-15-alpine:
-  devilbox-pgsql-latest:
-  devilbox-pgsql-alpine:
+  dreamdevbox-pgsql-9.0:
+  dreamdevbox-pgsql-9.1:
+  dreamdevbox-pgsql-9.2:
+  dreamdevbox-pgsql-9.2-alpine:
+  dreamdevbox-pgsql-9.3:
+  dreamdevbox-pgsql-9.3-alpine:
+  dreamdevbox-pgsql-9.4:
+  dreamdevbox-pgsql-9.4-alpine:
+  dreamdevbox-pgsql-9.5:
+  dreamdevbox-pgsql-9.5-alpine:
+  dreamdevbox-pgsql-9.6:
+  dreamdevbox-pgsql-9.6-alpine:
+  dreamdevbox-pgsql-10:
+  dreamdevbox-pgsql-10-alpine:
+  dreamdevbox-pgsql-11:
+  dreamdevbox-pgsql-11-alpine:
+  dreamdevbox-pgsql-12:
+  dreamdevbox-pgsql-12-alpine:
+  dreamdevbox-pgsql-13:
+  dreamdevbox-pgsql-13-alpine:
+  dreamdevbox-pgsql-14:
+  dreamdevbox-pgsql-14-alpine:
+  dreamdevbox-pgsql-15:
+  dreamdevbox-pgsql-15-alpine:
+  dreamdevbox-pgsql-latest:
+  dreamdevbox-pgsql-alpine:
 
   # ------------------------------------------------------------
   # MongoDB
   # ------------------------------------------------------------
-  devilbox-mongo-2.8:
-  devilbox-mongo-3.0:
-  devilbox-mongo-3.2:
-  devilbox-mongo-3.4:
-  devilbox-mongo-3.6:
-  devilbox-mongo-4.0:
-  devilbox-mongo-4.2:
-  devilbox-mongo-4.4:
-  devilbox-mongo-5.0:
-  devilbox-mongo-latest:
+  dreamdevbox-mongo-2.8:
+  dreamdevbox-mongo-3.0:
+  dreamdevbox-mongo-3.2:
+  dreamdevbox-mongo-3.4:
+  dreamdevbox-mongo-3.6:
+  dreamdevbox-mongo-4.0:
+  dreamdevbox-mongo-4.2:
+  dreamdevbox-mongo-4.4:
+  dreamdevbox-mongo-5.0:
+  dreamdevbox-mongo-latest:

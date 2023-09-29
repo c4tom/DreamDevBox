@@ -64,9 +64,9 @@ ERROR=0
 ### Intranet / from host
 ###
 printf "[TEST] https Intranet / from host"
-if ! run "curl -sS --fail --cacert ${DVLBOX_PATH}/ca/devilbox-ca.crt 'https://localhost:${HOST_PORT_HTTPD_SSL}' >/dev/null" "${RETRIES}" "" "0"; then
+if ! run "curl -sS --fail --cacert ${DVLBOX_PATH}/ca/dreamdevbox-ca.crt 'https://localhost:${HOST_PORT_HTTPD_SSL}' >/dev/null" "${RETRIES}" "" "0"; then
 	printf "\\r[FAIL] https Intranet / from host\\n"
-	run "curl -v --cacert ${DVLBOX_PATH}/ca/devilbox-ca.crt 'https://localhost:${HOST_PORT_HTTPD_SSL}' || true" "1"
+	run "curl -v --cacert ${DVLBOX_PATH}/ca/dreamdevbox-ca.crt 'https://localhost:${HOST_PORT_HTTPD_SSL}' || true" "1"
 	ERROR=1
 else
 	printf "\\r[OK]   https Intranet / from host\\n"
@@ -90,9 +90,9 @@ fi
 ### Intranet /credits.php from host
 ###
 printf "[TEST] https Intranet /credits.php from host"
-if ! run "curl -sS --fail --cacert ${DVLBOX_PATH}/ca/devilbox-ca.crt 'https://localhost:${HOST_PORT_HTTPD_SSL}/credits.php' | tac | tac | grep -E 'https:\\/\\/github\\.com\\/cytopia' >/dev/null" "${RETRIES}" "" "0"; then
+if ! run "curl -sS --fail --cacert ${DVLBOX_PATH}/ca/dreamdevbox-ca.crt 'https://localhost:${HOST_PORT_HTTPD_SSL}/credits.php' | tac | tac | grep -E 'https:\\/\\/github\\.com\\/cytopia' >/dev/null" "${RETRIES}" "" "0"; then
 	printf "\\r[FAIL] https Intranet /credits.php from host\\n"
-	run "curl -v --cacert ${DVLBOX_PATH}/ca/devilbox-ca.crt 'https://localhost:${HOST_PORT_HTTPD_SSL}/credits.php' || true" "1"
+	run "curl -v --cacert ${DVLBOX_PATH}/ca/dreamdevbox-ca.crt 'https://localhost:${HOST_PORT_HTTPD_SSL}/credits.php' || true" "1"
 	ERROR=1
 else
 	printf "\\r[OK]   https Intranet /credits.php from host\\n"

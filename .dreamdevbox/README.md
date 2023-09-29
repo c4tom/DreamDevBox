@@ -1,6 +1,6 @@
 # DreamDevBox base configuration
 
-Those folders include the devilbox base configuration.
+Those folders include the dreamdevbox base configuration.
 
 Do not edit anything here!
 

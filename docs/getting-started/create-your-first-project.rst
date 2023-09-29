@@ -30,7 +30,7 @@ http://127.0.0.1/vhosts.php
 
 It should look like the screenshot below and will actually already provide the information needed to create a new project.
 
-.. include:: /_includes/figures/devilbox/devilbox-intranet-vhosts-empty.rst
+.. include:: /_includes/figures/dreamdevbox/dreamdevbox-intranet-vhosts-empty.rst
 
 
 Step 2: create a project directory
@@ -45,7 +45,7 @@ In your DreamDevBox git directory, navigate to ``./data/www`` and create a new d
 .. code-block:: bash
 
    # navigate to your DreamDevBox git directory
-   host> cd path/to devilbox
+   host> cd path/to dreamdevbox
 
    # navigate to the data directory
    host> cd data/www
@@ -55,7 +55,7 @@ In your DreamDevBox git directory, navigate to ``./data/www`` and create a new d
 
 Visit the vhost page again and see what has changed: http://localhost/vhosts.php
 
-.. include:: /_includes/figures/devilbox/devilbox-intranet-vhosts-missing-htdocs.rst
+.. include:: /_includes/figures/dreamdevbox/dreamdevbox-intranet-vhosts-missing-htdocs.rst
 
 **So what has happened?**
 
@@ -73,7 +73,7 @@ Navigate to your newly created project directory and create a directory named `h
 .. code-block:: bash
 
    # navigate to your DreamDevBox git directory
-   host> cd path/to devilbox
+   host> cd path/to dreamdevbox
 
    # navigate to your above created project directory
    host> cd data/www/project-1
@@ -83,7 +83,7 @@ Navigate to your newly created project directory and create a directory named `h
 
 Vist the vhost page again and see what has changed: http://localhost/vhosts.php
 
-.. include:: /_includes/figures/devilbox/devilbox-intranet-vhosts-missing-dns.rst
+.. include:: /_includes/figures/dreamdevbox/dreamdevbox-intranet-vhosts-missing-dns.rst
 
 **So what has happened?**
 
@@ -125,7 +125,7 @@ into your ``/etc/hosts`` (or ``C:\Windows\System32\drivers\etc`` for Windows).
 
 Vist the vhost page again and see what has changed: http://localhost/vhosts.php
 
-.. include:: /_includes/figures/devilbox/devilbox-intranet-vhosts-working.rst
+.. include:: /_includes/figures/dreamdevbox/dreamdevbox-intranet-vhosts-working.rst
 
 **So what has happened?**
 
@@ -139,7 +139,7 @@ Step 5: visit your project
 On the intranet, click on your project link. This will open your project in a new Browser tab or
 visit http://project-1.loc
 
-.. include:: /_includes/figures/devilbox/devilbox-project-missing-index.rst
+.. include:: /_includes/figures/dreamdevbox/dreamdevbox-project-missing-index.rst
 
 **So what has happened?**
 
@@ -156,7 +156,7 @@ Navigate to your docroot directory within your project and create a ``index.php`
 .. code-block:: bash
 
    # navigate to your DreamDevBox git directory
-   host> cd path/to devilbox
+   host> cd path/to dreamdevbox
 
    # navigate to your projects docroot directory
    host> cd data/www/project-1/htdocs
@@ -172,7 +172,7 @@ Alternatively create an ``index.php`` file in ``data/www/project-1/htdocs`` with
 
 Visit your project url again and see what has changed: http://project-1.loc
 
-.. include:: /_includes/figures/devilbox/devilbox-project-hello-world.rst
+.. include:: /_includes/figures/dreamdevbox/dreamdevbox-project-hello-world.rst
 
 
 Checklist

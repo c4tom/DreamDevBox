@@ -79,7 +79,7 @@ The vhost directory defines the name under which your project will be available.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ mkdir my-ci
+   dreamdevbox@php-7.0.20 in /shared/httpd $ mkdir my-ci
 
 .. seealso:: :ref:`env_tld_suffix`
 
@@ -91,15 +91,15 @@ Navigate into your newly created vhost directory and install CodeIgniter.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ cd my-ci
-   devilbox@php-7.0.20 in /shared/httpd/my-ci $ wget https://github.com/bcit-ci/CodeIgniter/archive/3.1.8.tar.gz
-   devilbox@php-7.0.20 in /shared/httpd/my-ci $ tar xfvz 3.1.8.tar.gz
+   dreamdevbox@php-7.0.20 in /shared/httpd $ cd my-ci
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-ci $ wget https://github.com/bcit-ci/CodeIgniter/archive/3.1.8.tar.gz
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-ci $ tar xfvz 3.1.8.tar.gz
 
 How does the directory structure look after installation:
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-ci $ tree -L 1
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-ci $ tree -L 1
    .
    ├── 3.1.8.tar.gz
    └── CodeIgniter-3.1.8
@@ -121,13 +121,13 @@ to its expected path.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-ci $ ln -s CodeIgniter-3.1.8/ htdocs
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-ci $ ln -s CodeIgniter-3.1.8/ htdocs
 
 How does the directory structure look after symlinking:
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-ci $ tree -L 1
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-ci $ tree -L 1
    .
    ├── 3.1.8.tar.gz
    ├── CodeIgniter-3.1.8
@@ -142,7 +142,7 @@ path and points to the frameworks entrypoint.
    When using **Docker Toolbox**, you need to **explicitly allow** the usage of **symlinks**.
    See below for instructions:
 
-   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_devilbox_windows_symlinks`
+   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_dreamdevbox_windows_symlinks`
 
 
 5. Add MySQL Database
@@ -150,7 +150,7 @@ path and points to the frameworks entrypoint.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-ci $ mysql -u root -h 127.0.0.1 -p -e 'CREATE DATABASE my_ci;'
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-ci $ mysql -u root -h 127.0.0.1 -p -e 'CREATE DATABASE my_ci;'
 
 
 6. Configure database connection
@@ -158,7 +158,7 @@ path and points to the frameworks entrypoint.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-ci $ vi htdocs/application/config/database.php
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-ci $ vi htdocs/application/config/database.php
 
 .. code-block:: php
    :caption: htdocs/application/config/database.php

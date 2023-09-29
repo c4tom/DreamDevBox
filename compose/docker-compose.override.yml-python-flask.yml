@@ -11,7 +11,7 @@ services:
   # You can add more than one service here if you have multiple flask projects.
   # Just duplicate the block and adjust service name, hostname and ip address.
   flask1:
-    image: devilbox/python-flask:${PYTHON_VERSION:-3.8}-dev
+    image: dreamdevbox/python-flask:${PYTHON_VERSION:-3.8}-dev
     hostname: flask1
     ports:
       - "${LOCAL_LISTEN_ADDR}${HOST_PORT_FLASK:-3000}:${FLASK_PORT:-3000}"

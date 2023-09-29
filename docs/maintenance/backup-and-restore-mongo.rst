@@ -33,13 +33,13 @@ To backup all databases follow the below listed example:
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Enter the PHP container
    host> ./shell.sh
 
    # Run mongodump
-   devilbox@php-7.1.6 in /shared/httpd $ mongodump --out /shared/backups/mongo
+   dreamdevbox@php-7.1.6 in /shared/httpd $ mongodump --out /shared/backups/mongo
 
 
 Restore
@@ -54,10 +54,10 @@ To restore all MongoDB databases follow the below listed example:
 .. code-block:: bash
 
    # Navigate to the DreamDevBox directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Enter the PHP container
    host> ./shell.sh
 
    # Start the restore/import from /shared/backups/mongo
-   devilbox@php-7.1.6 in /shared/httpd $ mongorestore /shared/backups/mongo
+   dreamdevbox@php-7.1.6 in /shared/httpd $ mongorestore /shared/backups/mongo

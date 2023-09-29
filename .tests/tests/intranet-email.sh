@@ -57,13 +57,13 @@ HOST_PORT_HTTPD="$( "${SCRIPT_PATH}/../scripts/env-getvar.sh" "HOST_PORT_HTTPD" 
 ###
 ### Email variables
 ###
-MY_MAIL="ci@devilbox.org"
+MY_MAIL="ci@dreamdevbox.org"
 MY_SUBJ="testing-ci-subject"
 MY_MESS="testing-ci-message"
 
 
 # Empty mails first
-run "docker-compose exec --user devilbox -T php bash -c '> /var/mail/devilbox'" "${RETRIES}" "${DVLBOX_PATH}"
+run "docker-compose exec --user dreamdevbox -T php bash -c '> /var/mail/dreamdevbox'" "${RETRIES}" "${DVLBOX_PATH}"
 
 # Send a new mail
 run "curl -sS --fail -XPOST 'http://localhost:${HOST_PORT_HTTPD}/mail.php' -d 'email=${MY_MAIL}&subject=${MY_SUBJ}&message=${MY_MESS}'" "${RETRIES}"

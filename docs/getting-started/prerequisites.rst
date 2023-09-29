@@ -57,7 +57,7 @@ The minimum required versions are listed below:
 * ``Docker Compose``: 1.16.0+
 
 
-Additionally you will require ``git`` in order to clone the devilbox project.
+Additionally you will require ``git`` in order to clone the dreamdevbox project.
 
 .. seealso::
 
@@ -138,7 +138,7 @@ drawbacks in the below provided links.
      * |ext_lnk_install_docker_toolbox_mac_native_vs_toolbox|
      * |ext_link_docker_machine|
 
-.. important:: :ref:`howto_docker_toolbox_and_the_devilbox`
+.. important:: :ref:`howto_docker_toolbox_and_the_dreamdevbox`
 
 Windows
 -------
@@ -176,7 +176,7 @@ have read its drawbacks in the below provided links.
      * |ext_lnk_install_docker_toolbox_win|
      * |ext_link_docker_machine|
 
-.. important:: :ref:`howto_docker_toolbox_and_the_devilbox`
+.. important:: :ref:`howto_docker_toolbox_and_the_dreamdevbox`
 
 
 Post installation

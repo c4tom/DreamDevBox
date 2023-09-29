@@ -69,7 +69,7 @@ to ensure this will work with all web servers.
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
    host> cp cfg/vhost-gen/apache22.yml-example-rproxy data/www/my-app/.dreamdevbox/apache22.yml
    host> cp cfg/vhost-gen/apache24.yml-example-rproxy data/www/my-app/.dreamdevbox/apache24.yml
    host> cp cfg/vhost-gen/nginx.yml-example-rproxy data/www/my-app/.dreamdevbox/nginx.yml
@@ -89,7 +89,7 @@ Open the ``apache22.yml`` vhost-gen template in your project:
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
    host> vi data/www/my-app/.dreamdevbox/apache22.yml
 
 
@@ -127,7 +127,7 @@ Open the ``apache24.yml`` vhost-gen template in your project:
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
    host> vi data/www/my-app/.dreamdevbox/apache24.yml
 
 
@@ -165,7 +165,7 @@ Open the ``nginx.yml`` vhost-gen template in your project:
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
    host> vi data/www/my-app/.dreamdevbox/nginx.yml
 
 
@@ -207,7 +207,7 @@ Now for the changes to take affect, simply restart the DreamDevBox (or start if 
 
 .. code-block:: bash
 
-   host> cd /path/to/devilbox
+   host> cd /path/to/dreamdevbox
 
    # Stop the DreamDevBox
    host> docker-compose stop

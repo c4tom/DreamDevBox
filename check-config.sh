@@ -237,40 +237,40 @@ else
 	log_debug "Variable 'DOCKER_LOGS' has correct value: ${DOCKER_LOGS}"
 fi
 
-DEVILBOX_PATH="$( get_env_value "DEVILBOX_PATH" )"
-if [ ! -d "${DEVILBOX_PATH}" ]; then
-	log_err "Variable 'DEVILBOX_PATH' directory does not exist: ${DEVILBOX_PATH}"
+DREAMDEVBOX_PATH="$( get_env_value "DREAMDEVBOX_PATH" )"
+if [ ! -d "${DREAMDEVBOX_PATH}" ]; then
+	log_err "Variable 'DREAMDEVBOX_PATH' directory does not exist: ${DREAMDEVBOX_PATH}"
 	RET_CODE=$(( RET_CODE + 1))
 	WRONG_ENV_FILES_VALUES=1
 else
-	log_debug "Variable 'DEVILBOX_PATH' directory exists: ${DEVILBOX_PATH}"
+	log_debug "Variable 'DREAMDEVBOX_PATH' directory exists: ${DREAMDEVBOX_PATH}"
 fi
 
-DEVILBOX_PATH_PERM="$( file_get_perm "${DEVILBOX_PATH}" )"
-if [ "${DEVILBOX_PATH_PERM}" != "0755" ] && [ "${DEVILBOX_PATH_PERM}" != "0775" ] && [ "${DEVILBOX_PATH_PERM}" != "0777" ]; then
-	log_err "Variable 'DEVILBOX_PATH' directory must be 0755, 0775 or 0777. Has: ${DEVILBOX_PATH_PERM}"
+DREAMDEVBOX_PATH_PERM="$( file_get_perm "${DREAMDEVBOX_PATH}" )"
+if [ "${DREAMDEVBOX_PATH_PERM}" != "0755" ] && [ "${DREAMDEVBOX_PATH_PERM}" != "0775" ] && [ "${DREAMDEVBOX_PATH_PERM}" != "0777" ]; then
+	log_err "Variable 'DREAMDEVBOX_PATH' directory must be 0755, 0775 or 0777. Has: ${DREAMDEVBOX_PATH_PERM}"
 	RET_CODE=$(( RET_CODE + 1))
 	WRONG_ENV_FILES_VALUES=1
 else
-	log_debug "Variable 'DEVILBOX_PATH' directory has correct permissions: ${DEVILBOX_PATH_PERM}"
+	log_debug "Variable 'DREAMDEVBOX_PATH' directory has correct permissions: ${DREAMDEVBOX_PATH_PERM}"
 fi
 
-DEVILBOX_PATH_PERM="$( file_get_uid "${DEVILBOX_PATH}" )"
-if [ "${DEVILBOX_PATH_PERM}" != "${MY_UID}" ]; then
-	log_err "Variable 'DEVILBOX_PATH' directory uid must be ${MY_UID}. Has: ${DEVILBOX_PATH_PERM}"
+DREAMDEVBOX_PATH_PERM="$( file_get_uid "${DREAMDEVBOX_PATH}" )"
+if [ "${DREAMDEVBOX_PATH_PERM}" != "${MY_UID}" ]; then
+	log_err "Variable 'DREAMDEVBOX_PATH' directory uid must be ${MY_UID}. Has: ${DREAMDEVBOX_PATH_PERM}"
 	RET_CODE=$(( RET_CODE + 1))
 	WRONG_ENV_FILES_VALUES=1
 else
-	log_debug "Variable 'DEVILBOX_PATH' diretory has correct uid: ${DEVILBOX_PATH_PERM}"
+	log_debug "Variable 'DREAMDEVBOX_PATH' diretory has correct uid: ${DREAMDEVBOX_PATH_PERM}"
 fi
 
-DEVILBOX_PATH_PERM="$( file_get_gid "${DEVILBOX_PATH}" )"
-if [ "${DEVILBOX_PATH_PERM}" != "${MY_GID}" ]; then
-	log_err "Variable 'DEVILBOX_PATH' directory gid must be ${MY_GID}. Has: ${DEVILBOX_PATH_PERM}"
+DREAMDEVBOX_PATH_PERM="$( file_get_gid "${DREAMDEVBOX_PATH}" )"
+if [ "${DREAMDEVBOX_PATH_PERM}" != "${MY_GID}" ]; then
+	log_err "Variable 'DREAMDEVBOX_PATH' directory gid must be ${MY_GID}. Has: ${DREAMDEVBOX_PATH_PERM}"
 	RET_CODE=$(( RET_CODE + 1))
 	WRONG_ENV_FILES_VALUES=1
 else
-	log_debug "Variable 'DEVILBOX_PATH' diretory has correct gid: ${DEVILBOX_PATH_PERM}"
+	log_debug "Variable 'DREAMDEVBOX_PATH' diretory has correct gid: ${DREAMDEVBOX_PATH_PERM}"
 fi
 
 LOCAL_LISTEN_ADDR="$( get_env_value "LOCAL_LISTEN_ADDR" )"
@@ -498,9 +498,9 @@ fi
 #--------------------------------------------------------------------------------------------------
 # DreamDevBox Directory permissions
 #--------------------------------------------------------------------------------------------------
-print_head_1 "Checking devilbox core directory permissions"
+print_head_1 "Checking dreamdevbox core directory permissions"
 
-DEVILBOX_DIRS=(
+DREAMDEVBOX_DIRS=(
 	"autostart"
 	"bash"
 	"ca"
@@ -511,66 +511,66 @@ DEVILBOX_DIRS=(
 )
 
 # Check allowed directory permissions: 0755 0775 0777
-DEVILBOX_DIR_PERM_WRONG=0
-for search_dir in "${DEVILBOX_DIRS[@]}"; do
+DREAMDEVBOX_DIR_PERM_WRONG=0
+for search_dir in "${DREAMDEVBOX_DIRS[@]}"; do
 	while read -r my_dir; do
 		PERM="$( file_get_perm "${my_dir}" )"
 		if [ "${PERM}" != "0755" ] && [ "${PERM}" != "0775" ] && [ "${PERM}" != "0777" ]; then
 			log_err "Directory '${my_dir}' should have 0755, 0775 or 0777 permissions. Has: ${PERM} permissions"
 			RET_CODE=$(( RET_CODE + 1))
-			DEVILBOX_DIR_PERM_WRONG=1
+			DREAMDEVBOX_DIR_PERM_WRONG=1
 		else
 			log_debug "Directory '${my_dir}' has correct permissions: ${PERM}"
 		fi
 	done < <(find "${search_dir}" -type d)
 done
-if [ "${DEVILBOX_DIR_PERM_WRONG}" = "0" ]; then
-	log_ok "All devilbox directories have correct permissions"
+if [ "${DREAMDEVBOX_DIR_PERM_WRONG}" = "0" ]; then
+	log_ok "All dreamdevbox directories have correct permissions"
 fi
 
 # Check allowed uid
-DEVILBOX_DIR_PERM_WRONG=0
-for search_dir in "${DEVILBOX_DIRS[@]}"; do
+DREAMDEVBOX_DIR_PERM_WRONG=0
+for search_dir in "${DREAMDEVBOX_DIRS[@]}"; do
 	while read -r my_dir; do
 		PERM="$( file_get_uid "${my_dir}" )"
 		if [ "${PERM}" != "${MY_UID}" ]; then
 			log_err "Directory '${my_dir}' should have uid '${MY_UID}' Has: '${PERM}'"
 			RET_CODE=$(( RET_CODE + 1))
-			DEVILBOX_DIR_PERM_WRONG=1
+			DREAMDEVBOX_DIR_PERM_WRONG=1
 		else
 			log_debug "Directory '${my_dir}' has correct uid: ${PERM}"
 		fi
 	done < <(find "${search_dir}" -type d)
 done
-if [ "${DEVILBOX_DIR_PERM_WRONG}" = "0" ]; then
-	log_ok "All devilbox directories have correct uid"
+if [ "${DREAMDEVBOX_DIR_PERM_WRONG}" = "0" ]; then
+	log_ok "All dreamdevbox directories have correct uid"
 fi
 
 # Check allowed gid
-DEVILBOX_DIR_PERM_WRONG=0
-for search_dir in "${DEVILBOX_DIRS[@]}"; do
+DREAMDEVBOX_DIR_PERM_WRONG=0
+for search_dir in "${DREAMDEVBOX_DIRS[@]}"; do
 	while read -r my_dir; do
 		PERM="$( file_get_gid "${my_dir}" )"
 		if [ "${PERM}" != "${MY_GID}" ]; then
 			log_err "Directory '${my_dir}' should have gid '${MY_GID}' Has: '${PERM}'"
 			RET_CODE=$(( RET_CODE + 1))
-			DEVILBOX_DIR_PERM_WRONG=1
+			DREAMDEVBOX_DIR_PERM_WRONG=1
 		else
 			log_debug "Directory '${my_dir}' has correct gid: ${PERM}"
 		fi
 	done < <(find "${search_dir}" -type d)
 done
-if [ "${DEVILBOX_DIR_PERM_WRONG}" = "0" ]; then
-	log_ok "All devilbox directories have correct gid"
+if [ "${DREAMDEVBOX_DIR_PERM_WRONG}" = "0" ]; then
+	log_ok "All dreamdevbox directories have correct gid"
 fi
 
 
 #--------------------------------------------------------------------------------------------------
 # DreamDevBox File permissions
 #--------------------------------------------------------------------------------------------------
-print_head_1 "Checking devilbox core file permissions"
+print_head_1 "Checking dreamdevbox core file permissions"
 
-DEVILBOX_DIRS=(
+DREAMDEVBOX_DIRS=(
 	"autostart"
 	"ca"
 	"cfg"
@@ -579,16 +579,16 @@ DEVILBOX_DIRS=(
 )
 
 # Check allowed directory permissions: 0644 0664 0666
-DEVILBOX_DIR_PERM_WRONG=0
-for search_file in "${DEVILBOX_DIRS[@]}"; do
+DREAMDEVBOX_DIR_PERM_WRONG=0
+for search_file in "${DREAMDEVBOX_DIRS[@]}"; do
 	while read -r my_file; do
 		PERM="$( file_get_perm "${my_file}" )"
 		# Private CA file
-		if [ "${my_file}" = "ca/devilbox-ca.key" ]; then
+		if [ "${my_file}" = "ca/dreamdevbox-ca.key" ]; then
 			if [ "${PERM}" != "0600" ]; then
 				log_err "File '${my_file}' should have 0600 permissions. Has: ${PERM} permissions"
 				RET_CODE=$(( RET_CODE + 1))
-				DEVILBOX_DIR_PERM_WRONG=1
+				DREAMDEVBOX_DIR_PERM_WRONG=1
 			else
 				log_debug "File '${my_file}' has correct permissions: ${PERM}"
 			fi
@@ -597,7 +597,7 @@ for search_file in "${DEVILBOX_DIRS[@]}"; do
 			if [ "${PERM}" != "0755" ] && [ "${PERM}" != "0775" ] && [ "${PERM}" != "0777" ]; then
 				log_err "File '${my_file}' should have 0755, 0775 or 0777 permissions. Has: ${PERM} permissions"
 				RET_CODE=$(( RET_CODE + 1))
-				DEVILBOX_DIR_PERM_WRONG=1
+				DREAMDEVBOX_DIR_PERM_WRONG=1
 			else
 				log_debug "File '${my_file}' has correct permissions: ${PERM}"
 			fi
@@ -606,51 +606,51 @@ for search_file in "${DEVILBOX_DIRS[@]}"; do
 			if [ "${PERM}" != "0644" ] && [ "${PERM}" != "0664" ] && [ "${PERM}" != "0666" ]; then
 				log_err "File '${my_file}' should have 0644, 0664 or 0666 permissions. Has: ${PERM} permissions"
 				RET_CODE=$(( RET_CODE + 1))
-				DEVILBOX_DIR_PERM_WRONG=1
+				DREAMDEVBOX_DIR_PERM_WRONG=1
 			else
 				log_debug "File '${my_file}' has correct permissions: ${PERM}"
 			fi
 		fi
 	done < <(find "${search_file}" -type f)
 done
-if [ "${DEVILBOX_DIR_PERM_WRONG}" = "0" ]; then
-	log_ok "All devilbox files have correct permissions"
+if [ "${DREAMDEVBOX_DIR_PERM_WRONG}" = "0" ]; then
+	log_ok "All dreamdevbox files have correct permissions"
 fi
 
 # Check allowed uid
-DEVILBOX_DIR_PERM_WRONG=0
-for search_file in "${DEVILBOX_DIRS[@]}"; do
+DREAMDEVBOX_DIR_PERM_WRONG=0
+for search_file in "${DREAMDEVBOX_DIRS[@]}"; do
 	while read -r my_file; do
 		PERM="$( file_get_uid "${my_file}" )"
 		if [ "${PERM}" != "${MY_UID}" ]; then
 			log_err "File '${my_file}' should have uid '${MY_UID}' Has: '${PERM}'"
 			RET_CODE=$(( RET_CODE + 1))
-			DEVILBOX_DIR_PERM_WRONG=1
+			DREAMDEVBOX_DIR_PERM_WRONG=1
 		else
 			log_debug "File '${my_file}' has correct uid: ${PERM}"
 		fi
 	done < <(find "${search_file}" -type f)
 done
-if [ "${DEVILBOX_DIR_PERM_WRONG}" = "0" ]; then
-	log_ok "All devilbox files have correct uid"
+if [ "${DREAMDEVBOX_DIR_PERM_WRONG}" = "0" ]; then
+	log_ok "All dreamdevbox files have correct uid"
 fi
 
 # Check allowed gid
-DEVILBOX_DIR_PERM_WRONG=0
-for search_file in "${DEVILBOX_DIRS[@]}"; do
+DREAMDEVBOX_DIR_PERM_WRONG=0
+for search_file in "${DREAMDEVBOX_DIRS[@]}"; do
 	while read -r my_file; do
 		PERM="$( file_get_gid "${my_file}" )"
 		if [ "${PERM}" != "${MY_GID}" ]; then
 			log_err "File '${my_file}' should have gid '${MY_GID}' Has: '${PERM}'"
 			RET_CODE=$(( RET_CODE + 1))
-			DEVILBOX_DIR_PERM_WRONG=1
+			DREAMDEVBOX_DIR_PERM_WRONG=1
 		else
 			log_debug "File '${my_file}' has correct gid: ${PERM}"
 		fi
 	done < <(find "${search_file}" -type f)
 done
-if [ "${DEVILBOX_DIR_PERM_WRONG}" = "0" ]; then
-	log_ok "All devilbox files have correct gid"
+if [ "${DREAMDEVBOX_DIR_PERM_WRONG}" = "0" ]; then
+	log_ok "All dreamdevbox files have correct gid"
 fi
 
 

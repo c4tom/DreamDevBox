@@ -4,7 +4,7 @@
 # pm2 (https://github.com/Unitech/pm2)
 #
 # Important: As everything is run by the root user, you must explicitly direct the
-#            commands to the devilbox user.
+#            commands to the dreamdevbox user.
 #
 
 
@@ -27,7 +27,7 @@ fi
 
 
 # This loops over the paths, separates base directory and filename and will run it in the background
-# as the user devilbox. There shouldn't be any need to change anything here.
+# as the user dreamdevbox. There shouldn't be any need to change anything here.
 for item in ${NODE_PROJECTS[*]}; do
 	NODE_PATH="$( dirname "${item}" )"
 	NODE_FILE="$( basename "${item}" )"
@@ -41,6 +41,6 @@ for item in ${NODE_PROJECTS[*]}; do
 		continue;
 	fi
 
-	echo "su -c \"cd ${NODE_PATH}; pm2 start ${NODE_FILE}\" -l devilbox"
-	su -c "cd ${NODE_PATH}; pm2 start ${NODE_FILE}" -l devilbox
+	echo "su -c \"cd ${NODE_PATH}; pm2 start ${NODE_FILE}\" -l dreamdevbox"
+	su -c "cd ${NODE_PATH}; pm2 start ${NODE_FILE}" -l dreamdevbox
 done

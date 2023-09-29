@@ -27,7 +27,7 @@ All you have to do is to adjust the path of :ref:`env_httpd_datadir` in the ``.e
 .. code-block:: bash
 
    # Navigate to DreamDevBox git directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Open the .env file with your favourite editor
    host> vim .env
@@ -52,7 +52,7 @@ Consider the following directory setup:
 .. code-block:: bash
 
    |
-   +- devilbox/
+   +- dreamdevbox/
    |
    +- projects/
       |
@@ -72,7 +72,7 @@ All you have to to is to adjust the path of :ref:`env_httpd_datadir` in the ``.e
 .. code-block:: bash
 
    # Navigate to DreamDevBox git directory
-   host> cd path/to/devilbox
+   host> cd path/to/dreamdevbox
 
    # Open the .env file with your favourite editor
    host> vim .env

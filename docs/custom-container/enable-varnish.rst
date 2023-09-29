@@ -205,7 +205,7 @@ For this example we will assume you are using  Varnish 6
 
 The final step is to start the DreamDevBox with Varnish.
 
-.. seealso:: :ref:`start_the_devilbox`
+.. seealso:: :ref:`start_the_dreamdevbox`
 
 4.1 Varnish only
 ^^^^^^^^^^^^^^^^

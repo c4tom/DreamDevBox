@@ -77,7 +77,7 @@ The vhost directory defines the name under which your project will be available.
 
 .. code-block:: bash
 
-   devilbox@php-7.2.29 in /shared/httpd $ mkdir my-symfony
+   dreamdevbox@php-7.2.29 in /shared/httpd $ mkdir my-symfony
 
 .. seealso:: :ref:`env_tld_suffix`
 
@@ -89,14 +89,14 @@ Navigate into your newly created vhost directory and install Symfony with ``symf
 
 .. code-block:: bash
 
-   devilbox@php-7.2.29 in /shared/httpd $ cd my-symfony
-   devilbox@php-7.2.29 in /shared/httpd/my-symfony $ symfony new symfony
+   dreamdevbox@php-7.2.29 in /shared/httpd $ cd my-symfony
+   dreamdevbox@php-7.2.29 in /shared/httpd/my-symfony $ symfony new symfony
 
 How does the directory structure look after installation:
 
 .. code-block:: bash
 
-   devilbox@php-7.2.29 in /shared/httpd/my-symfony $ tree -L 1
+   dreamdevbox@php-7.2.29 in /shared/httpd/my-symfony $ tree -L 1
    .
    └── symfony
 
@@ -117,13 +117,13 @@ to its expected path.
 
 .. code-block:: bash
 
-   devilbox@php-7.2.29 in /shared/httpd/my-symfony $ ln -s symfony/public/ htdocs
+   dreamdevbox@php-7.2.29 in /shared/httpd/my-symfony $ ln -s symfony/public/ htdocs
 
 How does the directory structure look after symlinking:
 
 .. code-block:: bash
 
-   devilbox@php-7.2.29 in /shared/httpd/my-sw $ tree -L 1
+   dreamdevbox@php-7.2.29 in /shared/httpd/my-sw $ tree -L 1
    .
    ├── symfony
    └── htdocs -> symfony/public
@@ -137,7 +137,7 @@ path and points to the frameworks entrypoint.
    When using **Docker Toolbox**, you need to **explicitly allow** the usage of **symlinks**.
    See below for instructions:
 
-   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_devilbox_windows_symlinks`
+   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_dreamdevbox_windows_symlinks`
 
 
 5. DNS record

@@ -11,10 +11,10 @@ provided examples, copy them to a file ending by `.sh`
 ## Info
 
 If you want to autostart NodeJS applications, you can use [pm2](https://github.com/Unitech/pm2).
-Ensure you do this as user `devilbox`, as by default everything is run by root.
+Ensure you do this as user `dreamdevbox`, as by default everything is run by root.
 
 ```bash
-su -c 'cd /shared/httpd/node/node; pm2 start index.js' -l devilbox
+su -c 'cd /shared/httpd/node/node; pm2 start index.js' -l dreamdevbox
 ```
 
 

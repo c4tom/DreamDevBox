@@ -77,7 +77,7 @@ The vhost directory defines the name under which your project will be available.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ mkdir my-drupal
+   dreamdevbox@php-7.0.20 in /shared/httpd $ mkdir my-drupal
 
 .. seealso:: :ref:`env_tld_suffix`
 
@@ -89,14 +89,14 @@ Navigate into your newly created vhost directory and install Drupal with ``drush
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ cd my-drupal
-   devilbox@php-7.0.20 in /shared/httpd/my-drupal $ drush dl drupal
+   dreamdevbox@php-7.0.20 in /shared/httpd $ cd my-drupal
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-drupal $ drush dl drupal
 
 How does the directory structure look after installation:
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-drupal $ tree -L 1
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-drupal $ tree -L 1
    .
    └── drupal-8.3.3
 
@@ -117,13 +117,13 @@ to its expected path.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-drupal $ ln -s drupal-8.3.3/ htdocs
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-drupal $ ln -s drupal-8.3.3/ htdocs
 
 How does the directory structure look after symlinking:
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-drupal $ tree -L 1
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-drupal $ tree -L 1
    .
    ├── drupal-8.3.3
    └── htdocs -> CodeIgniter-3.1.8
@@ -137,7 +137,7 @@ path and points to the frameworks entrypoint.
    When using **Docker Toolbox**, you need to **explicitly allow** the usage of **symlinks**.
    See below for instructions:
 
-   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_devilbox_windows_symlinks`
+   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_dreamdevbox_windows_symlinks`
 
 
 5. DNS record

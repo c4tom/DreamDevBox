@@ -62,10 +62,10 @@
 			</value>
 
 			Unix user of processes
-			<value name="user">devilbox</value>
+			<value name="user">dreamdevbox</value>
 
 			Unix group of processes
-			<value name="group">devilbox</value>
+			<value name="group">dreamdevbox</value>
 
 			Process manager settings
 			<value name="pm">

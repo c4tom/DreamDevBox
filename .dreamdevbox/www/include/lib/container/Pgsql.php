@@ -1,8 +1,8 @@
 <?php
-namespace devilbox;
+namespace dreamdevbox;
 
 /**
- * @requires devilbox::Logger
+ * @requires dreamdevbox::Logger
  */
 class Pgsql extends BaseClass implements BaseInterface
 {

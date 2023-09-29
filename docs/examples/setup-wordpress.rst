@@ -78,7 +78,7 @@ The vhost directory defines the name under which your project will be available.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ mkdir my-wp
+   dreamdevbox@php-7.0.20 in /shared/httpd $ mkdir my-wp
 
 .. seealso:: :ref:`env_tld_suffix`
 
@@ -90,14 +90,14 @@ Navigate into your newly created vhost directory and install WordPress with ``gi
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd $ cd my-wp
-   devilbox@php-7.0.20 in /shared/httpd/my-wp $ git clone https://github.com/WordPress/WordPress wordpress.git
+   dreamdevbox@php-7.0.20 in /shared/httpd $ cd my-wp
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-wp $ git clone https://github.com/WordPress/WordPress wordpress.git
 
 How does the directory structure look after installation:
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-wp $ tree -L 1
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-wp $ tree -L 1
    .
    └── wordpress.git
 
@@ -118,13 +118,13 @@ to its expected path.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-wp $ ln -s wordpress.git/ htdocs
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-wp $ ln -s wordpress.git/ htdocs
 
 How does the directory structure look after symlinking:
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-wp $ tree -L 1
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-wp $ tree -L 1
    .
    ├── wordpress.git
    └── htdocs -> wordpress.git
@@ -138,7 +138,7 @@ path and points to the frameworks entrypoint.
    When using **Docker Toolbox**, you need to **explicitly allow** the usage of **symlinks**.
    See below for instructions:
 
-   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_devilbox_windows_symlinks`
+   * Docker Toolbox and :ref:`howto_docker_toolbox_and_the_dreamdevbox_windows_symlinks`
 
 
 5. Add MySQL Database
@@ -146,7 +146,7 @@ path and points to the frameworks entrypoint.
 
 .. code-block:: bash
 
-   devilbox@php-7.0.20 in /shared/httpd/my-wp $ mysql -u root -h 127.0.0.1 -p -e 'CREATE DATABASE my_wp;'
+   dreamdevbox@php-7.0.20 in /shared/httpd/my-wp $ mysql -u root -h 127.0.0.1 -p -e 'CREATE DATABASE my_wp;'
 
 
 6. DNS record

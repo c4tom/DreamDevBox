@@ -5,7 +5,7 @@ This document will hold all information on how to update between major versions.
 
 ## Update from `v2.4.0` to `v3.0.0` (`v3.0.0-beta-1`)
 
-**PR:** https://github.com/cytopia/devilbox/pull/942
+**PR:** https://github.com/cytopia/dreamdevbox/pull/942
 
 This PR introduces new `.env` variables, so you are required to copy `env-example` over to `.env`.
 Also ensure to stop and remove containers.
@@ -16,7 +16,7 @@ docker-compose rm -f
 
 ## Update from `v1.8.1` to `v1.8.2`
 
-**PR:** https://github.com/cytopia/devilbox/pull/750
+**PR:** https://github.com/cytopia/dreamdevbox/pull/750
 
 This PR adds many new images, ensure to remove your current old state before running them:
 ```bash
@@ -27,7 +27,7 @@ docker-compose rm -f
 
 ## Update from `v1.8.0` to `v1.8.1`
 
-**PR:** https://github.com/cytopia/devilbox/pull/747
+**PR:** https://github.com/cytopia/dreamdevbox/pull/747
 
 This PR ensures to have all directories in log/ mod/ cfg/ added by default. Prior this, some
 of those directories might have been created by Docker (running as root) and they have the wrong
@@ -41,7 +41,7 @@ sudo chown -R <user>:<group> .
 
 ## Update from `v1.6.2` to `v1.6.3`
 
-**PR:** https://github.com/cytopia/devilbox/pull/689
+**PR:** https://github.com/cytopia/dreamdevbox/pull/689
 
 The following affects you if you have a PostgreSQL root password set:
 
@@ -51,12 +51,12 @@ has been introduced. A default value has been set in `docker-compose.yml` to mak
 
 ## Update from `v1.1.0` to `v1.2.0`
 
-**PR:** https://github.com/cytopia/devilbox/pull/647
+**PR:** https://github.com/cytopia/dreamdevbox/pull/647
 
 This release changes the way the SSL CA and certificates are generated.
 Background here: https://support.apple.com/en-us/HT210176
 
-In order to use the new CA, you will need to delete your current CA in `ca/devilbox-ca.*`.
+In order to use the new CA, you will need to delete your current CA in `ca/dreamdevbox-ca.*`.
 A new one will be automatically generated if none is present. Additionally you will have to
 import the CA again in your browser(s).
 
@@ -65,7 +65,7 @@ import the CA again in your browser(s).
 
 #### Docker Volumes
 
-**PR:** https://github.com/cytopia/devilbox/pull/383
+**PR:** https://github.com/cytopia/dreamdevbox/pull/383
 
 This feature will move all data directories (MySQL, PostgreSQL, MongoDB and others) to Docker
 volumes for best-practice and compatibility reasons on different operating systems.
@@ -82,6 +82,6 @@ you will be unable to access your current data:
 
 **Documentation:**
 
-* [Backup Mysql](https://devilbox.readthedocs.io/en/latest/maintenance/backup-and-restore-mysql.html)
-* [Backup PostgreSQL](https://devilbox.readthedocs.io/en/latest/maintenance/backup-and-restore-pgsql.html)
-* [Backup MongoDB](https://devilbox.readthedocs.io/en/latest/maintenance/backup-and-restore-mongo.html)
+* [Backup Mysql](https://dreamdevbox.readthedocs.io/en/latest/maintenance/backup-and-restore-mysql.html)
+* [Backup PostgreSQL](https://dreamdevbox.readthedocs.io/en/latest/maintenance/backup-and-restore-pgsql.html)
+* [Backup MongoDB](https://dreamdevbox.readthedocs.io/en/latest/maintenance/backup-and-restore-mongo.html)

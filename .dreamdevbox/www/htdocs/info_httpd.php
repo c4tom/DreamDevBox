@@ -17,7 +17,7 @@
 
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12">
-					<iframe style="width:100%; height:100vh; position:relative;" src="/devilbox-httpd-status" frameborder="0" allowfullscreen></iframe>
+					<iframe style="width:100%; height:100vh; position:relative;" src="/dreamdevbox-httpd-status" frameborder="0" allowfullscreen></iframe>
 				</div>
 			</div>
 

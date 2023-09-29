@@ -19,8 +19,8 @@ RETRIES=10
 # FUNCTIONS
 # -------------------------------------------------------------------------------------------------
 
-PHP_TAG="$( grep 'devilbox/php' "${DVLBOX_PATH}/docker-compose.yml" | sed 's/^.*-work-//g' )"
-PHP_MOD="$( run "curl -sS 'https://raw.githubusercontent.com/devilbox/docker-php-fpm/${PHP_TAG}/doc/php-modules.md'" "${RETRIES}" )";
+PHP_TAG="$( grep 'dreamdevbox/php' "${DVLBOX_PATH}/docker-compose.yml" | sed 's/^.*-work-//g' )"
+PHP_MOD="$( run "curl -sS 'https://raw.githubusercontent.com/dreamdevbox/docker-php-fpm/${PHP_TAG}/doc/php-modules.md'" "${RETRIES}" )";
 
 
 get_modules() {

@@ -21,7 +21,7 @@
 	$conf['servers'][0]['port'] = 5432;
 
 	// ---- Auto-login
-	if (getenv('DEVILBOX_VENDOR_PHPPGADMIN_AUTOLOGIN') == 1) {
+	if (getenv('DREAMDEVBOX_VENDOR_PHPPGADMIN_AUTOLOGIN') == 1) {
 		$_REQUEST['server']= 'pgsql:5432:allow';
 		if(session_id() == ''){
 			//session has not started
